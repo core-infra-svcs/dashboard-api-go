@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy.md) |  | 
-**AdaptivePolicyGroups** | [**[]OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaAdaptivePolicyGroups**](OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaAdaptivePolicyGroups.md) | Adaptive policy groups to assign | 
+**NetworkIds** | **[]string** | A list of network IDs to add to the network group | 
 
 ## Methods
 
 ### NewInlineObject339
 
-`func NewInlineObject339(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy, adaptivePolicyGroups []OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaAdaptivePolicyGroups, ) *InlineObject339`
+`func NewInlineObject339(networkIds []string, ) *InlineObject339`
 
 NewInlineObject339 instantiates a new InlineObject339 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +25,24 @@ NewInlineObject339WithDefaults instantiates a new InlineObject339 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPolicy
+### GetNetworkIds
 
-`func (o *InlineObject339) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy`
+`func (o *InlineObject339) GetNetworkIds() []string`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
 
-### GetPolicyOk
+### GetNetworkIdsOk
 
-`func (o *InlineObject339) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy, bool)`
+`func (o *InlineObject339) GetNetworkIdsOk() (*[]string, bool)`
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetNetworkIds
 
-`func (o *InlineObject339) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy)`
+`func (o *InlineObject339) SetNetworkIds(v []string)`
 
-SetPolicy sets Policy field to given value.
-
-
-### GetAdaptivePolicyGroups
-
-`func (o *InlineObject339) GetAdaptivePolicyGroups() []OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaAdaptivePolicyGroups`
-
-GetAdaptivePolicyGroups returns the AdaptivePolicyGroups field if non-nil, zero value otherwise.
-
-### GetAdaptivePolicyGroupsOk
-
-`func (o *InlineObject339) GetAdaptivePolicyGroupsOk() (*[]OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaAdaptivePolicyGroups, bool)`
-
-GetAdaptivePolicyGroupsOk returns a tuple with the AdaptivePolicyGroups field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAdaptivePolicyGroups
-
-`func (o *InlineObject339) SetAdaptivePolicyGroups(v []OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaAdaptivePolicyGroups)`
-
-SetAdaptivePolicyGroups sets AdaptivePolicyGroups field to given value.
+SetNetworkIds sets NetworkIds field to given value.
 
 
 

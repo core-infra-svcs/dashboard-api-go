@@ -6,11 +6,11 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ClusterId** | Pointer to **string** | ID of the cluster | [optional] 
 **Name** | Pointer to **string** | Name of the cluster | [optional] 
-**Uplinks** | Pointer to [**[]InlineResponse20118Uplinks**](InlineResponse20118Uplinks.md) | Uplink settings of the cluster | [optional] 
-**Tunnels** | Pointer to [**[]InlineResponse20118Tunnels**](InlineResponse20118Tunnels.md) | Tunnel settings of the cluster | [optional] 
-**Nameservers** | Pointer to [**InlineResponse20118Nameservers**](InlineResponse20118Nameservers.md) |  | [optional] 
-**PortChannels** | Pointer to [**[]InlineResponse20118PortChannels**](InlineResponse20118PortChannels.md) | Port channel settings of the cluster | [optional] 
-**Devices** | Pointer to [**[]InlineResponse20118Devices**](InlineResponse20118Devices.md) | Devices in the cluster | [optional] 
+**Uplinks** | Pointer to [**[]InlineResponse20119Uplinks**](InlineResponse20119Uplinks.md) | Uplink settings of the cluster | [optional] 
+**Tunnels** | Pointer to [**[]InlineResponse20119Tunnels**](InlineResponse20119Tunnels.md) | Tunnel settings of the cluster | [optional] 
+**Nameservers** | Pointer to [**InlineResponse20119Nameservers**](InlineResponse20119Nameservers.md) |  | [optional] 
+**PortChannels** | Pointer to [**[]InlineResponse20119PortChannels**](InlineResponse20119PortChannels.md) | Port channel settings of the cluster | [optional] 
+**Devices** | Pointer to [**[]InlineResponse20119Devices**](InlineResponse20119Devices.md) | Devices in the cluster | [optional] 
 **Notes** | Pointer to **string** | Notes about cluster | [optional] 
 **Url** | Pointer to **string** | URL to display cluster details | [optional] 
 **Failover** | Pointer to [**OrganizationsOrganizationIdCampusGatewayClustersFailoverTargetsFailover**](OrganizationsOrganizationIdCampusGatewayClustersFailoverTargetsFailover.md) |  | [optional] 
@@ -86,20 +86,20 @@ HasName returns a boolean if a field has been set.
 
 ### GetUplinks
 
-`func (o *InlineResponse2024) GetUplinks() []InlineResponse20118Uplinks`
+`func (o *InlineResponse2024) GetUplinks() []InlineResponse20119Uplinks`
 
 GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
 
 ### GetUplinksOk
 
-`func (o *InlineResponse2024) GetUplinksOk() (*[]InlineResponse20118Uplinks, bool)`
+`func (o *InlineResponse2024) GetUplinksOk() (*[]InlineResponse20119Uplinks, bool)`
 
 GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUplinks
 
-`func (o *InlineResponse2024) SetUplinks(v []InlineResponse20118Uplinks)`
+`func (o *InlineResponse2024) SetUplinks(v []InlineResponse20119Uplinks)`
 
 SetUplinks sets Uplinks field to given value.
 
@@ -111,20 +111,20 @@ HasUplinks returns a boolean if a field has been set.
 
 ### GetTunnels
 
-`func (o *InlineResponse2024) GetTunnels() []InlineResponse20118Tunnels`
+`func (o *InlineResponse2024) GetTunnels() []InlineResponse20119Tunnels`
 
 GetTunnels returns the Tunnels field if non-nil, zero value otherwise.
 
 ### GetTunnelsOk
 
-`func (o *InlineResponse2024) GetTunnelsOk() (*[]InlineResponse20118Tunnels, bool)`
+`func (o *InlineResponse2024) GetTunnelsOk() (*[]InlineResponse20119Tunnels, bool)`
 
 GetTunnelsOk returns a tuple with the Tunnels field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTunnels
 
-`func (o *InlineResponse2024) SetTunnels(v []InlineResponse20118Tunnels)`
+`func (o *InlineResponse2024) SetTunnels(v []InlineResponse20119Tunnels)`
 
 SetTunnels sets Tunnels field to given value.
 
@@ -136,20 +136,20 @@ HasTunnels returns a boolean if a field has been set.
 
 ### GetNameservers
 
-`func (o *InlineResponse2024) GetNameservers() InlineResponse20118Nameservers`
+`func (o *InlineResponse2024) GetNameservers() InlineResponse20119Nameservers`
 
 GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
 
 ### GetNameserversOk
 
-`func (o *InlineResponse2024) GetNameserversOk() (*InlineResponse20118Nameservers, bool)`
+`func (o *InlineResponse2024) GetNameserversOk() (*InlineResponse20119Nameservers, bool)`
 
 GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNameservers
 
-`func (o *InlineResponse2024) SetNameservers(v InlineResponse20118Nameservers)`
+`func (o *InlineResponse2024) SetNameservers(v InlineResponse20119Nameservers)`
 
 SetNameservers sets Nameservers field to given value.
 
@@ -161,20 +161,20 @@ HasNameservers returns a boolean if a field has been set.
 
 ### GetPortChannels
 
-`func (o *InlineResponse2024) GetPortChannels() []InlineResponse20118PortChannels`
+`func (o *InlineResponse2024) GetPortChannels() []InlineResponse20119PortChannels`
 
 GetPortChannels returns the PortChannels field if non-nil, zero value otherwise.
 
 ### GetPortChannelsOk
 
-`func (o *InlineResponse2024) GetPortChannelsOk() (*[]InlineResponse20118PortChannels, bool)`
+`func (o *InlineResponse2024) GetPortChannelsOk() (*[]InlineResponse20119PortChannels, bool)`
 
 GetPortChannelsOk returns a tuple with the PortChannels field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPortChannels
 
-`func (o *InlineResponse2024) SetPortChannels(v []InlineResponse20118PortChannels)`
+`func (o *InlineResponse2024) SetPortChannels(v []InlineResponse20119PortChannels)`
 
 SetPortChannels sets PortChannels field to given value.
 
@@ -186,20 +186,20 @@ HasPortChannels returns a boolean if a field has been set.
 
 ### GetDevices
 
-`func (o *InlineResponse2024) GetDevices() []InlineResponse20118Devices`
+`func (o *InlineResponse2024) GetDevices() []InlineResponse20119Devices`
 
 GetDevices returns the Devices field if non-nil, zero value otherwise.
 
 ### GetDevicesOk
 
-`func (o *InlineResponse2024) GetDevicesOk() (*[]InlineResponse20118Devices, bool)`
+`func (o *InlineResponse2024) GetDevicesOk() (*[]InlineResponse20119Devices, bool)`
 
 GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDevices
 
-`func (o *InlineResponse2024) SetDevices(v []InlineResponse20118Devices)`
+`func (o *InlineResponse2024) SetDevices(v []InlineResponse20119Devices)`
 
 SetDevices sets Devices field to given value.
 

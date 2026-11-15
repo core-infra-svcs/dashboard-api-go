@@ -4,14 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SsidNumber** | Pointer to **int32** | SSID Number | [optional] 
-**Vlan** | Pointer to **int32** | LAN | [optional] 
-**ClientMac** | Pointer to **string** | Client Mac | [optional] 
-**Serial** | Pointer to **string** | Serial Number | [optional] 
-**Radio** | Pointer to **int32** | Radio number | [optional] 
-**FailureStep** | Pointer to **string** | The failed onboarding step. One of: assoc, auth, dhcp, dns. | [optional] 
-**Type** | Pointer to **string** | The failure type in the onboarding step | [optional] 
-**Ts** | Pointer to **time.Time** | The timestamp when the client mac failed | [optional] 
+**Hostname** | Pointer to **string** | Desired ESL hostname of the network | [optional] 
+**Enabled** | Pointer to **bool** | Turn ESL features on and off for this network | [optional] 
+**Mode** | Pointer to **string** | Electronic shelf label mode of the network. Valid options are &#39;Bluetooth&#39;, &#39;high frequency&#39; | [optional] 
 
 ## Methods
 
@@ -32,205 +27,80 @@ NewInlineResponse200238WithDefaults instantiates a new InlineResponse200238 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSsidNumber
+### GetHostname
 
-`func (o *InlineResponse200238) GetSsidNumber() int32`
+`func (o *InlineResponse200238) GetHostname() string`
 
-GetSsidNumber returns the SsidNumber field if non-nil, zero value otherwise.
+GetHostname returns the Hostname field if non-nil, zero value otherwise.
 
-### GetSsidNumberOk
+### GetHostnameOk
 
-`func (o *InlineResponse200238) GetSsidNumberOk() (*int32, bool)`
+`func (o *InlineResponse200238) GetHostnameOk() (*string, bool)`
 
-GetSsidNumberOk returns a tuple with the SsidNumber field if it's non-nil, zero value otherwise
+GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsidNumber
+### SetHostname
 
-`func (o *InlineResponse200238) SetSsidNumber(v int32)`
+`func (o *InlineResponse200238) SetHostname(v string)`
 
-SetSsidNumber sets SsidNumber field to given value.
+SetHostname sets Hostname field to given value.
 
-### HasSsidNumber
+### HasHostname
 
-`func (o *InlineResponse200238) HasSsidNumber() bool`
+`func (o *InlineResponse200238) HasHostname() bool`
 
-HasSsidNumber returns a boolean if a field has been set.
+HasHostname returns a boolean if a field has been set.
 
-### GetVlan
+### GetEnabled
 
-`func (o *InlineResponse200238) GetVlan() int32`
+`func (o *InlineResponse200238) GetEnabled() bool`
 
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetVlanOk
+### GetEnabledOk
 
-`func (o *InlineResponse200238) GetVlanOk() (*int32, bool)`
+`func (o *InlineResponse200238) GetEnabledOk() (*bool, bool)`
 
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlan
+### SetEnabled
 
-`func (o *InlineResponse200238) SetVlan(v int32)`
+`func (o *InlineResponse200238) SetEnabled(v bool)`
 
-SetVlan sets Vlan field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasVlan
+### HasEnabled
 
-`func (o *InlineResponse200238) HasVlan() bool`
+`func (o *InlineResponse200238) HasEnabled() bool`
 
-HasVlan returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetClientMac
+### GetMode
 
-`func (o *InlineResponse200238) GetClientMac() string`
+`func (o *InlineResponse200238) GetMode() string`
 
-GetClientMac returns the ClientMac field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetClientMacOk
+### GetModeOk
 
-`func (o *InlineResponse200238) GetClientMacOk() (*string, bool)`
+`func (o *InlineResponse200238) GetModeOk() (*string, bool)`
 
-GetClientMacOk returns a tuple with the ClientMac field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientMac
+### SetMode
 
-`func (o *InlineResponse200238) SetClientMac(v string)`
+`func (o *InlineResponse200238) SetMode(v string)`
 
-SetClientMac sets ClientMac field to given value.
+SetMode sets Mode field to given value.
 
-### HasClientMac
+### HasMode
 
-`func (o *InlineResponse200238) HasClientMac() bool`
+`func (o *InlineResponse200238) HasMode() bool`
 
-HasClientMac returns a boolean if a field has been set.
-
-### GetSerial
-
-`func (o *InlineResponse200238) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineResponse200238) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineResponse200238) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineResponse200238) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
-
-### GetRadio
-
-`func (o *InlineResponse200238) GetRadio() int32`
-
-GetRadio returns the Radio field if non-nil, zero value otherwise.
-
-### GetRadioOk
-
-`func (o *InlineResponse200238) GetRadioOk() (*int32, bool)`
-
-GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRadio
-
-`func (o *InlineResponse200238) SetRadio(v int32)`
-
-SetRadio sets Radio field to given value.
-
-### HasRadio
-
-`func (o *InlineResponse200238) HasRadio() bool`
-
-HasRadio returns a boolean if a field has been set.
-
-### GetFailureStep
-
-`func (o *InlineResponse200238) GetFailureStep() string`
-
-GetFailureStep returns the FailureStep field if non-nil, zero value otherwise.
-
-### GetFailureStepOk
-
-`func (o *InlineResponse200238) GetFailureStepOk() (*string, bool)`
-
-GetFailureStepOk returns a tuple with the FailureStep field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFailureStep
-
-`func (o *InlineResponse200238) SetFailureStep(v string)`
-
-SetFailureStep sets FailureStep field to given value.
-
-### HasFailureStep
-
-`func (o *InlineResponse200238) HasFailureStep() bool`
-
-HasFailureStep returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *InlineResponse200238) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *InlineResponse200238) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *InlineResponse200238) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *InlineResponse200238) HasType() bool`
-
-HasType returns a boolean if a field has been set.
-
-### GetTs
-
-`func (o *InlineResponse200238) GetTs() time.Time`
-
-GetTs returns the Ts field if non-nil, zero value otherwise.
-
-### GetTsOk
-
-`func (o *InlineResponse200238) GetTsOk() (*time.Time, bool)`
-
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTs
-
-`func (o *InlineResponse200238) SetTs(v time.Time)`
-
-SetTs sets Ts field to given value.
-
-### HasTs
-
-`func (o *InlineResponse200238) HasTs() bool`
-
-HasTs returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

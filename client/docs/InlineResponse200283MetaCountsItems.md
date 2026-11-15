@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Total** | Pointer to **int32** | The total number of items in the dataset | [optional] 
-**Remaining** | Pointer to **int32** | The number of items in the dataset that are available on subsequent pages | [optional] 
+**Total** | Pointer to **int32** | The non-negative total number of assignments in the filtered dataset. Maximum is bounded by the number of assignments accessible to the organization. | [optional] 
+**Remaining** | Pointer to **int32** | The non-negative number of assignments available on subsequent pages; this value is less than or equal to total | [optional] 
 
 ## Methods
 

@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Subnet** | Pointer to **string** | The subnet of the single LAN | [optional] 
-**ApplianceIp** | Pointer to **string** | The local IP of the appliance on the single LAN | [optional] 
-**MandatoryDhcp** | Pointer to [**InlineResponse20093MandatoryDhcp**](InlineResponse20093MandatoryDhcp.md) |  | [optional] 
-**Ipv6** | Pointer to [**InlineResponse20093Ipv6**](InlineResponse20093Ipv6.md) |  | [optional] 
-**Vrf** | Pointer to [**InlineResponse20093Vrf**](InlineResponse20093Vrf.md) |  | [optional] 
+**Mode** | Pointer to **string** | Intrusion detection mode | [optional] 
+**IdsRulesets** | Pointer to **string** | Intrusion detection ruleset | [optional] 
+**Policy** | Pointer to [**NullableInlineResponse20092Policy**](InlineResponse20092Policy.md) |  | [optional] 
+**ProtectedNetworks** | Pointer to [**InlineResponse20092ProtectedNetworks**](InlineResponse20092ProtectedNetworks.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +28,115 @@ NewInlineResponse20093WithDefaults instantiates a new InlineResponse20093 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSubnet
+### GetMode
 
-`func (o *InlineResponse20093) GetSubnet() string`
+`func (o *InlineResponse20093) GetMode() string`
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetSubnetOk
+### GetModeOk
 
-`func (o *InlineResponse20093) GetSubnetOk() (*string, bool)`
+`func (o *InlineResponse20093) GetModeOk() (*string, bool)`
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetMode
 
-`func (o *InlineResponse20093) SetSubnet(v string)`
+`func (o *InlineResponse20093) SetMode(v string)`
 
-SetSubnet sets Subnet field to given value.
+SetMode sets Mode field to given value.
 
-### HasSubnet
+### HasMode
 
-`func (o *InlineResponse20093) HasSubnet() bool`
+`func (o *InlineResponse20093) HasMode() bool`
 
-HasSubnet returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetApplianceIp
+### GetIdsRulesets
 
-`func (o *InlineResponse20093) GetApplianceIp() string`
+`func (o *InlineResponse20093) GetIdsRulesets() string`
 
-GetApplianceIp returns the ApplianceIp field if non-nil, zero value otherwise.
+GetIdsRulesets returns the IdsRulesets field if non-nil, zero value otherwise.
 
-### GetApplianceIpOk
+### GetIdsRulesetsOk
 
-`func (o *InlineResponse20093) GetApplianceIpOk() (*string, bool)`
+`func (o *InlineResponse20093) GetIdsRulesetsOk() (*string, bool)`
 
-GetApplianceIpOk returns a tuple with the ApplianceIp field if it's non-nil, zero value otherwise
+GetIdsRulesetsOk returns a tuple with the IdsRulesets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplianceIp
+### SetIdsRulesets
 
-`func (o *InlineResponse20093) SetApplianceIp(v string)`
+`func (o *InlineResponse20093) SetIdsRulesets(v string)`
 
-SetApplianceIp sets ApplianceIp field to given value.
+SetIdsRulesets sets IdsRulesets field to given value.
 
-### HasApplianceIp
+### HasIdsRulesets
 
-`func (o *InlineResponse20093) HasApplianceIp() bool`
+`func (o *InlineResponse20093) HasIdsRulesets() bool`
 
-HasApplianceIp returns a boolean if a field has been set.
+HasIdsRulesets returns a boolean if a field has been set.
 
-### GetMandatoryDhcp
+### GetPolicy
 
-`func (o *InlineResponse20093) GetMandatoryDhcp() InlineResponse20093MandatoryDhcp`
+`func (o *InlineResponse20093) GetPolicy() InlineResponse20092Policy`
 
-GetMandatoryDhcp returns the MandatoryDhcp field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetMandatoryDhcpOk
+### GetPolicyOk
 
-`func (o *InlineResponse20093) GetMandatoryDhcpOk() (*InlineResponse20093MandatoryDhcp, bool)`
+`func (o *InlineResponse20093) GetPolicyOk() (*InlineResponse20092Policy, bool)`
 
-GetMandatoryDhcpOk returns a tuple with the MandatoryDhcp field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMandatoryDhcp
+### SetPolicy
 
-`func (o *InlineResponse20093) SetMandatoryDhcp(v InlineResponse20093MandatoryDhcp)`
+`func (o *InlineResponse20093) SetPolicy(v InlineResponse20092Policy)`
 
-SetMandatoryDhcp sets MandatoryDhcp field to given value.
+SetPolicy sets Policy field to given value.
 
-### HasMandatoryDhcp
+### HasPolicy
 
-`func (o *InlineResponse20093) HasMandatoryDhcp() bool`
+`func (o *InlineResponse20093) HasPolicy() bool`
 
-HasMandatoryDhcp returns a boolean if a field has been set.
+HasPolicy returns a boolean if a field has been set.
 
-### GetIpv6
+### SetPolicyNil
 
-`func (o *InlineResponse20093) GetIpv6() InlineResponse20093Ipv6`
+`func (o *InlineResponse20093) SetPolicyNil(b bool)`
 
-GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
+ SetPolicyNil sets the value for Policy to be an explicit nil
 
-### GetIpv6Ok
+### UnsetPolicy
+`func (o *InlineResponse20093) UnsetPolicy()`
 
-`func (o *InlineResponse20093) GetIpv6Ok() (*InlineResponse20093Ipv6, bool)`
+UnsetPolicy ensures that no value is present for Policy, not even an explicit nil
+### GetProtectedNetworks
 
-GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
+`func (o *InlineResponse20093) GetProtectedNetworks() InlineResponse20092ProtectedNetworks`
+
+GetProtectedNetworks returns the ProtectedNetworks field if non-nil, zero value otherwise.
+
+### GetProtectedNetworksOk
+
+`func (o *InlineResponse20093) GetProtectedNetworksOk() (*InlineResponse20092ProtectedNetworks, bool)`
+
+GetProtectedNetworksOk returns a tuple with the ProtectedNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpv6
+### SetProtectedNetworks
 
-`func (o *InlineResponse20093) SetIpv6(v InlineResponse20093Ipv6)`
+`func (o *InlineResponse20093) SetProtectedNetworks(v InlineResponse20092ProtectedNetworks)`
 
-SetIpv6 sets Ipv6 field to given value.
+SetProtectedNetworks sets ProtectedNetworks field to given value.
 
-### HasIpv6
+### HasProtectedNetworks
 
-`func (o *InlineResponse20093) HasIpv6() bool`
+`func (o *InlineResponse20093) HasProtectedNetworks() bool`
 
-HasIpv6 returns a boolean if a field has been set.
-
-### GetVrf
-
-`func (o *InlineResponse20093) GetVrf() InlineResponse20093Vrf`
-
-GetVrf returns the Vrf field if non-nil, zero value otherwise.
-
-### GetVrfOk
-
-`func (o *InlineResponse20093) GetVrfOk() (*InlineResponse20093Vrf, bool)`
-
-GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVrf
-
-`func (o *InlineResponse20093) SetVrf(v InlineResponse20093Vrf)`
-
-SetVrf sets Vrf field to given value.
-
-### HasVrf
-
-`func (o *InlineResponse20093) HasVrf() bool`
-
-HasVrf returns a boolean if a field has been set.
+HasProtectedNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

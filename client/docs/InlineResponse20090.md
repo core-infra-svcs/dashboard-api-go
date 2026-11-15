@@ -4,10 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** | Intrusion detection mode | [optional] 
-**IdsRulesets** | Pointer to **string** | Intrusion detection ruleset | [optional] 
-**Policy** | Pointer to [**NullableInlineResponse20089Policy**](InlineResponse20089Policy.md) |  | [optional] 
-**ProtectedNetworks** | Pointer to [**InlineResponse20089ProtectedNetworks**](InlineResponse20089ProtectedNetworks.md) |  | [optional] 
+**WanTrafficUplinkPreferences** | Pointer to [**[]InlineResponse20090WanTrafficUplinkPreferences**](InlineResponse20090WanTrafficUplinkPreferences.md) | policies with respective traffic filters for an MX network | [optional] 
 
 ## Methods
 
@@ -28,115 +25,30 @@ NewInlineResponse20090WithDefaults instantiates a new InlineResponse20090 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetWanTrafficUplinkPreferences
 
-`func (o *InlineResponse20090) GetMode() string`
+`func (o *InlineResponse20090) GetWanTrafficUplinkPreferences() []InlineResponse20090WanTrafficUplinkPreferences`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetWanTrafficUplinkPreferences returns the WanTrafficUplinkPreferences field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetWanTrafficUplinkPreferencesOk
 
-`func (o *InlineResponse20090) GetModeOk() (*string, bool)`
+`func (o *InlineResponse20090) GetWanTrafficUplinkPreferencesOk() (*[]InlineResponse20090WanTrafficUplinkPreferences, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetWanTrafficUplinkPreferencesOk returns a tuple with the WanTrafficUplinkPreferences field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetWanTrafficUplinkPreferences
 
-`func (o *InlineResponse20090) SetMode(v string)`
+`func (o *InlineResponse20090) SetWanTrafficUplinkPreferences(v []InlineResponse20090WanTrafficUplinkPreferences)`
 
-SetMode sets Mode field to given value.
+SetWanTrafficUplinkPreferences sets WanTrafficUplinkPreferences field to given value.
 
-### HasMode
+### HasWanTrafficUplinkPreferences
 
-`func (o *InlineResponse20090) HasMode() bool`
+`func (o *InlineResponse20090) HasWanTrafficUplinkPreferences() bool`
 
-HasMode returns a boolean if a field has been set.
-
-### GetIdsRulesets
-
-`func (o *InlineResponse20090) GetIdsRulesets() string`
-
-GetIdsRulesets returns the IdsRulesets field if non-nil, zero value otherwise.
-
-### GetIdsRulesetsOk
-
-`func (o *InlineResponse20090) GetIdsRulesetsOk() (*string, bool)`
-
-GetIdsRulesetsOk returns a tuple with the IdsRulesets field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIdsRulesets
-
-`func (o *InlineResponse20090) SetIdsRulesets(v string)`
-
-SetIdsRulesets sets IdsRulesets field to given value.
-
-### HasIdsRulesets
-
-`func (o *InlineResponse20090) HasIdsRulesets() bool`
-
-HasIdsRulesets returns a boolean if a field has been set.
-
-### GetPolicy
-
-`func (o *InlineResponse20090) GetPolicy() InlineResponse20089Policy`
-
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
-
-### GetPolicyOk
-
-`func (o *InlineResponse20090) GetPolicyOk() (*InlineResponse20089Policy, bool)`
-
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPolicy
-
-`func (o *InlineResponse20090) SetPolicy(v InlineResponse20089Policy)`
-
-SetPolicy sets Policy field to given value.
-
-### HasPolicy
-
-`func (o *InlineResponse20090) HasPolicy() bool`
-
-HasPolicy returns a boolean if a field has been set.
-
-### SetPolicyNil
-
-`func (o *InlineResponse20090) SetPolicyNil(b bool)`
-
- SetPolicyNil sets the value for Policy to be an explicit nil
-
-### UnsetPolicy
-`func (o *InlineResponse20090) UnsetPolicy()`
-
-UnsetPolicy ensures that no value is present for Policy, not even an explicit nil
-### GetProtectedNetworks
-
-`func (o *InlineResponse20090) GetProtectedNetworks() InlineResponse20089ProtectedNetworks`
-
-GetProtectedNetworks returns the ProtectedNetworks field if non-nil, zero value otherwise.
-
-### GetProtectedNetworksOk
-
-`func (o *InlineResponse20090) GetProtectedNetworksOk() (*InlineResponse20089ProtectedNetworks, bool)`
-
-GetProtectedNetworksOk returns a tuple with the ProtectedNetworks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProtectedNetworks
-
-`func (o *InlineResponse20090) SetProtectedNetworks(v InlineResponse20089ProtectedNetworks)`
-
-SetProtectedNetworks sets ProtectedNetworks field to given value.
-
-### HasProtectedNetworks
-
-`func (o *InlineResponse20090) HasProtectedNetworks() bool`
-
-HasProtectedNetworks returns a boolean if a field has been set.
+HasWanTrafficUplinkPreferences returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

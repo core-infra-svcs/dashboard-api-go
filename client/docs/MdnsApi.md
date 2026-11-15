@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## UpdateNetworkCampusGatewaySsidMdns
 
-> InlineResponse200118 UpdateNetworkCampusGatewaySsidMdns(ctx, networkId, number).UpdateNetworkCampusGatewaySsidMdns(updateNetworkCampusGatewaySsidMdns).Execute()
+> InlineResponse200121 UpdateNetworkCampusGatewaySsidMdns(ctx, networkId, number).UpdateNetworkCampusGatewaySsidMdns(updateNetworkCampusGatewaySsidMdns).Execute()
 
 Update the mDNS gateway settings and rules for a SSID and cluster
 
@@ -31,7 +31,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
-    updateNetworkCampusGatewaySsidMdns := *openapiclient.NewInlineObject107() // InlineObject107 |  (optional)
+    updateNetworkCampusGatewaySsidMdns := *openapiclient.NewInlineObject110() // InlineObject110 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MdnsApi.UpdateNetworkCampusGatewaySsidMdns``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkCampusGatewaySsidMdns`: InlineResponse200118
+    // response from `UpdateNetworkCampusGatewaySsidMdns`: InlineResponse200121
     fmt.Fprintf(os.Stdout, "Response from `MdnsApi.UpdateNetworkCampusGatewaySsidMdns`: %v\n", resp)
 }
 ```
@@ -63,11 +63,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkCampusGatewaySsidMdns** | [**InlineObject107**](InlineObject107.md) |  | 
+ **updateNetworkCampusGatewaySsidMdns** | [**InlineObject110**](InlineObject110.md) |  | 
 
 ### Return type
 
-[**InlineResponse200118**](InlineResponse200118.md)
+[**InlineResponse200121**](InlineResponse200121.md)
 
 ### Authorization
 

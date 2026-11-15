@@ -4,14 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | List of AP serials | 
-**ProfileId** | **NullableString** | AP profile ID | 
+**ScanningEnabled** | Pointer to **bool** | Whether APs will scan for Bluetooth enabled clients. | [optional] 
+**AdvertisingEnabled** | Pointer to **bool** | Whether APs will advertise beacons. | [optional] 
+**Uuid** | Pointer to **string** | The UUID to be used in the beacon identifier. | [optional] 
+**MajorMinorAssignmentMode** | Pointer to **string** | The way major and minor number should be assigned to nodes in the network. (&#39;Unique&#39;, &#39;Non-unique&#39;) | [optional] 
+**Major** | Pointer to **int32** | The major number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
+**Minor** | Pointer to **int32** | The minor number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
 
 ## Methods
 
 ### NewInlineObject210
 
-`func NewInlineObject210(serials []string, profileId NullableString, ) *InlineObject210`
+`func NewInlineObject210() *InlineObject210`
 
 NewInlineObject210 instantiates a new InlineObject210 object
 This constructor will assign default values to properties that have it defined,
@@ -26,56 +30,156 @@ NewInlineObject210WithDefaults instantiates a new InlineObject210 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetScanningEnabled
 
-`func (o *InlineObject210) GetSerials() []string`
+`func (o *InlineObject210) GetScanningEnabled() bool`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetScanningEnabled returns the ScanningEnabled field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetScanningEnabledOk
 
-`func (o *InlineObject210) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject210) GetScanningEnabledOk() (*bool, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetScanningEnabledOk returns a tuple with the ScanningEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetScanningEnabled
 
-`func (o *InlineObject210) SetSerials(v []string)`
+`func (o *InlineObject210) SetScanningEnabled(v bool)`
 
-SetSerials sets Serials field to given value.
+SetScanningEnabled sets ScanningEnabled field to given value.
 
+### HasScanningEnabled
 
-### GetProfileId
+`func (o *InlineObject210) HasScanningEnabled() bool`
 
-`func (o *InlineObject210) GetProfileId() string`
+HasScanningEnabled returns a boolean if a field has been set.
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+### GetAdvertisingEnabled
 
-### GetProfileIdOk
+`func (o *InlineObject210) GetAdvertisingEnabled() bool`
 
-`func (o *InlineObject210) GetProfileIdOk() (*string, bool)`
+GetAdvertisingEnabled returns the AdvertisingEnabled field if non-nil, zero value otherwise.
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+### GetAdvertisingEnabledOk
+
+`func (o *InlineObject210) GetAdvertisingEnabledOk() (*bool, bool)`
+
+GetAdvertisingEnabledOk returns a tuple with the AdvertisingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetAdvertisingEnabled
 
-`func (o *InlineObject210) SetProfileId(v string)`
+`func (o *InlineObject210) SetAdvertisingEnabled(v bool)`
 
-SetProfileId sets ProfileId field to given value.
+SetAdvertisingEnabled sets AdvertisingEnabled field to given value.
 
+### HasAdvertisingEnabled
 
-### SetProfileIdNil
+`func (o *InlineObject210) HasAdvertisingEnabled() bool`
 
-`func (o *InlineObject210) SetProfileIdNil(b bool)`
+HasAdvertisingEnabled returns a boolean if a field has been set.
 
- SetProfileIdNil sets the value for ProfileId to be an explicit nil
+### GetUuid
 
-### UnsetProfileId
-`func (o *InlineObject210) UnsetProfileId()`
+`func (o *InlineObject210) GetUuid() string`
 
-UnsetProfileId ensures that no value is present for ProfileId, not even an explicit nil
+GetUuid returns the Uuid field if non-nil, zero value otherwise.
+
+### GetUuidOk
+
+`func (o *InlineObject210) GetUuidOk() (*string, bool)`
+
+GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUuid
+
+`func (o *InlineObject210) SetUuid(v string)`
+
+SetUuid sets Uuid field to given value.
+
+### HasUuid
+
+`func (o *InlineObject210) HasUuid() bool`
+
+HasUuid returns a boolean if a field has been set.
+
+### GetMajorMinorAssignmentMode
+
+`func (o *InlineObject210) GetMajorMinorAssignmentMode() string`
+
+GetMajorMinorAssignmentMode returns the MajorMinorAssignmentMode field if non-nil, zero value otherwise.
+
+### GetMajorMinorAssignmentModeOk
+
+`func (o *InlineObject210) GetMajorMinorAssignmentModeOk() (*string, bool)`
+
+GetMajorMinorAssignmentModeOk returns a tuple with the MajorMinorAssignmentMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMajorMinorAssignmentMode
+
+`func (o *InlineObject210) SetMajorMinorAssignmentMode(v string)`
+
+SetMajorMinorAssignmentMode sets MajorMinorAssignmentMode field to given value.
+
+### HasMajorMinorAssignmentMode
+
+`func (o *InlineObject210) HasMajorMinorAssignmentMode() bool`
+
+HasMajorMinorAssignmentMode returns a boolean if a field has been set.
+
+### GetMajor
+
+`func (o *InlineObject210) GetMajor() int32`
+
+GetMajor returns the Major field if non-nil, zero value otherwise.
+
+### GetMajorOk
+
+`func (o *InlineObject210) GetMajorOk() (*int32, bool)`
+
+GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMajor
+
+`func (o *InlineObject210) SetMajor(v int32)`
+
+SetMajor sets Major field to given value.
+
+### HasMajor
+
+`func (o *InlineObject210) HasMajor() bool`
+
+HasMajor returns a boolean if a field has been set.
+
+### GetMinor
+
+`func (o *InlineObject210) GetMinor() int32`
+
+GetMinor returns the Minor field if non-nil, zero value otherwise.
+
+### GetMinorOk
+
+`func (o *InlineObject210) GetMinorOk() (*int32, bool)`
+
+GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMinor
+
+`func (o *InlineObject210) SetMinor(v int32)`
+
+SetMinor sets Minor field to given value.
+
+### HasMinor
+
+`func (o *InlineObject210) HasMinor() bool`
+
+HasMinor returns a boolean if a field has been set.
+
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

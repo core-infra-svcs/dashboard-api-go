@@ -4,14 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Serial of device | [optional] 
-**Name** | Pointer to **string** | Name of device | [optional] 
-**Url** | Pointer to **string** | Dashboard URL for the device | [optional] 
-**Model** | Pointer to **string** | Product type of device | [optional] 
-**Software** | Pointer to [**InlineResponse200361Software**](InlineResponse200361Software.md) |  | [optional] 
-**Modems** | Pointer to [**[]InlineResponse200361Modems**](InlineResponse200361Modems.md) | Information about the available modems and SIMs for the device. Maximum 1 modem. | [optional] 
-**Profile** | Pointer to [**InlineResponse200361Profile**](InlineResponse200361Profile.md) |  | [optional] 
-**Network** | Pointer to [**InlineResponse200361Network**](InlineResponse200361Network.md) |  | [optional] 
+**CertificateAuthorityId** | Pointer to **string** | The ID of the certificate authority | [optional] 
+**Crl** | Pointer to **string** | The PEM-encoded CRL for the certificate authority | [optional] 
 
 ## Methods
 
@@ -32,205 +26,55 @@ NewInlineResponse200361ItemsWithDefaults instantiates a new InlineResponse200361
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetCertificateAuthorityId
 
-`func (o *InlineResponse200361Items) GetSerial() string`
+`func (o *InlineResponse200361Items) GetCertificateAuthorityId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetCertificateAuthorityIdOk
 
-`func (o *InlineResponse200361Items) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200361Items) GetCertificateAuthorityIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetCertificateAuthorityId
 
-`func (o *InlineResponse200361Items) SetSerial(v string)`
+`func (o *InlineResponse200361Items) SetCertificateAuthorityId(v string)`
 
-SetSerial sets Serial field to given value.
+SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
 
-### HasSerial
+### HasCertificateAuthorityId
 
-`func (o *InlineResponse200361Items) HasSerial() bool`
+`func (o *InlineResponse200361Items) HasCertificateAuthorityId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasCertificateAuthorityId returns a boolean if a field has been set.
 
-### GetName
+### GetCrl
 
-`func (o *InlineResponse200361Items) GetName() string`
+`func (o *InlineResponse200361Items) GetCrl() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetCrl returns the Crl field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetCrlOk
 
-`func (o *InlineResponse200361Items) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200361Items) GetCrlOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetCrlOk returns a tuple with the Crl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetCrl
 
-`func (o *InlineResponse200361Items) SetName(v string)`
+`func (o *InlineResponse200361Items) SetCrl(v string)`
 
-SetName sets Name field to given value.
+SetCrl sets Crl field to given value.
 
-### HasName
+### HasCrl
 
-`func (o *InlineResponse200361Items) HasName() bool`
+`func (o *InlineResponse200361Items) HasCrl() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetUrl
-
-`func (o *InlineResponse200361Items) GetUrl() string`
-
-GetUrl returns the Url field if non-nil, zero value otherwise.
-
-### GetUrlOk
-
-`func (o *InlineResponse200361Items) GetUrlOk() (*string, bool)`
-
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUrl
-
-`func (o *InlineResponse200361Items) SetUrl(v string)`
-
-SetUrl sets Url field to given value.
-
-### HasUrl
-
-`func (o *InlineResponse200361Items) HasUrl() bool`
-
-HasUrl returns a boolean if a field has been set.
-
-### GetModel
-
-`func (o *InlineResponse200361Items) GetModel() string`
-
-GetModel returns the Model field if non-nil, zero value otherwise.
-
-### GetModelOk
-
-`func (o *InlineResponse200361Items) GetModelOk() (*string, bool)`
-
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetModel
-
-`func (o *InlineResponse200361Items) SetModel(v string)`
-
-SetModel sets Model field to given value.
-
-### HasModel
-
-`func (o *InlineResponse200361Items) HasModel() bool`
-
-HasModel returns a boolean if a field has been set.
-
-### GetSoftware
-
-`func (o *InlineResponse200361Items) GetSoftware() InlineResponse200361Software`
-
-GetSoftware returns the Software field if non-nil, zero value otherwise.
-
-### GetSoftwareOk
-
-`func (o *InlineResponse200361Items) GetSoftwareOk() (*InlineResponse200361Software, bool)`
-
-GetSoftwareOk returns a tuple with the Software field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSoftware
-
-`func (o *InlineResponse200361Items) SetSoftware(v InlineResponse200361Software)`
-
-SetSoftware sets Software field to given value.
-
-### HasSoftware
-
-`func (o *InlineResponse200361Items) HasSoftware() bool`
-
-HasSoftware returns a boolean if a field has been set.
-
-### GetModems
-
-`func (o *InlineResponse200361Items) GetModems() []InlineResponse200361Modems`
-
-GetModems returns the Modems field if non-nil, zero value otherwise.
-
-### GetModemsOk
-
-`func (o *InlineResponse200361Items) GetModemsOk() (*[]InlineResponse200361Modems, bool)`
-
-GetModemsOk returns a tuple with the Modems field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetModems
-
-`func (o *InlineResponse200361Items) SetModems(v []InlineResponse200361Modems)`
-
-SetModems sets Modems field to given value.
-
-### HasModems
-
-`func (o *InlineResponse200361Items) HasModems() bool`
-
-HasModems returns a boolean if a field has been set.
-
-### GetProfile
-
-`func (o *InlineResponse200361Items) GetProfile() InlineResponse200361Profile`
-
-GetProfile returns the Profile field if non-nil, zero value otherwise.
-
-### GetProfileOk
-
-`func (o *InlineResponse200361Items) GetProfileOk() (*InlineResponse200361Profile, bool)`
-
-GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProfile
-
-`func (o *InlineResponse200361Items) SetProfile(v InlineResponse200361Profile)`
-
-SetProfile sets Profile field to given value.
-
-### HasProfile
-
-`func (o *InlineResponse200361Items) HasProfile() bool`
-
-HasProfile returns a boolean if a field has been set.
-
-### GetNetwork
-
-`func (o *InlineResponse200361Items) GetNetwork() InlineResponse200361Network`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200361Items) GetNetworkOk() (*InlineResponse200361Network, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200361Items) SetNetwork(v InlineResponse200361Network)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200361Items) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
+HasCrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

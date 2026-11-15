@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkAssignPolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkAssignPolicy.md) |  | 
-**Targets** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkAssignTargets**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkAssignTargets.md) | Network enforcement targets to assign to the specified policy. Maximum 1000 per request. | 
+**Name** | **string** | Name of the policy | 
+**Description** | Pointer to **string** | Description of the policy | [optional] 
 
 ## Methods
 
 ### NewInlineObject346
 
-`func NewInlineObject346(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkAssignPolicy, targets []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkAssignTargets, ) *InlineObject346`
+`func NewInlineObject346(name string, ) *InlineObject346`
 
 NewInlineObject346 instantiates a new InlineObject346 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +26,50 @@ NewInlineObject346WithDefaults instantiates a new InlineObject346 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPolicy
+### GetName
 
-`func (o *InlineObject346) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkAssignPolicy`
+`func (o *InlineObject346) GetName() string`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetPolicyOk
+### GetNameOk
 
-`func (o *InlineObject346) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkAssignPolicy, bool)`
+`func (o *InlineObject346) GetNameOk() (*string, bool)`
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetName
 
-`func (o *InlineObject346) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkAssignPolicy)`
+`func (o *InlineObject346) SetName(v string)`
 
-SetPolicy sets Policy field to given value.
+SetName sets Name field to given value.
 
 
-### GetTargets
+### GetDescription
 
-`func (o *InlineObject346) GetTargets() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkAssignTargets`
+`func (o *InlineObject346) GetDescription() string`
 
-GetTargets returns the Targets field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetTargetsOk
+### GetDescriptionOk
 
-`func (o *InlineObject346) GetTargetsOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkAssignTargets, bool)`
+`func (o *InlineObject346) GetDescriptionOk() (*string, bool)`
 
-GetTargetsOk returns a tuple with the Targets field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTargets
+### SetDescription
 
-`func (o *InlineObject346) SetTargets(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkAssignTargets)`
+`func (o *InlineObject346) SetDescription(v string)`
 
-SetTargets sets Targets field to given value.
+SetDescription sets Description field to given value.
 
+### HasDescription
+
+`func (o *InlineObject346) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

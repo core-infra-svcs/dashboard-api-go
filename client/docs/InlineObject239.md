@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the adaptive policy ACL | 
-**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] [default to ""]
-**Rules** | [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules1**](OrganizationsOrganizationIdAdaptivePolicyAclsRules1.md) | An ordered array of the adaptive policy ACL rules. | 
-**IpVersion** | **string** | IP version of adpative policy ACL. One of: &#39;any&#39;, &#39;ipv4&#39; or &#39;ipv6&#39; | 
+**Name** | Pointer to **string** | The name of the organization | [optional] 
+**Management** | Pointer to [**OrganizationsManagement1**](OrganizationsManagement1.md) |  | [optional] 
+**Api** | Pointer to [**OrganizationsOrganizationIdApi**](OrganizationsOrganizationIdApi.md) |  | [optional] 
+**Privacy** | Pointer to **map[string]interface{}** | Privacy-related settings for the organization. | [optional] 
 
 ## Methods
 
 ### NewInlineObject239
 
-`func NewInlineObject239(name string, rules []OrganizationsOrganizationIdAdaptivePolicyAclsRules1, ipVersion string, ) *InlineObject239`
+`func NewInlineObject239() *InlineObject239`
 
 NewInlineObject239 instantiates a new InlineObject239 object
 This constructor will assign default values to properties that have it defined,
@@ -47,71 +47,86 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
 
-### GetDescription
+`func (o *InlineObject239) HasName() bool`
 
-`func (o *InlineObject239) GetDescription() string`
+HasName returns a boolean if a field has been set.
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+### GetManagement
 
-### GetDescriptionOk
+`func (o *InlineObject239) GetManagement() OrganizationsManagement1`
 
-`func (o *InlineObject239) GetDescriptionOk() (*string, bool)`
+GetManagement returns the Management field if non-nil, zero value otherwise.
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+### GetManagementOk
+
+`func (o *InlineObject239) GetManagementOk() (*OrganizationsManagement1, bool)`
+
+GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetManagement
 
-`func (o *InlineObject239) SetDescription(v string)`
+`func (o *InlineObject239) SetManagement(v OrganizationsManagement1)`
 
-SetDescription sets Description field to given value.
+SetManagement sets Management field to given value.
 
-### HasDescription
+### HasManagement
 
-`func (o *InlineObject239) HasDescription() bool`
+`func (o *InlineObject239) HasManagement() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasManagement returns a boolean if a field has been set.
 
-### GetRules
+### GetApi
 
-`func (o *InlineObject239) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules1`
+`func (o *InlineObject239) GetApi() OrganizationsOrganizationIdApi`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetApi returns the Api field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetApiOk
 
-`func (o *InlineObject239) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules1, bool)`
+`func (o *InlineObject239) GetApiOk() (*OrganizationsOrganizationIdApi, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetApi
 
-`func (o *InlineObject239) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules1)`
+`func (o *InlineObject239) SetApi(v OrganizationsOrganizationIdApi)`
 
-SetRules sets Rules field to given value.
+SetApi sets Api field to given value.
 
+### HasApi
 
-### GetIpVersion
+`func (o *InlineObject239) HasApi() bool`
 
-`func (o *InlineObject239) GetIpVersion() string`
+HasApi returns a boolean if a field has been set.
 
-GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
+### GetPrivacy
 
-### GetIpVersionOk
+`func (o *InlineObject239) GetPrivacy() map[string]interface{}`
 
-`func (o *InlineObject239) GetIpVersionOk() (*string, bool)`
+GetPrivacy returns the Privacy field if non-nil, zero value otherwise.
 
-GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
+### GetPrivacyOk
+
+`func (o *InlineObject239) GetPrivacyOk() (*map[string]interface{}, bool)`
+
+GetPrivacyOk returns a tuple with the Privacy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpVersion
+### SetPrivacy
 
-`func (o *InlineObject239) SetIpVersion(v string)`
+`func (o *InlineObject239) SetPrivacy(v map[string]interface{})`
 
-SetIpVersion sets IpVersion field to given value.
+SetPrivacy sets Privacy field to given value.
 
+### HasPrivacy
+
+`func (o *InlineObject239) HasPrivacy() bool`
+
+HasPrivacy returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

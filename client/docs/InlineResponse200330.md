@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the role | [optional] 
-**AppliedOnDevices** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices**](OrganizationsOrganizationIdCameraRolesAppliedOnDevices.md) | Devices the role is applied to | [optional] 
-**AppliedOnNetworks** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnNetworks**](OrganizationsOrganizationIdCameraRolesAppliedOnNetworks.md) | Networks the role is applied to | [optional] 
-**AppliedOrgWide** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide**](OrganizationsOrganizationIdCameraRolesAppliedOrgWide.md) | Organization-wide permissions | [optional] 
+**NetworkId** | Pointer to **string** | The network id of the camera | [optional] 
+**Serial** | Pointer to **string** | The serial number of the camera | [optional] 
+**Boundaries** | Pointer to [**OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries**](OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200330WithDefaults instantiates a new InlineResponse200330 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetNetworkId
 
-`func (o *InlineResponse200330) GetName() string`
+`func (o *InlineResponse200330) GetNetworkId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200330) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200330) GetNetworkIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetNetworkId
 
-`func (o *InlineResponse200330) SetName(v string)`
+`func (o *InlineResponse200330) SetNetworkId(v string)`
 
-SetName sets Name field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasName
+### HasNetworkId
 
-`func (o *InlineResponse200330) HasName() bool`
+`func (o *InlineResponse200330) HasNetworkId() bool`
 
-HasName returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetAppliedOnDevices
+### GetSerial
 
-`func (o *InlineResponse200330) GetAppliedOnDevices() []OrganizationsOrganizationIdCameraRolesAppliedOnDevices`
+`func (o *InlineResponse200330) GetSerial() string`
 
-GetAppliedOnDevices returns the AppliedOnDevices field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetAppliedOnDevicesOk
+### GetSerialOk
 
-`func (o *InlineResponse200330) GetAppliedOnDevicesOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices, bool)`
+`func (o *InlineResponse200330) GetSerialOk() (*string, bool)`
 
-GetAppliedOnDevicesOk returns a tuple with the AppliedOnDevices field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAppliedOnDevices
+### SetSerial
 
-`func (o *InlineResponse200330) SetAppliedOnDevices(v []OrganizationsOrganizationIdCameraRolesAppliedOnDevices)`
+`func (o *InlineResponse200330) SetSerial(v string)`
 
-SetAppliedOnDevices sets AppliedOnDevices field to given value.
+SetSerial sets Serial field to given value.
 
-### HasAppliedOnDevices
+### HasSerial
 
-`func (o *InlineResponse200330) HasAppliedOnDevices() bool`
+`func (o *InlineResponse200330) HasSerial() bool`
 
-HasAppliedOnDevices returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetAppliedOnNetworks
+### GetBoundaries
 
-`func (o *InlineResponse200330) GetAppliedOnNetworks() []OrganizationsOrganizationIdCameraRolesAppliedOnNetworks`
+`func (o *InlineResponse200330) GetBoundaries() OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries`
 
-GetAppliedOnNetworks returns the AppliedOnNetworks field if non-nil, zero value otherwise.
+GetBoundaries returns the Boundaries field if non-nil, zero value otherwise.
 
-### GetAppliedOnNetworksOk
+### GetBoundariesOk
 
-`func (o *InlineResponse200330) GetAppliedOnNetworksOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnNetworks, bool)`
+`func (o *InlineResponse200330) GetBoundariesOk() (*OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries, bool)`
 
-GetAppliedOnNetworksOk returns a tuple with the AppliedOnNetworks field if it's non-nil, zero value otherwise
+GetBoundariesOk returns a tuple with the Boundaries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAppliedOnNetworks
+### SetBoundaries
 
-`func (o *InlineResponse200330) SetAppliedOnNetworks(v []OrganizationsOrganizationIdCameraRolesAppliedOnNetworks)`
+`func (o *InlineResponse200330) SetBoundaries(v OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries)`
 
-SetAppliedOnNetworks sets AppliedOnNetworks field to given value.
+SetBoundaries sets Boundaries field to given value.
 
-### HasAppliedOnNetworks
+### HasBoundaries
 
-`func (o *InlineResponse200330) HasAppliedOnNetworks() bool`
+`func (o *InlineResponse200330) HasBoundaries() bool`
 
-HasAppliedOnNetworks returns a boolean if a field has been set.
-
-### GetAppliedOrgWide
-
-`func (o *InlineResponse200330) GetAppliedOrgWide() []OrganizationsOrganizationIdCameraRolesAppliedOrgWide`
-
-GetAppliedOrgWide returns the AppliedOrgWide field if non-nil, zero value otherwise.
-
-### GetAppliedOrgWideOk
-
-`func (o *InlineResponse200330) GetAppliedOrgWideOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide, bool)`
-
-GetAppliedOrgWideOk returns a tuple with the AppliedOrgWide field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAppliedOrgWide
-
-`func (o *InlineResponse200330) SetAppliedOrgWide(v []OrganizationsOrganizationIdCameraRolesAppliedOrgWide)`
-
-SetAppliedOrgWide sets AppliedOrgWide field to given value.
-
-### HasAppliedOrgWide
-
-`func (o *InlineResponse200330) HasAppliedOrgWide() bool`
-
-HasAppliedOrgWide returns a boolean if a field has been set.
+HasBoundaries returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

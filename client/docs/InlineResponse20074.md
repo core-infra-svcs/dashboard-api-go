@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse20074Rules**](InlineResponse20074Rules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
+**Categories** | Pointer to [**[]InlineResponse20074Categories**](InlineResponse20074Categories.md) | Available content filtering categories | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20074WithDefaults instantiates a new InlineResponse20074 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetCategories
 
-`func (o *InlineResponse20074) GetRules() []InlineResponse20074Rules`
+`func (o *InlineResponse20074) GetCategories() []InlineResponse20074Categories`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetCategories returns the Categories field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetCategoriesOk
 
-`func (o *InlineResponse20074) GetRulesOk() (*[]InlineResponse20074Rules, bool)`
+`func (o *InlineResponse20074) GetCategoriesOk() (*[]InlineResponse20074Categories, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetCategoriesOk returns a tuple with the Categories field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetCategories
 
-`func (o *InlineResponse20074) SetRules(v []InlineResponse20074Rules)`
+`func (o *InlineResponse20074) SetCategories(v []InlineResponse20074Categories)`
 
-SetRules sets Rules field to given value.
+SetCategories sets Categories field to given value.
 
-### HasRules
+### HasCategories
 
-`func (o *InlineResponse20074) HasRules() bool`
+`func (o *InlineResponse20074) HasCategories() bool`
 
-HasRules returns a boolean if a field has been set.
+HasCategories returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

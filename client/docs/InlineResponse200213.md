@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Nodes** | Pointer to [**[]InlineResponse200213Nodes**](InlineResponse200213Nodes.md) | List of nodes in the network topology | [optional] 
-**Links** | Pointer to [**[]InlineResponse200213Links**](InlineResponse200213Links.md) | List of links between nodes | [optional] 
-**Errors** | Pointer to **[]string** | List of errors encountered while building the topology | [optional] 
+**BroadcastThreshold** | Pointer to **int32** | Broadcast threshold. | [optional] 
+**MulticastThreshold** | Pointer to **int32** | Multicast threshold. | [optional] 
+**UnknownUnicastThreshold** | Pointer to **int32** | Unknown Unicast threshold. | [optional] 
+**TreatTheseTrafficTypesAsOneThreshold** | Pointer to **[]string** | Grouped traffic types | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200213WithDefaults instantiates a new InlineResponse200213 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNodes
+### GetBroadcastThreshold
 
-`func (o *InlineResponse200213) GetNodes() []InlineResponse200213Nodes`
+`func (o *InlineResponse200213) GetBroadcastThreshold() int32`
 
-GetNodes returns the Nodes field if non-nil, zero value otherwise.
+GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
 
-### GetNodesOk
+### GetBroadcastThresholdOk
 
-`func (o *InlineResponse200213) GetNodesOk() (*[]InlineResponse200213Nodes, bool)`
+`func (o *InlineResponse200213) GetBroadcastThresholdOk() (*int32, bool)`
 
-GetNodesOk returns a tuple with the Nodes field if it's non-nil, zero value otherwise
+GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNodes
+### SetBroadcastThreshold
 
-`func (o *InlineResponse200213) SetNodes(v []InlineResponse200213Nodes)`
+`func (o *InlineResponse200213) SetBroadcastThreshold(v int32)`
 
-SetNodes sets Nodes field to given value.
+SetBroadcastThreshold sets BroadcastThreshold field to given value.
 
-### HasNodes
+### HasBroadcastThreshold
 
-`func (o *InlineResponse200213) HasNodes() bool`
+`func (o *InlineResponse200213) HasBroadcastThreshold() bool`
 
-HasNodes returns a boolean if a field has been set.
+HasBroadcastThreshold returns a boolean if a field has been set.
 
-### GetLinks
+### GetMulticastThreshold
 
-`func (o *InlineResponse200213) GetLinks() []InlineResponse200213Links`
+`func (o *InlineResponse200213) GetMulticastThreshold() int32`
 
-GetLinks returns the Links field if non-nil, zero value otherwise.
+GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
 
-### GetLinksOk
+### GetMulticastThresholdOk
 
-`func (o *InlineResponse200213) GetLinksOk() (*[]InlineResponse200213Links, bool)`
+`func (o *InlineResponse200213) GetMulticastThresholdOk() (*int32, bool)`
 
-GetLinksOk returns a tuple with the Links field if it's non-nil, zero value otherwise
+GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLinks
+### SetMulticastThreshold
 
-`func (o *InlineResponse200213) SetLinks(v []InlineResponse200213Links)`
+`func (o *InlineResponse200213) SetMulticastThreshold(v int32)`
 
-SetLinks sets Links field to given value.
+SetMulticastThreshold sets MulticastThreshold field to given value.
 
-### HasLinks
+### HasMulticastThreshold
 
-`func (o *InlineResponse200213) HasLinks() bool`
+`func (o *InlineResponse200213) HasMulticastThreshold() bool`
 
-HasLinks returns a boolean if a field has been set.
+HasMulticastThreshold returns a boolean if a field has been set.
 
-### GetErrors
+### GetUnknownUnicastThreshold
 
-`func (o *InlineResponse200213) GetErrors() []string`
+`func (o *InlineResponse200213) GetUnknownUnicastThreshold() int32`
 
-GetErrors returns the Errors field if non-nil, zero value otherwise.
+GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
 
-### GetErrorsOk
+### GetUnknownUnicastThresholdOk
 
-`func (o *InlineResponse200213) GetErrorsOk() (*[]string, bool)`
+`func (o *InlineResponse200213) GetUnknownUnicastThresholdOk() (*int32, bool)`
 
-GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
+GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetErrors
+### SetUnknownUnicastThreshold
 
-`func (o *InlineResponse200213) SetErrors(v []string)`
+`func (o *InlineResponse200213) SetUnknownUnicastThreshold(v int32)`
 
-SetErrors sets Errors field to given value.
+SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
 
-### HasErrors
+### HasUnknownUnicastThreshold
 
-`func (o *InlineResponse200213) HasErrors() bool`
+`func (o *InlineResponse200213) HasUnknownUnicastThreshold() bool`
 
-HasErrors returns a boolean if a field has been set.
+HasUnknownUnicastThreshold returns a boolean if a field has been set.
+
+### GetTreatTheseTrafficTypesAsOneThreshold
+
+`func (o *InlineResponse200213) GetTreatTheseTrafficTypesAsOneThreshold() []string`
+
+GetTreatTheseTrafficTypesAsOneThreshold returns the TreatTheseTrafficTypesAsOneThreshold field if non-nil, zero value otherwise.
+
+### GetTreatTheseTrafficTypesAsOneThresholdOk
+
+`func (o *InlineResponse200213) GetTreatTheseTrafficTypesAsOneThresholdOk() (*[]string, bool)`
+
+GetTreatTheseTrafficTypesAsOneThresholdOk returns a tuple with the TreatTheseTrafficTypesAsOneThreshold field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTreatTheseTrafficTypesAsOneThreshold
+
+`func (o *InlineResponse200213) SetTreatTheseTrafficTypesAsOneThreshold(v []string)`
+
+SetTreatTheseTrafficTypesAsOneThreshold sets TreatTheseTrafficTypesAsOneThreshold field to given value.
+
+### HasTreatTheseTrafficTypesAsOneThreshold
+
+`func (o *InlineResponse200213) HasTreatTheseTrafficTypesAsOneThreshold() bool`
+
+HasTreatTheseTrafficTypesAsOneThreshold returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

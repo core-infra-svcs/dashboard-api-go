@@ -4,12 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnrollmentId** | Pointer to **string** | Id to check the status of your enrollment | [optional] 
-**Url** | Pointer to **string** | Url to check the status of your enrollment | [optional] 
-**Request** | Pointer to [**InlineResponse20115Request**](InlineResponse20115Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the enrollment | [optional] 
-**EnrollmentStartedAt** | Pointer to **string** | Enrollment started at | [optional] 
-**DoorLocks** | Pointer to [**[]InlineResponse20066DoorLocks**](InlineResponse20066DoorLocks.md) | Door locks | [optional] 
+**Serial** | Pointer to **string** | The device serial | [optional] 
+**Network** | Pointer to [**InlineResponse20066Network**](InlineResponse20066Network.md) |  | [optional] 
+**RfProfile** | Pointer to [**InlineResponse20066RfProfile**](InlineResponse20066RfProfile.md) |  | [optional] 
+**Radios** | Pointer to [**[]InlineResponse20066Radios**](InlineResponse20066Radios.md) | Individual radios on the device | [optional] 
 
 ## Methods
 
@@ -30,155 +28,105 @@ NewInlineResponse20066WithDefaults instantiates a new InlineResponse20066 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnrollmentId
+### GetSerial
 
-`func (o *InlineResponse20066) GetEnrollmentId() string`
+`func (o *InlineResponse20066) GetSerial() string`
 
-GetEnrollmentId returns the EnrollmentId field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetEnrollmentIdOk
+### GetSerialOk
 
-`func (o *InlineResponse20066) GetEnrollmentIdOk() (*string, bool)`
+`func (o *InlineResponse20066) GetSerialOk() (*string, bool)`
 
-GetEnrollmentIdOk returns a tuple with the EnrollmentId field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnrollmentId
+### SetSerial
 
-`func (o *InlineResponse20066) SetEnrollmentId(v string)`
+`func (o *InlineResponse20066) SetSerial(v string)`
 
-SetEnrollmentId sets EnrollmentId field to given value.
+SetSerial sets Serial field to given value.
 
-### HasEnrollmentId
+### HasSerial
 
-`func (o *InlineResponse20066) HasEnrollmentId() bool`
+`func (o *InlineResponse20066) HasSerial() bool`
 
-HasEnrollmentId returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetUrl
+### GetNetwork
 
-`func (o *InlineResponse20066) GetUrl() string`
+`func (o *InlineResponse20066) GetNetwork() InlineResponse20066Network`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetNetworkOk
 
-`func (o *InlineResponse20066) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse20066) GetNetworkOk() (*InlineResponse20066Network, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetNetwork
 
-`func (o *InlineResponse20066) SetUrl(v string)`
+`func (o *InlineResponse20066) SetNetwork(v InlineResponse20066Network)`
 
-SetUrl sets Url field to given value.
+SetNetwork sets Network field to given value.
 
-### HasUrl
+### HasNetwork
 
-`func (o *InlineResponse20066) HasUrl() bool`
+`func (o *InlineResponse20066) HasNetwork() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetRequest
+### GetRfProfile
 
-`func (o *InlineResponse20066) GetRequest() InlineResponse20115Request`
+`func (o *InlineResponse20066) GetRfProfile() InlineResponse20066RfProfile`
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+GetRfProfile returns the RfProfile field if non-nil, zero value otherwise.
 
-### GetRequestOk
+### GetRfProfileOk
 
-`func (o *InlineResponse20066) GetRequestOk() (*InlineResponse20115Request, bool)`
+`func (o *InlineResponse20066) GetRfProfileOk() (*InlineResponse20066RfProfile, bool)`
 
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetRfProfileOk returns a tuple with the RfProfile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetRfProfile
 
-`func (o *InlineResponse20066) SetRequest(v InlineResponse20115Request)`
+`func (o *InlineResponse20066) SetRfProfile(v InlineResponse20066RfProfile)`
 
-SetRequest sets Request field to given value.
+SetRfProfile sets RfProfile field to given value.
 
-### HasRequest
+### HasRfProfile
 
-`func (o *InlineResponse20066) HasRequest() bool`
+`func (o *InlineResponse20066) HasRfProfile() bool`
 
-HasRequest returns a boolean if a field has been set.
+HasRfProfile returns a boolean if a field has been set.
 
-### GetStatus
+### GetRadios
 
-`func (o *InlineResponse20066) GetStatus() string`
+`func (o *InlineResponse20066) GetRadios() []InlineResponse20066Radios`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetRadios returns the Radios field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetRadiosOk
 
-`func (o *InlineResponse20066) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse20066) GetRadiosOk() (*[]InlineResponse20066Radios, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetRadiosOk returns a tuple with the Radios field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetRadios
 
-`func (o *InlineResponse20066) SetStatus(v string)`
+`func (o *InlineResponse20066) SetRadios(v []InlineResponse20066Radios)`
 
-SetStatus sets Status field to given value.
+SetRadios sets Radios field to given value.
 
-### HasStatus
+### HasRadios
 
-`func (o *InlineResponse20066) HasStatus() bool`
+`func (o *InlineResponse20066) HasRadios() bool`
 
-HasStatus returns a boolean if a field has been set.
-
-### GetEnrollmentStartedAt
-
-`func (o *InlineResponse20066) GetEnrollmentStartedAt() string`
-
-GetEnrollmentStartedAt returns the EnrollmentStartedAt field if non-nil, zero value otherwise.
-
-### GetEnrollmentStartedAtOk
-
-`func (o *InlineResponse20066) GetEnrollmentStartedAtOk() (*string, bool)`
-
-GetEnrollmentStartedAtOk returns a tuple with the EnrollmentStartedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnrollmentStartedAt
-
-`func (o *InlineResponse20066) SetEnrollmentStartedAt(v string)`
-
-SetEnrollmentStartedAt sets EnrollmentStartedAt field to given value.
-
-### HasEnrollmentStartedAt
-
-`func (o *InlineResponse20066) HasEnrollmentStartedAt() bool`
-
-HasEnrollmentStartedAt returns a boolean if a field has been set.
-
-### GetDoorLocks
-
-`func (o *InlineResponse20066) GetDoorLocks() []InlineResponse20066DoorLocks`
-
-GetDoorLocks returns the DoorLocks field if non-nil, zero value otherwise.
-
-### GetDoorLocksOk
-
-`func (o *InlineResponse20066) GetDoorLocksOk() (*[]InlineResponse20066DoorLocks, bool)`
-
-GetDoorLocksOk returns a tuple with the DoorLocks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDoorLocks
-
-`func (o *InlineResponse20066) SetDoorLocks(v []InlineResponse20066DoorLocks)`
-
-SetDoorLocks sets DoorLocks field to given value.
-
-### HasDoorLocks
-
-`func (o *InlineResponse20066) HasDoorLocks() bool`
-
-HasDoorLocks returns a boolean if a field has been set.
+HasRadios returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

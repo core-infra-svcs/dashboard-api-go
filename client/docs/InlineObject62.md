@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | [**[]NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules**](NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules.md) | An array of 1:Many nat rules | 
+**Rules** | Pointer to [**[]InlineResponse20080Rules**](InlineResponse20080Rules.md) | An ordered array of the MX L7 firewall rules. Each rule is an object with &#39;policy&#39;, &#39;type&#39;, and &#39;value&#39;. The &#39;value&#39; shape depends on &#39;type&#39;: object for application/applicationCategory, string for host/port/ipRange, and an array of 2-letter ISO 3166-1 alpha-2 country codes for allowedCountries/blockedCountries. For backward compatibility, request types also accept whitelistedCountries/blacklistedCountries. | [optional] 
 
 ## Methods
 
 ### NewInlineObject62
 
-`func NewInlineObject62(rules []NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules, ) *InlineObject62`
+`func NewInlineObject62() *InlineObject62`
 
 NewInlineObject62 instantiates a new InlineObject62 object
 This constructor will assign default values to properties that have it defined,
@@ -27,23 +27,28 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetRules
 
-`func (o *InlineObject62) GetRules() []NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules`
+`func (o *InlineObject62) GetRules() []InlineResponse20080Rules`
 
 GetRules returns the Rules field if non-nil, zero value otherwise.
 
 ### GetRulesOk
 
-`func (o *InlineObject62) GetRulesOk() (*[]NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules, bool)`
+`func (o *InlineObject62) GetRulesOk() (*[]InlineResponse20080Rules, bool)`
 
 GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRules
 
-`func (o *InlineObject62) SetRules(v []NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules)`
+`func (o *InlineObject62) SetRules(v []InlineResponse20080Rules)`
 
 SetRules sets Rules field to given value.
 
+### HasRules
+
+`func (o *InlineObject62) HasRules() bool`
+
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

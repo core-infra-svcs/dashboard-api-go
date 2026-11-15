@@ -4,18 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the route | 
-**Subnet** | **string** | Subnet of the route | 
-**GatewayIp** | **string** | Gateway IP address (next hop) | 
-**GatewayVlanId** | Pointer to **int32** | Gateway VLAN ID | [optional] 
-**Enabled** | Pointer to **bool** | Enable/disable the static route | [optional] 
-**Vrf** | Pointer to [**NetworksNetworkIdApplianceStaticRoutesVrf1**](NetworksNetworkIdApplianceStaticRoutesVrf1.md) |  | [optional] 
+**ClientTrackingMethod** | Pointer to **string** | Client tracking method of a network | [optional] 
+**DeploymentMode** | Pointer to **string** | Deployment mode of a network | [optional] 
+**DynamicDns** | Pointer to [**NetworksNetworkIdApplianceSettingsDynamicDns**](NetworksNetworkIdApplianceSettingsDynamicDns.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject79
 
-`func NewInlineObject79(name string, subnet string, gatewayIp string, ) *InlineObject79`
+`func NewInlineObject79() *InlineObject79`
 
 NewInlineObject79 instantiates a new InlineObject79 object
 This constructor will assign default values to properties that have it defined,
@@ -30,140 +27,80 @@ NewInlineObject79WithDefaults instantiates a new InlineObject79 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetClientTrackingMethod
 
-`func (o *InlineObject79) GetName() string`
+`func (o *InlineObject79) GetClientTrackingMethod() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetClientTrackingMethod returns the ClientTrackingMethod field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetClientTrackingMethodOk
 
-`func (o *InlineObject79) GetNameOk() (*string, bool)`
+`func (o *InlineObject79) GetClientTrackingMethodOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetClientTrackingMethodOk returns a tuple with the ClientTrackingMethod field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetClientTrackingMethod
 
-`func (o *InlineObject79) SetName(v string)`
+`func (o *InlineObject79) SetClientTrackingMethod(v string)`
 
-SetName sets Name field to given value.
+SetClientTrackingMethod sets ClientTrackingMethod field to given value.
 
+### HasClientTrackingMethod
 
-### GetSubnet
+`func (o *InlineObject79) HasClientTrackingMethod() bool`
 
-`func (o *InlineObject79) GetSubnet() string`
+HasClientTrackingMethod returns a boolean if a field has been set.
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+### GetDeploymentMode
 
-### GetSubnetOk
+`func (o *InlineObject79) GetDeploymentMode() string`
 
-`func (o *InlineObject79) GetSubnetOk() (*string, bool)`
+GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+### GetDeploymentModeOk
+
+`func (o *InlineObject79) GetDeploymentModeOk() (*string, bool)`
+
+GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetDeploymentMode
 
-`func (o *InlineObject79) SetSubnet(v string)`
+`func (o *InlineObject79) SetDeploymentMode(v string)`
 
-SetSubnet sets Subnet field to given value.
+SetDeploymentMode sets DeploymentMode field to given value.
 
+### HasDeploymentMode
 
-### GetGatewayIp
+`func (o *InlineObject79) HasDeploymentMode() bool`
 
-`func (o *InlineObject79) GetGatewayIp() string`
+HasDeploymentMode returns a boolean if a field has been set.
 
-GetGatewayIp returns the GatewayIp field if non-nil, zero value otherwise.
+### GetDynamicDns
 
-### GetGatewayIpOk
+`func (o *InlineObject79) GetDynamicDns() NetworksNetworkIdApplianceSettingsDynamicDns`
 
-`func (o *InlineObject79) GetGatewayIpOk() (*string, bool)`
+GetDynamicDns returns the DynamicDns field if non-nil, zero value otherwise.
 
-GetGatewayIpOk returns a tuple with the GatewayIp field if it's non-nil, zero value otherwise
+### GetDynamicDnsOk
+
+`func (o *InlineObject79) GetDynamicDnsOk() (*NetworksNetworkIdApplianceSettingsDynamicDns, bool)`
+
+GetDynamicDnsOk returns a tuple with the DynamicDns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGatewayIp
+### SetDynamicDns
 
-`func (o *InlineObject79) SetGatewayIp(v string)`
+`func (o *InlineObject79) SetDynamicDns(v NetworksNetworkIdApplianceSettingsDynamicDns)`
 
-SetGatewayIp sets GatewayIp field to given value.
+SetDynamicDns sets DynamicDns field to given value.
 
+### HasDynamicDns
 
-### GetGatewayVlanId
+`func (o *InlineObject79) HasDynamicDns() bool`
 
-`func (o *InlineObject79) GetGatewayVlanId() int32`
-
-GetGatewayVlanId returns the GatewayVlanId field if non-nil, zero value otherwise.
-
-### GetGatewayVlanIdOk
-
-`func (o *InlineObject79) GetGatewayVlanIdOk() (*int32, bool)`
-
-GetGatewayVlanIdOk returns a tuple with the GatewayVlanId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGatewayVlanId
-
-`func (o *InlineObject79) SetGatewayVlanId(v int32)`
-
-SetGatewayVlanId sets GatewayVlanId field to given value.
-
-### HasGatewayVlanId
-
-`func (o *InlineObject79) HasGatewayVlanId() bool`
-
-HasGatewayVlanId returns a boolean if a field has been set.
-
-### GetEnabled
-
-`func (o *InlineObject79) GetEnabled() bool`
-
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
-
-### GetEnabledOk
-
-`func (o *InlineObject79) GetEnabledOk() (*bool, bool)`
-
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnabled
-
-`func (o *InlineObject79) SetEnabled(v bool)`
-
-SetEnabled sets Enabled field to given value.
-
-### HasEnabled
-
-`func (o *InlineObject79) HasEnabled() bool`
-
-HasEnabled returns a boolean if a field has been set.
-
-### GetVrf
-
-`func (o *InlineObject79) GetVrf() NetworksNetworkIdApplianceStaticRoutesVrf1`
-
-GetVrf returns the Vrf field if non-nil, zero value otherwise.
-
-### GetVrfOk
-
-`func (o *InlineObject79) GetVrfOk() (*NetworksNetworkIdApplianceStaticRoutesVrf1, bool)`
-
-GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVrf
-
-`func (o *InlineObject79) SetVrf(v NetworksNetworkIdApplianceStaticRoutesVrf1)`
-
-SetVrf sets Vrf field to given value.
-
-### HasVrf
-
-`func (o *InlineObject79) HasVrf() bool`
-
-HasVrf returns a boolean if a field has been set.
+HasDynamicDns returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

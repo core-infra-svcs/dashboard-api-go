@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Enabled** | **bool** | Whether the alerts are enabled | 
-**Maintenance** | Pointer to [**InlineResponse200317ConfigurationMaintenance**](InlineResponse200317ConfigurationMaintenance.md) |  | [optional] 
+**Maintenance** | Pointer to [**InlineResponse200323ConfigurationMaintenance**](InlineResponse200323ConfigurationMaintenance.md) |  | [optional] 
 **AlertDestinations** | [**OrganizationsOrganizationIdAssuranceAlertsProfilesConfigurationAlertDestinations**](OrganizationsOrganizationIdAssuranceAlertsProfilesConfigurationAlertDestinations.md) |  | 
 
 ## Methods
@@ -49,20 +49,20 @@ SetEnabled sets Enabled field to given value.
 
 ### GetMaintenance
 
-`func (o *OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration) GetMaintenance() InlineResponse200317ConfigurationMaintenance`
+`func (o *OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration) GetMaintenance() InlineResponse200323ConfigurationMaintenance`
 
 GetMaintenance returns the Maintenance field if non-nil, zero value otherwise.
 
 ### GetMaintenanceOk
 
-`func (o *OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration) GetMaintenanceOk() (*InlineResponse200317ConfigurationMaintenance, bool)`
+`func (o *OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration) GetMaintenanceOk() (*InlineResponse200323ConfigurationMaintenance, bool)`
 
 GetMaintenanceOk returns a tuple with the Maintenance field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMaintenance
 
-`func (o *OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration) SetMaintenance(v InlineResponse200317ConfigurationMaintenance)`
+`func (o *OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration) SetMaintenance(v InlineResponse200323ConfigurationMaintenance)`
 
 SetMaintenance sets Maintenance field to given value.
 

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Serial** | Pointer to **string** | The serial number for the device | [optional] 
-**LatencyStats** | Pointer to [**InlineResponse20063LatencyStats**](InlineResponse20063LatencyStats.md) |  | [optional] 
+**ConnectionStats** | Pointer to [**InlineResponse20063ConnectionStats**](InlineResponse20063ConnectionStats.md) |  | [optional] 
 
 ## Methods
 
@@ -51,30 +51,30 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetLatencyStats
+### GetConnectionStats
 
-`func (o *InlineResponse20063) GetLatencyStats() InlineResponse20063LatencyStats`
+`func (o *InlineResponse20063) GetConnectionStats() InlineResponse20063ConnectionStats`
 
-GetLatencyStats returns the LatencyStats field if non-nil, zero value otherwise.
+GetConnectionStats returns the ConnectionStats field if non-nil, zero value otherwise.
 
-### GetLatencyStatsOk
+### GetConnectionStatsOk
 
-`func (o *InlineResponse20063) GetLatencyStatsOk() (*InlineResponse20063LatencyStats, bool)`
+`func (o *InlineResponse20063) GetConnectionStatsOk() (*InlineResponse20063ConnectionStats, bool)`
 
-GetLatencyStatsOk returns a tuple with the LatencyStats field if it's non-nil, zero value otherwise
+GetConnectionStatsOk returns a tuple with the ConnectionStats field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLatencyStats
+### SetConnectionStats
 
-`func (o *InlineResponse20063) SetLatencyStats(v InlineResponse20063LatencyStats)`
+`func (o *InlineResponse20063) SetConnectionStats(v InlineResponse20063ConnectionStats)`
 
-SetLatencyStats sets LatencyStats field to given value.
+SetConnectionStats sets ConnectionStats field to given value.
 
-### HasLatencyStats
+### HasConnectionStats
 
-`func (o *InlineResponse20063) HasLatencyStats() bool`
+`func (o *InlineResponse20063) HasConnectionStats() bool`
 
-HasLatencyStats returns a boolean if a field has been set.
+HasConnectionStats returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DscpTagValue** | Pointer to **int32** | The DSCP tag value. | [optional] 
-**Description** | Pointer to **string** | The description of the DSCP tag. | [optional] 
+**Nodes** | Pointer to [**[]InlineResponse200216Nodes**](InlineResponse200216Nodes.md) | List of nodes in the network topology | [optional] 
+**Links** | Pointer to [**[]InlineResponse200216Links**](InlineResponse200216Links.md) | List of links between nodes | [optional] 
+**Errors** | Pointer to **[]string** | List of errors encountered while building the topology | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200216WithDefaults instantiates a new InlineResponse200216 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDscpTagValue
+### GetNodes
 
-`func (o *InlineResponse200216) GetDscpTagValue() int32`
+`func (o *InlineResponse200216) GetNodes() []InlineResponse200216Nodes`
 
-GetDscpTagValue returns the DscpTagValue field if non-nil, zero value otherwise.
+GetNodes returns the Nodes field if non-nil, zero value otherwise.
 
-### GetDscpTagValueOk
+### GetNodesOk
 
-`func (o *InlineResponse200216) GetDscpTagValueOk() (*int32, bool)`
+`func (o *InlineResponse200216) GetNodesOk() (*[]InlineResponse200216Nodes, bool)`
 
-GetDscpTagValueOk returns a tuple with the DscpTagValue field if it's non-nil, zero value otherwise
+GetNodesOk returns a tuple with the Nodes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDscpTagValue
+### SetNodes
 
-`func (o *InlineResponse200216) SetDscpTagValue(v int32)`
+`func (o *InlineResponse200216) SetNodes(v []InlineResponse200216Nodes)`
 
-SetDscpTagValue sets DscpTagValue field to given value.
+SetNodes sets Nodes field to given value.
 
-### HasDscpTagValue
+### HasNodes
 
-`func (o *InlineResponse200216) HasDscpTagValue() bool`
+`func (o *InlineResponse200216) HasNodes() bool`
 
-HasDscpTagValue returns a boolean if a field has been set.
+HasNodes returns a boolean if a field has been set.
 
-### GetDescription
+### GetLinks
 
-`func (o *InlineResponse200216) GetDescription() string`
+`func (o *InlineResponse200216) GetLinks() []InlineResponse200216Links`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetLinks returns the Links field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetLinksOk
 
-`func (o *InlineResponse200216) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse200216) GetLinksOk() (*[]InlineResponse200216Links, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetLinksOk returns a tuple with the Links field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetLinks
 
-`func (o *InlineResponse200216) SetDescription(v string)`
+`func (o *InlineResponse200216) SetLinks(v []InlineResponse200216Links)`
 
-SetDescription sets Description field to given value.
+SetLinks sets Links field to given value.
 
-### HasDescription
+### HasLinks
 
-`func (o *InlineResponse200216) HasDescription() bool`
+`func (o *InlineResponse200216) HasLinks() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasLinks returns a boolean if a field has been set.
+
+### GetErrors
+
+`func (o *InlineResponse200216) GetErrors() []string`
+
+GetErrors returns the Errors field if non-nil, zero value otherwise.
+
+### GetErrorsOk
+
+`func (o *InlineResponse200216) GetErrorsOk() (*[]string, bool)`
+
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetErrors
+
+`func (o *InlineResponse200216) SetErrors(v []string)`
+
+SetErrors sets Errors field to given value.
+
+### HasErrors
+
+`func (o *InlineResponse200216) HasErrors() bool`
+
+HasErrors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

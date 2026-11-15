@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClaimId** | **string** | The unique order claim id | 
-**Subscriptions** | Pointer to [**[]OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions**](OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions.md) | The individual subscriptions to claim | [optional] 
+**ShortName** | **string** | Short name of the early access feature | 
+**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
 
 ## Methods
 
 ### NewInlineObject317
 
-`func NewInlineObject317(claimId string, ) *InlineObject317`
+`func NewInlineObject317(shortName string, ) *InlineObject317`
 
 NewInlineObject317 instantiates a new InlineObject317 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,50 @@ NewInlineObject317WithDefaults instantiates a new InlineObject317 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClaimId
+### GetShortName
 
-`func (o *InlineObject317) GetClaimId() string`
+`func (o *InlineObject317) GetShortName() string`
 
-GetClaimId returns the ClaimId field if non-nil, zero value otherwise.
+GetShortName returns the ShortName field if non-nil, zero value otherwise.
 
-### GetClaimIdOk
+### GetShortNameOk
 
-`func (o *InlineObject317) GetClaimIdOk() (*string, bool)`
+`func (o *InlineObject317) GetShortNameOk() (*string, bool)`
 
-GetClaimIdOk returns a tuple with the ClaimId field if it's non-nil, zero value otherwise
+GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClaimId
+### SetShortName
 
-`func (o *InlineObject317) SetClaimId(v string)`
+`func (o *InlineObject317) SetShortName(v string)`
 
-SetClaimId sets ClaimId field to given value.
+SetShortName sets ShortName field to given value.
 
 
-### GetSubscriptions
+### GetLimitScopeToNetworks
 
-`func (o *InlineObject317) GetSubscriptions() []OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions`
+`func (o *InlineObject317) GetLimitScopeToNetworks() []string`
 
-GetSubscriptions returns the Subscriptions field if non-nil, zero value otherwise.
+GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
 
-### GetSubscriptionsOk
+### GetLimitScopeToNetworksOk
 
-`func (o *InlineObject317) GetSubscriptionsOk() (*[]OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions, bool)`
+`func (o *InlineObject317) GetLimitScopeToNetworksOk() (*[]string, bool)`
 
-GetSubscriptionsOk returns a tuple with the Subscriptions field if it's non-nil, zero value otherwise
+GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubscriptions
+### SetLimitScopeToNetworks
 
-`func (o *InlineObject317) SetSubscriptions(v []OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions)`
+`func (o *InlineObject317) SetLimitScopeToNetworks(v []string)`
 
-SetSubscriptions sets Subscriptions field to given value.
+SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
 
-### HasSubscriptions
+### HasLimitScopeToNetworks
 
-`func (o *InlineObject317) HasSubscriptions() bool`
+`func (o *InlineObject317) HasLimitScopeToNetworks() bool`
 
-HasSubscriptions returns a boolean if a field has been set.
+HasLimitScopeToNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

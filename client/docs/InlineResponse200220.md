@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | A Base64 encoded ID. | [optional] 
-**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
-**Url** | Pointer to **string** | The URL of the HTTP server. | [optional] 
-**Enabled** | Pointer to **bool** | Whether the HTTP server is enabled for webhooks. | [optional] 
-**NetworkId** | Pointer to **string** | A Meraki network ID. | [optional] 
-**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate.md) |  | [optional] 
+**Iname** | Pointer to **string** | IName of the VLAN profile | [optional] 
+**Name** | Pointer to **string** | Name of the profile, string length must be from 1 to 255 characters | [optional] 
+**IsDefault** | Pointer to **bool** | Boolean indicating the default VLAN Profile for any device that does not have a profile explicitly assigned | [optional] 
+**ActiveVlans** | Pointer to **string** | The active VLANs for the VLAN profile. Given range must be inclusive of all named VLANs. | [optional] 
+**VlanNames** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanNames**](NetworksNetworkIdVlanProfilesVlanNames.md) | An array of named VLANs | [optional] 
+**VlanGroups** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanGroups**](NetworksNetworkIdVlanProfilesVlanGroups.md) | An array of named VLANs | [optional] 
 
 ## Methods
 
@@ -30,30 +30,30 @@ NewInlineResponse200220WithDefaults instantiates a new InlineResponse200220 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetIname
 
-`func (o *InlineResponse200220) GetId() string`
+`func (o *InlineResponse200220) GetIname() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetIname returns the Iname field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetInameOk
 
-`func (o *InlineResponse200220) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200220) GetInameOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetInameOk returns a tuple with the Iname field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetIname
 
-`func (o *InlineResponse200220) SetId(v string)`
+`func (o *InlineResponse200220) SetIname(v string)`
 
-SetId sets Id field to given value.
+SetIname sets Iname field to given value.
 
-### HasId
+### HasIname
 
-`func (o *InlineResponse200220) HasId() bool`
+`func (o *InlineResponse200220) HasIname() bool`
 
-HasId returns a boolean if a field has been set.
+HasIname returns a boolean if a field has been set.
 
 ### GetName
 
@@ -80,105 +80,105 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetUrl
+### GetIsDefault
 
-`func (o *InlineResponse200220) GetUrl() string`
+`func (o *InlineResponse200220) GetIsDefault() bool`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetIsDefaultOk
 
-`func (o *InlineResponse200220) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse200220) GetIsDefaultOk() (*bool, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetIsDefault
 
-`func (o *InlineResponse200220) SetUrl(v string)`
+`func (o *InlineResponse200220) SetIsDefault(v bool)`
 
-SetUrl sets Url field to given value.
+SetIsDefault sets IsDefault field to given value.
 
-### HasUrl
+### HasIsDefault
 
-`func (o *InlineResponse200220) HasUrl() bool`
+`func (o *InlineResponse200220) HasIsDefault() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasIsDefault returns a boolean if a field has been set.
 
-### GetEnabled
+### GetActiveVlans
 
-`func (o *InlineResponse200220) GetEnabled() bool`
+`func (o *InlineResponse200220) GetActiveVlans() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetActiveVlans returns the ActiveVlans field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetActiveVlansOk
 
-`func (o *InlineResponse200220) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200220) GetActiveVlansOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetActiveVlansOk returns a tuple with the ActiveVlans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetActiveVlans
 
-`func (o *InlineResponse200220) SetEnabled(v bool)`
+`func (o *InlineResponse200220) SetActiveVlans(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetActiveVlans sets ActiveVlans field to given value.
 
-### HasEnabled
+### HasActiveVlans
 
-`func (o *InlineResponse200220) HasEnabled() bool`
+`func (o *InlineResponse200220) HasActiveVlans() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasActiveVlans returns a boolean if a field has been set.
 
-### GetNetworkId
+### GetVlanNames
 
-`func (o *InlineResponse200220) GetNetworkId() string`
+`func (o *InlineResponse200220) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetVlanNamesOk
 
-`func (o *InlineResponse200220) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200220) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetVlanNames
 
-`func (o *InlineResponse200220) SetNetworkId(v string)`
+`func (o *InlineResponse200220) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames)`
 
-SetNetworkId sets NetworkId field to given value.
+SetVlanNames sets VlanNames field to given value.
 
-### HasNetworkId
+### HasVlanNames
 
-`func (o *InlineResponse200220) HasNetworkId() bool`
+`func (o *InlineResponse200220) HasVlanNames() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasVlanNames returns a boolean if a field has been set.
 
-### GetPayloadTemplate
+### GetVlanGroups
 
-`func (o *InlineResponse200220) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate`
+`func (o *InlineResponse200220) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups`
 
-GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
+GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
 
-### GetPayloadTemplateOk
+### GetVlanGroupsOk
 
-`func (o *InlineResponse200220) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate, bool)`
+`func (o *InlineResponse200220) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups, bool)`
 
-GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
+GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplate
+### SetVlanGroups
 
-`func (o *InlineResponse200220) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate)`
+`func (o *InlineResponse200220) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups)`
 
-SetPayloadTemplate sets PayloadTemplate field to given value.
+SetVlanGroups sets VlanGroups field to given value.
 
-### HasPayloadTemplate
+### HasVlanGroups
 
-`func (o *InlineResponse200220) HasPayloadTemplate() bool`
+`func (o *InlineResponse200220) HasVlanGroups() bool`
 
-HasPayloadTemplate returns a boolean if a field has been set.
+HasVlanGroups returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

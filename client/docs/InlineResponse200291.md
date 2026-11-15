@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Indicates whether VRFs are enabled for the organization&#39;s appliance configuration. | [optional] 
+**Items** | Pointer to [**[]InlineResponse200286Items**](InlineResponse200286Items.md) | List of split DNS profile assignment | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200291WithDefaults instantiates a new InlineResponse200291 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetItems
 
-`func (o *InlineResponse200291) GetEnabled() bool`
+`func (o *InlineResponse200291) GetItems() []InlineResponse200286Items`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetItemsOk
 
-`func (o *InlineResponse200291) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200291) GetItemsOk() (*[]InlineResponse200286Items, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetItems
 
-`func (o *InlineResponse200291) SetEnabled(v bool)`
+`func (o *InlineResponse200291) SetItems(v []InlineResponse200286Items)`
 
-SetEnabled sets Enabled field to given value.
+SetItems sets Items field to given value.
 
-### HasEnabled
+### HasItems
 
-`func (o *InlineResponse200291) HasEnabled() bool`
+`func (o *InlineResponse200291) HasItems() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

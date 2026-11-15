@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## CreateDeviceLiveToolsRoutingTableSummary
 
-> InlineResponse20112 CreateDeviceLiveToolsRoutingTableSummary(ctx, serial).CreateDeviceLiveToolsRoutingTableSummary(createDeviceLiveToolsRoutingTableSummary).Execute()
+> InlineResponse20113 CreateDeviceLiveToolsRoutingTableSummary(ctx, serial).CreateDeviceLiveToolsRoutingTableSummary(createDeviceLiveToolsRoutingTableSummary).Execute()
 
 Enqueue a routing table summary job for a device
 
@@ -31,7 +31,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsRoutingTableSummary := *openapiclient.NewInlineObject31() // InlineObject31 |  (optional)
+    createDeviceLiveToolsRoutingTableSummary := *openapiclient.NewInlineObject33() // InlineObject33 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SummariesApi.CreateDeviceLiveToolsRoutingTableSummary``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceLiveToolsRoutingTableSummary`: InlineResponse20112
+    // response from `CreateDeviceLiveToolsRoutingTableSummary`: InlineResponse20113
     fmt.Fprintf(os.Stdout, "Response from `SummariesApi.CreateDeviceLiveToolsRoutingTableSummary`: %v\n", resp)
 }
 ```
@@ -61,11 +61,11 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsRouti
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsRoutingTableSummary** | [**InlineObject31**](InlineObject31.md) |  | 
+ **createDeviceLiveToolsRoutingTableSummary** | [**InlineObject33**](InlineObject33.md) |  | 
 
 ### Return type
 
-[**InlineResponse20112**](InlineResponse20112.md)
+[**InlineResponse20113**](InlineResponse20113.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsRoutingTableSummary
 
-> InlineResponse20043 GetDeviceLiveToolsRoutingTableSummary(ctx, serial, id).Execute()
+> InlineResponse20045 GetDeviceLiveToolsRoutingTableSummary(ctx, serial, id).Execute()
 
 Return the status and result of a routing table summary job
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SummariesApi.GetDeviceLiveToolsRoutingTableSummary``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsRoutingTableSummary`: InlineResponse20043
+    // response from `GetDeviceLiveToolsRoutingTableSummary`: InlineResponse20045
     fmt.Fprintf(os.Stdout, "Response from `SummariesApi.GetDeviceLiveToolsRoutingTableSummary`: %v\n", resp)
 }
 ```
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20043**](InlineResponse20043.md)
+[**InlineResponse20045**](InlineResponse20045.md)
 
 ### Authorization
 

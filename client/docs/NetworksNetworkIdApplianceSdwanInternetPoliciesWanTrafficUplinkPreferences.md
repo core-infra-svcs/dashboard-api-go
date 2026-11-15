@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **FailOverCriterion** | Pointer to **string** | WAN failover and failback behavior | [optional] 
 **PerformanceClass** | Pointer to [**NetworksNetworkIdApplianceSdwanInternetPoliciesPerformanceClass**](NetworksNetworkIdApplianceSdwanInternetPoliciesPerformanceClass.md) |  | [optional] 
 **TrafficFilters** | [**[]NetworksNetworkIdApplianceSdwanInternetPoliciesTrafficFilters**](NetworksNetworkIdApplianceSdwanInternetPoliciesTrafficFilters.md) | Traffic filters | 
+**Vrf** | Pointer to [**NetworksNetworkIdApplianceSdwanInternetPoliciesVrf**](NetworksNetworkIdApplianceSdwanInternetPoliciesVrf.md) |  | [optional] 
 
 ## Methods
 
@@ -117,6 +118,31 @@ and a boolean to check if the value has been set.
 
 SetTrafficFilters sets TrafficFilters field to given value.
 
+
+### GetVrf
+
+`func (o *NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences) GetVrf() NetworksNetworkIdApplianceSdwanInternetPoliciesVrf`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences) GetVrfOk() (*NetworksNetworkIdApplianceSdwanInternetPoliciesVrf, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences) SetVrf(v NetworksNetworkIdApplianceSdwanInternetPoliciesVrf)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

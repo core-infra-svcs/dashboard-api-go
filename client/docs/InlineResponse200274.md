@@ -4,8 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200274Items**](InlineResponse200274Items.md) | Pipeline summary with aggregated job and operation status counts | [optional] 
-**Meta** | Pointer to [**InlineResponse200272Meta**](InlineResponse200272Meta.md) |  | [optional] 
+**Id** | Pointer to **string** | The alert config ID | [optional] 
+**Type** | Pointer to **string** | The alert type | [optional] 
+**Enabled** | Pointer to **bool** | Is the alert config enabled | [optional] 
+**AlertCondition** | Pointer to [**OrganizationsOrganizationIdAlertsProfilesAlertCondition**](OrganizationsOrganizationIdAlertsProfilesAlertCondition.md) |  | [optional] 
+**Recipients** | Pointer to [**OrganizationsOrganizationIdAlertsProfilesRecipients**](OrganizationsOrganizationIdAlertsProfilesRecipients.md) |  | [optional] 
+**NetworkTags** | Pointer to **[]string** | Networks with these tags will be monitored for the alert | [optional] 
+**Description** | Pointer to **string** | User supplied description of the alert | [optional] 
 
 ## Methods
 
@@ -26,55 +31,180 @@ NewInlineResponse200274WithDefaults instantiates a new InlineResponse200274 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetId
 
-`func (o *InlineResponse200274) GetItems() []InlineResponse200274Items`
+`func (o *InlineResponse200274) GetId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetIdOk
 
-`func (o *InlineResponse200274) GetItemsOk() (*[]InlineResponse200274Items, bool)`
+`func (o *InlineResponse200274) GetIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetId
 
-`func (o *InlineResponse200274) SetItems(v []InlineResponse200274Items)`
+`func (o *InlineResponse200274) SetId(v string)`
 
-SetItems sets Items field to given value.
+SetId sets Id field to given value.
 
-### HasItems
+### HasId
 
-`func (o *InlineResponse200274) HasItems() bool`
+`func (o *InlineResponse200274) HasId() bool`
 
-HasItems returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetMeta
+### GetType
 
-`func (o *InlineResponse200274) GetMeta() InlineResponse200272Meta`
+`func (o *InlineResponse200274) GetType() string`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetTypeOk
 
-`func (o *InlineResponse200274) GetMetaOk() (*InlineResponse200272Meta, bool)`
+`func (o *InlineResponse200274) GetTypeOk() (*string, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetType
 
-`func (o *InlineResponse200274) SetMeta(v InlineResponse200272Meta)`
+`func (o *InlineResponse200274) SetType(v string)`
 
-SetMeta sets Meta field to given value.
+SetType sets Type field to given value.
 
-### HasMeta
+### HasType
 
-`func (o *InlineResponse200274) HasMeta() bool`
+`func (o *InlineResponse200274) HasType() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
+
+### GetEnabled
+
+`func (o *InlineResponse200274) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineResponse200274) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineResponse200274) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineResponse200274) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
+
+### GetAlertCondition
+
+`func (o *InlineResponse200274) GetAlertCondition() OrganizationsOrganizationIdAlertsProfilesAlertCondition`
+
+GetAlertCondition returns the AlertCondition field if non-nil, zero value otherwise.
+
+### GetAlertConditionOk
+
+`func (o *InlineResponse200274) GetAlertConditionOk() (*OrganizationsOrganizationIdAlertsProfilesAlertCondition, bool)`
+
+GetAlertConditionOk returns a tuple with the AlertCondition field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAlertCondition
+
+`func (o *InlineResponse200274) SetAlertCondition(v OrganizationsOrganizationIdAlertsProfilesAlertCondition)`
+
+SetAlertCondition sets AlertCondition field to given value.
+
+### HasAlertCondition
+
+`func (o *InlineResponse200274) HasAlertCondition() bool`
+
+HasAlertCondition returns a boolean if a field has been set.
+
+### GetRecipients
+
+`func (o *InlineResponse200274) GetRecipients() OrganizationsOrganizationIdAlertsProfilesRecipients`
+
+GetRecipients returns the Recipients field if non-nil, zero value otherwise.
+
+### GetRecipientsOk
+
+`func (o *InlineResponse200274) GetRecipientsOk() (*OrganizationsOrganizationIdAlertsProfilesRecipients, bool)`
+
+GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecipients
+
+`func (o *InlineResponse200274) SetRecipients(v OrganizationsOrganizationIdAlertsProfilesRecipients)`
+
+SetRecipients sets Recipients field to given value.
+
+### HasRecipients
+
+`func (o *InlineResponse200274) HasRecipients() bool`
+
+HasRecipients returns a boolean if a field has been set.
+
+### GetNetworkTags
+
+`func (o *InlineResponse200274) GetNetworkTags() []string`
+
+GetNetworkTags returns the NetworkTags field if non-nil, zero value otherwise.
+
+### GetNetworkTagsOk
+
+`func (o *InlineResponse200274) GetNetworkTagsOk() (*[]string, bool)`
+
+GetNetworkTagsOk returns a tuple with the NetworkTags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkTags
+
+`func (o *InlineResponse200274) SetNetworkTags(v []string)`
+
+SetNetworkTags sets NetworkTags field to given value.
+
+### HasNetworkTags
+
+`func (o *InlineResponse200274) HasNetworkTags() bool`
+
+HasNetworkTags returns a boolean if a field has been set.
+
+### GetDescription
+
+`func (o *InlineResponse200274) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineResponse200274) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineResponse200274) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineResponse200274) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

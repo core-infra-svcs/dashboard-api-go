@@ -4,14 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMacs** | Pointer to **[]string** | The wifiMacs of the endpoints to be rebooted. | [optional] 
-**Ids** | Pointer to **[]string** | The ids of the endpoints to be rebooted. | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the endpoints to be rebooted. | [optional] 
-**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the endpoints to be rebooted. | [optional] 
-**KextPaths** | Pointer to **[]string** | The KextPaths of the endpoints to be rebooted. Available for macOS 11+ | [optional] 
-**NotifyUser** | Pointer to **bool** | Whether or not to notify the user before rebooting the endpoint. Available for macOS 11.3+ | [optional] 
-**RebuildKernelCache** | Pointer to **bool** | Whether or not to rebuild the kernel cache when rebooting the endpoint. Available for macOS 11+ | [optional] 
-**RequestRequiresNetworkTether** | Pointer to **bool** | Whether or not the request requires network tethering. Available for macOS and supervised iOS or tvOS | [optional] 
+**WifiMacs** | Pointer to **[]string** | The wifiMacs of the devices to be locked. | [optional] 
+**Ids** | Pointer to **[]string** | The ids of the devices to be locked. | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices to be locked. | [optional] 
+**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be locked. | [optional] 
+**Pin** | Pointer to **int32** | The pin number for locking macOS devices (a six digit number). Required only for macOS devices. | [optional] 
 
 ## Methods
 
@@ -132,105 +129,30 @@ SetScope sets Scope field to given value.
 
 HasScope returns a boolean if a field has been set.
 
-### GetKextPaths
+### GetPin
 
-`func (o *InlineObject151) GetKextPaths() []string`
+`func (o *InlineObject151) GetPin() int32`
 
-GetKextPaths returns the KextPaths field if non-nil, zero value otherwise.
+GetPin returns the Pin field if non-nil, zero value otherwise.
 
-### GetKextPathsOk
+### GetPinOk
 
-`func (o *InlineObject151) GetKextPathsOk() (*[]string, bool)`
+`func (o *InlineObject151) GetPinOk() (*int32, bool)`
 
-GetKextPathsOk returns a tuple with the KextPaths field if it's non-nil, zero value otherwise
+GetPinOk returns a tuple with the Pin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetKextPaths
+### SetPin
 
-`func (o *InlineObject151) SetKextPaths(v []string)`
+`func (o *InlineObject151) SetPin(v int32)`
 
-SetKextPaths sets KextPaths field to given value.
+SetPin sets Pin field to given value.
 
-### HasKextPaths
+### HasPin
 
-`func (o *InlineObject151) HasKextPaths() bool`
+`func (o *InlineObject151) HasPin() bool`
 
-HasKextPaths returns a boolean if a field has been set.
-
-### GetNotifyUser
-
-`func (o *InlineObject151) GetNotifyUser() bool`
-
-GetNotifyUser returns the NotifyUser field if non-nil, zero value otherwise.
-
-### GetNotifyUserOk
-
-`func (o *InlineObject151) GetNotifyUserOk() (*bool, bool)`
-
-GetNotifyUserOk returns a tuple with the NotifyUser field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNotifyUser
-
-`func (o *InlineObject151) SetNotifyUser(v bool)`
-
-SetNotifyUser sets NotifyUser field to given value.
-
-### HasNotifyUser
-
-`func (o *InlineObject151) HasNotifyUser() bool`
-
-HasNotifyUser returns a boolean if a field has been set.
-
-### GetRebuildKernelCache
-
-`func (o *InlineObject151) GetRebuildKernelCache() bool`
-
-GetRebuildKernelCache returns the RebuildKernelCache field if non-nil, zero value otherwise.
-
-### GetRebuildKernelCacheOk
-
-`func (o *InlineObject151) GetRebuildKernelCacheOk() (*bool, bool)`
-
-GetRebuildKernelCacheOk returns a tuple with the RebuildKernelCache field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRebuildKernelCache
-
-`func (o *InlineObject151) SetRebuildKernelCache(v bool)`
-
-SetRebuildKernelCache sets RebuildKernelCache field to given value.
-
-### HasRebuildKernelCache
-
-`func (o *InlineObject151) HasRebuildKernelCache() bool`
-
-HasRebuildKernelCache returns a boolean if a field has been set.
-
-### GetRequestRequiresNetworkTether
-
-`func (o *InlineObject151) GetRequestRequiresNetworkTether() bool`
-
-GetRequestRequiresNetworkTether returns the RequestRequiresNetworkTether field if non-nil, zero value otherwise.
-
-### GetRequestRequiresNetworkTetherOk
-
-`func (o *InlineObject151) GetRequestRequiresNetworkTetherOk() (*bool, bool)`
-
-GetRequestRequiresNetworkTetherOk returns a tuple with the RequestRequiresNetworkTether field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRequestRequiresNetworkTether
-
-`func (o *InlineObject151) SetRequestRequiresNetworkTether(v bool)`
-
-SetRequestRequiresNetworkTether sets RequestRequiresNetworkTether field to given value.
-
-### HasRequestRequiresNetworkTether
-
-`func (o *InlineObject151) HasRequestRequiresNetworkTether() bool`
-
-HasRequestRequiresNetworkTether returns a boolean if a field has been set.
+HasPin returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

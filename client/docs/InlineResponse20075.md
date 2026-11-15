@@ -4,9 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Service** | Pointer to **string** | Appliance service name | [optional] 
-**Access** | Pointer to **string** | A string indicating the rule for which IPs are allowed to use the specified service | [optional] 
-**AllowedIps** | Pointer to **[]string** | An array of allowed CIDRs that can access the service | [optional] 
+**NetworkId** | Pointer to **string** | Dashboard network ID | [optional] 
+**Name** | Pointer to **string** | Dashboard network name | [optional] 
+**Enabled** | Pointer to **bool** | Is warm spare enabled | [optional] 
+**Mode** | Pointer to **string** | HA mode (disabled|active-passive|active-active) | [optional] 
+**Designations** | Pointer to [**[]InlineResponse20075Designations**](InlineResponse20075Designations.md) | Ordered HA roles (1&#x3D;primary, 2&#x3D;spare) | [optional] 
+**Uplink** | Pointer to [**InlineResponse20075Uplink**](InlineResponse20075Uplink.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +30,155 @@ NewInlineResponse20075WithDefaults instantiates a new InlineResponse20075 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetService
+### GetNetworkId
 
-`func (o *InlineResponse20075) GetService() string`
+`func (o *InlineResponse20075) GetNetworkId() string`
 
-GetService returns the Service field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetServiceOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse20075) GetServiceOk() (*string, bool)`
+`func (o *InlineResponse20075) GetNetworkIdOk() (*string, bool)`
 
-GetServiceOk returns a tuple with the Service field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetService
+### SetNetworkId
 
-`func (o *InlineResponse20075) SetService(v string)`
+`func (o *InlineResponse20075) SetNetworkId(v string)`
 
-SetService sets Service field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasService
+### HasNetworkId
 
-`func (o *InlineResponse20075) HasService() bool`
+`func (o *InlineResponse20075) HasNetworkId() bool`
 
-HasService returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetAccess
+### GetName
 
-`func (o *InlineResponse20075) GetAccess() string`
+`func (o *InlineResponse20075) GetName() string`
 
-GetAccess returns the Access field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAccessOk
+### GetNameOk
 
-`func (o *InlineResponse20075) GetAccessOk() (*string, bool)`
+`func (o *InlineResponse20075) GetNameOk() (*string, bool)`
 
-GetAccessOk returns a tuple with the Access field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccess
+### SetName
 
-`func (o *InlineResponse20075) SetAccess(v string)`
+`func (o *InlineResponse20075) SetName(v string)`
 
-SetAccess sets Access field to given value.
+SetName sets Name field to given value.
 
-### HasAccess
+### HasName
 
-`func (o *InlineResponse20075) HasAccess() bool`
+`func (o *InlineResponse20075) HasName() bool`
 
-HasAccess returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetAllowedIps
+### GetEnabled
 
-`func (o *InlineResponse20075) GetAllowedIps() []string`
+`func (o *InlineResponse20075) GetEnabled() bool`
 
-GetAllowedIps returns the AllowedIps field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetAllowedIpsOk
+### GetEnabledOk
 
-`func (o *InlineResponse20075) GetAllowedIpsOk() (*[]string, bool)`
+`func (o *InlineResponse20075) GetEnabledOk() (*bool, bool)`
 
-GetAllowedIpsOk returns a tuple with the AllowedIps field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedIps
+### SetEnabled
 
-`func (o *InlineResponse20075) SetAllowedIps(v []string)`
+`func (o *InlineResponse20075) SetEnabled(v bool)`
 
-SetAllowedIps sets AllowedIps field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasAllowedIps
+### HasEnabled
 
-`func (o *InlineResponse20075) HasAllowedIps() bool`
+`func (o *InlineResponse20075) HasEnabled() bool`
 
-HasAllowedIps returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
+
+### GetMode
+
+`func (o *InlineResponse20075) GetMode() string`
+
+GetMode returns the Mode field if non-nil, zero value otherwise.
+
+### GetModeOk
+
+`func (o *InlineResponse20075) GetModeOk() (*string, bool)`
+
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMode
+
+`func (o *InlineResponse20075) SetMode(v string)`
+
+SetMode sets Mode field to given value.
+
+### HasMode
+
+`func (o *InlineResponse20075) HasMode() bool`
+
+HasMode returns a boolean if a field has been set.
+
+### GetDesignations
+
+`func (o *InlineResponse20075) GetDesignations() []InlineResponse20075Designations`
+
+GetDesignations returns the Designations field if non-nil, zero value otherwise.
+
+### GetDesignationsOk
+
+`func (o *InlineResponse20075) GetDesignationsOk() (*[]InlineResponse20075Designations, bool)`
+
+GetDesignationsOk returns a tuple with the Designations field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDesignations
+
+`func (o *InlineResponse20075) SetDesignations(v []InlineResponse20075Designations)`
+
+SetDesignations sets Designations field to given value.
+
+### HasDesignations
+
+`func (o *InlineResponse20075) HasDesignations() bool`
+
+HasDesignations returns a boolean if a field has been set.
+
+### GetUplink
+
+`func (o *InlineResponse20075) GetUplink() InlineResponse20075Uplink`
+
+GetUplink returns the Uplink field if non-nil, zero value otherwise.
+
+### GetUplinkOk
+
+`func (o *InlineResponse20075) GetUplinkOk() (*InlineResponse20075Uplink, bool)`
+
+GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUplink
+
+`func (o *InlineResponse20075) SetUplink(v InlineResponse20075Uplink)`
+
+SetUplink sets Uplink field to given value.
+
+### HasUplink
+
+`func (o *InlineResponse20075) HasUplink() bool`
+
+HasUplink returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

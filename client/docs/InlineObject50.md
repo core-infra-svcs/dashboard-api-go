@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the network | [optional] 
-**TimeZone** | Pointer to **string** | The timezone of the network. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article.&lt;/a&gt; | [optional] 
-**Tags** | Pointer to **[]string** | A list of tags to be applied to the network | [optional] 
-**EnrollmentString** | Pointer to **string** | A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. | [optional] 
-**Notes** | Pointer to **NullableString** | Add any notes or additional information about this network here. | [optional] 
+**RfProfile** | Pointer to [**DevicesSerialWirelessRadioOverridesRfProfile**](DevicesSerialWirelessRadioOverridesRfProfile.md) |  | [optional] 
+**Radios** | Pointer to [**[]DevicesSerialWirelessRadioOverridesRadios**](DevicesSerialWirelessRadioOverridesRadios.md) | Radio overrides. If omitted, existing per-radio override settings remain unchanged. If provided, only the radios included in the array are updated; the array does not replace the device&#39;s full existing set of radio overrides. Read-only response fields for each radio, such as &#39;band&#39;, may be included in the request body and are ignored. | [optional] 
 
 ## Methods
 
@@ -29,141 +26,56 @@ NewInlineObject50WithDefaults instantiates a new InlineObject50 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetRfProfile
 
-`func (o *InlineObject50) GetName() string`
+`func (o *InlineObject50) GetRfProfile() DevicesSerialWirelessRadioOverridesRfProfile`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRfProfile returns the RfProfile field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRfProfileOk
 
-`func (o *InlineObject50) GetNameOk() (*string, bool)`
+`func (o *InlineObject50) GetRfProfileOk() (*DevicesSerialWirelessRadioOverridesRfProfile, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRfProfileOk returns a tuple with the RfProfile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRfProfile
 
-`func (o *InlineObject50) SetName(v string)`
+`func (o *InlineObject50) SetRfProfile(v DevicesSerialWirelessRadioOverridesRfProfile)`
 
-SetName sets Name field to given value.
+SetRfProfile sets RfProfile field to given value.
 
-### HasName
+### HasRfProfile
 
-`func (o *InlineObject50) HasName() bool`
+`func (o *InlineObject50) HasRfProfile() bool`
 
-HasName returns a boolean if a field has been set.
+HasRfProfile returns a boolean if a field has been set.
 
-### GetTimeZone
+### GetRadios
 
-`func (o *InlineObject50) GetTimeZone() string`
+`func (o *InlineObject50) GetRadios() []DevicesSerialWirelessRadioOverridesRadios`
 
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
+GetRadios returns the Radios field if non-nil, zero value otherwise.
 
-### GetTimeZoneOk
+### GetRadiosOk
 
-`func (o *InlineObject50) GetTimeZoneOk() (*string, bool)`
+`func (o *InlineObject50) GetRadiosOk() (*[]DevicesSerialWirelessRadioOverridesRadios, bool)`
 
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
+GetRadiosOk returns a tuple with the Radios field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeZone
+### SetRadios
 
-`func (o *InlineObject50) SetTimeZone(v string)`
+`func (o *InlineObject50) SetRadios(v []DevicesSerialWirelessRadioOverridesRadios)`
 
-SetTimeZone sets TimeZone field to given value.
+SetRadios sets Radios field to given value.
 
-### HasTimeZone
+### HasRadios
 
-`func (o *InlineObject50) HasTimeZone() bool`
+`func (o *InlineObject50) HasRadios() bool`
 
-HasTimeZone returns a boolean if a field has been set.
+HasRadios returns a boolean if a field has been set.
 
-### GetTags
-
-`func (o *InlineObject50) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineObject50) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineObject50) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineObject50) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetEnrollmentString
-
-`func (o *InlineObject50) GetEnrollmentString() string`
-
-GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
-
-### GetEnrollmentStringOk
-
-`func (o *InlineObject50) GetEnrollmentStringOk() (*string, bool)`
-
-GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnrollmentString
-
-`func (o *InlineObject50) SetEnrollmentString(v string)`
-
-SetEnrollmentString sets EnrollmentString field to given value.
-
-### HasEnrollmentString
-
-`func (o *InlineObject50) HasEnrollmentString() bool`
-
-HasEnrollmentString returns a boolean if a field has been set.
-
-### GetNotes
-
-`func (o *InlineObject50) GetNotes() string`
-
-GetNotes returns the Notes field if non-nil, zero value otherwise.
-
-### GetNotesOk
-
-`func (o *InlineObject50) GetNotesOk() (*string, bool)`
-
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNotes
-
-`func (o *InlineObject50) SetNotes(v string)`
-
-SetNotes sets Notes field to given value.
-
-### HasNotes
-
-`func (o *InlineObject50) HasNotes() bool`
-
-HasNotes returns a boolean if a field has been set.
-
-### SetNotesNil
-
-`func (o *InlineObject50) SetNotesNil(b bool)`
-
- SetNotesNil sets the value for Notes to be an explicit nil
-
-### UnsetNotes
-`func (o *InlineObject50) UnsetNotes()`
-
-UnsetNotes ensures that no value is present for Notes, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

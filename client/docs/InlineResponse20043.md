@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SummaryId** | Pointer to **string** | Id of the route table summary request. Used to check the status of the request. | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your routing table summary request. | [optional] 
-**Status** | Pointer to **string** | Status of the routing table summary request. | [optional] 
-**Counts** | Pointer to [**InlineResponse20043Counts**](InlineResponse20043Counts.md) |  | [optional] 
-**Errors** | Pointer to **[]string** | An error message for a failed execution | [optional] 
+**JobId** | Pointer to **string** | ID of the route details request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this URL to check the status of your route details request. | [optional] 
+**Request** | Pointer to [**InlineResponse20111Request**](InlineResponse20111Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the route details request. | [optional] 
+**Results** | Pointer to [**InlineResponse20043Results**](InlineResponse20043Results.md) |  | [optional] 
+**Errors** | Pointer to **[]string** | Any errors encountered while retrieving route details. | [optional] 
 
 ## Methods
 
@@ -29,30 +30,30 @@ NewInlineResponse20043WithDefaults instantiates a new InlineResponse20043 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSummaryId
+### GetJobId
 
-`func (o *InlineResponse20043) GetSummaryId() string`
+`func (o *InlineResponse20043) GetJobId() string`
 
-GetSummaryId returns the SummaryId field if non-nil, zero value otherwise.
+GetJobId returns the JobId field if non-nil, zero value otherwise.
 
-### GetSummaryIdOk
+### GetJobIdOk
 
-`func (o *InlineResponse20043) GetSummaryIdOk() (*string, bool)`
+`func (o *InlineResponse20043) GetJobIdOk() (*string, bool)`
 
-GetSummaryIdOk returns a tuple with the SummaryId field if it's non-nil, zero value otherwise
+GetJobIdOk returns a tuple with the JobId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSummaryId
+### SetJobId
 
-`func (o *InlineResponse20043) SetSummaryId(v string)`
+`func (o *InlineResponse20043) SetJobId(v string)`
 
-SetSummaryId sets SummaryId field to given value.
+SetJobId sets JobId field to given value.
 
-### HasSummaryId
+### HasJobId
 
-`func (o *InlineResponse20043) HasSummaryId() bool`
+`func (o *InlineResponse20043) HasJobId() bool`
 
-HasSummaryId returns a boolean if a field has been set.
+HasJobId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -79,6 +80,31 @@ SetUrl sets Url field to given value.
 
 HasUrl returns a boolean if a field has been set.
 
+### GetRequest
+
+`func (o *InlineResponse20043) GetRequest() InlineResponse20111Request`
+
+GetRequest returns the Request field if non-nil, zero value otherwise.
+
+### GetRequestOk
+
+`func (o *InlineResponse20043) GetRequestOk() (*InlineResponse20111Request, bool)`
+
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequest
+
+`func (o *InlineResponse20043) SetRequest(v InlineResponse20111Request)`
+
+SetRequest sets Request field to given value.
+
+### HasRequest
+
+`func (o *InlineResponse20043) HasRequest() bool`
+
+HasRequest returns a boolean if a field has been set.
+
 ### GetStatus
 
 `func (o *InlineResponse20043) GetStatus() string`
@@ -104,30 +130,30 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetCounts
+### GetResults
 
-`func (o *InlineResponse20043) GetCounts() InlineResponse20043Counts`
+`func (o *InlineResponse20043) GetResults() InlineResponse20043Results`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetResults returns the Results field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetResultsOk
 
-`func (o *InlineResponse20043) GetCountsOk() (*InlineResponse20043Counts, bool)`
+`func (o *InlineResponse20043) GetResultsOk() (*InlineResponse20043Results, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetResults
 
-`func (o *InlineResponse20043) SetCounts(v InlineResponse20043Counts)`
+`func (o *InlineResponse20043) SetResults(v InlineResponse20043Results)`
 
-SetCounts sets Counts field to given value.
+SetResults sets Results field to given value.
 
-### HasCounts
+### HasResults
 
-`func (o *InlineResponse20043) HasCounts() bool`
+`func (o *InlineResponse20043) HasResults() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasResults returns a boolean if a field has been set.
 
 ### GetErrors
 

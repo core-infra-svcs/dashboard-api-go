@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**UtilizationTotal** | Pointer to **float32** | Total channel utilization | [optional] 
-**Utilization80211** | Pointer to **float32** | Average wifi utilization | [optional] 
-**UtilizationNon80211** | Pointer to **float32** | Average signal interference | [optional] 
+**NetworkId** | Pointer to **string** | The network ID | [optional] 
+**DefaultPolicy** | Pointer to **string** | Indicates whether or not clients are allowed to       connect to rogue SSIDs. (blocked by default) | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse200226WithDefaults instantiates a new InlineResponse200226 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetNetworkId
 
-`func (o *InlineResponse200226) GetStartTs() time.Time`
+`func (o *InlineResponse200226) GetNetworkId() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200226) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200226) GetNetworkIdOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetNetworkId
 
-`func (o *InlineResponse200226) SetStartTs(v time.Time)`
+`func (o *InlineResponse200226) SetNetworkId(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasStartTs
+### HasNetworkId
 
-`func (o *InlineResponse200226) HasStartTs() bool`
+`func (o *InlineResponse200226) HasNetworkId() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetEndTs
+### GetDefaultPolicy
 
-`func (o *InlineResponse200226) GetEndTs() time.Time`
+`func (o *InlineResponse200226) GetDefaultPolicy() string`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetDefaultPolicyOk
 
-`func (o *InlineResponse200226) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200226) GetDefaultPolicyOk() (*string, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetDefaultPolicy
 
-`func (o *InlineResponse200226) SetEndTs(v time.Time)`
+`func (o *InlineResponse200226) SetDefaultPolicy(v string)`
 
-SetEndTs sets EndTs field to given value.
+SetDefaultPolicy sets DefaultPolicy field to given value.
 
-### HasEndTs
+### HasDefaultPolicy
 
-`func (o *InlineResponse200226) HasEndTs() bool`
+`func (o *InlineResponse200226) HasDefaultPolicy() bool`
 
-HasEndTs returns a boolean if a field has been set.
-
-### GetUtilizationTotal
-
-`func (o *InlineResponse200226) GetUtilizationTotal() float32`
-
-GetUtilizationTotal returns the UtilizationTotal field if non-nil, zero value otherwise.
-
-### GetUtilizationTotalOk
-
-`func (o *InlineResponse200226) GetUtilizationTotalOk() (*float32, bool)`
-
-GetUtilizationTotalOk returns a tuple with the UtilizationTotal field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUtilizationTotal
-
-`func (o *InlineResponse200226) SetUtilizationTotal(v float32)`
-
-SetUtilizationTotal sets UtilizationTotal field to given value.
-
-### HasUtilizationTotal
-
-`func (o *InlineResponse200226) HasUtilizationTotal() bool`
-
-HasUtilizationTotal returns a boolean if a field has been set.
-
-### GetUtilization80211
-
-`func (o *InlineResponse200226) GetUtilization80211() float32`
-
-GetUtilization80211 returns the Utilization80211 field if non-nil, zero value otherwise.
-
-### GetUtilization80211Ok
-
-`func (o *InlineResponse200226) GetUtilization80211Ok() (*float32, bool)`
-
-GetUtilization80211Ok returns a tuple with the Utilization80211 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUtilization80211
-
-`func (o *InlineResponse200226) SetUtilization80211(v float32)`
-
-SetUtilization80211 sets Utilization80211 field to given value.
-
-### HasUtilization80211
-
-`func (o *InlineResponse200226) HasUtilization80211() bool`
-
-HasUtilization80211 returns a boolean if a field has been set.
-
-### GetUtilizationNon80211
-
-`func (o *InlineResponse200226) GetUtilizationNon80211() float32`
-
-GetUtilizationNon80211 returns the UtilizationNon80211 field if non-nil, zero value otherwise.
-
-### GetUtilizationNon80211Ok
-
-`func (o *InlineResponse200226) GetUtilizationNon80211Ok() (*float32, bool)`
-
-GetUtilizationNon80211Ok returns a tuple with the UtilizationNon80211 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUtilizationNon80211
-
-`func (o *InlineResponse200226) SetUtilizationNon80211(v float32)`
-
-SetUtilizationNon80211 sets UtilizationNon80211 field to given value.
-
-### HasUtilizationNon80211
-
-`func (o *InlineResponse200226) HasUtilizationNon80211() bool`
-
-HasUtilizationNon80211 returns a boolean if a field has been set.
+HasDefaultPolicy returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

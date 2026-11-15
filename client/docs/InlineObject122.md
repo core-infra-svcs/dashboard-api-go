@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Products** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedEventsProducts1**](NetworksNetworkIdFirmwareUpgradesStagedEventsProducts1.md) |  | [optional] 
-**Stages** | [**[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages**](NetworksNetworkIdFirmwareUpgradesStagedEventsStages.md) | All firmware upgrade stages in the network with their start time. | 
+**UpgradeWindow** | Pointer to [**NetworksNetworkIdFirmwareUpgradesUpgradeWindow**](NetworksNetworkIdFirmwareUpgradesUpgradeWindow.md) |  | [optional] 
+**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
+**Products** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProducts**](NetworksNetworkIdFirmwareUpgradesProducts.md) |  | [optional] 
+**FeatureLossAcknowledgements** | Pointer to [**[]NetworksNetworkIdFirmwareUpgradesFeatureLossAcknowledgements**](NetworksNetworkIdFirmwareUpgradesFeatureLossAcknowledgements.md) | Acknowledges the target version has removed certain features that the network is currently using. | [optional] 
 
 ## Methods
 
 ### NewInlineObject122
 
-`func NewInlineObject122(stages []NetworksNetworkIdFirmwareUpgradesStagedEventsStages, ) *InlineObject122`
+`func NewInlineObject122() *InlineObject122`
 
 NewInlineObject122 instantiates a new InlineObject122 object
 This constructor will assign default values to properties that have it defined,
@@ -26,22 +28,72 @@ NewInlineObject122WithDefaults instantiates a new InlineObject122 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
+### GetUpgradeWindow
+
+`func (o *InlineObject122) GetUpgradeWindow() NetworksNetworkIdFirmwareUpgradesUpgradeWindow`
+
+GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
+
+### GetUpgradeWindowOk
+
+`func (o *InlineObject122) GetUpgradeWindowOk() (*NetworksNetworkIdFirmwareUpgradesUpgradeWindow, bool)`
+
+GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpgradeWindow
+
+`func (o *InlineObject122) SetUpgradeWindow(v NetworksNetworkIdFirmwareUpgradesUpgradeWindow)`
+
+SetUpgradeWindow sets UpgradeWindow field to given value.
+
+### HasUpgradeWindow
+
+`func (o *InlineObject122) HasUpgradeWindow() bool`
+
+HasUpgradeWindow returns a boolean if a field has been set.
+
+### GetTimezone
+
+`func (o *InlineObject122) GetTimezone() string`
+
+GetTimezone returns the Timezone field if non-nil, zero value otherwise.
+
+### GetTimezoneOk
+
+`func (o *InlineObject122) GetTimezoneOk() (*string, bool)`
+
+GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTimezone
+
+`func (o *InlineObject122) SetTimezone(v string)`
+
+SetTimezone sets Timezone field to given value.
+
+### HasTimezone
+
+`func (o *InlineObject122) HasTimezone() bool`
+
+HasTimezone returns a boolean if a field has been set.
+
 ### GetProducts
 
-`func (o *InlineObject122) GetProducts() NetworksNetworkIdFirmwareUpgradesStagedEventsProducts1`
+`func (o *InlineObject122) GetProducts() NetworksNetworkIdFirmwareUpgradesProducts`
 
 GetProducts returns the Products field if non-nil, zero value otherwise.
 
 ### GetProductsOk
 
-`func (o *InlineObject122) GetProductsOk() (*NetworksNetworkIdFirmwareUpgradesStagedEventsProducts1, bool)`
+`func (o *InlineObject122) GetProductsOk() (*NetworksNetworkIdFirmwareUpgradesProducts, bool)`
 
 GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProducts
 
-`func (o *InlineObject122) SetProducts(v NetworksNetworkIdFirmwareUpgradesStagedEventsProducts1)`
+`func (o *InlineObject122) SetProducts(v NetworksNetworkIdFirmwareUpgradesProducts)`
 
 SetProducts sets Products field to given value.
 
@@ -51,25 +103,30 @@ SetProducts sets Products field to given value.
 
 HasProducts returns a boolean if a field has been set.
 
-### GetStages
+### GetFeatureLossAcknowledgements
 
-`func (o *InlineObject122) GetStages() []NetworksNetworkIdFirmwareUpgradesStagedEventsStages`
+`func (o *InlineObject122) GetFeatureLossAcknowledgements() []NetworksNetworkIdFirmwareUpgradesFeatureLossAcknowledgements`
 
-GetStages returns the Stages field if non-nil, zero value otherwise.
+GetFeatureLossAcknowledgements returns the FeatureLossAcknowledgements field if non-nil, zero value otherwise.
 
-### GetStagesOk
+### GetFeatureLossAcknowledgementsOk
 
-`func (o *InlineObject122) GetStagesOk() (*[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages, bool)`
+`func (o *InlineObject122) GetFeatureLossAcknowledgementsOk() (*[]NetworksNetworkIdFirmwareUpgradesFeatureLossAcknowledgements, bool)`
 
-GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
+GetFeatureLossAcknowledgementsOk returns a tuple with the FeatureLossAcknowledgements field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStages
+### SetFeatureLossAcknowledgements
 
-`func (o *InlineObject122) SetStages(v []NetworksNetworkIdFirmwareUpgradesStagedEventsStages)`
+`func (o *InlineObject122) SetFeatureLossAcknowledgements(v []NetworksNetworkIdFirmwareUpgradesFeatureLossAcknowledgements)`
 
-SetStages sets Stages field to given value.
+SetFeatureLossAcknowledgements sets FeatureLossAcknowledgements field to given value.
 
+### HasFeatureLossAcknowledgements
+
+`func (o *InlineObject122) HasFeatureLossAcknowledgements() bool`
+
+HasFeatureLossAcknowledgements returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

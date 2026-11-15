@@ -4,14 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse200267Counts**](InlineResponse200267Counts.md) |  | [optional] 
-**Limits** | Pointer to [**InlineResponse200267Limits**](InlineResponse200267Limits.md) |  | [optional] 
+**Id** | Pointer to **string** | ID of the action batch. Can be used to check the status of the action batch at /organizations/{organizationId}/actionBatches/{actionBatchId} | [optional] 
+**OrganizationId** | Pointer to **string** | ID of the organization this action batch belongs to | [optional] 
+**Confirmed** | Pointer to **bool** | Flag describing whether the action should be previewed before executing or not | [optional] 
+**Synchronous** | Pointer to **bool** | Flag describing whether actions should run synchronously or asynchronously | [optional] 
+**Status** | Pointer to [**OrganizationsOrganizationIdActionBatchesStatus**](OrganizationsOrganizationIdActionBatchesStatus.md) |  | [optional] 
+**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions**](OrganizationsOrganizationIdActionBatchesActions.md) | A set of changes made as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
 
 ## Methods
 
 ### NewInlineResponse200267
 
-`func NewInlineResponse200267() *InlineResponse200267`
+`func NewInlineResponse200267(actions []OrganizationsOrganizationIdActionBatchesActions, ) *InlineResponse200267`
 
 NewInlineResponse200267 instantiates a new InlineResponse200267 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +30,150 @@ NewInlineResponse200267WithDefaults instantiates a new InlineResponse200267 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetId
 
-`func (o *InlineResponse200267) GetCounts() InlineResponse200267Counts`
+`func (o *InlineResponse200267) GetId() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetIdOk
 
-`func (o *InlineResponse200267) GetCountsOk() (*InlineResponse200267Counts, bool)`
+`func (o *InlineResponse200267) GetIdOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetId
 
-`func (o *InlineResponse200267) SetCounts(v InlineResponse200267Counts)`
+`func (o *InlineResponse200267) SetId(v string)`
 
-SetCounts sets Counts field to given value.
+SetId sets Id field to given value.
 
-### HasCounts
+### HasId
 
-`func (o *InlineResponse200267) HasCounts() bool`
+`func (o *InlineResponse200267) HasId() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetLimits
+### GetOrganizationId
 
-`func (o *InlineResponse200267) GetLimits() InlineResponse200267Limits`
+`func (o *InlineResponse200267) GetOrganizationId() string`
 
-GetLimits returns the Limits field if non-nil, zero value otherwise.
+GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
 
-### GetLimitsOk
+### GetOrganizationIdOk
 
-`func (o *InlineResponse200267) GetLimitsOk() (*InlineResponse200267Limits, bool)`
+`func (o *InlineResponse200267) GetOrganizationIdOk() (*string, bool)`
 
-GetLimitsOk returns a tuple with the Limits field if it's non-nil, zero value otherwise
+GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLimits
+### SetOrganizationId
 
-`func (o *InlineResponse200267) SetLimits(v InlineResponse200267Limits)`
+`func (o *InlineResponse200267) SetOrganizationId(v string)`
 
-SetLimits sets Limits field to given value.
+SetOrganizationId sets OrganizationId field to given value.
 
-### HasLimits
+### HasOrganizationId
 
-`func (o *InlineResponse200267) HasLimits() bool`
+`func (o *InlineResponse200267) HasOrganizationId() bool`
 
-HasLimits returns a boolean if a field has been set.
+HasOrganizationId returns a boolean if a field has been set.
+
+### GetConfirmed
+
+`func (o *InlineResponse200267) GetConfirmed() bool`
+
+GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+
+### GetConfirmedOk
+
+`func (o *InlineResponse200267) GetConfirmedOk() (*bool, bool)`
+
+GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetConfirmed
+
+`func (o *InlineResponse200267) SetConfirmed(v bool)`
+
+SetConfirmed sets Confirmed field to given value.
+
+### HasConfirmed
+
+`func (o *InlineResponse200267) HasConfirmed() bool`
+
+HasConfirmed returns a boolean if a field has been set.
+
+### GetSynchronous
+
+`func (o *InlineResponse200267) GetSynchronous() bool`
+
+GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
+
+### GetSynchronousOk
+
+`func (o *InlineResponse200267) GetSynchronousOk() (*bool, bool)`
+
+GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSynchronous
+
+`func (o *InlineResponse200267) SetSynchronous(v bool)`
+
+SetSynchronous sets Synchronous field to given value.
+
+### HasSynchronous
+
+`func (o *InlineResponse200267) HasSynchronous() bool`
+
+HasSynchronous returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *InlineResponse200267) GetStatus() OrganizationsOrganizationIdActionBatchesStatus`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineResponse200267) GetStatusOk() (*OrganizationsOrganizationIdActionBatchesStatus, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineResponse200267) SetStatus(v OrganizationsOrganizationIdActionBatchesStatus)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *InlineResponse200267) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
+
+### GetActions
+
+`func (o *InlineResponse200267) GetActions() []OrganizationsOrganizationIdActionBatchesActions`
+
+GetActions returns the Actions field if non-nil, zero value otherwise.
+
+### GetActionsOk
+
+`func (o *InlineResponse200267) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions, bool)`
+
+GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetActions
+
+`func (o *InlineResponse200267) SetActions(v []OrganizationsOrganizationIdActionBatchesActions)`
+
+SetActions sets Actions field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

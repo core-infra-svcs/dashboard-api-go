@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Status** | Pointer to **string** | The \&quot;status\&quot; to update the Certificate Authority to. Only valid option is \&quot;trusted\&quot;. | [optional] 
-**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority to update. | [optional] 
+**Name** | Pointer to **string** | The name of the Limited Access Role | [optional] 
+**Scope** | Pointer to **string** | The scope of the Limited Access Role | [optional] 
+**Tags** | Pointer to **[]string** | The tags of the Limited Access Role | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineObject372WithDefaults instantiates a new InlineObject372 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStatus
+### GetName
 
-`func (o *InlineObject372) GetStatus() string`
+`func (o *InlineObject372) GetName() string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetNameOk
 
-`func (o *InlineObject372) GetStatusOk() (*string, bool)`
+`func (o *InlineObject372) GetNameOk() (*string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetName
 
-`func (o *InlineObject372) SetStatus(v string)`
+`func (o *InlineObject372) SetName(v string)`
 
-SetStatus sets Status field to given value.
+SetName sets Name field to given value.
 
-### HasStatus
+### HasName
 
-`func (o *InlineObject372) HasStatus() bool`
+`func (o *InlineObject372) HasName() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetCertificateAuthorityId
+### GetScope
 
-`func (o *InlineObject372) GetCertificateAuthorityId() string`
+`func (o *InlineObject372) GetScope() string`
 
-GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-### GetCertificateAuthorityIdOk
+### GetScopeOk
 
-`func (o *InlineObject372) GetCertificateAuthorityIdOk() (*string, bool)`
+`func (o *InlineObject372) GetScopeOk() (*string, bool)`
 
-GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCertificateAuthorityId
+### SetScope
 
-`func (o *InlineObject372) SetCertificateAuthorityId(v string)`
+`func (o *InlineObject372) SetScope(v string)`
 
-SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
+SetScope sets Scope field to given value.
 
-### HasCertificateAuthorityId
+### HasScope
 
-`func (o *InlineObject372) HasCertificateAuthorityId() bool`
+`func (o *InlineObject372) HasScope() bool`
 
-HasCertificateAuthorityId returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineObject372) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineObject372) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineObject372) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineObject372) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

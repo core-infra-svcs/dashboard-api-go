@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**JobId** | Pointer to **string** | Id of the port status request. Used to check the status of the request. | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your port status request. | [optional] 
-**Request** | Pointer to [**InlineResponse2019Request**](InlineResponse2019Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the port status request. | [optional] 
-**Results** | Pointer to [**[]InlineResponse20040Results**](InlineResponse20040Results.md) | Port status results | [optional] 
-**Errors** | Pointer to **[]string** | Any errors encountered while retrieving port status | [optional] 
+**CyclePortId** | Pointer to **string** | ID of the cycle port request | [optional] 
+**Url** | Pointer to **string** | GET this URL to check the status of your cycle port request. | [optional] 
+**Request** | Pointer to [**InlineResponse2018Request**](InlineResponse2018Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the cycle port request | [optional] 
+**Error** | Pointer to **string** | An error message for a failed cycle port execution, if present | [optional] 
 
 ## Methods
 
@@ -30,30 +29,30 @@ NewInlineResponse20040WithDefaults instantiates a new InlineResponse20040 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetJobId
+### GetCyclePortId
 
-`func (o *InlineResponse20040) GetJobId() string`
+`func (o *InlineResponse20040) GetCyclePortId() string`
 
-GetJobId returns the JobId field if non-nil, zero value otherwise.
+GetCyclePortId returns the CyclePortId field if non-nil, zero value otherwise.
 
-### GetJobIdOk
+### GetCyclePortIdOk
 
-`func (o *InlineResponse20040) GetJobIdOk() (*string, bool)`
+`func (o *InlineResponse20040) GetCyclePortIdOk() (*string, bool)`
 
-GetJobIdOk returns a tuple with the JobId field if it's non-nil, zero value otherwise
+GetCyclePortIdOk returns a tuple with the CyclePortId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetJobId
+### SetCyclePortId
 
-`func (o *InlineResponse20040) SetJobId(v string)`
+`func (o *InlineResponse20040) SetCyclePortId(v string)`
 
-SetJobId sets JobId field to given value.
+SetCyclePortId sets CyclePortId field to given value.
 
-### HasJobId
+### HasCyclePortId
 
-`func (o *InlineResponse20040) HasJobId() bool`
+`func (o *InlineResponse20040) HasCyclePortId() bool`
 
-HasJobId returns a boolean if a field has been set.
+HasCyclePortId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -82,20 +81,20 @@ HasUrl returns a boolean if a field has been set.
 
 ### GetRequest
 
-`func (o *InlineResponse20040) GetRequest() InlineResponse2019Request`
+`func (o *InlineResponse20040) GetRequest() InlineResponse2018Request`
 
 GetRequest returns the Request field if non-nil, zero value otherwise.
 
 ### GetRequestOk
 
-`func (o *InlineResponse20040) GetRequestOk() (*InlineResponse2019Request, bool)`
+`func (o *InlineResponse20040) GetRequestOk() (*InlineResponse2018Request, bool)`
 
 GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRequest
 
-`func (o *InlineResponse20040) SetRequest(v InlineResponse2019Request)`
+`func (o *InlineResponse20040) SetRequest(v InlineResponse2018Request)`
 
 SetRequest sets Request field to given value.
 
@@ -130,55 +129,30 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetResults
+### GetError
 
-`func (o *InlineResponse20040) GetResults() []InlineResponse20040Results`
+`func (o *InlineResponse20040) GetError() string`
 
-GetResults returns the Results field if non-nil, zero value otherwise.
+GetError returns the Error field if non-nil, zero value otherwise.
 
-### GetResultsOk
+### GetErrorOk
 
-`func (o *InlineResponse20040) GetResultsOk() (*[]InlineResponse20040Results, bool)`
+`func (o *InlineResponse20040) GetErrorOk() (*string, bool)`
 
-GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
+GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResults
+### SetError
 
-`func (o *InlineResponse20040) SetResults(v []InlineResponse20040Results)`
+`func (o *InlineResponse20040) SetError(v string)`
 
-SetResults sets Results field to given value.
+SetError sets Error field to given value.
 
-### HasResults
+### HasError
 
-`func (o *InlineResponse20040) HasResults() bool`
+`func (o *InlineResponse20040) HasError() bool`
 
-HasResults returns a boolean if a field has been set.
-
-### GetErrors
-
-`func (o *InlineResponse20040) GetErrors() []string`
-
-GetErrors returns the Errors field if non-nil, zero value otherwise.
-
-### GetErrorsOk
-
-`func (o *InlineResponse20040) GetErrorsOk() (*[]string, bool)`
-
-GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetErrors
-
-`func (o *InlineResponse20040) SetErrors(v []string)`
-
-SetErrors sets Errors field to given value.
-
-### HasErrors
-
-`func (o *InlineResponse20040) HasErrors() bool`
-
-HasErrors returns a boolean if a field has been set.
+HasError returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PolicyId** | Pointer to **NullableString** | Identifier for the policy (present for default base policies). | [optional] 
-**Name** | Pointer to **string** | Display name of the policy. | [optional] 
-**Description** | Pointer to **NullableString** | Details about the policy. | [optional] 
-**BasePolicy** | Pointer to [**NullableInlineResponse200293BasePolicy**](InlineResponse200293BasePolicy.md) |  | [optional] 
-**IsBasePolicy** | Pointer to **bool** | Indicates whether the policy is one of the default base policies. | [optional] 
+**Network** | Pointer to [**InlineResponse200293Network**](InlineResponse200293Network.md) |  | [optional] 
+**Serial** | Pointer to **string** | Unique serial number for the device | [optional] 
+**Interfaces** | Pointer to [**[]InlineResponse200293Interfaces**](InlineResponse200293Interfaces.md) | The interfaces associated with the given device | [optional] 
 
 ## Methods
 
@@ -29,160 +27,80 @@ NewInlineResponse200293ItemsWithDefaults instantiates a new InlineResponse200293
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPolicyId
+### GetNetwork
 
-`func (o *InlineResponse200293Items) GetPolicyId() string`
+`func (o *InlineResponse200293Items) GetNetwork() InlineResponse200293Network`
 
-GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetPolicyIdOk
+### GetNetworkOk
 
-`func (o *InlineResponse200293Items) GetPolicyIdOk() (*string, bool)`
+`func (o *InlineResponse200293Items) GetNetworkOk() (*InlineResponse200293Network, bool)`
 
-GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicyId
+### SetNetwork
 
-`func (o *InlineResponse200293Items) SetPolicyId(v string)`
+`func (o *InlineResponse200293Items) SetNetwork(v InlineResponse200293Network)`
 
-SetPolicyId sets PolicyId field to given value.
+SetNetwork sets Network field to given value.
 
-### HasPolicyId
+### HasNetwork
 
-`func (o *InlineResponse200293Items) HasPolicyId() bool`
+`func (o *InlineResponse200293Items) HasNetwork() bool`
 
-HasPolicyId returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### SetPolicyIdNil
+### GetSerial
 
-`func (o *InlineResponse200293Items) SetPolicyIdNil(b bool)`
+`func (o *InlineResponse200293Items) GetSerial() string`
 
- SetPolicyIdNil sets the value for PolicyId to be an explicit nil
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### UnsetPolicyId
-`func (o *InlineResponse200293Items) UnsetPolicyId()`
+### GetSerialOk
 
-UnsetPolicyId ensures that no value is present for PolicyId, not even an explicit nil
-### GetName
+`func (o *InlineResponse200293Items) GetSerialOk() (*string, bool)`
 
-`func (o *InlineResponse200293Items) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200293Items) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSerial
 
-`func (o *InlineResponse200293Items) SetName(v string)`
+`func (o *InlineResponse200293Items) SetSerial(v string)`
 
-SetName sets Name field to given value.
+SetSerial sets Serial field to given value.
 
-### HasName
+### HasSerial
 
-`func (o *InlineResponse200293Items) HasName() bool`
+`func (o *InlineResponse200293Items) HasSerial() bool`
 
-HasName returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetDescription
+### GetInterfaces
 
-`func (o *InlineResponse200293Items) GetDescription() string`
+`func (o *InlineResponse200293Items) GetInterfaces() []InlineResponse200293Interfaces`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetInterfacesOk
 
-`func (o *InlineResponse200293Items) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse200293Items) GetInterfacesOk() (*[]InlineResponse200293Interfaces, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetInterfaces
 
-`func (o *InlineResponse200293Items) SetDescription(v string)`
+`func (o *InlineResponse200293Items) SetInterfaces(v []InlineResponse200293Interfaces)`
 
-SetDescription sets Description field to given value.
+SetInterfaces sets Interfaces field to given value.
 
-### HasDescription
+### HasInterfaces
 
-`func (o *InlineResponse200293Items) HasDescription() bool`
+`func (o *InlineResponse200293Items) HasInterfaces() bool`
 
-HasDescription returns a boolean if a field has been set.
-
-### SetDescriptionNil
-
-`func (o *InlineResponse200293Items) SetDescriptionNil(b bool)`
-
- SetDescriptionNil sets the value for Description to be an explicit nil
-
-### UnsetDescription
-`func (o *InlineResponse200293Items) UnsetDescription()`
-
-UnsetDescription ensures that no value is present for Description, not even an explicit nil
-### GetBasePolicy
-
-`func (o *InlineResponse200293Items) GetBasePolicy() InlineResponse200293BasePolicy`
-
-GetBasePolicy returns the BasePolicy field if non-nil, zero value otherwise.
-
-### GetBasePolicyOk
-
-`func (o *InlineResponse200293Items) GetBasePolicyOk() (*InlineResponse200293BasePolicy, bool)`
-
-GetBasePolicyOk returns a tuple with the BasePolicy field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBasePolicy
-
-`func (o *InlineResponse200293Items) SetBasePolicy(v InlineResponse200293BasePolicy)`
-
-SetBasePolicy sets BasePolicy field to given value.
-
-### HasBasePolicy
-
-`func (o *InlineResponse200293Items) HasBasePolicy() bool`
-
-HasBasePolicy returns a boolean if a field has been set.
-
-### SetBasePolicyNil
-
-`func (o *InlineResponse200293Items) SetBasePolicyNil(b bool)`
-
- SetBasePolicyNil sets the value for BasePolicy to be an explicit nil
-
-### UnsetBasePolicy
-`func (o *InlineResponse200293Items) UnsetBasePolicy()`
-
-UnsetBasePolicy ensures that no value is present for BasePolicy, not even an explicit nil
-### GetIsBasePolicy
-
-`func (o *InlineResponse200293Items) GetIsBasePolicy() bool`
-
-GetIsBasePolicy returns the IsBasePolicy field if non-nil, zero value otherwise.
-
-### GetIsBasePolicyOk
-
-`func (o *InlineResponse200293Items) GetIsBasePolicyOk() (*bool, bool)`
-
-GetIsBasePolicyOk returns a tuple with the IsBasePolicy field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsBasePolicy
-
-`func (o *InlineResponse200293Items) SetIsBasePolicy(v bool)`
-
-SetIsBasePolicy sets IsBasePolicy field to given value.
-
-### HasIsBasePolicy
-
-`func (o *InlineResponse200293Items) HasIsBasePolicy() bool`
-
-HasIsBasePolicy returns a boolean if a field has been set.
+HasInterfaces returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

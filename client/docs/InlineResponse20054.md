@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PortId** | Pointer to **string** | The string identifier of this port on the switch. This is commonly just the port number but may contain additional identifying information such as the slot and module-type if the port is located on a port module. | [optional] 
-**Packets** | Pointer to [**[]DevicesSerialSwitchPortsStatusesPacketsPackets**](DevicesSerialSwitchPortsStatusesPacketsPackets.md) | The packet counts on the switch. Note that this data is collected periodically from the switch. Any data from the past five minutes may be incomplete. | [optional] 
+**Ports** | Pointer to **[]string** | List of switch ports | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse20054WithDefaults instantiates a new InlineResponse20054 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPortId
+### GetPorts
 
-`func (o *InlineResponse20054) GetPortId() string`
+`func (o *InlineResponse20054) GetPorts() []string`
 
-GetPortId returns the PortId field if non-nil, zero value otherwise.
+GetPorts returns the Ports field if non-nil, zero value otherwise.
 
-### GetPortIdOk
+### GetPortsOk
 
-`func (o *InlineResponse20054) GetPortIdOk() (*string, bool)`
+`func (o *InlineResponse20054) GetPortsOk() (*[]string, bool)`
 
-GetPortIdOk returns a tuple with the PortId field if it's non-nil, zero value otherwise
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPortId
+### SetPorts
 
-`func (o *InlineResponse20054) SetPortId(v string)`
+`func (o *InlineResponse20054) SetPorts(v []string)`
 
-SetPortId sets PortId field to given value.
+SetPorts sets Ports field to given value.
 
-### HasPortId
+### HasPorts
 
-`func (o *InlineResponse20054) HasPortId() bool`
+`func (o *InlineResponse20054) HasPorts() bool`
 
-HasPortId returns a boolean if a field has been set.
-
-### GetPackets
-
-`func (o *InlineResponse20054) GetPackets() []DevicesSerialSwitchPortsStatusesPacketsPackets`
-
-GetPackets returns the Packets field if non-nil, zero value otherwise.
-
-### GetPacketsOk
-
-`func (o *InlineResponse20054) GetPacketsOk() (*[]DevicesSerialSwitchPortsStatusesPacketsPackets, bool)`
-
-GetPacketsOk returns a tuple with the Packets field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPackets
-
-`func (o *InlineResponse20054) SetPackets(v []DevicesSerialSwitchPortsStatusesPacketsPackets)`
-
-SetPackets sets Packets field to given value.
-
-### HasPackets
-
-`func (o *InlineResponse20054) HasPackets() bool`
-
-HasPackets returns a boolean if a field has been set.
+HasPorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

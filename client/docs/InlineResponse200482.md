@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertTypeId** | Pointer to **string** | The type ID of Meraki alert | [optional] 
-**AlertType** | Pointer to **string** | The type of Meraki alert | [optional] 
-**Example** | Pointer to [**OrganizationsOrganizationIdWebhooksAlertTypesExample**](OrganizationsOrganizationIdWebhooksAlertTypesExample.md) |  | [optional] 
+**Model** | Pointer to **string** | The device model | [optional] 
+**Count** | Pointer to **int32** | Total number of devices per model | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200482WithDefaults instantiates a new InlineResponse200482 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlertTypeId
+### GetModel
 
-`func (o *InlineResponse200482) GetAlertTypeId() string`
+`func (o *InlineResponse200482) GetModel() string`
 
-GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetAlertTypeIdOk
+### GetModelOk
 
-`func (o *InlineResponse200482) GetAlertTypeIdOk() (*string, bool)`
+`func (o *InlineResponse200482) GetModelOk() (*string, bool)`
 
-GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertTypeId
+### SetModel
 
-`func (o *InlineResponse200482) SetAlertTypeId(v string)`
+`func (o *InlineResponse200482) SetModel(v string)`
 
-SetAlertTypeId sets AlertTypeId field to given value.
+SetModel sets Model field to given value.
 
-### HasAlertTypeId
+### HasModel
 
-`func (o *InlineResponse200482) HasAlertTypeId() bool`
+`func (o *InlineResponse200482) HasModel() bool`
 
-HasAlertTypeId returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
-### GetAlertType
+### GetCount
 
-`func (o *InlineResponse200482) GetAlertType() string`
+`func (o *InlineResponse200482) GetCount() int32`
 
-GetAlertType returns the AlertType field if non-nil, zero value otherwise.
+GetCount returns the Count field if non-nil, zero value otherwise.
 
-### GetAlertTypeOk
+### GetCountOk
 
-`func (o *InlineResponse200482) GetAlertTypeOk() (*string, bool)`
+`func (o *InlineResponse200482) GetCountOk() (*int32, bool)`
 
-GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
+GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertType
+### SetCount
 
-`func (o *InlineResponse200482) SetAlertType(v string)`
+`func (o *InlineResponse200482) SetCount(v int32)`
 
-SetAlertType sets AlertType field to given value.
+SetCount sets Count field to given value.
 
-### HasAlertType
+### HasCount
 
-`func (o *InlineResponse200482) HasAlertType() bool`
+`func (o *InlineResponse200482) HasCount() bool`
 
-HasAlertType returns a boolean if a field has been set.
+HasCount returns a boolean if a field has been set.
 
-### GetExample
+### GetUsage
 
-`func (o *InlineResponse200482) GetExample() OrganizationsOrganizationIdWebhooksAlertTypesExample`
+`func (o *InlineResponse200482) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage`
 
-GetExample returns the Example field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetExampleOk
+### GetUsageOk
 
-`func (o *InlineResponse200482) GetExampleOk() (*OrganizationsOrganizationIdWebhooksAlertTypesExample, bool)`
+`func (o *InlineResponse200482) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage, bool)`
 
-GetExampleOk returns a tuple with the Example field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetExample
+### SetUsage
 
-`func (o *InlineResponse200482) SetExample(v OrganizationsOrganizationIdWebhooksAlertTypesExample)`
+`func (o *InlineResponse200482) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage)`
 
-SetExample sets Example field to given value.
+SetUsage sets Usage field to given value.
 
-### HasExample
+### HasUsage
 
-`func (o *InlineResponse200482) HasExample() bool`
+`func (o *InlineResponse200482) HasUsage() bool`
 
-HasExample returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

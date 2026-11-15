@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**JobId** | Pointer to **string** | Id of the power usage request. Used to check the status of the request. | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your power usage request. | [optional] 
-**Request** | Pointer to [**InlineResponse20110Request**](InlineResponse20110Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the power usage request. | [optional] 
-**Results** | Pointer to [**InlineResponse20041Results**](InlineResponse20041Results.md) |  | [optional] 
-**Errors** | Pointer to **[]string** | Any errors encountered while retrieving power usage details | [optional] 
+**JobId** | Pointer to **string** | Id of the port status request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your port status request. | [optional] 
+**Request** | Pointer to [**InlineResponse2019Request**](InlineResponse2019Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the port status request. | [optional] 
+**Results** | Pointer to [**[]InlineResponse20041Results**](InlineResponse20041Results.md) | Port status results | [optional] 
+**Errors** | Pointer to **[]string** | Any errors encountered while retrieving port status | [optional] 
 
 ## Methods
 
@@ -82,20 +82,20 @@ HasUrl returns a boolean if a field has been set.
 
 ### GetRequest
 
-`func (o *InlineResponse20041) GetRequest() InlineResponse20110Request`
+`func (o *InlineResponse20041) GetRequest() InlineResponse2019Request`
 
 GetRequest returns the Request field if non-nil, zero value otherwise.
 
 ### GetRequestOk
 
-`func (o *InlineResponse20041) GetRequestOk() (*InlineResponse20110Request, bool)`
+`func (o *InlineResponse20041) GetRequestOk() (*InlineResponse2019Request, bool)`
 
 GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRequest
 
-`func (o *InlineResponse20041) SetRequest(v InlineResponse20110Request)`
+`func (o *InlineResponse20041) SetRequest(v InlineResponse2019Request)`
 
 SetRequest sets Request field to given value.
 
@@ -132,20 +132,20 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetResults
 
-`func (o *InlineResponse20041) GetResults() InlineResponse20041Results`
+`func (o *InlineResponse20041) GetResults() []InlineResponse20041Results`
 
 GetResults returns the Results field if non-nil, zero value otherwise.
 
 ### GetResultsOk
 
-`func (o *InlineResponse20041) GetResultsOk() (*InlineResponse20041Results, bool)`
+`func (o *InlineResponse20041) GetResultsOk() (*[]InlineResponse20041Results, bool)`
 
 GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetResults
 
-`func (o *InlineResponse20041) SetResults(v InlineResponse20041Results)`
+`func (o *InlineResponse20041) SetResults(v []InlineResponse20041Results)`
 
 SetResults sets Results field to given value.
 

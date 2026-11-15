@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200361Items**](InlineResponse200361Items.md) | Devices available to be assigned to a Cellular Data Management Profile. Maximum 1000 items per page. | [optional] 
+**Items** | Pointer to [**[]InlineResponse200361Items**](InlineResponse200361Items.md) | List of CRLs for the specified certificate authorities | [optional] 
 **Meta** | Pointer to [**InlineResponse200361Meta**](InlineResponse200361Meta.md) |  | [optional] 
 
 ## Methods

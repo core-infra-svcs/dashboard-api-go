@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Settings** | Pointer to **string** | How bandwidth limits are applied by your rule. Can be one of &#39;network default&#39;, &#39;ignore&#39; or &#39;custom&#39;. | [optional] 
-**BandwidthLimits** | Pointer to [**InlineResponse20098PerClientBandwidthLimitsBandwidthLimits**](InlineResponse20098PerClientBandwidthLimitsBandwidthLimits.md) |  | [optional] 
+**BandwidthLimits** | Pointer to [**InlineResponse200101PerClientBandwidthLimitsBandwidthLimits**](InlineResponse200101PerClientBandwidthLimitsBandwidthLimits.md) |  | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasSettings returns a boolean if a field has been set.
 
 ### GetBandwidthLimits
 
-`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingPerClientBandwidthLimits) GetBandwidthLimits() InlineResponse20098PerClientBandwidthLimitsBandwidthLimits`
+`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingPerClientBandwidthLimits) GetBandwidthLimits() InlineResponse200101PerClientBandwidthLimitsBandwidthLimits`
 
 GetBandwidthLimits returns the BandwidthLimits field if non-nil, zero value otherwise.
 
 ### GetBandwidthLimitsOk
 
-`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingPerClientBandwidthLimits) GetBandwidthLimitsOk() (*InlineResponse20098PerClientBandwidthLimitsBandwidthLimits, bool)`
+`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingPerClientBandwidthLimits) GetBandwidthLimitsOk() (*InlineResponse200101PerClientBandwidthLimitsBandwidthLimits, bool)`
 
 GetBandwidthLimitsOk returns a tuple with the BandwidthLimits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBandwidthLimits
 
-`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingPerClientBandwidthLimits) SetBandwidthLimits(v InlineResponse20098PerClientBandwidthLimitsBandwidthLimits)`
+`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingPerClientBandwidthLimits) SetBandwidthLimits(v InlineResponse200101PerClientBandwidthLimitsBandwidthLimits)`
 
 SetBandwidthLimits sets BandwidthLimits field to given value.
 

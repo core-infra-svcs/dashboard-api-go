@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the combined network | 
-**NetworkIds** | **[]string** | A list of the network IDs that will be combined. If an ID of a combined network is included in this list, the other networks in the list will be grouped into that network | 
-**EnrollmentString** | Pointer to **string** | A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. All networks that are part of this combined network will have their enrollment string appended by &#39;-network_type&#39;. If left empty, all exisitng enrollment strings will be deleted. | [optional] 
+**LicenseId** | **string** | The ID of the SM license to assign seats from | 
+**NetworkId** | **string** | The ID of the SM network to assign the seats to | 
+**SeatCount** | **int32** | The number of seats to assign to the SM network. Must be less than or equal to the total number of seats of the license | 
 
 ## Methods
 
 ### NewInlineObject328
 
-`func NewInlineObject328(name string, networkIds []string, ) *InlineObject328`
+`func NewInlineObject328(licenseId string, networkId string, seatCount int32, ) *InlineObject328`
 
 NewInlineObject328 instantiates a new InlineObject328 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +27,65 @@ NewInlineObject328WithDefaults instantiates a new InlineObject328 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetLicenseId
 
-`func (o *InlineObject328) GetName() string`
+`func (o *InlineObject328) GetLicenseId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetLicenseIdOk
 
-`func (o *InlineObject328) GetNameOk() (*string, bool)`
+`func (o *InlineObject328) GetLicenseIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetLicenseId
 
-`func (o *InlineObject328) SetName(v string)`
+`func (o *InlineObject328) SetLicenseId(v string)`
 
-SetName sets Name field to given value.
+SetLicenseId sets LicenseId field to given value.
 
 
-### GetNetworkIds
+### GetNetworkId
 
-`func (o *InlineObject328) GetNetworkIds() []string`
+`func (o *InlineObject328) GetNetworkId() string`
 
-GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetNetworkIdsOk
+### GetNetworkIdOk
 
-`func (o *InlineObject328) GetNetworkIdsOk() (*[]string, bool)`
+`func (o *InlineObject328) GetNetworkIdOk() (*string, bool)`
 
-GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkIds
+### SetNetworkId
 
-`func (o *InlineObject328) SetNetworkIds(v []string)`
+`func (o *InlineObject328) SetNetworkId(v string)`
 
-SetNetworkIds sets NetworkIds field to given value.
+SetNetworkId sets NetworkId field to given value.
 
 
-### GetEnrollmentString
+### GetSeatCount
 
-`func (o *InlineObject328) GetEnrollmentString() string`
+`func (o *InlineObject328) GetSeatCount() int32`
 
-GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
+GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
 
-### GetEnrollmentStringOk
+### GetSeatCountOk
 
-`func (o *InlineObject328) GetEnrollmentStringOk() (*string, bool)`
+`func (o *InlineObject328) GetSeatCountOk() (*int32, bool)`
 
-GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
+GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnrollmentString
+### SetSeatCount
 
-`func (o *InlineObject328) SetEnrollmentString(v string)`
+`func (o *InlineObject328) SetSeatCount(v int32)`
 
-SetEnrollmentString sets EnrollmentString field to given value.
+SetSeatCount sets SeatCount field to given value.
 
-### HasEnrollmentString
-
-`func (o *InlineObject328) HasEnrollmentString() bool`
-
-HasEnrollmentString returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

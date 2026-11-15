@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Wireless LAN controller cloud ID | [optional] 
-**Network** | Pointer to [**InlineResponse200525Network**](InlineResponse200525Network.md) |  | [optional] 
-**Counts** | Pointer to [**InlineResponse200538Counts**](InlineResponse200538Counts.md) |  | [optional] 
-**Redundancy** | Pointer to [**InlineResponse200538Redundancy**](InlineResponse200538Redundancy.md) |  | [optional] 
-**Firmware** | Pointer to [**InlineResponse200538Firmware**](InlineResponse200538Firmware.md) |  | [optional] 
+**Serial** | Pointer to **string** | Access points cloud ID | [optional] 
+**Controller** | Pointer to [**InlineResponse200538Controller**](InlineResponse200538Controller.md) |  | [optional] 
+**Network** | Pointer to [**InlineResponse200538Network**](InlineResponse200538Network.md) |  | [optional] 
 
 ## Methods
 
@@ -54,22 +52,47 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
+### GetController
+
+`func (o *InlineResponse200538Items) GetController() InlineResponse200538Controller`
+
+GetController returns the Controller field if non-nil, zero value otherwise.
+
+### GetControllerOk
+
+`func (o *InlineResponse200538Items) GetControllerOk() (*InlineResponse200538Controller, bool)`
+
+GetControllerOk returns a tuple with the Controller field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetController
+
+`func (o *InlineResponse200538Items) SetController(v InlineResponse200538Controller)`
+
+SetController sets Controller field to given value.
+
+### HasController
+
+`func (o *InlineResponse200538Items) HasController() bool`
+
+HasController returns a boolean if a field has been set.
+
 ### GetNetwork
 
-`func (o *InlineResponse200538Items) GetNetwork() InlineResponse200525Network`
+`func (o *InlineResponse200538Items) GetNetwork() InlineResponse200538Network`
 
 GetNetwork returns the Network field if non-nil, zero value otherwise.
 
 ### GetNetworkOk
 
-`func (o *InlineResponse200538Items) GetNetworkOk() (*InlineResponse200525Network, bool)`
+`func (o *InlineResponse200538Items) GetNetworkOk() (*InlineResponse200538Network, bool)`
 
 GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetwork
 
-`func (o *InlineResponse200538Items) SetNetwork(v InlineResponse200525Network)`
+`func (o *InlineResponse200538Items) SetNetwork(v InlineResponse200538Network)`
 
 SetNetwork sets Network field to given value.
 
@@ -78,81 +101,6 @@ SetNetwork sets Network field to given value.
 `func (o *InlineResponse200538Items) HasNetwork() bool`
 
 HasNetwork returns a boolean if a field has been set.
-
-### GetCounts
-
-`func (o *InlineResponse200538Items) GetCounts() InlineResponse200538Counts`
-
-GetCounts returns the Counts field if non-nil, zero value otherwise.
-
-### GetCountsOk
-
-`func (o *InlineResponse200538Items) GetCountsOk() (*InlineResponse200538Counts, bool)`
-
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCounts
-
-`func (o *InlineResponse200538Items) SetCounts(v InlineResponse200538Counts)`
-
-SetCounts sets Counts field to given value.
-
-### HasCounts
-
-`func (o *InlineResponse200538Items) HasCounts() bool`
-
-HasCounts returns a boolean if a field has been set.
-
-### GetRedundancy
-
-`func (o *InlineResponse200538Items) GetRedundancy() InlineResponse200538Redundancy`
-
-GetRedundancy returns the Redundancy field if non-nil, zero value otherwise.
-
-### GetRedundancyOk
-
-`func (o *InlineResponse200538Items) GetRedundancyOk() (*InlineResponse200538Redundancy, bool)`
-
-GetRedundancyOk returns a tuple with the Redundancy field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRedundancy
-
-`func (o *InlineResponse200538Items) SetRedundancy(v InlineResponse200538Redundancy)`
-
-SetRedundancy sets Redundancy field to given value.
-
-### HasRedundancy
-
-`func (o *InlineResponse200538Items) HasRedundancy() bool`
-
-HasRedundancy returns a boolean if a field has been set.
-
-### GetFirmware
-
-`func (o *InlineResponse200538Items) GetFirmware() InlineResponse200538Firmware`
-
-GetFirmware returns the Firmware field if non-nil, zero value otherwise.
-
-### GetFirmwareOk
-
-`func (o *InlineResponse200538Items) GetFirmwareOk() (*InlineResponse200538Firmware, bool)`
-
-GetFirmwareOk returns a tuple with the Firmware field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFirmware
-
-`func (o *InlineResponse200538Items) SetFirmware(v InlineResponse200538Firmware)`
-
-SetFirmware sets Firmware field to given value.
-
-### HasFirmware
-
-`func (o *InlineResponse200538Items) HasFirmware() bool`
-
-HasFirmware returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

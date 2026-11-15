@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200283Items**](InlineResponse200283Items.md) | List of local DNS profile assignment | [optional] 
+**Items** | Pointer to [**[]InlineResponse200283Items**](InlineResponse200283Items.md) | MX port profile assignments. Each item is one assignment and pagination cursors are based on the assignment primary key. Maximum: 100 assignments per page. | [optional] 
 **Meta** | Pointer to [**InlineResponse200283Meta**](InlineResponse200283Meta.md) |  | [optional] 
 
 ## Methods

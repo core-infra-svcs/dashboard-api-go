@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LedsBlinkId** | Pointer to **string** | ID of led blink job | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your leds blink request | [optional] 
-**Status** | Pointer to **string** | Status of the leds blink request | [optional] 
-**Request** | Pointer to [**InlineResponse2013Request**](InlineResponse2013Request.md) |  | [optional] 
-**Error** | Pointer to **string** | An error message for a failed Blink LEDs execution, if present | [optional] 
+**CableTestId** | Pointer to **string** | Id of the cable test request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your cable test request. | [optional] 
+**Request** | Pointer to [**InlineResponse2012Request**](InlineResponse2012Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the cable test request. | [optional] 
+**Results** | Pointer to [**[]InlineResponse20034Results**](InlineResponse20034Results.md) | Results of the cable test request, one for each requested port. | [optional] 
+**Error** | Pointer to **string** | An error message for a failed execution | [optional] 
 
 ## Methods
 
@@ -29,30 +30,30 @@ NewInlineResponse20034WithDefaults instantiates a new InlineResponse20034 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLedsBlinkId
+### GetCableTestId
 
-`func (o *InlineResponse20034) GetLedsBlinkId() string`
+`func (o *InlineResponse20034) GetCableTestId() string`
 
-GetLedsBlinkId returns the LedsBlinkId field if non-nil, zero value otherwise.
+GetCableTestId returns the CableTestId field if non-nil, zero value otherwise.
 
-### GetLedsBlinkIdOk
+### GetCableTestIdOk
 
-`func (o *InlineResponse20034) GetLedsBlinkIdOk() (*string, bool)`
+`func (o *InlineResponse20034) GetCableTestIdOk() (*string, bool)`
 
-GetLedsBlinkIdOk returns a tuple with the LedsBlinkId field if it's non-nil, zero value otherwise
+GetCableTestIdOk returns a tuple with the CableTestId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLedsBlinkId
+### SetCableTestId
 
-`func (o *InlineResponse20034) SetLedsBlinkId(v string)`
+`func (o *InlineResponse20034) SetCableTestId(v string)`
 
-SetLedsBlinkId sets LedsBlinkId field to given value.
+SetCableTestId sets CableTestId field to given value.
 
-### HasLedsBlinkId
+### HasCableTestId
 
-`func (o *InlineResponse20034) HasLedsBlinkId() bool`
+`func (o *InlineResponse20034) HasCableTestId() bool`
 
-HasLedsBlinkId returns a boolean if a field has been set.
+HasCableTestId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -79,6 +80,31 @@ SetUrl sets Url field to given value.
 
 HasUrl returns a boolean if a field has been set.
 
+### GetRequest
+
+`func (o *InlineResponse20034) GetRequest() InlineResponse2012Request`
+
+GetRequest returns the Request field if non-nil, zero value otherwise.
+
+### GetRequestOk
+
+`func (o *InlineResponse20034) GetRequestOk() (*InlineResponse2012Request, bool)`
+
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequest
+
+`func (o *InlineResponse20034) SetRequest(v InlineResponse2012Request)`
+
+SetRequest sets Request field to given value.
+
+### HasRequest
+
+`func (o *InlineResponse20034) HasRequest() bool`
+
+HasRequest returns a boolean if a field has been set.
+
 ### GetStatus
 
 `func (o *InlineResponse20034) GetStatus() string`
@@ -104,30 +130,30 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetRequest
+### GetResults
 
-`func (o *InlineResponse20034) GetRequest() InlineResponse2013Request`
+`func (o *InlineResponse20034) GetResults() []InlineResponse20034Results`
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+GetResults returns the Results field if non-nil, zero value otherwise.
 
-### GetRequestOk
+### GetResultsOk
 
-`func (o *InlineResponse20034) GetRequestOk() (*InlineResponse2013Request, bool)`
+`func (o *InlineResponse20034) GetResultsOk() (*[]InlineResponse20034Results, bool)`
 
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetResults
 
-`func (o *InlineResponse20034) SetRequest(v InlineResponse2013Request)`
+`func (o *InlineResponse20034) SetResults(v []InlineResponse20034Results)`
 
-SetRequest sets Request field to given value.
+SetResults sets Results field to given value.
 
-### HasRequest
+### HasResults
 
-`func (o *InlineResponse20034) HasRequest() bool`
+`func (o *InlineResponse20034) HasResults() bool`
 
-HasRequest returns a boolean if a field has been set.
+HasResults returns a boolean if a field has been set.
 
 ### GetError
 

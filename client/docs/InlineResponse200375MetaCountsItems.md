@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Total** | Pointer to **int32** | Total number of packet capture files | [optional] 
-**Remaining** | Pointer to **int32** | Remaining number of packet capture files | [optional] 
+**Total** | Pointer to **int32** | Total number of Cellular Data Management Profile device assignments available. | [optional] 
+**Remaining** | Pointer to **int32** | Remaining number of Cellular Data Management Profile device assignments available for pagination. | [optional] 
 
 ## Methods
 

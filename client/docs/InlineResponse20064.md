@@ -4,10 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The device serial | [optional] 
-**Network** | Pointer to [**InlineResponse20064Network**](InlineResponse20064Network.md) |  | [optional] 
-**RfProfile** | Pointer to [**InlineResponse20064RfProfile**](InlineResponse20064RfProfile.md) |  | [optional] 
-**Radios** | Pointer to [**[]InlineResponse20064Radios**](InlineResponse20064Radios.md) | Individual radios on the device | [optional] 
+**ApEslId** | Pointer to **int32** | An identifier for the device used by the ESL system | [optional] 
+**Serial** | Pointer to **string** | The serial number of the device | [optional] 
+**Channel** | Pointer to **string** | Desired ESL channel for the device. Only configurable for devices assigned the High frequency ESL or sepioo IIoT role. Use &#39;Auto&#39; (case insensitive) to use the recommended channel | [optional] 
+**Enabled** | Pointer to **bool** | Turn ESL features on and off for this device | [optional] 
+**NetworkId** | Pointer to **string** | The identifier for the device&#39;s network | [optional] 
+**Hostname** | Pointer to **string** | Hostname of the ESL management service | [optional] 
+**Provider** | Pointer to **string** | The service providing ESL functionality | [optional] 
 
 ## Methods
 
@@ -27,6 +30,31 @@ will change when the set of required properties is changed
 NewInlineResponse20064WithDefaults instantiates a new InlineResponse20064 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetApEslId
+
+`func (o *InlineResponse20064) GetApEslId() int32`
+
+GetApEslId returns the ApEslId field if non-nil, zero value otherwise.
+
+### GetApEslIdOk
+
+`func (o *InlineResponse20064) GetApEslIdOk() (*int32, bool)`
+
+GetApEslIdOk returns a tuple with the ApEslId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApEslId
+
+`func (o *InlineResponse20064) SetApEslId(v int32)`
+
+SetApEslId sets ApEslId field to given value.
+
+### HasApEslId
+
+`func (o *InlineResponse20064) HasApEslId() bool`
+
+HasApEslId returns a boolean if a field has been set.
 
 ### GetSerial
 
@@ -53,80 +81,130 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetNetwork
+### GetChannel
 
-`func (o *InlineResponse20064) GetNetwork() InlineResponse20064Network`
+`func (o *InlineResponse20064) GetChannel() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetChannel returns the Channel field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetChannelOk
 
-`func (o *InlineResponse20064) GetNetworkOk() (*InlineResponse20064Network, bool)`
+`func (o *InlineResponse20064) GetChannelOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetChannel
 
-`func (o *InlineResponse20064) SetNetwork(v InlineResponse20064Network)`
+`func (o *InlineResponse20064) SetChannel(v string)`
 
-SetNetwork sets Network field to given value.
+SetChannel sets Channel field to given value.
 
-### HasNetwork
+### HasChannel
 
-`func (o *InlineResponse20064) HasNetwork() bool`
+`func (o *InlineResponse20064) HasChannel() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasChannel returns a boolean if a field has been set.
 
-### GetRfProfile
+### GetEnabled
 
-`func (o *InlineResponse20064) GetRfProfile() InlineResponse20064RfProfile`
+`func (o *InlineResponse20064) GetEnabled() bool`
 
-GetRfProfile returns the RfProfile field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetRfProfileOk
+### GetEnabledOk
 
-`func (o *InlineResponse20064) GetRfProfileOk() (*InlineResponse20064RfProfile, bool)`
+`func (o *InlineResponse20064) GetEnabledOk() (*bool, bool)`
 
-GetRfProfileOk returns a tuple with the RfProfile field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRfProfile
+### SetEnabled
 
-`func (o *InlineResponse20064) SetRfProfile(v InlineResponse20064RfProfile)`
+`func (o *InlineResponse20064) SetEnabled(v bool)`
 
-SetRfProfile sets RfProfile field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasRfProfile
+### HasEnabled
 
-`func (o *InlineResponse20064) HasRfProfile() bool`
+`func (o *InlineResponse20064) HasEnabled() bool`
 
-HasRfProfile returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetRadios
+### GetNetworkId
 
-`func (o *InlineResponse20064) GetRadios() []InlineResponse20064Radios`
+`func (o *InlineResponse20064) GetNetworkId() string`
 
-GetRadios returns the Radios field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetRadiosOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse20064) GetRadiosOk() (*[]InlineResponse20064Radios, bool)`
+`func (o *InlineResponse20064) GetNetworkIdOk() (*string, bool)`
 
-GetRadiosOk returns a tuple with the Radios field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRadios
+### SetNetworkId
 
-`func (o *InlineResponse20064) SetRadios(v []InlineResponse20064Radios)`
+`func (o *InlineResponse20064) SetNetworkId(v string)`
 
-SetRadios sets Radios field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasRadios
+### HasNetworkId
 
-`func (o *InlineResponse20064) HasRadios() bool`
+`func (o *InlineResponse20064) HasNetworkId() bool`
 
-HasRadios returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
+
+### GetHostname
+
+`func (o *InlineResponse20064) GetHostname() string`
+
+GetHostname returns the Hostname field if non-nil, zero value otherwise.
+
+### GetHostnameOk
+
+`func (o *InlineResponse20064) GetHostnameOk() (*string, bool)`
+
+GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHostname
+
+`func (o *InlineResponse20064) SetHostname(v string)`
+
+SetHostname sets Hostname field to given value.
+
+### HasHostname
+
+`func (o *InlineResponse20064) HasHostname() bool`
+
+HasHostname returns a boolean if a field has been set.
+
+### GetProvider
+
+`func (o *InlineResponse20064) GetProvider() string`
+
+GetProvider returns the Provider field if non-nil, zero value otherwise.
+
+### GetProviderOk
+
+`func (o *InlineResponse20064) GetProviderOk() (*string, bool)`
+
+GetProviderOk returns a tuple with the Provider field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProvider
+
+`func (o *InlineResponse20064) SetProvider(v string)`
+
+SetProvider sets Provider field to given value.
+
+### HasProvider
+
+`func (o *InlineResponse20064) HasProvider() bool`
+
+HasProvider returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200372Items**](InlineResponse200372Items.md) | List of migrations for the specified devices | [optional] 
-**Meta** | Pointer to [**InlineResponse200283Meta**](InlineResponse200283Meta.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200372Items**](InlineResponse200372Items.md) | Devices available to be assigned to a Cellular Data Management Profile. Maximum 1000 items per page. | [optional] 
+**Meta** | Pointer to [**InlineResponse200372Meta**](InlineResponse200372Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasItems returns a boolean if a field has been set.
 
 ### GetMeta
 
-`func (o *InlineResponse200372) GetMeta() InlineResponse200283Meta`
+`func (o *InlineResponse200372) GetMeta() InlineResponse200372Meta`
 
 GetMeta returns the Meta field if non-nil, zero value otherwise.
 
 ### GetMetaOk
 
-`func (o *InlineResponse200372) GetMetaOk() (*InlineResponse200283Meta, bool)`
+`func (o *InlineResponse200372) GetMetaOk() (*InlineResponse200372Meta, bool)`
 
 GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMeta
 
-`func (o *InlineResponse200372) SetMeta(v InlineResponse200283Meta)`
+`func (o *InlineResponse200372) SetMeta(v InlineResponse200372Meta)`
 
 SetMeta sets Meta field to given value.
 

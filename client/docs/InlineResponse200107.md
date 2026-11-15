@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTime** | Pointer to **time.Time** | Start time of interval | [optional] 
-**EndTime** | Pointer to **time.Time** | End time of interval | [optional] 
-**ByInterface** | Pointer to [**[]NetworksNetworkIdApplianceUplinksUsageHistoryByInterface**](NetworksNetworkIdApplianceUplinksUsageHistoryByInterface.md) | List of usage data for each interface | [optional] 
+**Network** | Pointer to [**InlineResponse200107Network**](InlineResponse200107Network.md) |  | [optional] 
+**Policies** | Pointer to [**[]InlineResponse200107Policies**](InlineResponse200107Policies.md) | Umbrella policies applied to the network. The maximum number of policies is determined by Cisco Umbrella account limits. | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200107WithDefaults instantiates a new InlineResponse200107 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTime
+### GetNetwork
 
-`func (o *InlineResponse200107) GetStartTime() time.Time`
+`func (o *InlineResponse200107) GetNetwork() InlineResponse200107Network`
 
-GetStartTime returns the StartTime field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetStartTimeOk
+### GetNetworkOk
 
-`func (o *InlineResponse200107) GetStartTimeOk() (*time.Time, bool)`
+`func (o *InlineResponse200107) GetNetworkOk() (*InlineResponse200107Network, bool)`
 
-GetStartTimeOk returns a tuple with the StartTime field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTime
+### SetNetwork
 
-`func (o *InlineResponse200107) SetStartTime(v time.Time)`
+`func (o *InlineResponse200107) SetNetwork(v InlineResponse200107Network)`
 
-SetStartTime sets StartTime field to given value.
+SetNetwork sets Network field to given value.
 
-### HasStartTime
+### HasNetwork
 
-`func (o *InlineResponse200107) HasStartTime() bool`
+`func (o *InlineResponse200107) HasNetwork() bool`
 
-HasStartTime returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetEndTime
+### GetPolicies
 
-`func (o *InlineResponse200107) GetEndTime() time.Time`
+`func (o *InlineResponse200107) GetPolicies() []InlineResponse200107Policies`
 
-GetEndTime returns the EndTime field if non-nil, zero value otherwise.
+GetPolicies returns the Policies field if non-nil, zero value otherwise.
 
-### GetEndTimeOk
+### GetPoliciesOk
 
-`func (o *InlineResponse200107) GetEndTimeOk() (*time.Time, bool)`
+`func (o *InlineResponse200107) GetPoliciesOk() (*[]InlineResponse200107Policies, bool)`
 
-GetEndTimeOk returns a tuple with the EndTime field if it's non-nil, zero value otherwise
+GetPoliciesOk returns a tuple with the Policies field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTime
+### SetPolicies
 
-`func (o *InlineResponse200107) SetEndTime(v time.Time)`
+`func (o *InlineResponse200107) SetPolicies(v []InlineResponse200107Policies)`
 
-SetEndTime sets EndTime field to given value.
+SetPolicies sets Policies field to given value.
 
-### HasEndTime
+### HasPolicies
 
-`func (o *InlineResponse200107) HasEndTime() bool`
+`func (o *InlineResponse200107) HasPolicies() bool`
 
-HasEndTime returns a boolean if a field has been set.
-
-### GetByInterface
-
-`func (o *InlineResponse200107) GetByInterface() []NetworksNetworkIdApplianceUplinksUsageHistoryByInterface`
-
-GetByInterface returns the ByInterface field if non-nil, zero value otherwise.
-
-### GetByInterfaceOk
-
-`func (o *InlineResponse200107) GetByInterfaceOk() (*[]NetworksNetworkIdApplianceUplinksUsageHistoryByInterface, bool)`
-
-GetByInterfaceOk returns a tuple with the ByInterface field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetByInterface
-
-`func (o *InlineResponse200107) SetByInterface(v []NetworksNetworkIdApplianceUplinksUsageHistoryByInterface)`
-
-SetByInterface sets ByInterface field to given value.
-
-### HasByInterface
-
-`func (o *InlineResponse200107) HasByInterface() bool`
-
-HasByInterface returns a boolean if a field has been set.
+HasPolicies returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

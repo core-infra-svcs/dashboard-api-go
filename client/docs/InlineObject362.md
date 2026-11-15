@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SiteId** | Pointer to **string** | Site ID of the site to update | [optional] 
-**Routing** | Pointer to [**OrganizationsOrganizationIdSaseSitesSiteIdRouting**](OrganizationsOrganizationIdSaseSitesSiteIdRouting.md) |  | [optional] 
+**X509certSha1Fingerprint** | **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | 
+**SsoLoginUrl** | Pointer to **string** | Dashboard will redirect users to this URL to log in again when their sessions expire. | [optional] 
+**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
 
 ## Methods
 
 ### NewInlineObject362
 
-`func NewInlineObject362() *InlineObject362`
+`func NewInlineObject362(x509certSha1Fingerprint string, ) *InlineObject362`
 
 NewInlineObject362 instantiates a new InlineObject362 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +27,75 @@ NewInlineObject362WithDefaults instantiates a new InlineObject362 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSiteId
+### GetX509certSha1Fingerprint
 
-`func (o *InlineObject362) GetSiteId() string`
+`func (o *InlineObject362) GetX509certSha1Fingerprint() string`
 
-GetSiteId returns the SiteId field if non-nil, zero value otherwise.
+GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
 
-### GetSiteIdOk
+### GetX509certSha1FingerprintOk
 
-`func (o *InlineObject362) GetSiteIdOk() (*string, bool)`
+`func (o *InlineObject362) GetX509certSha1FingerprintOk() (*string, bool)`
 
-GetSiteIdOk returns a tuple with the SiteId field if it's non-nil, zero value otherwise
+GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSiteId
+### SetX509certSha1Fingerprint
 
-`func (o *InlineObject362) SetSiteId(v string)`
+`func (o *InlineObject362) SetX509certSha1Fingerprint(v string)`
 
-SetSiteId sets SiteId field to given value.
+SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
 
-### HasSiteId
 
-`func (o *InlineObject362) HasSiteId() bool`
+### GetSsoLoginUrl
 
-HasSiteId returns a boolean if a field has been set.
+`func (o *InlineObject362) GetSsoLoginUrl() string`
 
-### GetRouting
+GetSsoLoginUrl returns the SsoLoginUrl field if non-nil, zero value otherwise.
 
-`func (o *InlineObject362) GetRouting() OrganizationsOrganizationIdSaseSitesSiteIdRouting`
+### GetSsoLoginUrlOk
 
-GetRouting returns the Routing field if non-nil, zero value otherwise.
+`func (o *InlineObject362) GetSsoLoginUrlOk() (*string, bool)`
 
-### GetRoutingOk
-
-`func (o *InlineObject362) GetRoutingOk() (*OrganizationsOrganizationIdSaseSitesSiteIdRouting, bool)`
-
-GetRoutingOk returns a tuple with the Routing field if it's non-nil, zero value otherwise
+GetSsoLoginUrlOk returns a tuple with the SsoLoginUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRouting
+### SetSsoLoginUrl
 
-`func (o *InlineObject362) SetRouting(v OrganizationsOrganizationIdSaseSitesSiteIdRouting)`
+`func (o *InlineObject362) SetSsoLoginUrl(v string)`
 
-SetRouting sets Routing field to given value.
+SetSsoLoginUrl sets SsoLoginUrl field to given value.
 
-### HasRouting
+### HasSsoLoginUrl
 
-`func (o *InlineObject362) HasRouting() bool`
+`func (o *InlineObject362) HasSsoLoginUrl() bool`
 
-HasRouting returns a boolean if a field has been set.
+HasSsoLoginUrl returns a boolean if a field has been set.
+
+### GetSloLogoutUrl
+
+`func (o *InlineObject362) GetSloLogoutUrl() string`
+
+GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
+
+### GetSloLogoutUrlOk
+
+`func (o *InlineObject362) GetSloLogoutUrlOk() (*string, bool)`
+
+GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSloLogoutUrl
+
+`func (o *InlineObject362) SetSloLogoutUrl(v string)`
+
+SetSloLogoutUrl sets SloLogoutUrl field to given value.
+
+### HasSloLogoutUrl
+
+`func (o *InlineObject362) HasSloLogoutUrl() bool`
+
+HasSloLogoutUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

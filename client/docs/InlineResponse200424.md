@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Success** | Pointer to **bool** | Whether the operation was successful | [optional] 
+**RemainderLicenses** | Pointer to [**[]InlineResponse200423**](InlineResponse200423.md) | Remainder licenses created in the source organization as a result of moving a subset of the counts of a license | [optional] 
+**MovedLicenses** | Pointer to [**[]InlineResponse200423**](InlineResponse200423.md) | Newly moved licenses created in the destination organization of the license move operation | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200424WithDefaults instantiates a new InlineResponse200424 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSuccess
+### GetRemainderLicenses
 
-`func (o *InlineResponse200424) GetSuccess() bool`
+`func (o *InlineResponse200424) GetRemainderLicenses() []InlineResponse200423`
 
-GetSuccess returns the Success field if non-nil, zero value otherwise.
+GetRemainderLicenses returns the RemainderLicenses field if non-nil, zero value otherwise.
 
-### GetSuccessOk
+### GetRemainderLicensesOk
 
-`func (o *InlineResponse200424) GetSuccessOk() (*bool, bool)`
+`func (o *InlineResponse200424) GetRemainderLicensesOk() (*[]InlineResponse200423, bool)`
 
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
+GetRemainderLicensesOk returns a tuple with the RemainderLicenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSuccess
+### SetRemainderLicenses
 
-`func (o *InlineResponse200424) SetSuccess(v bool)`
+`func (o *InlineResponse200424) SetRemainderLicenses(v []InlineResponse200423)`
 
-SetSuccess sets Success field to given value.
+SetRemainderLicenses sets RemainderLicenses field to given value.
 
-### HasSuccess
+### HasRemainderLicenses
 
-`func (o *InlineResponse200424) HasSuccess() bool`
+`func (o *InlineResponse200424) HasRemainderLicenses() bool`
 
-HasSuccess returns a boolean if a field has been set.
+HasRemainderLicenses returns a boolean if a field has been set.
+
+### GetMovedLicenses
+
+`func (o *InlineResponse200424) GetMovedLicenses() []InlineResponse200423`
+
+GetMovedLicenses returns the MovedLicenses field if non-nil, zero value otherwise.
+
+### GetMovedLicensesOk
+
+`func (o *InlineResponse200424) GetMovedLicensesOk() (*[]InlineResponse200423, bool)`
+
+GetMovedLicensesOk returns a tuple with the MovedLicenses field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMovedLicenses
+
+`func (o *InlineResponse200424) SetMovedLicenses(v []InlineResponse200423)`
+
+SetMovedLicenses sets MovedLicenses field to given value.
+
+### HasMovedLicenses
+
+`func (o *InlineResponse200424) HasMovedLicenses() bool`
+
+HasMovedLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

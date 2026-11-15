@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse20081Rules**](InlineResponse20081Rules.md) | An array of 1:Many nat rules | [optional] 
+**ApplicationCategories** | Pointer to [**[]InlineResponse20081ApplicationCategories**](InlineResponse20081ApplicationCategories.md) |  The L7 firewall application categories and their associated applications for an MX network | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20081WithDefaults instantiates a new InlineResponse20081 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetApplicationCategories
 
-`func (o *InlineResponse20081) GetRules() []InlineResponse20081Rules`
+`func (o *InlineResponse20081) GetApplicationCategories() []InlineResponse20081ApplicationCategories`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetApplicationCategories returns the ApplicationCategories field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetApplicationCategoriesOk
 
-`func (o *InlineResponse20081) GetRulesOk() (*[]InlineResponse20081Rules, bool)`
+`func (o *InlineResponse20081) GetApplicationCategoriesOk() (*[]InlineResponse20081ApplicationCategories, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetApplicationCategoriesOk returns a tuple with the ApplicationCategories field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetApplicationCategories
 
-`func (o *InlineResponse20081) SetRules(v []InlineResponse20081Rules)`
+`func (o *InlineResponse20081) SetApplicationCategories(v []InlineResponse20081ApplicationCategories)`
 
-SetRules sets Rules field to given value.
+SetApplicationCategories sets ApplicationCategories field to given value.
 
-### HasRules
+### HasApplicationCategories
 
-`func (o *InlineResponse20081) HasRules() bool`
+`func (o *InlineResponse20081) HasApplicationCategories() bool`
 
-HasRules returns a boolean if a field has been set.
+HasApplicationCategories returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

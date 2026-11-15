@@ -4,9 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the SSID | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage**](OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage.md) |  | [optional] 
-**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageClients**](OrganizationsOrganizationIdSummaryTopSsidsByUsageClients.md) |  | [optional] 
+**PageIndex** | Pointer to **int32** | Current page index | [optional] 
+**PageItems** | Pointer to **int32** | Number of items in the page | [optional] 
+**TotalItems** | Pointer to **int32** | Total number of items | [optional] 
+**HasNext** | Pointer to **bool** | Is there more data to load | [optional] 
+**HasPrevious** | Pointer to **bool** | Is there previous data to load | [optional] 
+**Contents** | Pointer to [**[]InlineResponse200472Contents**](InlineResponse200472Contents.md) | Metrics content | [optional] 
 
 ## Methods
 
@@ -27,80 +30,155 @@ NewInlineResponse200472WithDefaults instantiates a new InlineResponse200472 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetPageIndex
 
-`func (o *InlineResponse200472) GetName() string`
+`func (o *InlineResponse200472) GetPageIndex() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetPageIndex returns the PageIndex field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetPageIndexOk
 
-`func (o *InlineResponse200472) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200472) GetPageIndexOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetPageIndexOk returns a tuple with the PageIndex field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetPageIndex
 
-`func (o *InlineResponse200472) SetName(v string)`
+`func (o *InlineResponse200472) SetPageIndex(v int32)`
 
-SetName sets Name field to given value.
+SetPageIndex sets PageIndex field to given value.
 
-### HasName
+### HasPageIndex
 
-`func (o *InlineResponse200472) HasName() bool`
+`func (o *InlineResponse200472) HasPageIndex() bool`
 
-HasName returns a boolean if a field has been set.
+HasPageIndex returns a boolean if a field has been set.
 
-### GetUsage
+### GetPageItems
 
-`func (o *InlineResponse200472) GetUsage() OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage`
+`func (o *InlineResponse200472) GetPageItems() int32`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetPageItems returns the PageItems field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetPageItemsOk
 
-`func (o *InlineResponse200472) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage, bool)`
+`func (o *InlineResponse200472) GetPageItemsOk() (*int32, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetPageItemsOk returns a tuple with the PageItems field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetPageItems
 
-`func (o *InlineResponse200472) SetUsage(v OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage)`
+`func (o *InlineResponse200472) SetPageItems(v int32)`
 
-SetUsage sets Usage field to given value.
+SetPageItems sets PageItems field to given value.
 
-### HasUsage
+### HasPageItems
 
-`func (o *InlineResponse200472) HasUsage() bool`
+`func (o *InlineResponse200472) HasPageItems() bool`
 
-HasUsage returns a boolean if a field has been set.
+HasPageItems returns a boolean if a field has been set.
 
-### GetClients
+### GetTotalItems
 
-`func (o *InlineResponse200472) GetClients() OrganizationsOrganizationIdSummaryTopSsidsByUsageClients`
+`func (o *InlineResponse200472) GetTotalItems() int32`
 
-GetClients returns the Clients field if non-nil, zero value otherwise.
+GetTotalItems returns the TotalItems field if non-nil, zero value otherwise.
 
-### GetClientsOk
+### GetTotalItemsOk
 
-`func (o *InlineResponse200472) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageClients, bool)`
+`func (o *InlineResponse200472) GetTotalItemsOk() (*int32, bool)`
 
-GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
+GetTotalItemsOk returns a tuple with the TotalItems field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClients
+### SetTotalItems
 
-`func (o *InlineResponse200472) SetClients(v OrganizationsOrganizationIdSummaryTopSsidsByUsageClients)`
+`func (o *InlineResponse200472) SetTotalItems(v int32)`
 
-SetClients sets Clients field to given value.
+SetTotalItems sets TotalItems field to given value.
 
-### HasClients
+### HasTotalItems
 
-`func (o *InlineResponse200472) HasClients() bool`
+`func (o *InlineResponse200472) HasTotalItems() bool`
 
-HasClients returns a boolean if a field has been set.
+HasTotalItems returns a boolean if a field has been set.
+
+### GetHasNext
+
+`func (o *InlineResponse200472) GetHasNext() bool`
+
+GetHasNext returns the HasNext field if non-nil, zero value otherwise.
+
+### GetHasNextOk
+
+`func (o *InlineResponse200472) GetHasNextOk() (*bool, bool)`
+
+GetHasNextOk returns a tuple with the HasNext field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHasNext
+
+`func (o *InlineResponse200472) SetHasNext(v bool)`
+
+SetHasNext sets HasNext field to given value.
+
+### HasHasNext
+
+`func (o *InlineResponse200472) HasHasNext() bool`
+
+HasHasNext returns a boolean if a field has been set.
+
+### GetHasPrevious
+
+`func (o *InlineResponse200472) GetHasPrevious() bool`
+
+GetHasPrevious returns the HasPrevious field if non-nil, zero value otherwise.
+
+### GetHasPreviousOk
+
+`func (o *InlineResponse200472) GetHasPreviousOk() (*bool, bool)`
+
+GetHasPreviousOk returns a tuple with the HasPrevious field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHasPrevious
+
+`func (o *InlineResponse200472) SetHasPrevious(v bool)`
+
+SetHasPrevious sets HasPrevious field to given value.
+
+### HasHasPrevious
+
+`func (o *InlineResponse200472) HasHasPrevious() bool`
+
+HasHasPrevious returns a boolean if a field has been set.
+
+### GetContents
+
+`func (o *InlineResponse200472) GetContents() []InlineResponse200472Contents`
+
+GetContents returns the Contents field if non-nil, zero value otherwise.
+
+### GetContentsOk
+
+`func (o *InlineResponse200472) GetContentsOk() (*[]InlineResponse200472Contents, bool)`
+
+GetContentsOk returns a tuple with the Contents field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetContents
+
+`func (o *InlineResponse200472) SetContents(v []InlineResponse200472Contents)`
+
+SetContents sets Contents field to given value.
+
+### HasContents
+
+`func (o *InlineResponse200472) HasContents() bool`
+
+HasContents returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

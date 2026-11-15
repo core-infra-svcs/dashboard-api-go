@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200531Items**](InlineResponse200531Items.md) | Wireless LAN controller layer 3 interfaces historical status | [optional] 
-**Meta** | Pointer to [**InlineResponse200283Meta**](InlineResponse200283Meta.md) |  | [optional] 
+**Id** | Pointer to **string** | Network ID | [optional] 
+**Name** | Pointer to **string** | Network name | [optional] 
+**Group** | Pointer to [**InlineResponse200531Group**](InlineResponse200531Group.md) |  | [optional] 
+**ClientsUrl** | Pointer to **string** | URL to the network&#39;s clients page in Dashboard | [optional] 
+**Assignments** | Pointer to [**[]InlineResponse200531Assignments**](InlineResponse200531Assignments.md) | The SSID profile assignments for the network | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200531WithDefaults instantiates a new InlineResponse200531 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetId
 
-`func (o *InlineResponse200531) GetItems() []InlineResponse200531Items`
+`func (o *InlineResponse200531) GetId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetIdOk
 
-`func (o *InlineResponse200531) GetItemsOk() (*[]InlineResponse200531Items, bool)`
+`func (o *InlineResponse200531) GetIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetId
 
-`func (o *InlineResponse200531) SetItems(v []InlineResponse200531Items)`
+`func (o *InlineResponse200531) SetId(v string)`
 
-SetItems sets Items field to given value.
+SetId sets Id field to given value.
 
-### HasItems
+### HasId
 
-`func (o *InlineResponse200531) HasItems() bool`
+`func (o *InlineResponse200531) HasId() bool`
 
-HasItems returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetMeta
+### GetName
 
-`func (o *InlineResponse200531) GetMeta() InlineResponse200283Meta`
+`func (o *InlineResponse200531) GetName() string`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetNameOk
 
-`func (o *InlineResponse200531) GetMetaOk() (*InlineResponse200283Meta, bool)`
+`func (o *InlineResponse200531) GetNameOk() (*string, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetName
 
-`func (o *InlineResponse200531) SetMeta(v InlineResponse200283Meta)`
+`func (o *InlineResponse200531) SetName(v string)`
 
-SetMeta sets Meta field to given value.
+SetName sets Name field to given value.
 
-### HasMeta
+### HasName
 
-`func (o *InlineResponse200531) HasMeta() bool`
+`func (o *InlineResponse200531) HasName() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetGroup
+
+`func (o *InlineResponse200531) GetGroup() InlineResponse200531Group`
+
+GetGroup returns the Group field if non-nil, zero value otherwise.
+
+### GetGroupOk
+
+`func (o *InlineResponse200531) GetGroupOk() (*InlineResponse200531Group, bool)`
+
+GetGroupOk returns a tuple with the Group field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroup
+
+`func (o *InlineResponse200531) SetGroup(v InlineResponse200531Group)`
+
+SetGroup sets Group field to given value.
+
+### HasGroup
+
+`func (o *InlineResponse200531) HasGroup() bool`
+
+HasGroup returns a boolean if a field has been set.
+
+### GetClientsUrl
+
+`func (o *InlineResponse200531) GetClientsUrl() string`
+
+GetClientsUrl returns the ClientsUrl field if non-nil, zero value otherwise.
+
+### GetClientsUrlOk
+
+`func (o *InlineResponse200531) GetClientsUrlOk() (*string, bool)`
+
+GetClientsUrlOk returns a tuple with the ClientsUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClientsUrl
+
+`func (o *InlineResponse200531) SetClientsUrl(v string)`
+
+SetClientsUrl sets ClientsUrl field to given value.
+
+### HasClientsUrl
+
+`func (o *InlineResponse200531) HasClientsUrl() bool`
+
+HasClientsUrl returns a boolean if a field has been set.
+
+### GetAssignments
+
+`func (o *InlineResponse200531) GetAssignments() []InlineResponse200531Assignments`
+
+GetAssignments returns the Assignments field if non-nil, zero value otherwise.
+
+### GetAssignmentsOk
+
+`func (o *InlineResponse200531) GetAssignmentsOk() (*[]InlineResponse200531Assignments, bool)`
+
+GetAssignmentsOk returns a tuple with the Assignments field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAssignments
+
+`func (o *InlineResponse200531) SetAssignments(v []InlineResponse200531Assignments)`
+
+SetAssignments sets Assignments field to given value.
+
+### HasAssignments
+
+`func (o *InlineResponse200531) HasAssignments() bool`
+
+HasAssignments returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

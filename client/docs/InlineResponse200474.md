@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceSerial** | Pointer to **string** | Serial number of the source switch (must be on a network not bound to a template) | [optional] 
-**TargetSerials** | Pointer to **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | [optional] 
+**StartTime** | Pointer to **string** | Start time (ISO8601) | [optional] 
+**EndTime** | Pointer to **string** | End time (ISO8601) | [optional] 
+**PowerConsumption** | Pointer to **float32** | Total power consumption in kWh across all networks | [optional] 
+**CarbonEmissions** | Pointer to **float32** | Total carbon emissions in KgCO2 across all networks | [optional] 
+**PowerCost** | Pointer to **float32** | Total power cost across all networks | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200474WithDefaults instantiates a new InlineResponse200474 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceSerial
+### GetStartTime
 
-`func (o *InlineResponse200474) GetSourceSerial() string`
+`func (o *InlineResponse200474) GetStartTime() string`
 
-GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
+GetStartTime returns the StartTime field if non-nil, zero value otherwise.
 
-### GetSourceSerialOk
+### GetStartTimeOk
 
-`func (o *InlineResponse200474) GetSourceSerialOk() (*string, bool)`
+`func (o *InlineResponse200474) GetStartTimeOk() (*string, bool)`
 
-GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
+GetStartTimeOk returns a tuple with the StartTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceSerial
+### SetStartTime
 
-`func (o *InlineResponse200474) SetSourceSerial(v string)`
+`func (o *InlineResponse200474) SetStartTime(v string)`
 
-SetSourceSerial sets SourceSerial field to given value.
+SetStartTime sets StartTime field to given value.
 
-### HasSourceSerial
+### HasStartTime
 
-`func (o *InlineResponse200474) HasSourceSerial() bool`
+`func (o *InlineResponse200474) HasStartTime() bool`
 
-HasSourceSerial returns a boolean if a field has been set.
+HasStartTime returns a boolean if a field has been set.
 
-### GetTargetSerials
+### GetEndTime
 
-`func (o *InlineResponse200474) GetTargetSerials() []string`
+`func (o *InlineResponse200474) GetEndTime() string`
 
-GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
+GetEndTime returns the EndTime field if non-nil, zero value otherwise.
 
-### GetTargetSerialsOk
+### GetEndTimeOk
 
-`func (o *InlineResponse200474) GetTargetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200474) GetEndTimeOk() (*string, bool)`
 
-GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
+GetEndTimeOk returns a tuple with the EndTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTargetSerials
+### SetEndTime
 
-`func (o *InlineResponse200474) SetTargetSerials(v []string)`
+`func (o *InlineResponse200474) SetEndTime(v string)`
 
-SetTargetSerials sets TargetSerials field to given value.
+SetEndTime sets EndTime field to given value.
 
-### HasTargetSerials
+### HasEndTime
 
-`func (o *InlineResponse200474) HasTargetSerials() bool`
+`func (o *InlineResponse200474) HasEndTime() bool`
 
-HasTargetSerials returns a boolean if a field has been set.
+HasEndTime returns a boolean if a field has been set.
+
+### GetPowerConsumption
+
+`func (o *InlineResponse200474) GetPowerConsumption() float32`
+
+GetPowerConsumption returns the PowerConsumption field if non-nil, zero value otherwise.
+
+### GetPowerConsumptionOk
+
+`func (o *InlineResponse200474) GetPowerConsumptionOk() (*float32, bool)`
+
+GetPowerConsumptionOk returns a tuple with the PowerConsumption field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPowerConsumption
+
+`func (o *InlineResponse200474) SetPowerConsumption(v float32)`
+
+SetPowerConsumption sets PowerConsumption field to given value.
+
+### HasPowerConsumption
+
+`func (o *InlineResponse200474) HasPowerConsumption() bool`
+
+HasPowerConsumption returns a boolean if a field has been set.
+
+### GetCarbonEmissions
+
+`func (o *InlineResponse200474) GetCarbonEmissions() float32`
+
+GetCarbonEmissions returns the CarbonEmissions field if non-nil, zero value otherwise.
+
+### GetCarbonEmissionsOk
+
+`func (o *InlineResponse200474) GetCarbonEmissionsOk() (*float32, bool)`
+
+GetCarbonEmissionsOk returns a tuple with the CarbonEmissions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCarbonEmissions
+
+`func (o *InlineResponse200474) SetCarbonEmissions(v float32)`
+
+SetCarbonEmissions sets CarbonEmissions field to given value.
+
+### HasCarbonEmissions
+
+`func (o *InlineResponse200474) HasCarbonEmissions() bool`
+
+HasCarbonEmissions returns a boolean if a field has been set.
+
+### GetPowerCost
+
+`func (o *InlineResponse200474) GetPowerCost() float32`
+
+GetPowerCost returns the PowerCost field if non-nil, zero value otherwise.
+
+### GetPowerCostOk
+
+`func (o *InlineResponse200474) GetPowerCostOk() (*float32, bool)`
+
+GetPowerCostOk returns a tuple with the PowerCost field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPowerCost
+
+`func (o *InlineResponse200474) SetPowerCost(v float32)`
+
+SetPowerCost sets PowerCost field to given value.
+
+### HasPowerCost
+
+`func (o *InlineResponse200474) HasPowerCost() bool`
+
+HasPowerCost returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

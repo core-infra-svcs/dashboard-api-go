@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | ID of the profile. | [optional] 
-**Description** | Pointer to **string** | New description of the profile. | [optional] 
-**Rules** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules**](OrganizationsOrganizationIdDevicesCellularDataProfilesRules.md) | The rules associated with this profile. At least one rule and no more than two rules may be defined for a profile. | 
+**Orders** | Pointer to **[]string** | The numbers of the orders that should be claimed | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices that should be claimed | [optional] 
+**Licenses** | Pointer to [**[]OrganizationsOrganizationIdClaimLicenses**](OrganizationsOrganizationIdClaimLicenses.md) | The licenses that should be claimed | [optional] 
 
 ## Methods
 
 ### NewInlineObject298
 
-`func NewInlineObject298(rules []OrganizationsOrganizationIdDevicesCellularDataProfilesRules, ) *InlineObject298`
+`func NewInlineObject298() *InlineObject298`
 
 NewInlineObject298 instantiates a new InlineObject298 object
 This constructor will assign default values to properties that have it defined,
@@ -27,75 +27,80 @@ NewInlineObject298WithDefaults instantiates a new InlineObject298 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetOrders
 
-`func (o *InlineObject298) GetProfileId() string`
+`func (o *InlineObject298) GetOrders() []string`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetOrders returns the Orders field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetOrdersOk
 
-`func (o *InlineObject298) GetProfileIdOk() (*string, bool)`
+`func (o *InlineObject298) GetOrdersOk() (*[]string, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetOrders
 
-`func (o *InlineObject298) SetProfileId(v string)`
+`func (o *InlineObject298) SetOrders(v []string)`
 
-SetProfileId sets ProfileId field to given value.
+SetOrders sets Orders field to given value.
 
-### HasProfileId
+### HasOrders
 
-`func (o *InlineObject298) HasProfileId() bool`
+`func (o *InlineObject298) HasOrders() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasOrders returns a boolean if a field has been set.
 
-### GetDescription
+### GetSerials
 
-`func (o *InlineObject298) GetDescription() string`
+`func (o *InlineObject298) GetSerials() []string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetSerialsOk
 
-`func (o *InlineObject298) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject298) GetSerialsOk() (*[]string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetSerials
 
-`func (o *InlineObject298) SetDescription(v string)`
+`func (o *InlineObject298) SetSerials(v []string)`
 
-SetDescription sets Description field to given value.
+SetSerials sets Serials field to given value.
 
-### HasDescription
+### HasSerials
 
-`func (o *InlineObject298) HasDescription() bool`
+`func (o *InlineObject298) HasSerials() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetRules
+### GetLicenses
 
-`func (o *InlineObject298) GetRules() []OrganizationsOrganizationIdDevicesCellularDataProfilesRules`
+`func (o *InlineObject298) GetLicenses() []OrganizationsOrganizationIdClaimLicenses`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetLicenses returns the Licenses field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetLicensesOk
 
-`func (o *InlineObject298) GetRulesOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules, bool)`
+`func (o *InlineObject298) GetLicensesOk() (*[]OrganizationsOrganizationIdClaimLicenses, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetLicenses
 
-`func (o *InlineObject298) SetRules(v []OrganizationsOrganizationIdDevicesCellularDataProfilesRules)`
+`func (o *InlineObject298) SetLicenses(v []OrganizationsOrganizationIdClaimLicenses)`
 
-SetRules sets Rules field to given value.
+SetLicenses sets Licenses field to given value.
 
+### HasLicenses
+
+`func (o *InlineObject298) HasLicenses() bool`
+
+HasLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

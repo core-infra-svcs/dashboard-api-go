@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LocalSubnet** | **string** | The CIDR notation subnet used within the VPN | 
+**LocalSubnet** | Pointer to **string** | The CIDR notation subnet used within the VPN. Required for standalone networks. | [optional] 
 **UseVpn** | Pointer to **bool** | Indicates the presence of the subnet in the VPN | [optional] 
-**Nat** | Pointer to [**InlineResponse200111Nat**](InlineResponse200111Nat.md) |  | [optional] 
+**Nat** | Pointer to [**InlineResponse200114Nat**](InlineResponse200114Nat.md) |  | [optional] 
 
 ## Methods
 
 ### NewNetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets
 
-`func NewNetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets(localSubnet string, ) *NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets`
+`func NewNetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets() *NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets`
 
 NewNetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets instantiates a new NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets object
 This constructor will assign default values to properties that have it defined,
@@ -46,6 +46,11 @@ and a boolean to check if the value has been set.
 
 SetLocalSubnet sets LocalSubnet field to given value.
 
+### HasLocalSubnet
+
+`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets) HasLocalSubnet() bool`
+
+HasLocalSubnet returns a boolean if a field has been set.
 
 ### GetUseVpn
 
@@ -74,20 +79,20 @@ HasUseVpn returns a boolean if a field has been set.
 
 ### GetNat
 
-`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets) GetNat() InlineResponse200111Nat`
+`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets) GetNat() InlineResponse200114Nat`
 
 GetNat returns the Nat field if non-nil, zero value otherwise.
 
 ### GetNatOk
 
-`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets) GetNatOk() (*InlineResponse200111Nat, bool)`
+`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets) GetNatOk() (*InlineResponse200114Nat, bool)`
 
 GetNatOk returns a tuple with the Nat field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNat
 
-`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets) SetNat(v InlineResponse200111Nat)`
+`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets) SetNat(v InlineResponse200114Nat)`
 
 SetNat sets Nat field to given value.
 

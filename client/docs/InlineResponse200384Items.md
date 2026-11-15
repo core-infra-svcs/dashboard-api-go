@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | [**InlineResponse200133Network**](InlineResponse200133Network.md) |  | 
-**Available** | [**[]InlineResponse200384Available**](InlineResponse200384Available.md) | The list of roles that can be assigned to a syslog server for this network | 
+**Serial** | Pointer to **string** | The device serial | [optional] 
+**Target** | Pointer to **string** | The migration target destination | [optional] 
+**CreatedAt** | Pointer to **time.Time** | The time at which a migration was created | [optional] 
+**MigratedAt** | Pointer to **NullableTime** | The time at which the device initiated migration | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200384Items
 
-`func NewInlineResponse200384Items(network InlineResponse200133Network, available []InlineResponse200384Available, ) *InlineResponse200384Items`
+`func NewInlineResponse200384Items() *InlineResponse200384Items`
 
 NewInlineResponse200384Items instantiates a new InlineResponse200384Items object
 This constructor will assign default values to properties that have it defined,
@@ -26,46 +28,116 @@ NewInlineResponse200384ItemsWithDefaults instantiates a new InlineResponse200384
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetSerial
 
-`func (o *InlineResponse200384Items) GetNetwork() InlineResponse200133Network`
+`func (o *InlineResponse200384Items) GetSerial() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetSerialOk
 
-`func (o *InlineResponse200384Items) GetNetworkOk() (*InlineResponse200133Network, bool)`
+`func (o *InlineResponse200384Items) GetSerialOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetSerial
 
-`func (o *InlineResponse200384Items) SetNetwork(v InlineResponse200133Network)`
+`func (o *InlineResponse200384Items) SetSerial(v string)`
 
-SetNetwork sets Network field to given value.
+SetSerial sets Serial field to given value.
 
+### HasSerial
 
-### GetAvailable
+`func (o *InlineResponse200384Items) HasSerial() bool`
 
-`func (o *InlineResponse200384Items) GetAvailable() []InlineResponse200384Available`
+HasSerial returns a boolean if a field has been set.
 
-GetAvailable returns the Available field if non-nil, zero value otherwise.
+### GetTarget
 
-### GetAvailableOk
+`func (o *InlineResponse200384Items) GetTarget() string`
 
-`func (o *InlineResponse200384Items) GetAvailableOk() (*[]InlineResponse200384Available, bool)`
+GetTarget returns the Target field if non-nil, zero value otherwise.
 
-GetAvailableOk returns a tuple with the Available field if it's non-nil, zero value otherwise
+### GetTargetOk
+
+`func (o *InlineResponse200384Items) GetTargetOk() (*string, bool)`
+
+GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAvailable
+### SetTarget
 
-`func (o *InlineResponse200384Items) SetAvailable(v []InlineResponse200384Available)`
+`func (o *InlineResponse200384Items) SetTarget(v string)`
 
-SetAvailable sets Available field to given value.
+SetTarget sets Target field to given value.
 
+### HasTarget
 
+`func (o *InlineResponse200384Items) HasTarget() bool`
+
+HasTarget returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200384Items) GetCreatedAt() time.Time`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200384Items) GetCreatedAtOk() (*time.Time, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200384Items) SetCreatedAt(v time.Time)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200384Items) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetMigratedAt
+
+`func (o *InlineResponse200384Items) GetMigratedAt() time.Time`
+
+GetMigratedAt returns the MigratedAt field if non-nil, zero value otherwise.
+
+### GetMigratedAtOk
+
+`func (o *InlineResponse200384Items) GetMigratedAtOk() (*time.Time, bool)`
+
+GetMigratedAtOk returns a tuple with the MigratedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMigratedAt
+
+`func (o *InlineResponse200384Items) SetMigratedAt(v time.Time)`
+
+SetMigratedAt sets MigratedAt field to given value.
+
+### HasMigratedAt
+
+`func (o *InlineResponse200384Items) HasMigratedAt() bool`
+
+HasMigratedAt returns a boolean if a field has been set.
+
+### SetMigratedAtNil
+
+`func (o *InlineResponse200384Items) SetMigratedAtNil(b bool)`
+
+ SetMigratedAtNil sets the value for MigratedAt to be an explicit nil
+
+### UnsetMigratedAt
+`func (o *InlineResponse200384Items) UnsetMigratedAt()`
+
+UnsetMigratedAt ensures that no value is present for MigratedAt, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -4,9 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | Pointer to **string** | Receiver Url | [optional] 
-**Version** | Pointer to **string** | Scanning API Version | [optional] 
-**Radio** | Pointer to [**OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio.md) |  | [optional] 
+**V2cEnabled** | Pointer to **bool** | Boolean indicating whether SNMP version 2c is enabled for the organization. | [optional] 
+**V3Enabled** | Pointer to **bool** | Boolean indicating whether SNMP version 3 is enabled for the organization. | [optional] 
+**V3AuthMode** | Pointer to **string** | The SNMP version 3 authentication mode. Can be one of &#39;SHA&#39;, &#39;MD5&#39;, &#39;SHA256&#39;, &#39;SHA384&#39;, or &#39;SHA512&#39;. MD5 is not supported in the Cisco Meraki US Government Region. | [optional] 
+**V3AuthPass** | Pointer to **string** | The SNMP version 3 authentication password. Must be at least 8 characters if specified. | [optional] 
+**V3PrivMode** | Pointer to **string** | The SNMP version 3 privacy mode. Can be either &#39;DES&#39; or &#39;AES128&#39;. | [optional] 
+**V3PrivPass** | Pointer to **string** | The SNMP version 3 privacy password. Must be at least 8 characters if specified. | [optional] 
+**PeerIps** | Pointer to **[]string** | The list of IPv4 addresses that are allowed to access the SNMP server. | [optional] 
 
 ## Methods
 
@@ -27,80 +31,180 @@ NewInlineObject374WithDefaults instantiates a new InlineObject374 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUrl
+### GetV2cEnabled
 
-`func (o *InlineObject374) GetUrl() string`
+`func (o *InlineObject374) GetV2cEnabled() bool`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetV2cEnabled returns the V2cEnabled field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetV2cEnabledOk
 
-`func (o *InlineObject374) GetUrlOk() (*string, bool)`
+`func (o *InlineObject374) GetV2cEnabledOk() (*bool, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetV2cEnabledOk returns a tuple with the V2cEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetV2cEnabled
 
-`func (o *InlineObject374) SetUrl(v string)`
+`func (o *InlineObject374) SetV2cEnabled(v bool)`
 
-SetUrl sets Url field to given value.
+SetV2cEnabled sets V2cEnabled field to given value.
 
-### HasUrl
+### HasV2cEnabled
 
-`func (o *InlineObject374) HasUrl() bool`
+`func (o *InlineObject374) HasV2cEnabled() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasV2cEnabled returns a boolean if a field has been set.
 
-### GetVersion
+### GetV3Enabled
 
-`func (o *InlineObject374) GetVersion() string`
+`func (o *InlineObject374) GetV3Enabled() bool`
 
-GetVersion returns the Version field if non-nil, zero value otherwise.
+GetV3Enabled returns the V3Enabled field if non-nil, zero value otherwise.
 
-### GetVersionOk
+### GetV3EnabledOk
 
-`func (o *InlineObject374) GetVersionOk() (*string, bool)`
+`func (o *InlineObject374) GetV3EnabledOk() (*bool, bool)`
 
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+GetV3EnabledOk returns a tuple with the V3Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVersion
+### SetV3Enabled
 
-`func (o *InlineObject374) SetVersion(v string)`
+`func (o *InlineObject374) SetV3Enabled(v bool)`
 
-SetVersion sets Version field to given value.
+SetV3Enabled sets V3Enabled field to given value.
 
-### HasVersion
+### HasV3Enabled
 
-`func (o *InlineObject374) HasVersion() bool`
+`func (o *InlineObject374) HasV3Enabled() bool`
 
-HasVersion returns a boolean if a field has been set.
+HasV3Enabled returns a boolean if a field has been set.
 
-### GetRadio
+### GetV3AuthMode
 
-`func (o *InlineObject374) GetRadio() OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio`
+`func (o *InlineObject374) GetV3AuthMode() string`
 
-GetRadio returns the Radio field if non-nil, zero value otherwise.
+GetV3AuthMode returns the V3AuthMode field if non-nil, zero value otherwise.
 
-### GetRadioOk
+### GetV3AuthModeOk
 
-`func (o *InlineObject374) GetRadioOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio, bool)`
+`func (o *InlineObject374) GetV3AuthModeOk() (*string, bool)`
 
-GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
+GetV3AuthModeOk returns a tuple with the V3AuthMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRadio
+### SetV3AuthMode
 
-`func (o *InlineObject374) SetRadio(v OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio)`
+`func (o *InlineObject374) SetV3AuthMode(v string)`
 
-SetRadio sets Radio field to given value.
+SetV3AuthMode sets V3AuthMode field to given value.
 
-### HasRadio
+### HasV3AuthMode
 
-`func (o *InlineObject374) HasRadio() bool`
+`func (o *InlineObject374) HasV3AuthMode() bool`
 
-HasRadio returns a boolean if a field has been set.
+HasV3AuthMode returns a boolean if a field has been set.
+
+### GetV3AuthPass
+
+`func (o *InlineObject374) GetV3AuthPass() string`
+
+GetV3AuthPass returns the V3AuthPass field if non-nil, zero value otherwise.
+
+### GetV3AuthPassOk
+
+`func (o *InlineObject374) GetV3AuthPassOk() (*string, bool)`
+
+GetV3AuthPassOk returns a tuple with the V3AuthPass field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetV3AuthPass
+
+`func (o *InlineObject374) SetV3AuthPass(v string)`
+
+SetV3AuthPass sets V3AuthPass field to given value.
+
+### HasV3AuthPass
+
+`func (o *InlineObject374) HasV3AuthPass() bool`
+
+HasV3AuthPass returns a boolean if a field has been set.
+
+### GetV3PrivMode
+
+`func (o *InlineObject374) GetV3PrivMode() string`
+
+GetV3PrivMode returns the V3PrivMode field if non-nil, zero value otherwise.
+
+### GetV3PrivModeOk
+
+`func (o *InlineObject374) GetV3PrivModeOk() (*string, bool)`
+
+GetV3PrivModeOk returns a tuple with the V3PrivMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetV3PrivMode
+
+`func (o *InlineObject374) SetV3PrivMode(v string)`
+
+SetV3PrivMode sets V3PrivMode field to given value.
+
+### HasV3PrivMode
+
+`func (o *InlineObject374) HasV3PrivMode() bool`
+
+HasV3PrivMode returns a boolean if a field has been set.
+
+### GetV3PrivPass
+
+`func (o *InlineObject374) GetV3PrivPass() string`
+
+GetV3PrivPass returns the V3PrivPass field if non-nil, zero value otherwise.
+
+### GetV3PrivPassOk
+
+`func (o *InlineObject374) GetV3PrivPassOk() (*string, bool)`
+
+GetV3PrivPassOk returns a tuple with the V3PrivPass field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetV3PrivPass
+
+`func (o *InlineObject374) SetV3PrivPass(v string)`
+
+SetV3PrivPass sets V3PrivPass field to given value.
+
+### HasV3PrivPass
+
+`func (o *InlineObject374) HasV3PrivPass() bool`
+
+HasV3PrivPass returns a boolean if a field has been set.
+
+### GetPeerIps
+
+`func (o *InlineObject374) GetPeerIps() []string`
+
+GetPeerIps returns the PeerIps field if non-nil, zero value otherwise.
+
+### GetPeerIpsOk
+
+`func (o *InlineObject374) GetPeerIpsOk() (*[]string, bool)`
+
+GetPeerIpsOk returns a tuple with the PeerIps field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPeerIps
+
+`func (o *InlineObject374) SetPeerIps(v []string)`
+
+SetPeerIps sets PeerIps field to given value.
+
+### HasPeerIps
+
+`func (o *InlineObject374) HasPeerIps() bool`
+
+HasPeerIps returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

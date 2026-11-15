@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enrolled** | **bool** | Parameter to enroll or unenroll the zigbee devices | 
-**Channel** | Pointer to **string** | The new channel for the zigbee device | [optional] 
+**Network** | [**OrganizationsOrganizationIdWirelessMqttSettingsNetwork**](OrganizationsOrganizationIdWirelessMqttSettingsNetwork.md) |  | 
+**Mqtt** | [**OrganizationsOrganizationIdWirelessMqttSettingsMqtt**](OrganizationsOrganizationIdWirelessMqttSettingsMqtt.md) |  | 
+**Ble** | Pointer to [**InlineResponse200521Ble**](InlineResponse200521Ble.md) |  | [optional] 
+**Wifi** | Pointer to [**InlineResponse200521Wifi**](InlineResponse200521Wifi.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject383
 
-`func NewInlineObject383(enrolled bool, ) *InlineObject383`
+`func NewInlineObject383(network OrganizationsOrganizationIdWirelessMqttSettingsNetwork, mqtt OrganizationsOrganizationIdWirelessMqttSettingsMqtt, ) *InlineObject383`
 
 NewInlineObject383 instantiates a new InlineObject383 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +28,95 @@ NewInlineObject383WithDefaults instantiates a new InlineObject383 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnrolled
+### GetNetwork
 
-`func (o *InlineObject383) GetEnrolled() bool`
+`func (o *InlineObject383) GetNetwork() OrganizationsOrganizationIdWirelessMqttSettingsNetwork`
 
-GetEnrolled returns the Enrolled field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetEnrolledOk
+### GetNetworkOk
 
-`func (o *InlineObject383) GetEnrolledOk() (*bool, bool)`
+`func (o *InlineObject383) GetNetworkOk() (*OrganizationsOrganizationIdWirelessMqttSettingsNetwork, bool)`
 
-GetEnrolledOk returns a tuple with the Enrolled field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnrolled
+### SetNetwork
 
-`func (o *InlineObject383) SetEnrolled(v bool)`
+`func (o *InlineObject383) SetNetwork(v OrganizationsOrganizationIdWirelessMqttSettingsNetwork)`
 
-SetEnrolled sets Enrolled field to given value.
+SetNetwork sets Network field to given value.
 
 
-### GetChannel
+### GetMqtt
 
-`func (o *InlineObject383) GetChannel() string`
+`func (o *InlineObject383) GetMqtt() OrganizationsOrganizationIdWirelessMqttSettingsMqtt`
 
-GetChannel returns the Channel field if non-nil, zero value otherwise.
+GetMqtt returns the Mqtt field if non-nil, zero value otherwise.
 
-### GetChannelOk
+### GetMqttOk
 
-`func (o *InlineObject383) GetChannelOk() (*string, bool)`
+`func (o *InlineObject383) GetMqttOk() (*OrganizationsOrganizationIdWirelessMqttSettingsMqtt, bool)`
 
-GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
+GetMqttOk returns a tuple with the Mqtt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetChannel
+### SetMqtt
 
-`func (o *InlineObject383) SetChannel(v string)`
+`func (o *InlineObject383) SetMqtt(v OrganizationsOrganizationIdWirelessMqttSettingsMqtt)`
 
-SetChannel sets Channel field to given value.
+SetMqtt sets Mqtt field to given value.
 
-### HasChannel
 
-`func (o *InlineObject383) HasChannel() bool`
+### GetBle
 
-HasChannel returns a boolean if a field has been set.
+`func (o *InlineObject383) GetBle() InlineResponse200521Ble`
+
+GetBle returns the Ble field if non-nil, zero value otherwise.
+
+### GetBleOk
+
+`func (o *InlineObject383) GetBleOk() (*InlineResponse200521Ble, bool)`
+
+GetBleOk returns a tuple with the Ble field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBle
+
+`func (o *InlineObject383) SetBle(v InlineResponse200521Ble)`
+
+SetBle sets Ble field to given value.
+
+### HasBle
+
+`func (o *InlineObject383) HasBle() bool`
+
+HasBle returns a boolean if a field has been set.
+
+### GetWifi
+
+`func (o *InlineObject383) GetWifi() InlineResponse200521Wifi`
+
+GetWifi returns the Wifi field if non-nil, zero value otherwise.
+
+### GetWifiOk
+
+`func (o *InlineObject383) GetWifiOk() (*InlineResponse200521Wifi, bool)`
+
+GetWifiOk returns a tuple with the Wifi field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWifi
+
+`func (o *InlineObject383) SetWifi(v InlineResponse200521Wifi)`
+
+SetWifi sets Wifi field to given value.
+
+### HasWifi
+
+`func (o *InlineObject383) HasWifi() bool`
+
+HasWifi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

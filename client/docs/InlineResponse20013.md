@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Interfaces** | Pointer to [**InlineResponse20013Interfaces**](InlineResponse20013Interfaces.md) |  | [optional] 
+**Interfaces** | Pointer to [**map[string]InlineResponse20013Interfaces**](InlineResponse20013Interfaces.md) | Interface settings. | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetInterfaces
 
-`func (o *InlineResponse20013) GetInterfaces() InlineResponse20013Interfaces`
+`func (o *InlineResponse20013) GetInterfaces() map[string]InlineResponse20013Interfaces`
 
 GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
 
 ### GetInterfacesOk
 
-`func (o *InlineResponse20013) GetInterfacesOk() (*InlineResponse20013Interfaces, bool)`
+`func (o *InlineResponse20013) GetInterfacesOk() (*map[string]InlineResponse20013Interfaces, bool)`
 
 GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetInterfaces
 
-`func (o *InlineResponse20013) SetInterfaces(v InlineResponse20013Interfaces)`
+`func (o *InlineResponse20013) SetInterfaces(v map[string]InlineResponse20013Interfaces)`
 
 SetInterfaces sets Interfaces field to given value.
 

@@ -4,12 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PageIndex** | Pointer to **int32** | Current page index | [optional] 
-**PageItems** | Pointer to **int32** | Number of items in the page | [optional] 
-**TotalItems** | Pointer to **int32** | Total number of items | [optional] 
-**HasNext** | Pointer to **bool** | Is there more data to load | [optional] 
-**HasPrevious** | Pointer to **bool** | Is there previous data to load | [optional] 
-**Contents** | Pointer to [**[]InlineResponse200459Contents**](InlineResponse200459Contents.md) | Metrics content | [optional] 
+**Items** | Pointer to [**[]InlineResponse200459Items**](InlineResponse200459Items.md) | Array of Limited Access Roles | [optional] 
+**Meta** | Pointer to [**InlineResponse200286Meta**](InlineResponse200286Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -30,155 +26,55 @@ NewInlineResponse200459WithDefaults instantiates a new InlineResponse200459 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPageIndex
+### GetItems
 
-`func (o *InlineResponse200459) GetPageIndex() int32`
+`func (o *InlineResponse200459) GetItems() []InlineResponse200459Items`
 
-GetPageIndex returns the PageIndex field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetPageIndexOk
+### GetItemsOk
 
-`func (o *InlineResponse200459) GetPageIndexOk() (*int32, bool)`
+`func (o *InlineResponse200459) GetItemsOk() (*[]InlineResponse200459Items, bool)`
 
-GetPageIndexOk returns a tuple with the PageIndex field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPageIndex
+### SetItems
 
-`func (o *InlineResponse200459) SetPageIndex(v int32)`
+`func (o *InlineResponse200459) SetItems(v []InlineResponse200459Items)`
 
-SetPageIndex sets PageIndex field to given value.
+SetItems sets Items field to given value.
 
-### HasPageIndex
+### HasItems
 
-`func (o *InlineResponse200459) HasPageIndex() bool`
+`func (o *InlineResponse200459) HasItems() bool`
 
-HasPageIndex returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetPageItems
+### GetMeta
 
-`func (o *InlineResponse200459) GetPageItems() int32`
+`func (o *InlineResponse200459) GetMeta() InlineResponse200286Meta`
 
-GetPageItems returns the PageItems field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetPageItemsOk
+### GetMetaOk
 
-`func (o *InlineResponse200459) GetPageItemsOk() (*int32, bool)`
+`func (o *InlineResponse200459) GetMetaOk() (*InlineResponse200286Meta, bool)`
 
-GetPageItemsOk returns a tuple with the PageItems field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPageItems
+### SetMeta
 
-`func (o *InlineResponse200459) SetPageItems(v int32)`
+`func (o *InlineResponse200459) SetMeta(v InlineResponse200286Meta)`
 
-SetPageItems sets PageItems field to given value.
+SetMeta sets Meta field to given value.
 
-### HasPageItems
+### HasMeta
 
-`func (o *InlineResponse200459) HasPageItems() bool`
+`func (o *InlineResponse200459) HasMeta() bool`
 
-HasPageItems returns a boolean if a field has been set.
-
-### GetTotalItems
-
-`func (o *InlineResponse200459) GetTotalItems() int32`
-
-GetTotalItems returns the TotalItems field if non-nil, zero value otherwise.
-
-### GetTotalItemsOk
-
-`func (o *InlineResponse200459) GetTotalItemsOk() (*int32, bool)`
-
-GetTotalItemsOk returns a tuple with the TotalItems field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTotalItems
-
-`func (o *InlineResponse200459) SetTotalItems(v int32)`
-
-SetTotalItems sets TotalItems field to given value.
-
-### HasTotalItems
-
-`func (o *InlineResponse200459) HasTotalItems() bool`
-
-HasTotalItems returns a boolean if a field has been set.
-
-### GetHasNext
-
-`func (o *InlineResponse200459) GetHasNext() bool`
-
-GetHasNext returns the HasNext field if non-nil, zero value otherwise.
-
-### GetHasNextOk
-
-`func (o *InlineResponse200459) GetHasNextOk() (*bool, bool)`
-
-GetHasNextOk returns a tuple with the HasNext field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHasNext
-
-`func (o *InlineResponse200459) SetHasNext(v bool)`
-
-SetHasNext sets HasNext field to given value.
-
-### HasHasNext
-
-`func (o *InlineResponse200459) HasHasNext() bool`
-
-HasHasNext returns a boolean if a field has been set.
-
-### GetHasPrevious
-
-`func (o *InlineResponse200459) GetHasPrevious() bool`
-
-GetHasPrevious returns the HasPrevious field if non-nil, zero value otherwise.
-
-### GetHasPreviousOk
-
-`func (o *InlineResponse200459) GetHasPreviousOk() (*bool, bool)`
-
-GetHasPreviousOk returns a tuple with the HasPrevious field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHasPrevious
-
-`func (o *InlineResponse200459) SetHasPrevious(v bool)`
-
-SetHasPrevious sets HasPrevious field to given value.
-
-### HasHasPrevious
-
-`func (o *InlineResponse200459) HasHasPrevious() bool`
-
-HasHasPrevious returns a boolean if a field has been set.
-
-### GetContents
-
-`func (o *InlineResponse200459) GetContents() []InlineResponse200459Contents`
-
-GetContents returns the Contents field if non-nil, zero value otherwise.
-
-### GetContentsOk
-
-`func (o *InlineResponse200459) GetContentsOk() (*[]InlineResponse200459Contents, bool)`
-
-GetContentsOk returns a tuple with the Contents field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetContents
-
-`func (o *InlineResponse200459) SetContents(v []InlineResponse200459Contents)`
-
-SetContents sets Contents field to given value.
-
-### HasContents
-
-`func (o *InlineResponse200459) HasContents() bool`
-
-HasContents returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

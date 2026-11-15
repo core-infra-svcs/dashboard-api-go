@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Operation** | **string** | Operation to run on the sensor. &#39;enableDownstreamPower&#39;, &#39;disableDownstreamPower&#39;, and &#39;cycleDownstreamPower&#39; turn power on/off to the device that is connected downstream of an MT40 power monitor. &#39;refreshData&#39; causes an MT15 or MT40 device to upload its latest readings so that they are immediately available in the Dashboard API. | 
+**VlanId** | **int32** | The target&#39;s VLAN (1 to 4094) | 
+**Mac** | **string** | The target&#39;s MAC address | 
+**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject35
 
-`func NewInlineObject35(operation string, ) *InlineObject35`
+`func NewInlineObject35(vlanId int32, mac string, ) *InlineObject35`
 
 NewInlineObject35 instantiates a new InlineObject35 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +27,70 @@ NewInlineObject35WithDefaults instantiates a new InlineObject35 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOperation
+### GetVlanId
 
-`func (o *InlineObject35) GetOperation() string`
+`func (o *InlineObject35) GetVlanId() int32`
 
-GetOperation returns the Operation field if non-nil, zero value otherwise.
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-### GetOperationOk
+### GetVlanIdOk
 
-`func (o *InlineObject35) GetOperationOk() (*string, bool)`
+`func (o *InlineObject35) GetVlanIdOk() (*int32, bool)`
 
-GetOperationOk returns a tuple with the Operation field if it's non-nil, zero value otherwise
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOperation
+### SetVlanId
 
-`func (o *InlineObject35) SetOperation(v string)`
+`func (o *InlineObject35) SetVlanId(v int32)`
 
-SetOperation sets Operation field to given value.
+SetVlanId sets VlanId field to given value.
 
+
+### GetMac
+
+`func (o *InlineObject35) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *InlineObject35) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *InlineObject35) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
+
+### GetCallback
+
+`func (o *InlineObject35) GetCallback() DevicesSerialLiveToolsArpTableCallback`
+
+GetCallback returns the Callback field if non-nil, zero value otherwise.
+
+### GetCallbackOk
+
+`func (o *InlineObject35) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
+
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCallback
+
+`func (o *InlineObject35) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
+
+SetCallback sets Callback field to given value.
+
+### HasCallback
+
+`func (o *InlineObject35) HasCallback() bool`
+
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

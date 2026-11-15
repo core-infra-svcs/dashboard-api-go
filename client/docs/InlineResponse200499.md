@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Downstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream.md) |  | [optional] 
-**Upstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream.md) |  | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200499Items**](InlineResponse200499Items.md) | List of networks with SSID-level summaries of wireless clients impacted by connection failures. Results are sorted by impact count, with sort order configurable via the sortOrder parameter. | [optional] 
+**Meta** | Pointer to [**InlineResponse200499Meta**](InlineResponse200499Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200499WithDefaults instantiates a new InlineResponse200499 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDownstream
+### GetItems
 
-`func (o *InlineResponse200499) GetDownstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream`
+`func (o *InlineResponse200499) GetItems() []InlineResponse200499Items`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetItemsOk
 
-`func (o *InlineResponse200499) GetDownstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream, bool)`
+`func (o *InlineResponse200499) GetItemsOk() (*[]InlineResponse200499Items, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetItems
 
-`func (o *InlineResponse200499) SetDownstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream)`
+`func (o *InlineResponse200499) SetItems(v []InlineResponse200499Items)`
 
-SetDownstream sets Downstream field to given value.
+SetItems sets Items field to given value.
 
-### HasDownstream
+### HasItems
 
-`func (o *InlineResponse200499) HasDownstream() bool`
+`func (o *InlineResponse200499) HasItems() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetUpstream
+### GetMeta
 
-`func (o *InlineResponse200499) GetUpstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream`
+`func (o *InlineResponse200499) GetMeta() InlineResponse200499Meta`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetMetaOk
 
-`func (o *InlineResponse200499) GetUpstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream, bool)`
+`func (o *InlineResponse200499) GetMetaOk() (*InlineResponse200499Meta, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetMeta
 
-`func (o *InlineResponse200499) SetUpstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream)`
+`func (o *InlineResponse200499) SetMeta(v InlineResponse200499Meta)`
 
-SetUpstream sets Upstream field to given value.
+SetMeta sets Meta field to given value.
 
-### HasUpstream
+### HasMeta
 
-`func (o *InlineResponse200499) HasUpstream() bool`
+`func (o *InlineResponse200499) HasMeta() bool`
 
-HasUpstream returns a boolean if a field has been set.
-
-### GetNetwork
-
-`func (o *InlineResponse200499) GetNetwork() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200499) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200499) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200499) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

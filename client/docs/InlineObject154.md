@@ -4,14 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppIds** | **[]string** | ids of applications to be installed | 
-**Force** | Pointer to **bool** | By default, installation of an app which is believed to already be present on the device will be skipped. If you&#39;d like to force the installation of the app, set this parameter to true. | [optional] 
+**WifiMacs** | Pointer to **[]string** | The wifiMacs of the endpoints to be rebooted. | [optional] 
+**Ids** | Pointer to **[]string** | The ids of the endpoints to be rebooted. | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the endpoints to be rebooted. | [optional] 
+**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the endpoints to be rebooted. | [optional] 
+**KextPaths** | Pointer to **[]string** | The KextPaths of the endpoints to be rebooted. Available for macOS 11+ | [optional] 
+**NotifyUser** | Pointer to **bool** | Whether or not to notify the user before rebooting the endpoint. Available for macOS 11.3+ | [optional] 
+**RebuildKernelCache** | Pointer to **bool** | Whether or not to rebuild the kernel cache when rebooting the endpoint. Available for macOS 11+ | [optional] 
+**RequestRequiresNetworkTether** | Pointer to **bool** | Whether or not the request requires network tethering. Available for macOS and supervised iOS or tvOS | [optional] 
 
 ## Methods
 
 ### NewInlineObject154
 
-`func NewInlineObject154(appIds []string, ) *InlineObject154`
+`func NewInlineObject154() *InlineObject154`
 
 NewInlineObject154 instantiates a new InlineObject154 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +32,205 @@ NewInlineObject154WithDefaults instantiates a new InlineObject154 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAppIds
+### GetWifiMacs
 
-`func (o *InlineObject154) GetAppIds() []string`
+`func (o *InlineObject154) GetWifiMacs() []string`
 
-GetAppIds returns the AppIds field if non-nil, zero value otherwise.
+GetWifiMacs returns the WifiMacs field if non-nil, zero value otherwise.
 
-### GetAppIdsOk
+### GetWifiMacsOk
 
-`func (o *InlineObject154) GetAppIdsOk() (*[]string, bool)`
+`func (o *InlineObject154) GetWifiMacsOk() (*[]string, bool)`
 
-GetAppIdsOk returns a tuple with the AppIds field if it's non-nil, zero value otherwise
+GetWifiMacsOk returns a tuple with the WifiMacs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAppIds
+### SetWifiMacs
 
-`func (o *InlineObject154) SetAppIds(v []string)`
+`func (o *InlineObject154) SetWifiMacs(v []string)`
 
-SetAppIds sets AppIds field to given value.
+SetWifiMacs sets WifiMacs field to given value.
 
+### HasWifiMacs
 
-### GetForce
+`func (o *InlineObject154) HasWifiMacs() bool`
 
-`func (o *InlineObject154) GetForce() bool`
+HasWifiMacs returns a boolean if a field has been set.
 
-GetForce returns the Force field if non-nil, zero value otherwise.
+### GetIds
 
-### GetForceOk
+`func (o *InlineObject154) GetIds() []string`
 
-`func (o *InlineObject154) GetForceOk() (*bool, bool)`
+GetIds returns the Ids field if non-nil, zero value otherwise.
 
-GetForceOk returns a tuple with the Force field if it's non-nil, zero value otherwise
+### GetIdsOk
+
+`func (o *InlineObject154) GetIdsOk() (*[]string, bool)`
+
+GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetForce
+### SetIds
 
-`func (o *InlineObject154) SetForce(v bool)`
+`func (o *InlineObject154) SetIds(v []string)`
 
-SetForce sets Force field to given value.
+SetIds sets Ids field to given value.
 
-### HasForce
+### HasIds
 
-`func (o *InlineObject154) HasForce() bool`
+`func (o *InlineObject154) HasIds() bool`
 
-HasForce returns a boolean if a field has been set.
+HasIds returns a boolean if a field has been set.
+
+### GetSerials
+
+`func (o *InlineObject154) GetSerials() []string`
+
+GetSerials returns the Serials field if non-nil, zero value otherwise.
+
+### GetSerialsOk
+
+`func (o *InlineObject154) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerials
+
+`func (o *InlineObject154) SetSerials(v []string)`
+
+SetSerials sets Serials field to given value.
+
+### HasSerials
+
+`func (o *InlineObject154) HasSerials() bool`
+
+HasSerials returns a boolean if a field has been set.
+
+### GetScope
+
+`func (o *InlineObject154) GetScope() []string`
+
+GetScope returns the Scope field if non-nil, zero value otherwise.
+
+### GetScopeOk
+
+`func (o *InlineObject154) GetScopeOk() (*[]string, bool)`
+
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetScope
+
+`func (o *InlineObject154) SetScope(v []string)`
+
+SetScope sets Scope field to given value.
+
+### HasScope
+
+`func (o *InlineObject154) HasScope() bool`
+
+HasScope returns a boolean if a field has been set.
+
+### GetKextPaths
+
+`func (o *InlineObject154) GetKextPaths() []string`
+
+GetKextPaths returns the KextPaths field if non-nil, zero value otherwise.
+
+### GetKextPathsOk
+
+`func (o *InlineObject154) GetKextPathsOk() (*[]string, bool)`
+
+GetKextPathsOk returns a tuple with the KextPaths field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetKextPaths
+
+`func (o *InlineObject154) SetKextPaths(v []string)`
+
+SetKextPaths sets KextPaths field to given value.
+
+### HasKextPaths
+
+`func (o *InlineObject154) HasKextPaths() bool`
+
+HasKextPaths returns a boolean if a field has been set.
+
+### GetNotifyUser
+
+`func (o *InlineObject154) GetNotifyUser() bool`
+
+GetNotifyUser returns the NotifyUser field if non-nil, zero value otherwise.
+
+### GetNotifyUserOk
+
+`func (o *InlineObject154) GetNotifyUserOk() (*bool, bool)`
+
+GetNotifyUserOk returns a tuple with the NotifyUser field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotifyUser
+
+`func (o *InlineObject154) SetNotifyUser(v bool)`
+
+SetNotifyUser sets NotifyUser field to given value.
+
+### HasNotifyUser
+
+`func (o *InlineObject154) HasNotifyUser() bool`
+
+HasNotifyUser returns a boolean if a field has been set.
+
+### GetRebuildKernelCache
+
+`func (o *InlineObject154) GetRebuildKernelCache() bool`
+
+GetRebuildKernelCache returns the RebuildKernelCache field if non-nil, zero value otherwise.
+
+### GetRebuildKernelCacheOk
+
+`func (o *InlineObject154) GetRebuildKernelCacheOk() (*bool, bool)`
+
+GetRebuildKernelCacheOk returns a tuple with the RebuildKernelCache field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRebuildKernelCache
+
+`func (o *InlineObject154) SetRebuildKernelCache(v bool)`
+
+SetRebuildKernelCache sets RebuildKernelCache field to given value.
+
+### HasRebuildKernelCache
+
+`func (o *InlineObject154) HasRebuildKernelCache() bool`
+
+HasRebuildKernelCache returns a boolean if a field has been set.
+
+### GetRequestRequiresNetworkTether
+
+`func (o *InlineObject154) GetRequestRequiresNetworkTether() bool`
+
+GetRequestRequiresNetworkTether returns the RequestRequiresNetworkTether field if non-nil, zero value otherwise.
+
+### GetRequestRequiresNetworkTetherOk
+
+`func (o *InlineObject154) GetRequestRequiresNetworkTetherOk() (*bool, bool)`
+
+GetRequestRequiresNetworkTetherOk returns a tuple with the RequestRequiresNetworkTether field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequestRequiresNetworkTether
+
+`func (o *InlineObject154) SetRequestRequiresNetworkTether(v bool)`
+
+SetRequestRequiresNetworkTether sets RequestRequiresNetworkTether field to given value.
+
+### HasRequestRequiresNetworkTether
+
+`func (o *InlineObject154) HasRequestRequiresNetworkTether() bool`
+
+HasRequestRequiresNetworkTether returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

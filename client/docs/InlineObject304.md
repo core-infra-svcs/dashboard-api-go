@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | The serial(s) of the device(s) to stop the capture on | 
+**Items** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems**](OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems.md) | List of device-to-profile assignments to create. | 
 
 ## Methods
 
 ### NewInlineObject304
 
-`func NewInlineObject304(serials []string, ) *InlineObject304`
+`func NewInlineObject304(items []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems, ) *InlineObject304`
 
 NewInlineObject304 instantiates a new InlineObject304 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject304WithDefaults instantiates a new InlineObject304 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetItems
 
-`func (o *InlineObject304) GetSerials() []string`
+`func (o *InlineObject304) GetItems() []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetItemsOk
 
-`func (o *InlineObject304) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject304) GetItemsOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetItems
 
-`func (o *InlineObject304) SetSerials(v []string)`
+`func (o *InlineObject304) SetItems(v []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems)`
 
-SetSerials sets Serials field to given value.
+SetItems sets Items field to given value.
 
 
 

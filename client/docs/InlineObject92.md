@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **bool** | Enable or disable umbrella protection | 
+**Domains** | **[]string** | Domain names to exclude from Umbrella DNS routing (e.g., &#39;example.com&#39;, &#39;corp.example.org&#39;). Standard FQDNs only — wildcards are not supported. Values are lowercased before saving. Each call replaces the full exclusion list. | 
 
 ## Methods
 
 ### NewInlineObject92
 
-`func NewInlineObject92(enabled bool, ) *InlineObject92`
+`func NewInlineObject92(domains []string, ) *InlineObject92`
 
 NewInlineObject92 instantiates a new InlineObject92 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject92WithDefaults instantiates a new InlineObject92 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetDomains
 
-`func (o *InlineObject92) GetEnabled() bool`
+`func (o *InlineObject92) GetDomains() []string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetDomains returns the Domains field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetDomainsOk
 
-`func (o *InlineObject92) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject92) GetDomainsOk() (*[]string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetDomainsOk returns a tuple with the Domains field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetDomains
 
-`func (o *InlineObject92) SetEnabled(v bool)`
+`func (o *InlineObject92) SetDomains(v []string)`
 
-SetEnabled sets Enabled field to given value.
+SetDomains sets Domains field to given value.
 
 
 

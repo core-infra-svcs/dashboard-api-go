@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse20078Rules**](InlineResponse20078Rules.md) | An ordered array of the MX L7 firewall rules. Each rule is an object with &#39;policy&#39;, &#39;type&#39;, and &#39;value&#39;. The &#39;value&#39; shape depends on &#39;type&#39;: object for application/applicationCategory, string for host/port/ipRange, and an array of 2-letter ISO 3166-1 alpha-2 country codes for allowedCountries/blockedCountries. For backward compatibility, request types also accept whitelistedCountries/blacklistedCountries. | [optional] 
+**Service** | Pointer to **string** | Appliance service name | [optional] 
+**Access** | Pointer to **string** | A string indicating the rule for which IPs are allowed to use the specified service | [optional] 
+**AllowedIps** | Pointer to **[]string** | An array of allowed IPs that can access the service | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse20078WithDefaults instantiates a new InlineResponse20078 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetService
 
-`func (o *InlineResponse20078) GetRules() []InlineResponse20078Rules`
+`func (o *InlineResponse20078) GetService() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetService returns the Service field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetServiceOk
 
-`func (o *InlineResponse20078) GetRulesOk() (*[]InlineResponse20078Rules, bool)`
+`func (o *InlineResponse20078) GetServiceOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetServiceOk returns a tuple with the Service field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetService
 
-`func (o *InlineResponse20078) SetRules(v []InlineResponse20078Rules)`
+`func (o *InlineResponse20078) SetService(v string)`
 
-SetRules sets Rules field to given value.
+SetService sets Service field to given value.
 
-### HasRules
+### HasService
 
-`func (o *InlineResponse20078) HasRules() bool`
+`func (o *InlineResponse20078) HasService() bool`
 
-HasRules returns a boolean if a field has been set.
+HasService returns a boolean if a field has been set.
+
+### GetAccess
+
+`func (o *InlineResponse20078) GetAccess() string`
+
+GetAccess returns the Access field if non-nil, zero value otherwise.
+
+### GetAccessOk
+
+`func (o *InlineResponse20078) GetAccessOk() (*string, bool)`
+
+GetAccessOk returns a tuple with the Access field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccess
+
+`func (o *InlineResponse20078) SetAccess(v string)`
+
+SetAccess sets Access field to given value.
+
+### HasAccess
+
+`func (o *InlineResponse20078) HasAccess() bool`
+
+HasAccess returns a boolean if a field has been set.
+
+### GetAllowedIps
+
+`func (o *InlineResponse20078) GetAllowedIps() []string`
+
+GetAllowedIps returns the AllowedIps field if non-nil, zero value otherwise.
+
+### GetAllowedIpsOk
+
+`func (o *InlineResponse20078) GetAllowedIpsOk() (*[]string, bool)`
+
+GetAllowedIpsOk returns a tuple with the AllowedIps field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllowedIps
+
+`func (o *InlineResponse20078) SetAllowedIps(v []string)`
+
+SetAllowedIps sets AllowedIps field to given value.
+
+### HasAllowedIps
+
+`func (o *InlineResponse20078) HasAllowedIps() bool`
+
+HasAllowedIps returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

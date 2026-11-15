@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Network ID for this eSIM | [optional] 
+**Id** | **string** | The unique identifier of network (N_) or combined network (L_) | 
+**Name** | **string** | The name of the network | 
 
 ## Methods
 
 ### NewInlineResponse200344Network
 
-`func NewInlineResponse200344Network() *InlineResponse200344Network`
+`func NewInlineResponse200344Network(id string, name string, ) *InlineResponse200344Network`
 
 NewInlineResponse200344Network instantiates a new InlineResponse200344Network object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +45,26 @@ and a boolean to check if the value has been set.
 
 SetId sets Id field to given value.
 
-### HasId
 
-`func (o *InlineResponse200344Network) HasId() bool`
+### GetName
 
-HasId returns a boolean if a field has been set.
+`func (o *InlineResponse200344Network) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200344Network) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200344Network) SetName(v string)`
+
+SetName sets Name field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

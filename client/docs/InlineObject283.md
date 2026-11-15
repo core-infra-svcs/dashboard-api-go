@@ -4,16 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the new role. Must be unique. | [optional] 
-**AppliedOnDevices** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices1**](OrganizationsOrganizationIdCameraRolesAppliedOnDevices1.md) | Device tag on which this specified permission is applied. | [optional] 
-**AppliedOnNetworks** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1**](OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1.md) | Network tag on which this specified permission is applied. | [optional] 
-**AppliedOrgWide** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide1**](OrganizationsOrganizationIdCameraRolesAppliedOrgWide1.md) | Permissions to be applied org wide. | [optional] 
+**Name** | **string** | Name of the Dashboard branding policy. | 
+**Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
+**Appearance** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAppearance**](OrganizationsOrganizationIdBrandingPoliciesAppearance.md) |  | [optional] 
+**AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
+**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings.md) |  | [optional] 
+**CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo1**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject283
 
-`func NewInlineObject283() *InlineObject283`
+`func NewInlineObject283(name string, ) *InlineObject283`
 
 NewInlineObject283 instantiates a new InlineObject283 object
 This constructor will assign default values to properties that have it defined,
@@ -47,86 +49,131 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *InlineObject283) HasName() bool`
+### GetEnabled
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject283) GetEnabled() bool`
 
-### GetAppliedOnDevices
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-`func (o *InlineObject283) GetAppliedOnDevices() []OrganizationsOrganizationIdCameraRolesAppliedOnDevices1`
+### GetEnabledOk
 
-GetAppliedOnDevices returns the AppliedOnDevices field if non-nil, zero value otherwise.
+`func (o *InlineObject283) GetEnabledOk() (*bool, bool)`
 
-### GetAppliedOnDevicesOk
-
-`func (o *InlineObject283) GetAppliedOnDevicesOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices1, bool)`
-
-GetAppliedOnDevicesOk returns a tuple with the AppliedOnDevices field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAppliedOnDevices
+### SetEnabled
 
-`func (o *InlineObject283) SetAppliedOnDevices(v []OrganizationsOrganizationIdCameraRolesAppliedOnDevices1)`
+`func (o *InlineObject283) SetEnabled(v bool)`
 
-SetAppliedOnDevices sets AppliedOnDevices field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasAppliedOnDevices
+### HasEnabled
 
-`func (o *InlineObject283) HasAppliedOnDevices() bool`
+`func (o *InlineObject283) HasEnabled() bool`
 
-HasAppliedOnDevices returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetAppliedOnNetworks
+### GetAppearance
 
-`func (o *InlineObject283) GetAppliedOnNetworks() []OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1`
+`func (o *InlineObject283) GetAppearance() OrganizationsOrganizationIdBrandingPoliciesAppearance`
 
-GetAppliedOnNetworks returns the AppliedOnNetworks field if non-nil, zero value otherwise.
+GetAppearance returns the Appearance field if non-nil, zero value otherwise.
 
-### GetAppliedOnNetworksOk
+### GetAppearanceOk
 
-`func (o *InlineObject283) GetAppliedOnNetworksOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1, bool)`
+`func (o *InlineObject283) GetAppearanceOk() (*OrganizationsOrganizationIdBrandingPoliciesAppearance, bool)`
 
-GetAppliedOnNetworksOk returns a tuple with the AppliedOnNetworks field if it's non-nil, zero value otherwise
+GetAppearanceOk returns a tuple with the Appearance field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAppliedOnNetworks
+### SetAppearance
 
-`func (o *InlineObject283) SetAppliedOnNetworks(v []OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1)`
+`func (o *InlineObject283) SetAppearance(v OrganizationsOrganizationIdBrandingPoliciesAppearance)`
 
-SetAppliedOnNetworks sets AppliedOnNetworks field to given value.
+SetAppearance sets Appearance field to given value.
 
-### HasAppliedOnNetworks
+### HasAppearance
 
-`func (o *InlineObject283) HasAppliedOnNetworks() bool`
+`func (o *InlineObject283) HasAppearance() bool`
 
-HasAppliedOnNetworks returns a boolean if a field has been set.
+HasAppearance returns a boolean if a field has been set.
 
-### GetAppliedOrgWide
+### GetAdminSettings
 
-`func (o *InlineObject283) GetAppliedOrgWide() []OrganizationsOrganizationIdCameraRolesAppliedOrgWide1`
+`func (o *InlineObject283) GetAdminSettings() OrganizationsOrganizationIdBrandingPoliciesAdminSettings`
 
-GetAppliedOrgWide returns the AppliedOrgWide field if non-nil, zero value otherwise.
+GetAdminSettings returns the AdminSettings field if non-nil, zero value otherwise.
 
-### GetAppliedOrgWideOk
+### GetAdminSettingsOk
 
-`func (o *InlineObject283) GetAppliedOrgWideOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide1, bool)`
+`func (o *InlineObject283) GetAdminSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesAdminSettings, bool)`
 
-GetAppliedOrgWideOk returns a tuple with the AppliedOrgWide field if it's non-nil, zero value otherwise
+GetAdminSettingsOk returns a tuple with the AdminSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAppliedOrgWide
+### SetAdminSettings
 
-`func (o *InlineObject283) SetAppliedOrgWide(v []OrganizationsOrganizationIdCameraRolesAppliedOrgWide1)`
+`func (o *InlineObject283) SetAdminSettings(v OrganizationsOrganizationIdBrandingPoliciesAdminSettings)`
 
-SetAppliedOrgWide sets AppliedOrgWide field to given value.
+SetAdminSettings sets AdminSettings field to given value.
 
-### HasAppliedOrgWide
+### HasAdminSettings
 
-`func (o *InlineObject283) HasAppliedOrgWide() bool`
+`func (o *InlineObject283) HasAdminSettings() bool`
 
-HasAppliedOrgWide returns a boolean if a field has been set.
+HasAdminSettings returns a boolean if a field has been set.
+
+### GetHelpSettings
+
+`func (o *InlineObject283) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings`
+
+GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
+
+### GetHelpSettingsOk
+
+`func (o *InlineObject283) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings, bool)`
+
+GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHelpSettings
+
+`func (o *InlineObject283) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings)`
+
+SetHelpSettings sets HelpSettings field to given value.
+
+### HasHelpSettings
+
+`func (o *InlineObject283) HasHelpSettings() bool`
+
+HasHelpSettings returns a boolean if a field has been set.
+
+### GetCustomLogo
+
+`func (o *InlineObject283) GetCustomLogo() OrganizationsOrganizationIdBrandingPoliciesCustomLogo1`
+
+GetCustomLogo returns the CustomLogo field if non-nil, zero value otherwise.
+
+### GetCustomLogoOk
+
+`func (o *InlineObject283) GetCustomLogoOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogo1, bool)`
+
+GetCustomLogoOk returns a tuple with the CustomLogo field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCustomLogo
+
+`func (o *InlineObject283) SetCustomLogo(v OrganizationsOrganizationIdBrandingPoliciesCustomLogo1)`
+
+SetCustomLogo sets CustomLogo field to given value.
+
+### HasCustomLogo
+
+`func (o *InlineObject283) HasCustomLogo() bool`
+
+HasCustomLogo returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

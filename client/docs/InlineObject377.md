@@ -4,16 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Description** | Pointer to **string** | The description of mac address | [optional] 
-**Client** | [**InlineResponse200514Client**](InlineResponse200514Client.md) |  | 
-**Ssid** | [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid.md) |  | 
-**Network** | [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork.md) |  | 
+**SourceSerial** | **string** | Serial number of the source switch (must be on a network not bound to a template) | 
+**TargetSerials** | **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | 
 
 ## Methods
 
 ### NewInlineObject377
 
-`func NewInlineObject377(client InlineResponse200514Client, ssid OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid, network OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork, ) *InlineObject377`
+`func NewInlineObject377(sourceSerial string, targetSerials []string, ) *InlineObject377`
 
 NewInlineObject377 instantiates a new InlineObject377 object
 This constructor will assign default values to properties that have it defined,
@@ -28,89 +26,44 @@ NewInlineObject377WithDefaults instantiates a new InlineObject377 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDescription
+### GetSourceSerial
 
-`func (o *InlineObject377) GetDescription() string`
+`func (o *InlineObject377) GetSourceSerial() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetSourceSerialOk
 
-`func (o *InlineObject377) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject377) GetSourceSerialOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetSourceSerial
 
-`func (o *InlineObject377) SetDescription(v string)`
+`func (o *InlineObject377) SetSourceSerial(v string)`
 
-SetDescription sets Description field to given value.
+SetSourceSerial sets SourceSerial field to given value.
 
-### HasDescription
 
-`func (o *InlineObject377) HasDescription() bool`
+### GetTargetSerials
 
-HasDescription returns a boolean if a field has been set.
+`func (o *InlineObject377) GetTargetSerials() []string`
 
-### GetClient
+GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
 
-`func (o *InlineObject377) GetClient() InlineResponse200514Client`
+### GetTargetSerialsOk
 
-GetClient returns the Client field if non-nil, zero value otherwise.
+`func (o *InlineObject377) GetTargetSerialsOk() (*[]string, bool)`
 
-### GetClientOk
-
-`func (o *InlineObject377) GetClientOk() (*InlineResponse200514Client, bool)`
-
-GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
+GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClient
+### SetTargetSerials
 
-`func (o *InlineObject377) SetClient(v InlineResponse200514Client)`
+`func (o *InlineObject377) SetTargetSerials(v []string)`
 
-SetClient sets Client field to given value.
-
-
-### GetSsid
-
-`func (o *InlineObject377) GetSsid() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid`
-
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
-
-### GetSsidOk
-
-`func (o *InlineObject377) GetSsidOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid, bool)`
-
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSsid
-
-`func (o *InlineObject377) SetSsid(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid)`
-
-SetSsid sets Ssid field to given value.
-
-
-### GetNetwork
-
-`func (o *InlineObject377) GetNetwork() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineObject377) GetNetworkOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineObject377) SetNetwork(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork)`
-
-SetNetwork sets Network field to given value.
+SetTargetSerials sets TargetSerials field to given value.
 
 
 

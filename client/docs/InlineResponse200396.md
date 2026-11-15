@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200396Items**](InlineResponse200396Items.md) | An integration that you can add to your organization. | [optional] 
-**Meta** | Pointer to [**InlineResponse200272Meta**](InlineResponse200272Meta.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200396Items**](InlineResponse200396Items.md) | Outer container to hold the different syslog server roles per network | [optional] 
+**Meta** | Pointer to [**InlineResponse200395Meta**](InlineResponse200395Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasItems returns a boolean if a field has been set.
 
 ### GetMeta
 
-`func (o *InlineResponse200396) GetMeta() InlineResponse200272Meta`
+`func (o *InlineResponse200396) GetMeta() InlineResponse200395Meta`
 
 GetMeta returns the Meta field if non-nil, zero value otherwise.
 
 ### GetMetaOk
 
-`func (o *InlineResponse200396) GetMetaOk() (*InlineResponse200272Meta, bool)`
+`func (o *InlineResponse200396) GetMetaOk() (*InlineResponse200395Meta, bool)`
 
 GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMeta
 
-`func (o *InlineResponse200396) SetMeta(v InlineResponse200272Meta)`
+`func (o *InlineResponse200396) SetMeta(v InlineResponse200395Meta)`
 
 SetMeta sets Meta field to given value.
 

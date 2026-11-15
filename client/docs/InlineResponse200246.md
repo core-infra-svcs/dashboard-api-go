@@ -4,10 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**Snr** | Pointer to **int32** | Signal to noise ratio | [optional] 
-**Rssi** | Pointer to **int32** | Received signal strength indicator | [optional] 
+**NetworkId** | Pointer to **string** | Id of the network | [optional] 
+**Name** | Pointer to **string** | Name of the network | [optional] 
+**TimeZone** | Pointer to **string** | Time zone of the network | [optional] 
+**BusyHour** | Pointer to [**InlineResponse200246BusyHour**](InlineResponse200246BusyHour.md) |  | [optional] 
+**Channel** | Pointer to [**InlineResponse200246Channel**](InlineResponse200246Channel.md) |  | [optional] 
+**Fra** | Pointer to [**NetworksNetworkIdWirelessRadioRrmFra**](NetworksNetworkIdWirelessRadioRrmFra.md) |  | [optional] 
+**Ai** | Pointer to [**InlineResponse200246Ai**](InlineResponse200246Ai.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +31,180 @@ NewInlineResponse200246WithDefaults instantiates a new InlineResponse200246 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetNetworkId
 
-`func (o *InlineResponse200246) GetStartTs() time.Time`
+`func (o *InlineResponse200246) GetNetworkId() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200246) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200246) GetNetworkIdOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetNetworkId
 
-`func (o *InlineResponse200246) SetStartTs(v time.Time)`
+`func (o *InlineResponse200246) SetNetworkId(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasStartTs
+### HasNetworkId
 
-`func (o *InlineResponse200246) HasStartTs() bool`
+`func (o *InlineResponse200246) HasNetworkId() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetEndTs
+### GetName
 
-`func (o *InlineResponse200246) GetEndTs() time.Time`
+`func (o *InlineResponse200246) GetName() string`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetNameOk
 
-`func (o *InlineResponse200246) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200246) GetNameOk() (*string, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetName
 
-`func (o *InlineResponse200246) SetEndTs(v time.Time)`
+`func (o *InlineResponse200246) SetName(v string)`
 
-SetEndTs sets EndTs field to given value.
+SetName sets Name field to given value.
 
-### HasEndTs
+### HasName
 
-`func (o *InlineResponse200246) HasEndTs() bool`
+`func (o *InlineResponse200246) HasName() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetSnr
+### GetTimeZone
 
-`func (o *InlineResponse200246) GetSnr() int32`
+`func (o *InlineResponse200246) GetTimeZone() string`
 
-GetSnr returns the Snr field if non-nil, zero value otherwise.
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
 
-### GetSnrOk
+### GetTimeZoneOk
 
-`func (o *InlineResponse200246) GetSnrOk() (*int32, bool)`
+`func (o *InlineResponse200246) GetTimeZoneOk() (*string, bool)`
 
-GetSnrOk returns a tuple with the Snr field if it's non-nil, zero value otherwise
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSnr
+### SetTimeZone
 
-`func (o *InlineResponse200246) SetSnr(v int32)`
+`func (o *InlineResponse200246) SetTimeZone(v string)`
 
-SetSnr sets Snr field to given value.
+SetTimeZone sets TimeZone field to given value.
 
-### HasSnr
+### HasTimeZone
 
-`func (o *InlineResponse200246) HasSnr() bool`
+`func (o *InlineResponse200246) HasTimeZone() bool`
 
-HasSnr returns a boolean if a field has been set.
+HasTimeZone returns a boolean if a field has been set.
 
-### GetRssi
+### GetBusyHour
 
-`func (o *InlineResponse200246) GetRssi() int32`
+`func (o *InlineResponse200246) GetBusyHour() InlineResponse200246BusyHour`
 
-GetRssi returns the Rssi field if non-nil, zero value otherwise.
+GetBusyHour returns the BusyHour field if non-nil, zero value otherwise.
 
-### GetRssiOk
+### GetBusyHourOk
 
-`func (o *InlineResponse200246) GetRssiOk() (*int32, bool)`
+`func (o *InlineResponse200246) GetBusyHourOk() (*InlineResponse200246BusyHour, bool)`
 
-GetRssiOk returns a tuple with the Rssi field if it's non-nil, zero value otherwise
+GetBusyHourOk returns a tuple with the BusyHour field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRssi
+### SetBusyHour
 
-`func (o *InlineResponse200246) SetRssi(v int32)`
+`func (o *InlineResponse200246) SetBusyHour(v InlineResponse200246BusyHour)`
 
-SetRssi sets Rssi field to given value.
+SetBusyHour sets BusyHour field to given value.
 
-### HasRssi
+### HasBusyHour
 
-`func (o *InlineResponse200246) HasRssi() bool`
+`func (o *InlineResponse200246) HasBusyHour() bool`
 
-HasRssi returns a boolean if a field has been set.
+HasBusyHour returns a boolean if a field has been set.
+
+### GetChannel
+
+`func (o *InlineResponse200246) GetChannel() InlineResponse200246Channel`
+
+GetChannel returns the Channel field if non-nil, zero value otherwise.
+
+### GetChannelOk
+
+`func (o *InlineResponse200246) GetChannelOk() (*InlineResponse200246Channel, bool)`
+
+GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetChannel
+
+`func (o *InlineResponse200246) SetChannel(v InlineResponse200246Channel)`
+
+SetChannel sets Channel field to given value.
+
+### HasChannel
+
+`func (o *InlineResponse200246) HasChannel() bool`
+
+HasChannel returns a boolean if a field has been set.
+
+### GetFra
+
+`func (o *InlineResponse200246) GetFra() NetworksNetworkIdWirelessRadioRrmFra`
+
+GetFra returns the Fra field if non-nil, zero value otherwise.
+
+### GetFraOk
+
+`func (o *InlineResponse200246) GetFraOk() (*NetworksNetworkIdWirelessRadioRrmFra, bool)`
+
+GetFraOk returns a tuple with the Fra field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFra
+
+`func (o *InlineResponse200246) SetFra(v NetworksNetworkIdWirelessRadioRrmFra)`
+
+SetFra sets Fra field to given value.
+
+### HasFra
+
+`func (o *InlineResponse200246) HasFra() bool`
+
+HasFra returns a boolean if a field has been set.
+
+### GetAi
+
+`func (o *InlineResponse200246) GetAi() InlineResponse200246Ai`
+
+GetAi returns the Ai field if non-nil, zero value otherwise.
+
+### GetAiOk
+
+`func (o *InlineResponse200246) GetAiOk() (*InlineResponse200246Ai, bool)`
+
+GetAiOk returns a tuple with the Ai field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAi
+
+`func (o *InlineResponse200246) SetAi(v InlineResponse200246Ai)`
+
+SetAi sets Ai field to given value.
+
+### HasAi
+
+`func (o *InlineResponse200246) HasAi() bool`
+
+HasAi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

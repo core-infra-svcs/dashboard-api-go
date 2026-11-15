@@ -4,16 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMacs** | Pointer to **[]string** | The wifiMacs of the endpoints to be shutdown. | [optional] 
-**Ids** | Pointer to **[]string** | The ids of the endpoints to be shutdown. | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the endpoints to be shutdown. | [optional] 
-**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the endpoints to be shutdown. | [optional] 
+**WifiMacs** | Pointer to **[]string** | The wifiMacs of the devices to be modified. | [optional] 
+**Ids** | Pointer to **[]string** | The ids of the devices to be modified. | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices to be modified. | [optional] 
+**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be modified. | [optional] 
+**Tags** | **[]string** | The tags to be added, deleted, or updated. | 
+**UpdateAction** | **string** | One of add, delete, or update. Only devices that have been modified will be returned. | 
 
 ## Methods
 
 ### NewInlineObject152
 
-`func NewInlineObject152() *InlineObject152`
+`func NewInlineObject152(tags []string, updateAction string, ) *InlineObject152`
 
 NewInlineObject152 instantiates a new InlineObject152 object
 This constructor will assign default values to properties that have it defined,
@@ -127,6 +129,46 @@ SetScope sets Scope field to given value.
 `func (o *InlineObject152) HasScope() bool`
 
 HasScope returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineObject152) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineObject152) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineObject152) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+
+### GetUpdateAction
+
+`func (o *InlineObject152) GetUpdateAction() string`
+
+GetUpdateAction returns the UpdateAction field if non-nil, zero value otherwise.
+
+### GetUpdateActionOk
+
+`func (o *InlineObject152) GetUpdateActionOk() (*string, bool)`
+
+GetUpdateActionOk returns a tuple with the UpdateAction field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdateAction
+
+`func (o *InlineObject152) SetUpdateAction(v string)`
+
+SetUpdateAction sets UpdateAction field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

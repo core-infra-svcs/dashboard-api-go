@@ -4,7 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**[]InlineResponse200374Counts**](InlineResponse200374Counts.md) | Counts of devices per model | [optional] 
+**ProfileId** | Pointer to **string** | ID of the profile. | [optional] 
+**LastUpdatedAt** | Pointer to **string** | Time the profile was last updated in ISO8601Z. | [optional] 
+**Name** | Pointer to **string** | Name of the profile (names should be unique for all profiles defined for the org). | [optional] 
+**Description** | Pointer to **string** | The description of the profile that was set when it was created. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200374Rules**](InlineResponse200374Rules.md) | The rules associated with this profile. At least one rule and no more than two rules may be defined for a profile. | [optional] 
 
 ## Methods
 
@@ -25,30 +29,130 @@ NewInlineResponse200374WithDefaults instantiates a new InlineResponse200374 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetProfileId
 
-`func (o *InlineResponse200374) GetCounts() []InlineResponse200374Counts`
+`func (o *InlineResponse200374) GetProfileId() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetProfileIdOk
 
-`func (o *InlineResponse200374) GetCountsOk() (*[]InlineResponse200374Counts, bool)`
+`func (o *InlineResponse200374) GetProfileIdOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetProfileId
 
-`func (o *InlineResponse200374) SetCounts(v []InlineResponse200374Counts)`
+`func (o *InlineResponse200374) SetProfileId(v string)`
 
-SetCounts sets Counts field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasCounts
+### HasProfileId
 
-`func (o *InlineResponse200374) HasCounts() bool`
+`func (o *InlineResponse200374) HasProfileId() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasProfileId returns a boolean if a field has been set.
+
+### GetLastUpdatedAt
+
+`func (o *InlineResponse200374) GetLastUpdatedAt() string`
+
+GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
+
+### GetLastUpdatedAtOk
+
+`func (o *InlineResponse200374) GetLastUpdatedAtOk() (*string, bool)`
+
+GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastUpdatedAt
+
+`func (o *InlineResponse200374) SetLastUpdatedAt(v string)`
+
+SetLastUpdatedAt sets LastUpdatedAt field to given value.
+
+### HasLastUpdatedAt
+
+`func (o *InlineResponse200374) HasLastUpdatedAt() bool`
+
+HasLastUpdatedAt returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200374) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200374) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200374) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200374) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetDescription
+
+`func (o *InlineResponse200374) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineResponse200374) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineResponse200374) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineResponse200374) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *InlineResponse200374) GetRules() []InlineResponse200374Rules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineResponse200374) GetRulesOk() (*[]InlineResponse200374Rules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineResponse200374) SetRules(v []InlineResponse200374Rules)`
+
+SetRules sets Rules field to given value.
+
+### HasRules
+
+`func (o *InlineResponse200374) HasRules() bool`
+
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

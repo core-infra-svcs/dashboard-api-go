@@ -4,16 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RulesetId** | **string** | ID of the ruleset to assign | 
-**PolicyId** | **string** | ID of the policy to assign the ruleset to | 
-**Priority** | Pointer to **int32** | Priority of the ruleset assignment (lower numbers &#x3D; higher priority) | [optional] 
-**Staged** | Pointer to **bool** | Stage an assignment without applying it immediately to the policy | [optional] 
+**Name** | **string** | Name of the firewall rule | 
+**RulesetId** | **string** | Firewall ruleset ID to associate the rule with | 
+**Policy** | **string** | Rule policy - allow or deny traffic | 
+**Enabled** | Pointer to **bool** | Whether the rule is enabled | [optional] 
+**Priority** | Pointer to **int32** | Rule priority (lower numbers &#x3D; higher priority) | [optional] 
+**Description** | Pointer to **string** | Description of the firewall rule | [optional] 
+**Logging** | Pointer to [**InlineResponse200434Logging**](InlineResponse200434Logging.md) |  | [optional] 
+**Sources** | [**OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources**](OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources.md) |  | 
+**Destinations** | [**OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations**](OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations.md) |  | 
 
 ## Methods
 
 ### NewInlineObject343
 
-`func NewInlineObject343(rulesetId string, policyId string, ) *InlineObject343`
+`func NewInlineObject343(name string, rulesetId string, policy string, sources OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources, destinations OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations, ) *InlineObject343`
 
 NewInlineObject343 instantiates a new InlineObject343 object
 This constructor will assign default values to properties that have it defined,
@@ -27,6 +32,26 @@ will change when the set of required properties is changed
 NewInlineObject343WithDefaults instantiates a new InlineObject343 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetName
+
+`func (o *InlineObject343) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineObject343) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineObject343) SetName(v string)`
+
+SetName sets Name field to given value.
+
 
 ### GetRulesetId
 
@@ -48,25 +73,50 @@ and a boolean to check if the value has been set.
 SetRulesetId sets RulesetId field to given value.
 
 
-### GetPolicyId
+### GetPolicy
 
-`func (o *InlineObject343) GetPolicyId() string`
+`func (o *InlineObject343) GetPolicy() string`
 
-GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetPolicyIdOk
+### GetPolicyOk
 
-`func (o *InlineObject343) GetPolicyIdOk() (*string, bool)`
+`func (o *InlineObject343) GetPolicyOk() (*string, bool)`
 
-GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicyId
+### SetPolicy
 
-`func (o *InlineObject343) SetPolicyId(v string)`
+`func (o *InlineObject343) SetPolicy(v string)`
 
-SetPolicyId sets PolicyId field to given value.
+SetPolicy sets Policy field to given value.
 
+
+### GetEnabled
+
+`func (o *InlineObject343) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineObject343) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineObject343) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineObject343) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
 
 ### GetPriority
 
@@ -93,30 +143,95 @@ SetPriority sets Priority field to given value.
 
 HasPriority returns a boolean if a field has been set.
 
-### GetStaged
+### GetDescription
 
-`func (o *InlineObject343) GetStaged() bool`
+`func (o *InlineObject343) GetDescription() string`
 
-GetStaged returns the Staged field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetStagedOk
+### GetDescriptionOk
 
-`func (o *InlineObject343) GetStagedOk() (*bool, bool)`
+`func (o *InlineObject343) GetDescriptionOk() (*string, bool)`
 
-GetStagedOk returns a tuple with the Staged field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStaged
+### SetDescription
 
-`func (o *InlineObject343) SetStaged(v bool)`
+`func (o *InlineObject343) SetDescription(v string)`
 
-SetStaged sets Staged field to given value.
+SetDescription sets Description field to given value.
 
-### HasStaged
+### HasDescription
 
-`func (o *InlineObject343) HasStaged() bool`
+`func (o *InlineObject343) HasDescription() bool`
 
-HasStaged returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
+
+### GetLogging
+
+`func (o *InlineObject343) GetLogging() InlineResponse200434Logging`
+
+GetLogging returns the Logging field if non-nil, zero value otherwise.
+
+### GetLoggingOk
+
+`func (o *InlineObject343) GetLoggingOk() (*InlineResponse200434Logging, bool)`
+
+GetLoggingOk returns a tuple with the Logging field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLogging
+
+`func (o *InlineObject343) SetLogging(v InlineResponse200434Logging)`
+
+SetLogging sets Logging field to given value.
+
+### HasLogging
+
+`func (o *InlineObject343) HasLogging() bool`
+
+HasLogging returns a boolean if a field has been set.
+
+### GetSources
+
+`func (o *InlineObject343) GetSources() OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources`
+
+GetSources returns the Sources field if non-nil, zero value otherwise.
+
+### GetSourcesOk
+
+`func (o *InlineObject343) GetSourcesOk() (*OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources, bool)`
+
+GetSourcesOk returns a tuple with the Sources field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSources
+
+`func (o *InlineObject343) SetSources(v OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources)`
+
+SetSources sets Sources field to given value.
+
+
+### GetDestinations
+
+`func (o *InlineObject343) GetDestinations() OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations`
+
+GetDestinations returns the Destinations field if non-nil, zero value otherwise.
+
+### GetDestinationsOk
+
+`func (o *InlineObject343) GetDestinationsOk() (*OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations, bool)`
+
+GetDestinationsOk returns a tuple with the Destinations field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDestinations
+
+`func (o *InlineObject343) SetDestinations(v OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations)`
+
+SetDestinations sets Destinations field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

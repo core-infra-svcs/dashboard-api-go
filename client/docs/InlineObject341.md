@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy.md) |  | 
-**Vlans** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans.md) | VLANs to assign | 
+**Network** | [**OrganizationsOrganizationIdNetworksMovesNetwork**](OrganizationsOrganizationIdNetworksMovesNetwork.md) |  | 
+**Organizations** | [**OrganizationsOrganizationIdNetworksMovesOrganizations**](OrganizationsOrganizationIdNetworksMovesOrganizations.md) |  | 
+**Simulate** | Pointer to **bool** | If true, simulates the network move and validates the operation without committing changes. The network will remain in the source organization. | [optional] 
 
 ## Methods
 
 ### NewInlineObject341
 
-`func NewInlineObject341(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy, vlans []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans, ) *InlineObject341`
+`func NewInlineObject341(network OrganizationsOrganizationIdNetworksMovesNetwork, organizations OrganizationsOrganizationIdNetworksMovesOrganizations, ) *InlineObject341`
 
 NewInlineObject341 instantiates a new InlineObject341 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +27,70 @@ NewInlineObject341WithDefaults instantiates a new InlineObject341 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPolicy
+### GetNetwork
 
-`func (o *InlineObject341) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy`
+`func (o *InlineObject341) GetNetwork() OrganizationsOrganizationIdNetworksMovesNetwork`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetPolicyOk
+### GetNetworkOk
 
-`func (o *InlineObject341) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy, bool)`
+`func (o *InlineObject341) GetNetworkOk() (*OrganizationsOrganizationIdNetworksMovesNetwork, bool)`
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetNetwork
 
-`func (o *InlineObject341) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy)`
+`func (o *InlineObject341) SetNetwork(v OrganizationsOrganizationIdNetworksMovesNetwork)`
 
-SetPolicy sets Policy field to given value.
+SetNetwork sets Network field to given value.
 
 
-### GetVlans
+### GetOrganizations
 
-`func (o *InlineObject341) GetVlans() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans`
+`func (o *InlineObject341) GetOrganizations() OrganizationsOrganizationIdNetworksMovesOrganizations`
 
-GetVlans returns the Vlans field if non-nil, zero value otherwise.
+GetOrganizations returns the Organizations field if non-nil, zero value otherwise.
 
-### GetVlansOk
+### GetOrganizationsOk
 
-`func (o *InlineObject341) GetVlansOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans, bool)`
+`func (o *InlineObject341) GetOrganizationsOk() (*OrganizationsOrganizationIdNetworksMovesOrganizations, bool)`
 
-GetVlansOk returns a tuple with the Vlans field if it's non-nil, zero value otherwise
+GetOrganizationsOk returns a tuple with the Organizations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlans
+### SetOrganizations
 
-`func (o *InlineObject341) SetVlans(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans)`
+`func (o *InlineObject341) SetOrganizations(v OrganizationsOrganizationIdNetworksMovesOrganizations)`
 
-SetVlans sets Vlans field to given value.
+SetOrganizations sets Organizations field to given value.
 
+
+### GetSimulate
+
+`func (o *InlineObject341) GetSimulate() bool`
+
+GetSimulate returns the Simulate field if non-nil, zero value otherwise.
+
+### GetSimulateOk
+
+`func (o *InlineObject341) GetSimulateOk() (*bool, bool)`
+
+GetSimulateOk returns a tuple with the Simulate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSimulate
+
+`func (o *InlineObject341) SetSimulate(v bool)`
+
+SetSimulate sets Simulate field to given value.
+
+### HasSimulate
+
+`func (o *InlineObject341) HasSimulate() bool`
+
+HasSimulate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
-**Rules** | Pointer to [**[]InlineResponse20098Rules**](InlineResponse20098Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
+**GlobalBandwidthLimits** | [**InlineResponse20099GlobalBandwidthLimits**](InlineResponse20099GlobalBandwidthLimits.md) |  | 
 
 ## Methods
 
 ### NewInlineObject84
 
-`func NewInlineObject84() *InlineObject84`
+`func NewInlineObject84(globalBandwidthLimits InlineResponse20099GlobalBandwidthLimits, ) *InlineObject84`
 
 NewInlineObject84 instantiates a new InlineObject84 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +25,25 @@ NewInlineObject84WithDefaults instantiates a new InlineObject84 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultRulesEnabled
+### GetGlobalBandwidthLimits
 
-`func (o *InlineObject84) GetDefaultRulesEnabled() bool`
+`func (o *InlineObject84) GetGlobalBandwidthLimits() InlineResponse20099GlobalBandwidthLimits`
 
-GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
+GetGlobalBandwidthLimits returns the GlobalBandwidthLimits field if non-nil, zero value otherwise.
 
-### GetDefaultRulesEnabledOk
+### GetGlobalBandwidthLimitsOk
 
-`func (o *InlineObject84) GetDefaultRulesEnabledOk() (*bool, bool)`
+`func (o *InlineObject84) GetGlobalBandwidthLimitsOk() (*InlineResponse20099GlobalBandwidthLimits, bool)`
 
-GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
+GetGlobalBandwidthLimitsOk returns a tuple with the GlobalBandwidthLimits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultRulesEnabled
+### SetGlobalBandwidthLimits
 
-`func (o *InlineObject84) SetDefaultRulesEnabled(v bool)`
+`func (o *InlineObject84) SetGlobalBandwidthLimits(v InlineResponse20099GlobalBandwidthLimits)`
 
-SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
+SetGlobalBandwidthLimits sets GlobalBandwidthLimits field to given value.
 
-### HasDefaultRulesEnabled
-
-`func (o *InlineObject84) HasDefaultRulesEnabled() bool`
-
-HasDefaultRulesEnabled returns a boolean if a field has been set.
-
-### GetRules
-
-`func (o *InlineObject84) GetRules() []InlineResponse20098Rules`
-
-GetRules returns the Rules field if non-nil, zero value otherwise.
-
-### GetRulesOk
-
-`func (o *InlineObject84) GetRulesOk() (*[]InlineResponse20098Rules, bool)`
-
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRules
-
-`func (o *InlineObject84) SetRules(v []InlineResponse20098Rules)`
-
-SetRules sets Rules field to given value.
-
-### HasRules
-
-`func (o *InlineObject84) HasRules() bool`
-
-HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

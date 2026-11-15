@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]InlineResponse200342Items**](InlineResponse200342Items.md) | Latest CPU load data by Campus Gateway device | 
+**Items** | [**[]InlineResponse200342Items**](InlineResponse200342Items.md) | List of networks tunneling through campus gateway clusters | 
 **Meta** | [**InlineResponse200342Meta**](InlineResponse200342Meta.md) |  | 
 
 ## Methods

@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** | Current status of malware prevention | [optional] 
-**AllowedUrls** | Pointer to [**[]InlineResponse20091AllowedUrls**](InlineResponse20091AllowedUrls.md) | URLs permitted by the malware detection engine | [optional] 
-**AllowedFiles** | Pointer to [**[]InlineResponse20091AllowedFiles**](InlineResponse20091AllowedFiles.md) | Sha256 digests of files permitted by the malware detection engine | [optional] 
+**Network** | [**InlineResponse20091Network**](InlineResponse20091Network.md) |  | 
+**Enabled** | **bool** | Whether HTTPS inspection is enabled. | 
+**AllowLists** | [**InlineResponse20091AllowLists**](InlineResponse20091AllowLists.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse20091
 
-`func NewInlineResponse20091() *InlineResponse20091`
+`func NewInlineResponse20091(network InlineResponse20091Network, enabled bool, allowLists InlineResponse20091AllowLists, ) *InlineResponse20091`
 
 NewInlineResponse20091 instantiates a new InlineResponse20091 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +27,65 @@ NewInlineResponse20091WithDefaults instantiates a new InlineResponse20091 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetNetwork
 
-`func (o *InlineResponse20091) GetMode() string`
+`func (o *InlineResponse20091) GetNetwork() InlineResponse20091Network`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetNetworkOk
 
-`func (o *InlineResponse20091) GetModeOk() (*string, bool)`
+`func (o *InlineResponse20091) GetNetworkOk() (*InlineResponse20091Network, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetNetwork
 
-`func (o *InlineResponse20091) SetMode(v string)`
+`func (o *InlineResponse20091) SetNetwork(v InlineResponse20091Network)`
 
-SetMode sets Mode field to given value.
+SetNetwork sets Network field to given value.
 
-### HasMode
 
-`func (o *InlineResponse20091) HasMode() bool`
+### GetEnabled
 
-HasMode returns a boolean if a field has been set.
+`func (o *InlineResponse20091) GetEnabled() bool`
 
-### GetAllowedUrls
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse20091) GetAllowedUrls() []InlineResponse20091AllowedUrls`
+### GetEnabledOk
 
-GetAllowedUrls returns the AllowedUrls field if non-nil, zero value otherwise.
+`func (o *InlineResponse20091) GetEnabledOk() (*bool, bool)`
 
-### GetAllowedUrlsOk
-
-`func (o *InlineResponse20091) GetAllowedUrlsOk() (*[]InlineResponse20091AllowedUrls, bool)`
-
-GetAllowedUrlsOk returns a tuple with the AllowedUrls field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedUrls
+### SetEnabled
 
-`func (o *InlineResponse20091) SetAllowedUrls(v []InlineResponse20091AllowedUrls)`
+`func (o *InlineResponse20091) SetEnabled(v bool)`
 
-SetAllowedUrls sets AllowedUrls field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasAllowedUrls
 
-`func (o *InlineResponse20091) HasAllowedUrls() bool`
+### GetAllowLists
 
-HasAllowedUrls returns a boolean if a field has been set.
+`func (o *InlineResponse20091) GetAllowLists() InlineResponse20091AllowLists`
 
-### GetAllowedFiles
+GetAllowLists returns the AllowLists field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse20091) GetAllowedFiles() []InlineResponse20091AllowedFiles`
+### GetAllowListsOk
 
-GetAllowedFiles returns the AllowedFiles field if non-nil, zero value otherwise.
+`func (o *InlineResponse20091) GetAllowListsOk() (*InlineResponse20091AllowLists, bool)`
 
-### GetAllowedFilesOk
-
-`func (o *InlineResponse20091) GetAllowedFilesOk() (*[]InlineResponse20091AllowedFiles, bool)`
-
-GetAllowedFilesOk returns a tuple with the AllowedFiles field if it's non-nil, zero value otherwise
+GetAllowListsOk returns a tuple with the AllowLists field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedFiles
+### SetAllowLists
 
-`func (o *InlineResponse20091) SetAllowedFiles(v []InlineResponse20091AllowedFiles)`
+`func (o *InlineResponse20091) SetAllowLists(v InlineResponse20091AllowLists)`
 
-SetAllowedFiles sets AllowedFiles field to given value.
+SetAllowLists sets AllowLists field to given value.
 
-### HasAllowedFiles
-
-`func (o *InlineResponse20091) HasAllowedFiles() bool`
-
-HasAllowedFiles returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

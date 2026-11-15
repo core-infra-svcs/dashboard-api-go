@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationSummarySustainabilitySummaryConsumerMetricsDeviceCategories
 
-> InlineResponse200458 GetOrganizationSummarySustainabilitySummaryConsumerMetricsDeviceCategories(ctx, organizationId).Execute()
+> InlineResponse200470 GetOrganizationSummarySustainabilitySummaryConsumerMetricsDeviceCategories(ctx, organizationId).Execute()
 
 Lists available device categories for sustainability metrics with their corresponding device types.
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DeviceCategoriesApi.GetOrganizationSummarySustainabilitySummaryConsumerMetricsDeviceCategories``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummarySustainabilitySummaryConsumerMetricsDeviceCategories`: InlineResponse200458
+    // response from `GetOrganizationSummarySustainabilitySummaryConsumerMetricsDeviceCategories`: InlineResponse200470
     fmt.Fprintf(os.Stdout, "Response from `DeviceCategoriesApi.GetOrganizationSummarySustainabilitySummaryConsumerMetricsDeviceCategories`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200458**](InlineResponse200458.md)
+[**InlineResponse200470**](InlineResponse200470.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummarySustainabilitySummaryConsumerMetricsDeviceCategoriesAggregated
 
-> InlineResponse200459 GetOrganizationSummarySustainabilitySummaryConsumerMetricsDeviceCategoriesAggregated(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> InlineResponse200471 GetOrganizationSummarySustainabilitySummaryConsumerMetricsDeviceCategoriesAggregated(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Lists summary consumer metrics aggregated by device category.
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DeviceCategoriesApi.GetOrganizationSummarySustainabilitySummaryConsumerMetricsDeviceCategoriesAggregated``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummarySustainabilitySummaryConsumerMetricsDeviceCategoriesAggregated`: InlineResponse200459
+    // response from `GetOrganizationSummarySustainabilitySummaryConsumerMetricsDeviceCategoriesAggregated`: InlineResponse200471
     fmt.Fprintf(os.Stdout, "Response from `DeviceCategoriesApi.GetOrganizationSummarySustainabilitySummaryConsumerMetricsDeviceCategoriesAggregated`: %v\n", resp)
 }
 ```
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200459**](InlineResponse200459.md)
+[**InlineResponse200471**](InlineResponse200471.md)
 
 ### Authorization
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Uplinks** | Pointer to [**[]InlineResponse200106Uplinks**](InlineResponse200106Uplinks.md) | Per-uplink NAT exception configuration on the network. | [optional] 
+**Domains** | Pointer to **[]string** | Domain names currently excluded from Umbrella DNS routing | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200106WithDefaults instantiates a new InlineResponse200106 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUplinks
+### GetDomains
 
-`func (o *InlineResponse200106) GetUplinks() []InlineResponse200106Uplinks`
+`func (o *InlineResponse200106) GetDomains() []string`
 
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+GetDomains returns the Domains field if non-nil, zero value otherwise.
 
-### GetUplinksOk
+### GetDomainsOk
 
-`func (o *InlineResponse200106) GetUplinksOk() (*[]InlineResponse200106Uplinks, bool)`
+`func (o *InlineResponse200106) GetDomainsOk() (*[]string, bool)`
 
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+GetDomainsOk returns a tuple with the Domains field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinks
+### SetDomains
 
-`func (o *InlineResponse200106) SetUplinks(v []InlineResponse200106Uplinks)`
+`func (o *InlineResponse200106) SetDomains(v []string)`
 
-SetUplinks sets Uplinks field to given value.
+SetDomains sets Domains field to given value.
 
-### HasUplinks
+### HasDomains
 
-`func (o *InlineResponse200106) HasUplinks() bool`
+`func (o *InlineResponse200106) HasDomains() bool`
 
-HasUplinks returns a boolean if a field has been set.
+HasDomains returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

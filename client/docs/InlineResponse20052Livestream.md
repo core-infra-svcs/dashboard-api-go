@@ -1,0 +1,56 @@
+# InlineResponse20052Livestream
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**RelatedDevices** | Pointer to [**[]InlineResponse20052LivestreamRelatedDevices**](InlineResponse20052LivestreamRelatedDevices.md) | An array of the related devices for the role | [optional] 
+
+## Methods
+
+### NewInlineResponse20052Livestream
+
+`func NewInlineResponse20052Livestream() *InlineResponse20052Livestream`
+
+NewInlineResponse20052Livestream instantiates a new InlineResponse20052Livestream object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewInlineResponse20052LivestreamWithDefaults
+
+`func NewInlineResponse20052LivestreamWithDefaults() *InlineResponse20052Livestream`
+
+NewInlineResponse20052LivestreamWithDefaults instantiates a new InlineResponse20052Livestream object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
+
+### GetRelatedDevices
+
+`func (o *InlineResponse20052Livestream) GetRelatedDevices() []InlineResponse20052LivestreamRelatedDevices`
+
+GetRelatedDevices returns the RelatedDevices field if non-nil, zero value otherwise.
+
+### GetRelatedDevicesOk
+
+`func (o *InlineResponse20052Livestream) GetRelatedDevicesOk() (*[]InlineResponse20052LivestreamRelatedDevices, bool)`
+
+GetRelatedDevicesOk returns a tuple with the RelatedDevices field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRelatedDevices
+
+`func (o *InlineResponse20052Livestream) SetRelatedDevices(v []InlineResponse20052LivestreamRelatedDevices)`
+
+SetRelatedDevices sets RelatedDevices field to given value.
+
+### HasRelatedDevices
+
+`func (o *InlineResponse20052Livestream) HasRelatedDevices() bool`
+
+HasRelatedDevices returns a boolean if a field has been set.
+
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

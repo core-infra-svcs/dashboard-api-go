@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Categories** | Pointer to [**[]InlineResponse20072Categories**](InlineResponse20072Categories.md) | Available content filtering categories | [optional] 
+**Destinations** | Pointer to [**[]InlineResponse20072Destinations**](InlineResponse20072Destinations.md) | The list of connectivity monitoring destinations | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20072WithDefaults instantiates a new InlineResponse20072 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCategories
+### GetDestinations
 
-`func (o *InlineResponse20072) GetCategories() []InlineResponse20072Categories`
+`func (o *InlineResponse20072) GetDestinations() []InlineResponse20072Destinations`
 
-GetCategories returns the Categories field if non-nil, zero value otherwise.
+GetDestinations returns the Destinations field if non-nil, zero value otherwise.
 
-### GetCategoriesOk
+### GetDestinationsOk
 
-`func (o *InlineResponse20072) GetCategoriesOk() (*[]InlineResponse20072Categories, bool)`
+`func (o *InlineResponse20072) GetDestinationsOk() (*[]InlineResponse20072Destinations, bool)`
 
-GetCategoriesOk returns a tuple with the Categories field if it's non-nil, zero value otherwise
+GetDestinationsOk returns a tuple with the Destinations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategories
+### SetDestinations
 
-`func (o *InlineResponse20072) SetCategories(v []InlineResponse20072Categories)`
+`func (o *InlineResponse20072) SetDestinations(v []InlineResponse20072Destinations)`
 
-SetCategories sets Categories field to given value.
+SetDestinations sets Destinations field to given value.
 
-### HasCategories
+### HasDestinations
 
-`func (o *InlineResponse20072) HasCategories() bool`
+`func (o *InlineResponse20072) HasDestinations() bool`
 
-HasCategories returns a boolean if a field has been set.
+HasDestinations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

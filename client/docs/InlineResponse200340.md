@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]InlineResponse200340Items**](InlineResponse200340Items.md) | APs tunneling through the MCG clusters | 
-**Meta** | [**InlineResponse200335Meta**](InlineResponse200335Meta.md) |  | 
+**ClusterId** | Pointer to **string** | ID of the primary cluster | [optional] 
+**Network** | Pointer to [**InlineResponse200339Network**](InlineResponse200339Network.md) |  | [optional] 
+**Failover** | Pointer to [**OrganizationsOrganizationIdCampusGatewayClustersFailoverTargetsFailover**](OrganizationsOrganizationIdCampusGatewayClustersFailoverTargetsFailover.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200340
 
-`func NewInlineResponse200340(items []InlineResponse200340Items, meta InlineResponse200335Meta, ) *InlineResponse200340`
+`func NewInlineResponse200340() *InlineResponse200340`
 
 NewInlineResponse200340 instantiates a new InlineResponse200340 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +27,80 @@ NewInlineResponse200340WithDefaults instantiates a new InlineResponse200340 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetClusterId
 
-`func (o *InlineResponse200340) GetItems() []InlineResponse200340Items`
+`func (o *InlineResponse200340) GetClusterId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetClusterId returns the ClusterId field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetClusterIdOk
 
-`func (o *InlineResponse200340) GetItemsOk() (*[]InlineResponse200340Items, bool)`
+`func (o *InlineResponse200340) GetClusterIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetClusterIdOk returns a tuple with the ClusterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetClusterId
 
-`func (o *InlineResponse200340) SetItems(v []InlineResponse200340Items)`
+`func (o *InlineResponse200340) SetClusterId(v string)`
 
-SetItems sets Items field to given value.
+SetClusterId sets ClusterId field to given value.
 
+### HasClusterId
 
-### GetMeta
+`func (o *InlineResponse200340) HasClusterId() bool`
 
-`func (o *InlineResponse200340) GetMeta() InlineResponse200335Meta`
+HasClusterId returns a boolean if a field has been set.
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+### GetNetwork
 
-### GetMetaOk
+`func (o *InlineResponse200340) GetNetwork() InlineResponse200339Network`
 
-`func (o *InlineResponse200340) GetMetaOk() (*InlineResponse200335Meta, bool)`
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+### GetNetworkOk
+
+`func (o *InlineResponse200340) GetNetworkOk() (*InlineResponse200339Network, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetNetwork
 
-`func (o *InlineResponse200340) SetMeta(v InlineResponse200335Meta)`
+`func (o *InlineResponse200340) SetNetwork(v InlineResponse200339Network)`
 
-SetMeta sets Meta field to given value.
+SetNetwork sets Network field to given value.
 
+### HasNetwork
+
+`func (o *InlineResponse200340) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
+
+### GetFailover
+
+`func (o *InlineResponse200340) GetFailover() OrganizationsOrganizationIdCampusGatewayClustersFailoverTargetsFailover`
+
+GetFailover returns the Failover field if non-nil, zero value otherwise.
+
+### GetFailoverOk
+
+`func (o *InlineResponse200340) GetFailoverOk() (*OrganizationsOrganizationIdCampusGatewayClustersFailoverTargetsFailover, bool)`
+
+GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFailover
+
+`func (o *InlineResponse200340) SetFailover(v OrganizationsOrganizationIdCampusGatewayClustersFailoverTargetsFailover)`
+
+SetFailover sets Failover field to given value.
+
+### HasFailover
+
+`func (o *InlineResponse200340) HasFailover() bool`
+
+HasFailover returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

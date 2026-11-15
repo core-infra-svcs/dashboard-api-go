@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PipelineId** | Pointer to **string** | Pipeline ID | [optional] 
-**Operation** | Pointer to [**InlineResponse200274Operation**](InlineResponse200274Operation.md) |  | [optional] 
+**Operation** | Pointer to [**InlineResponse200277Operation**](InlineResponse200277Operation.md) |  | [optional] 
 **Status** | Pointer to **string** | Pipeline status | [optional] 
 **Counts** | Pointer to [**InlineResponse2026Counts**](InlineResponse2026Counts.md) |  | [optional] 
 
@@ -55,20 +55,20 @@ HasPipelineId returns a boolean if a field has been set.
 
 ### GetOperation
 
-`func (o *InlineResponse2026) GetOperation() InlineResponse200274Operation`
+`func (o *InlineResponse2026) GetOperation() InlineResponse200277Operation`
 
 GetOperation returns the Operation field if non-nil, zero value otherwise.
 
 ### GetOperationOk
 
-`func (o *InlineResponse2026) GetOperationOk() (*InlineResponse200274Operation, bool)`
+`func (o *InlineResponse2026) GetOperationOk() (*InlineResponse200277Operation, bool)`
 
 GetOperationOk returns a tuple with the Operation field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOperation
 
-`func (o *InlineResponse2026) SetOperation(v InlineResponse200274Operation)`
+`func (o *InlineResponse2026) SetOperation(v InlineResponse200277Operation)`
 
 SetOperation sets Operation field to given value.
 

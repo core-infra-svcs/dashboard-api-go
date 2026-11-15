@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ResultingNetwork** | Pointer to [**InlineResponse200414ResultingNetwork**](InlineResponse200414ResultingNetwork.md) |  | [optional] 
+**Counts** | Pointer to [**InlineResponse200414Counts**](InlineResponse200414Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200414WithDefaults instantiates a new InlineResponse200414 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetResultingNetwork
+### GetCounts
 
-`func (o *InlineResponse200414) GetResultingNetwork() InlineResponse200414ResultingNetwork`
+`func (o *InlineResponse200414) GetCounts() InlineResponse200414Counts`
 
-GetResultingNetwork returns the ResultingNetwork field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetResultingNetworkOk
+### GetCountsOk
 
-`func (o *InlineResponse200414) GetResultingNetworkOk() (*InlineResponse200414ResultingNetwork, bool)`
+`func (o *InlineResponse200414) GetCountsOk() (*InlineResponse200414Counts, bool)`
 
-GetResultingNetworkOk returns a tuple with the ResultingNetwork field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResultingNetwork
+### SetCounts
 
-`func (o *InlineResponse200414) SetResultingNetwork(v InlineResponse200414ResultingNetwork)`
+`func (o *InlineResponse200414) SetCounts(v InlineResponse200414Counts)`
 
-SetResultingNetwork sets ResultingNetwork field to given value.
+SetCounts sets Counts field to given value.
 
-### HasResultingNetwork
+### HasCounts
 
-`func (o *InlineResponse200414) HasResultingNetwork() bool`
+`func (o *InlineResponse200414) HasCounts() bool`
 
-HasResultingNetwork returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

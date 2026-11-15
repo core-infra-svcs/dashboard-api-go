@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Subnet** | Pointer to **string** | The subnet of the single LAN configuration | [optional] 
-**ApplianceIp** | Pointer to **string** | The appliance IP address of the single LAN | [optional] 
-**Ipv6** | Pointer to [**NetworksNetworkIdApplianceSingleLanIpv6**](NetworksNetworkIdApplianceSingleLanIpv6.md) |  | [optional] 
-**MandatoryDhcp** | Pointer to [**NetworksNetworkIdApplianceSingleLanMandatoryDhcp**](NetworksNetworkIdApplianceSingleLanMandatoryDhcp.md) |  | [optional] 
-**Vrf** | Pointer to [**NetworksNetworkIdApplianceSingleLanVrf**](NetworksNetworkIdApplianceSingleLanVrf.md) |  | [optional] 
+**Mode** | Pointer to **string** | Set mode to &#39;disabled&#39;/&#39;detection&#39;/&#39;prevention&#39; (optional - omitting will leave current config unchanged) | [optional] 
+**IdsRulesets** | Pointer to **string** | Set the detection ruleset &#39;connectivity&#39;/&#39;balanced&#39;/&#39;security&#39; (optional - omitting will leave current config unchanged). Default value is &#39;balanced&#39; if none currently saved | [optional] 
+**Policy** | Pointer to [**NetworksNetworkIdApplianceSecurityIntrusionPolicy**](NetworksNetworkIdApplianceSecurityIntrusionPolicy.md) |  | [optional] 
+**ProtectedNetworks** | Pointer to [**NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks**](NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +28,105 @@ NewInlineObject77WithDefaults instantiates a new InlineObject77 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSubnet
+### GetMode
 
-`func (o *InlineObject77) GetSubnet() string`
+`func (o *InlineObject77) GetMode() string`
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetSubnetOk
+### GetModeOk
 
-`func (o *InlineObject77) GetSubnetOk() (*string, bool)`
+`func (o *InlineObject77) GetModeOk() (*string, bool)`
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetMode
 
-`func (o *InlineObject77) SetSubnet(v string)`
+`func (o *InlineObject77) SetMode(v string)`
 
-SetSubnet sets Subnet field to given value.
+SetMode sets Mode field to given value.
 
-### HasSubnet
+### HasMode
 
-`func (o *InlineObject77) HasSubnet() bool`
+`func (o *InlineObject77) HasMode() bool`
 
-HasSubnet returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetApplianceIp
+### GetIdsRulesets
 
-`func (o *InlineObject77) GetApplianceIp() string`
+`func (o *InlineObject77) GetIdsRulesets() string`
 
-GetApplianceIp returns the ApplianceIp field if non-nil, zero value otherwise.
+GetIdsRulesets returns the IdsRulesets field if non-nil, zero value otherwise.
 
-### GetApplianceIpOk
+### GetIdsRulesetsOk
 
-`func (o *InlineObject77) GetApplianceIpOk() (*string, bool)`
+`func (o *InlineObject77) GetIdsRulesetsOk() (*string, bool)`
 
-GetApplianceIpOk returns a tuple with the ApplianceIp field if it's non-nil, zero value otherwise
+GetIdsRulesetsOk returns a tuple with the IdsRulesets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplianceIp
+### SetIdsRulesets
 
-`func (o *InlineObject77) SetApplianceIp(v string)`
+`func (o *InlineObject77) SetIdsRulesets(v string)`
 
-SetApplianceIp sets ApplianceIp field to given value.
+SetIdsRulesets sets IdsRulesets field to given value.
 
-### HasApplianceIp
+### HasIdsRulesets
 
-`func (o *InlineObject77) HasApplianceIp() bool`
+`func (o *InlineObject77) HasIdsRulesets() bool`
 
-HasApplianceIp returns a boolean if a field has been set.
+HasIdsRulesets returns a boolean if a field has been set.
 
-### GetIpv6
+### GetPolicy
 
-`func (o *InlineObject77) GetIpv6() NetworksNetworkIdApplianceSingleLanIpv6`
+`func (o *InlineObject77) GetPolicy() NetworksNetworkIdApplianceSecurityIntrusionPolicy`
 
-GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetIpv6Ok
+### GetPolicyOk
 
-`func (o *InlineObject77) GetIpv6Ok() (*NetworksNetworkIdApplianceSingleLanIpv6, bool)`
+`func (o *InlineObject77) GetPolicyOk() (*NetworksNetworkIdApplianceSecurityIntrusionPolicy, bool)`
 
-GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpv6
+### SetPolicy
 
-`func (o *InlineObject77) SetIpv6(v NetworksNetworkIdApplianceSingleLanIpv6)`
+`func (o *InlineObject77) SetPolicy(v NetworksNetworkIdApplianceSecurityIntrusionPolicy)`
 
-SetIpv6 sets Ipv6 field to given value.
+SetPolicy sets Policy field to given value.
 
-### HasIpv6
+### HasPolicy
 
-`func (o *InlineObject77) HasIpv6() bool`
+`func (o *InlineObject77) HasPolicy() bool`
 
-HasIpv6 returns a boolean if a field has been set.
+HasPolicy returns a boolean if a field has been set.
 
-### GetMandatoryDhcp
+### GetProtectedNetworks
 
-`func (o *InlineObject77) GetMandatoryDhcp() NetworksNetworkIdApplianceSingleLanMandatoryDhcp`
+`func (o *InlineObject77) GetProtectedNetworks() NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks`
 
-GetMandatoryDhcp returns the MandatoryDhcp field if non-nil, zero value otherwise.
+GetProtectedNetworks returns the ProtectedNetworks field if non-nil, zero value otherwise.
 
-### GetMandatoryDhcpOk
+### GetProtectedNetworksOk
 
-`func (o *InlineObject77) GetMandatoryDhcpOk() (*NetworksNetworkIdApplianceSingleLanMandatoryDhcp, bool)`
+`func (o *InlineObject77) GetProtectedNetworksOk() (*NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks, bool)`
 
-GetMandatoryDhcpOk returns a tuple with the MandatoryDhcp field if it's non-nil, zero value otherwise
+GetProtectedNetworksOk returns a tuple with the ProtectedNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMandatoryDhcp
+### SetProtectedNetworks
 
-`func (o *InlineObject77) SetMandatoryDhcp(v NetworksNetworkIdApplianceSingleLanMandatoryDhcp)`
+`func (o *InlineObject77) SetProtectedNetworks(v NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks)`
 
-SetMandatoryDhcp sets MandatoryDhcp field to given value.
+SetProtectedNetworks sets ProtectedNetworks field to given value.
 
-### HasMandatoryDhcp
+### HasProtectedNetworks
 
-`func (o *InlineObject77) HasMandatoryDhcp() bool`
+`func (o *InlineObject77) HasProtectedNetworks() bool`
 
-HasMandatoryDhcp returns a boolean if a field has been set.
-
-### GetVrf
-
-`func (o *InlineObject77) GetVrf() NetworksNetworkIdApplianceSingleLanVrf`
-
-GetVrf returns the Vrf field if non-nil, zero value otherwise.
-
-### GetVrfOk
-
-`func (o *InlineObject77) GetVrfOk() (*NetworksNetworkIdApplianceSingleLanVrf, bool)`
-
-GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVrf
-
-`func (o *InlineObject77) SetVrf(v NetworksNetworkIdApplianceSingleLanVrf)`
-
-SetVrf sets Vrf field to given value.
-
-### HasVrf
-
-`func (o *InlineObject77) HasVrf() bool`
-
-HasVrf returns a boolean if a field has been set.
+HasProtectedNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

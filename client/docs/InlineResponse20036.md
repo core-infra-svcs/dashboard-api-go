@@ -4,13 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MulticastRoutingId** | Pointer to **string** | ID of the Multicast routing request. Used to check the status of the request. | [optional] 
-**Url** | Pointer to **string** | GET this URL to check the status of your Multicast routing request. | [optional] 
-**Request** | Pointer to [**InlineResponse2015Request**](InlineResponse2015Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the Multicast routing request. | [optional] 
-**Interfaces** | Pointer to [**[]InlineResponse20036Interfaces**](InlineResponse20036Interfaces.md) | The interfaces that have PIM enabled | [optional] 
-**Routes** | Pointer to [**[]InlineResponse20036Routes**](InlineResponse20036Routes.md) | The multicast routes | [optional] 
-**Error** | Pointer to **string** | Description of the error. | [optional] 
+**MacTableId** | Pointer to **string** | ID of the MAC table request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your MAC table request. | [optional] 
+**Request** | Pointer to [**InlineResponse2014Request**](InlineResponse2014Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the MAC table request. | [optional] 
+**Entries** | Pointer to [**[]InlineResponse20036Entries**](InlineResponse20036Entries.md) | MAC address table entries | [optional] 
+**Error** | Pointer to **string** | An error message for a failed execution | [optional] 
 
 ## Methods
 
@@ -31,30 +30,30 @@ NewInlineResponse20036WithDefaults instantiates a new InlineResponse20036 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMulticastRoutingId
+### GetMacTableId
 
-`func (o *InlineResponse20036) GetMulticastRoutingId() string`
+`func (o *InlineResponse20036) GetMacTableId() string`
 
-GetMulticastRoutingId returns the MulticastRoutingId field if non-nil, zero value otherwise.
+GetMacTableId returns the MacTableId field if non-nil, zero value otherwise.
 
-### GetMulticastRoutingIdOk
+### GetMacTableIdOk
 
-`func (o *InlineResponse20036) GetMulticastRoutingIdOk() (*string, bool)`
+`func (o *InlineResponse20036) GetMacTableIdOk() (*string, bool)`
 
-GetMulticastRoutingIdOk returns a tuple with the MulticastRoutingId field if it's non-nil, zero value otherwise
+GetMacTableIdOk returns a tuple with the MacTableId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMulticastRoutingId
+### SetMacTableId
 
-`func (o *InlineResponse20036) SetMulticastRoutingId(v string)`
+`func (o *InlineResponse20036) SetMacTableId(v string)`
 
-SetMulticastRoutingId sets MulticastRoutingId field to given value.
+SetMacTableId sets MacTableId field to given value.
 
-### HasMulticastRoutingId
+### HasMacTableId
 
-`func (o *InlineResponse20036) HasMulticastRoutingId() bool`
+`func (o *InlineResponse20036) HasMacTableId() bool`
 
-HasMulticastRoutingId returns a boolean if a field has been set.
+HasMacTableId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -83,20 +82,20 @@ HasUrl returns a boolean if a field has been set.
 
 ### GetRequest
 
-`func (o *InlineResponse20036) GetRequest() InlineResponse2015Request`
+`func (o *InlineResponse20036) GetRequest() InlineResponse2014Request`
 
 GetRequest returns the Request field if non-nil, zero value otherwise.
 
 ### GetRequestOk
 
-`func (o *InlineResponse20036) GetRequestOk() (*InlineResponse2015Request, bool)`
+`func (o *InlineResponse20036) GetRequestOk() (*InlineResponse2014Request, bool)`
 
 GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRequest
 
-`func (o *InlineResponse20036) SetRequest(v InlineResponse2015Request)`
+`func (o *InlineResponse20036) SetRequest(v InlineResponse2014Request)`
 
 SetRequest sets Request field to given value.
 
@@ -131,55 +130,30 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetInterfaces
+### GetEntries
 
-`func (o *InlineResponse20036) GetInterfaces() []InlineResponse20036Interfaces`
+`func (o *InlineResponse20036) GetEntries() []InlineResponse20036Entries`
 
-GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
+GetEntries returns the Entries field if non-nil, zero value otherwise.
 
-### GetInterfacesOk
+### GetEntriesOk
 
-`func (o *InlineResponse20036) GetInterfacesOk() (*[]InlineResponse20036Interfaces, bool)`
+`func (o *InlineResponse20036) GetEntriesOk() (*[]InlineResponse20036Entries, bool)`
 
-GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
+GetEntriesOk returns a tuple with the Entries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaces
+### SetEntries
 
-`func (o *InlineResponse20036) SetInterfaces(v []InlineResponse20036Interfaces)`
+`func (o *InlineResponse20036) SetEntries(v []InlineResponse20036Entries)`
 
-SetInterfaces sets Interfaces field to given value.
+SetEntries sets Entries field to given value.
 
-### HasInterfaces
+### HasEntries
 
-`func (o *InlineResponse20036) HasInterfaces() bool`
+`func (o *InlineResponse20036) HasEntries() bool`
 
-HasInterfaces returns a boolean if a field has been set.
-
-### GetRoutes
-
-`func (o *InlineResponse20036) GetRoutes() []InlineResponse20036Routes`
-
-GetRoutes returns the Routes field if non-nil, zero value otherwise.
-
-### GetRoutesOk
-
-`func (o *InlineResponse20036) GetRoutesOk() (*[]InlineResponse20036Routes, bool)`
-
-GetRoutesOk returns a tuple with the Routes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRoutes
-
-`func (o *InlineResponse20036) SetRoutes(v []InlineResponse20036Routes)`
-
-SetRoutes sets Routes field to given value.
-
-### HasRoutes
-
-`func (o *InlineResponse20036) HasRoutes() bool`
-
-HasRoutes returns a boolean if a field has been set.
+HasEntries returns a boolean if a field has been set.
 
 ### GetError
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200533Items**](InlineResponse200533Items.md) | Wireless LAN controller interfaces packets statuses | [optional] 
-**Meta** | Pointer to [**InlineResponse200283Meta**](InlineResponse200283Meta.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200533Items**](InlineResponse200533Items.md) | The top-level propery containing all status data. | [optional] 
+**Meta** | Pointer to [**InlineResponse200533Meta**](InlineResponse200533Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasItems returns a boolean if a field has been set.
 
 ### GetMeta
 
-`func (o *InlineResponse200533) GetMeta() InlineResponse200283Meta`
+`func (o *InlineResponse200533) GetMeta() InlineResponse200533Meta`
 
 GetMeta returns the Meta field if non-nil, zero value otherwise.
 
 ### GetMetaOk
 
-`func (o *InlineResponse200533) GetMetaOk() (*InlineResponse200283Meta, bool)`
+`func (o *InlineResponse200533) GetMetaOk() (*InlineResponse200533Meta, bool)`
 
 GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMeta
 
-`func (o *InlineResponse200533) SetMeta(v InlineResponse200283Meta)`
+`func (o *InlineResponse200533) SetMeta(v InlineResponse200533Meta)`
 
 SetMeta sets Meta field to given value.
 

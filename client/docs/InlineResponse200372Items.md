@@ -4,10 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The device serial | [optional] 
-**Target** | Pointer to **string** | The migration target destination | [optional] 
-**CreatedAt** | Pointer to **time.Time** | The time at which a migration was created | [optional] 
-**MigratedAt** | Pointer to **NullableTime** | The time at which the device initiated migration | [optional] 
+**Serial** | Pointer to **string** | Serial of device | [optional] 
+**Name** | Pointer to **string** | Name of device | [optional] 
+**Url** | Pointer to **string** | Dashboard URL for the device | [optional] 
+**Model** | Pointer to **string** | Product type of device | [optional] 
+**Software** | Pointer to [**InlineResponse200372Software**](InlineResponse200372Software.md) |  | [optional] 
+**Modems** | Pointer to [**[]InlineResponse200372Modems**](InlineResponse200372Modems.md) | Information about the available modems and SIMs for the device. Maximum 1 modem. | [optional] 
+**Profile** | Pointer to [**InlineResponse200372Profile**](InlineResponse200372Profile.md) |  | [optional] 
+**Network** | Pointer to [**InlineResponse200372Network**](InlineResponse200372Network.md) |  | [optional] 
 
 ## Methods
 
@@ -53,91 +57,181 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetTarget
+### GetName
 
-`func (o *InlineResponse200372Items) GetTarget() string`
+`func (o *InlineResponse200372Items) GetName() string`
 
-GetTarget returns the Target field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTargetOk
+### GetNameOk
 
-`func (o *InlineResponse200372Items) GetTargetOk() (*string, bool)`
+`func (o *InlineResponse200372Items) GetNameOk() (*string, bool)`
 
-GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTarget
+### SetName
 
-`func (o *InlineResponse200372Items) SetTarget(v string)`
+`func (o *InlineResponse200372Items) SetName(v string)`
 
-SetTarget sets Target field to given value.
+SetName sets Name field to given value.
 
-### HasTarget
+### HasName
 
-`func (o *InlineResponse200372Items) HasTarget() bool`
+`func (o *InlineResponse200372Items) HasName() bool`
 
-HasTarget returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetCreatedAt
+### GetUrl
 
-`func (o *InlineResponse200372Items) GetCreatedAt() time.Time`
+`func (o *InlineResponse200372Items) GetUrl() string`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetUrlOk
 
-`func (o *InlineResponse200372Items) GetCreatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200372Items) GetUrlOk() (*string, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetUrl
 
-`func (o *InlineResponse200372Items) SetCreatedAt(v time.Time)`
+`func (o *InlineResponse200372Items) SetUrl(v string)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetUrl sets Url field to given value.
 
-### HasCreatedAt
+### HasUrl
 
-`func (o *InlineResponse200372Items) HasCreatedAt() bool`
+`func (o *InlineResponse200372Items) HasUrl() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetMigratedAt
+### GetModel
 
-`func (o *InlineResponse200372Items) GetMigratedAt() time.Time`
+`func (o *InlineResponse200372Items) GetModel() string`
 
-GetMigratedAt returns the MigratedAt field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetMigratedAtOk
+### GetModelOk
 
-`func (o *InlineResponse200372Items) GetMigratedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200372Items) GetModelOk() (*string, bool)`
 
-GetMigratedAtOk returns a tuple with the MigratedAt field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMigratedAt
+### SetModel
 
-`func (o *InlineResponse200372Items) SetMigratedAt(v time.Time)`
+`func (o *InlineResponse200372Items) SetModel(v string)`
 
-SetMigratedAt sets MigratedAt field to given value.
+SetModel sets Model field to given value.
 
-### HasMigratedAt
+### HasModel
 
-`func (o *InlineResponse200372Items) HasMigratedAt() bool`
+`func (o *InlineResponse200372Items) HasModel() bool`
 
-HasMigratedAt returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
-### SetMigratedAtNil
+### GetSoftware
 
-`func (o *InlineResponse200372Items) SetMigratedAtNil(b bool)`
+`func (o *InlineResponse200372Items) GetSoftware() InlineResponse200372Software`
 
- SetMigratedAtNil sets the value for MigratedAt to be an explicit nil
+GetSoftware returns the Software field if non-nil, zero value otherwise.
 
-### UnsetMigratedAt
-`func (o *InlineResponse200372Items) UnsetMigratedAt()`
+### GetSoftwareOk
 
-UnsetMigratedAt ensures that no value is present for MigratedAt, not even an explicit nil
+`func (o *InlineResponse200372Items) GetSoftwareOk() (*InlineResponse200372Software, bool)`
+
+GetSoftwareOk returns a tuple with the Software field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSoftware
+
+`func (o *InlineResponse200372Items) SetSoftware(v InlineResponse200372Software)`
+
+SetSoftware sets Software field to given value.
+
+### HasSoftware
+
+`func (o *InlineResponse200372Items) HasSoftware() bool`
+
+HasSoftware returns a boolean if a field has been set.
+
+### GetModems
+
+`func (o *InlineResponse200372Items) GetModems() []InlineResponse200372Modems`
+
+GetModems returns the Modems field if non-nil, zero value otherwise.
+
+### GetModemsOk
+
+`func (o *InlineResponse200372Items) GetModemsOk() (*[]InlineResponse200372Modems, bool)`
+
+GetModemsOk returns a tuple with the Modems field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetModems
+
+`func (o *InlineResponse200372Items) SetModems(v []InlineResponse200372Modems)`
+
+SetModems sets Modems field to given value.
+
+### HasModems
+
+`func (o *InlineResponse200372Items) HasModems() bool`
+
+HasModems returns a boolean if a field has been set.
+
+### GetProfile
+
+`func (o *InlineResponse200372Items) GetProfile() InlineResponse200372Profile`
+
+GetProfile returns the Profile field if non-nil, zero value otherwise.
+
+### GetProfileOk
+
+`func (o *InlineResponse200372Items) GetProfileOk() (*InlineResponse200372Profile, bool)`
+
+GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProfile
+
+`func (o *InlineResponse200372Items) SetProfile(v InlineResponse200372Profile)`
+
+SetProfile sets Profile field to given value.
+
+### HasProfile
+
+`func (o *InlineResponse200372Items) HasProfile() bool`
+
+HasProfile returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200372Items) GetNetwork() InlineResponse200372Network`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200372Items) GetNetworkOk() (*InlineResponse200372Network, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200372Items) SetNetwork(v InlineResponse200372Network)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200372Items) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
+
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Description** | Pointer to **string** | The description of mac address | [optional] 
-**Client** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient.md) |  | [optional] 
+**Items** | [**[]OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1**](OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1.md) | List of zero touch deployments to create | 
+**Meta** | Pointer to [**InlineResponse200286Meta**](InlineResponse200286Meta.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject378
 
-`func NewInlineObject378() *InlineObject378`
+`func NewInlineObject378(items []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1, ) *InlineObject378`
 
 NewInlineObject378 instantiates a new InlineObject378 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,50 @@ NewInlineObject378WithDefaults instantiates a new InlineObject378 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDescription
+### GetItems
 
-`func (o *InlineObject378) GetDescription() string`
+`func (o *InlineObject378) GetItems() []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetItemsOk
 
-`func (o *InlineObject378) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject378) GetItemsOk() (*[]OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetItems
 
-`func (o *InlineObject378) SetDescription(v string)`
+`func (o *InlineObject378) SetItems(v []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1)`
 
-SetDescription sets Description field to given value.
+SetItems sets Items field to given value.
 
-### HasDescription
 
-`func (o *InlineObject378) HasDescription() bool`
+### GetMeta
 
-HasDescription returns a boolean if a field has been set.
+`func (o *InlineObject378) GetMeta() InlineResponse200286Meta`
 
-### GetClient
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-`func (o *InlineObject378) GetClient() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient`
+### GetMetaOk
 
-GetClient returns the Client field if non-nil, zero value otherwise.
+`func (o *InlineObject378) GetMetaOk() (*InlineResponse200286Meta, bool)`
 
-### GetClientOk
-
-`func (o *InlineObject378) GetClientOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient, bool)`
-
-GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClient
+### SetMeta
 
-`func (o *InlineObject378) SetClient(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient)`
+`func (o *InlineObject378) SetMeta(v InlineResponse200286Meta)`
 
-SetClient sets Client field to given value.
+SetMeta sets Meta field to given value.
 
-### HasClient
+### HasMeta
 
-`func (o *InlineObject378) HasClient() bool`
+`func (o *InlineObject378) HasMeta() bool`
 
-HasClient returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

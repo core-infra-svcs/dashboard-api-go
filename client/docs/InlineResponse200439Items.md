@@ -4,10 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Connector** | Pointer to [**InlineResponse200439Connector**](InlineResponse200439Connector.md) |  | [optional] 
-**Type** | Pointer to **string** | The region&#39;s type | [optional] 
-**Name** | Pointer to **string** | Region name | [optional] 
-**Slug** | Pointer to **string** | Region identifier | [optional] 
+**Network** | Pointer to [**InlineResponse200439Network**](InlineResponse200439Network.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the VLAN | [optional] 
+**Subnet** | Pointer to **string** | Subnet of the VLAN | [optional] 
+**InterfaceId** | Pointer to **string** | Interface ID assigned to the VLAN | [optional] 
+**VlanId** | Pointer to **string** | VLAN ID | [optional] 
+**Policy** | Pointer to [**InlineResponse200439Policy**](InlineResponse200439Policy.md) |  | [optional] 
 
 ## Methods
 
@@ -28,55 +30,30 @@ NewInlineResponse200439ItemsWithDefaults instantiates a new InlineResponse200439
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConnector
+### GetNetwork
 
-`func (o *InlineResponse200439Items) GetConnector() InlineResponse200439Connector`
+`func (o *InlineResponse200439Items) GetNetwork() InlineResponse200439Network`
 
-GetConnector returns the Connector field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetConnectorOk
+### GetNetworkOk
 
-`func (o *InlineResponse200439Items) GetConnectorOk() (*InlineResponse200439Connector, bool)`
+`func (o *InlineResponse200439Items) GetNetworkOk() (*InlineResponse200439Network, bool)`
 
-GetConnectorOk returns a tuple with the Connector field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConnector
+### SetNetwork
 
-`func (o *InlineResponse200439Items) SetConnector(v InlineResponse200439Connector)`
+`func (o *InlineResponse200439Items) SetNetwork(v InlineResponse200439Network)`
 
-SetConnector sets Connector field to given value.
+SetNetwork sets Network field to given value.
 
-### HasConnector
+### HasNetwork
 
-`func (o *InlineResponse200439Items) HasConnector() bool`
+`func (o *InlineResponse200439Items) HasNetwork() bool`
 
-HasConnector returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *InlineResponse200439Items) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *InlineResponse200439Items) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *InlineResponse200439Items) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *InlineResponse200439Items) HasType() bool`
-
-HasType returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
 ### GetName
 
@@ -103,30 +80,105 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetSlug
+### GetSubnet
 
-`func (o *InlineResponse200439Items) GetSlug() string`
+`func (o *InlineResponse200439Items) GetSubnet() string`
 
-GetSlug returns the Slug field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetSlugOk
+### GetSubnetOk
 
-`func (o *InlineResponse200439Items) GetSlugOk() (*string, bool)`
+`func (o *InlineResponse200439Items) GetSubnetOk() (*string, bool)`
 
-GetSlugOk returns a tuple with the Slug field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSlug
+### SetSubnet
 
-`func (o *InlineResponse200439Items) SetSlug(v string)`
+`func (o *InlineResponse200439Items) SetSubnet(v string)`
 
-SetSlug sets Slug field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasSlug
+### HasSubnet
 
-`func (o *InlineResponse200439Items) HasSlug() bool`
+`func (o *InlineResponse200439Items) HasSubnet() bool`
 
-HasSlug returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
+
+### GetInterfaceId
+
+`func (o *InlineResponse200439Items) GetInterfaceId() string`
+
+GetInterfaceId returns the InterfaceId field if non-nil, zero value otherwise.
+
+### GetInterfaceIdOk
+
+`func (o *InlineResponse200439Items) GetInterfaceIdOk() (*string, bool)`
+
+GetInterfaceIdOk returns a tuple with the InterfaceId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetInterfaceId
+
+`func (o *InlineResponse200439Items) SetInterfaceId(v string)`
+
+SetInterfaceId sets InterfaceId field to given value.
+
+### HasInterfaceId
+
+`func (o *InlineResponse200439Items) HasInterfaceId() bool`
+
+HasInterfaceId returns a boolean if a field has been set.
+
+### GetVlanId
+
+`func (o *InlineResponse200439Items) GetVlanId() string`
+
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+
+### GetVlanIdOk
+
+`func (o *InlineResponse200439Items) GetVlanIdOk() (*string, bool)`
+
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlanId
+
+`func (o *InlineResponse200439Items) SetVlanId(v string)`
+
+SetVlanId sets VlanId field to given value.
+
+### HasVlanId
+
+`func (o *InlineResponse200439Items) HasVlanId() bool`
+
+HasVlanId returns a boolean if a field has been set.
+
+### GetPolicy
+
+`func (o *InlineResponse200439Items) GetPolicy() InlineResponse200439Policy`
+
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
+
+### GetPolicyOk
+
+`func (o *InlineResponse200439Items) GetPolicyOk() (*InlineResponse200439Policy, bool)`
+
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPolicy
+
+`func (o *InlineResponse200439Items) SetPolicy(v InlineResponse200439Policy)`
+
+SetPolicy sets Policy field to given value.
+
+### HasPolicy
+
+`func (o *InlineResponse200439Items) HasPolicy() bool`
+
+HasPolicy returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BrandingPolicyIds** | Pointer to **[]string** |       An ordered list of branding policy IDs that determines the priority order of how to apply the policies  | [optional] 
+**Items** | [**[]InlineResponse200322Items**](InlineResponse200322Items.md) | Historical Severity Counts | 
+**Meta** | [**InlineResponse200322Meta**](InlineResponse200322Meta.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200322
 
-`func NewInlineResponse200322() *InlineResponse200322`
+`func NewInlineResponse200322(items []InlineResponse200322Items, meta InlineResponse200322Meta, ) *InlineResponse200322`
 
 NewInlineResponse200322 instantiates a new InlineResponse200322 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +26,45 @@ NewInlineResponse200322WithDefaults instantiates a new InlineResponse200322 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBrandingPolicyIds
+### GetItems
 
-`func (o *InlineResponse200322) GetBrandingPolicyIds() []string`
+`func (o *InlineResponse200322) GetItems() []InlineResponse200322Items`
 
-GetBrandingPolicyIds returns the BrandingPolicyIds field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetBrandingPolicyIdsOk
+### GetItemsOk
 
-`func (o *InlineResponse200322) GetBrandingPolicyIdsOk() (*[]string, bool)`
+`func (o *InlineResponse200322) GetItemsOk() (*[]InlineResponse200322Items, bool)`
 
-GetBrandingPolicyIdsOk returns a tuple with the BrandingPolicyIds field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBrandingPolicyIds
+### SetItems
 
-`func (o *InlineResponse200322) SetBrandingPolicyIds(v []string)`
+`func (o *InlineResponse200322) SetItems(v []InlineResponse200322Items)`
 
-SetBrandingPolicyIds sets BrandingPolicyIds field to given value.
+SetItems sets Items field to given value.
 
-### HasBrandingPolicyIds
 
-`func (o *InlineResponse200322) HasBrandingPolicyIds() bool`
+### GetMeta
 
-HasBrandingPolicyIds returns a boolean if a field has been set.
+`func (o *InlineResponse200322) GetMeta() InlineResponse200322Meta`
+
+GetMeta returns the Meta field if non-nil, zero value otherwise.
+
+### GetMetaOk
+
+`func (o *InlineResponse200322) GetMetaOk() (*InlineResponse200322Meta, bool)`
+
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMeta
+
+`func (o *InlineResponse200322) SetMeta(v InlineResponse200322Meta)`
+
+SetMeta sets Meta field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

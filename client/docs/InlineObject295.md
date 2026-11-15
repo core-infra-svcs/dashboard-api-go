@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the profile to be added. This must be unique. | 
-**Description** | **string** | Description of the profile to be added. | 
-**Rules** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules**](OrganizationsOrganizationIdDevicesCellularDataProfilesRules.md) | The rules associated with this profile. At least one rule and no more than two rules may be defined for a profile. | 
+**FeatureType** | **string** | Feature this CA serves (e.g., radsec, openroaming, zigbee) | 
 
 ## Methods
 
 ### NewInlineObject295
 
-`func NewInlineObject295(name string, description string, rules []OrganizationsOrganizationIdDevicesCellularDataProfilesRules, ) *InlineObject295`
+`func NewInlineObject295(featureType string, ) *InlineObject295`
 
 NewInlineObject295 instantiates a new InlineObject295 object
 This constructor will assign default values to properties that have it defined,
@@ -27,64 +25,24 @@ NewInlineObject295WithDefaults instantiates a new InlineObject295 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetFeatureType
 
-`func (o *InlineObject295) GetName() string`
+`func (o *InlineObject295) GetFeatureType() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetFeatureType returns the FeatureType field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetFeatureTypeOk
 
-`func (o *InlineObject295) GetNameOk() (*string, bool)`
+`func (o *InlineObject295) GetFeatureTypeOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetFeatureTypeOk returns a tuple with the FeatureType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetFeatureType
 
-`func (o *InlineObject295) SetName(v string)`
+`func (o *InlineObject295) SetFeatureType(v string)`
 
-SetName sets Name field to given value.
-
-
-### GetDescription
-
-`func (o *InlineObject295) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineObject295) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineObject295) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-
-### GetRules
-
-`func (o *InlineObject295) GetRules() []OrganizationsOrganizationIdDevicesCellularDataProfilesRules`
-
-GetRules returns the Rules field if non-nil, zero value otherwise.
-
-### GetRulesOk
-
-`func (o *InlineObject295) GetRulesOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules, bool)`
-
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRules
-
-`func (o *InlineObject295) SetRules(v []OrganizationsOrganizationIdDevicesCellularDataProfilesRules)`
-
-SetRules sets Rules field to given value.
+SetFeatureType sets FeatureType field to given value.
 
 
 

@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Application** | Pointer to **string** | Name of the Application | [optional] 
-**Total** | Pointer to **float32** | Total usage of the Application, in megabytes | [optional] 
-**Downstream** | Pointer to **float32** | Downstream usage of the Application, in megabytes | [optional] 
-**Upstream** | Pointer to **float32** | Upstream usage of the Application, in megabytes | [optional] 
-**Percentage** | Pointer to **float32** | Percent usage of the Application | [optional] 
+**Status** | Pointer to **bool** | The success or failure status of the API | [optional] 
+**States** | Pointer to **[]string** | The set of different states on the spaces integration process | [optional] 
+**Email** | Pointer to **string** | The meraki user who attempts the spaces integration | [optional] 
+**AccountName** | Pointer to **string** | The spaces dashboard account name created in spaces integration | [optional] 
+**AccountType** | Pointer to **string** | The spaces dashboard account type created in spaces integration | [optional] 
 
 ## Methods
 
@@ -29,130 +29,130 @@ NewInlineResponse200465WithDefaults instantiates a new InlineResponse200465 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetApplication
+### GetStatus
 
-`func (o *InlineResponse200465) GetApplication() string`
+`func (o *InlineResponse200465) GetStatus() bool`
 
-GetApplication returns the Application field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetApplicationOk
+### GetStatusOk
 
-`func (o *InlineResponse200465) GetApplicationOk() (*string, bool)`
+`func (o *InlineResponse200465) GetStatusOk() (*bool, bool)`
 
-GetApplicationOk returns a tuple with the Application field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplication
+### SetStatus
 
-`func (o *InlineResponse200465) SetApplication(v string)`
+`func (o *InlineResponse200465) SetStatus(v bool)`
 
-SetApplication sets Application field to given value.
+SetStatus sets Status field to given value.
 
-### HasApplication
+### HasStatus
 
-`func (o *InlineResponse200465) HasApplication() bool`
+`func (o *InlineResponse200465) HasStatus() bool`
 
-HasApplication returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetTotal
+### GetStates
 
-`func (o *InlineResponse200465) GetTotal() float32`
+`func (o *InlineResponse200465) GetStates() []string`
 
-GetTotal returns the Total field if non-nil, zero value otherwise.
+GetStates returns the States field if non-nil, zero value otherwise.
 
-### GetTotalOk
+### GetStatesOk
 
-`func (o *InlineResponse200465) GetTotalOk() (*float32, bool)`
+`func (o *InlineResponse200465) GetStatesOk() (*[]string, bool)`
 
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+GetStatesOk returns a tuple with the States field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotal
+### SetStates
 
-`func (o *InlineResponse200465) SetTotal(v float32)`
+`func (o *InlineResponse200465) SetStates(v []string)`
 
-SetTotal sets Total field to given value.
+SetStates sets States field to given value.
 
-### HasTotal
+### HasStates
 
-`func (o *InlineResponse200465) HasTotal() bool`
+`func (o *InlineResponse200465) HasStates() bool`
 
-HasTotal returns a boolean if a field has been set.
+HasStates returns a boolean if a field has been set.
 
-### GetDownstream
+### GetEmail
 
-`func (o *InlineResponse200465) GetDownstream() float32`
+`func (o *InlineResponse200465) GetEmail() string`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetEmail returns the Email field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetEmailOk
 
-`func (o *InlineResponse200465) GetDownstreamOk() (*float32, bool)`
+`func (o *InlineResponse200465) GetEmailOk() (*string, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetEmail
 
-`func (o *InlineResponse200465) SetDownstream(v float32)`
+`func (o *InlineResponse200465) SetEmail(v string)`
 
-SetDownstream sets Downstream field to given value.
+SetEmail sets Email field to given value.
 
-### HasDownstream
+### HasEmail
 
-`func (o *InlineResponse200465) HasDownstream() bool`
+`func (o *InlineResponse200465) HasEmail() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasEmail returns a boolean if a field has been set.
 
-### GetUpstream
+### GetAccountName
 
-`func (o *InlineResponse200465) GetUpstream() float32`
+`func (o *InlineResponse200465) GetAccountName() string`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetAccountName returns the AccountName field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetAccountNameOk
 
-`func (o *InlineResponse200465) GetUpstreamOk() (*float32, bool)`
+`func (o *InlineResponse200465) GetAccountNameOk() (*string, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetAccountNameOk returns a tuple with the AccountName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetAccountName
 
-`func (o *InlineResponse200465) SetUpstream(v float32)`
+`func (o *InlineResponse200465) SetAccountName(v string)`
 
-SetUpstream sets Upstream field to given value.
+SetAccountName sets AccountName field to given value.
 
-### HasUpstream
+### HasAccountName
 
-`func (o *InlineResponse200465) HasUpstream() bool`
+`func (o *InlineResponse200465) HasAccountName() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasAccountName returns a boolean if a field has been set.
 
-### GetPercentage
+### GetAccountType
 
-`func (o *InlineResponse200465) GetPercentage() float32`
+`func (o *InlineResponse200465) GetAccountType() string`
 
-GetPercentage returns the Percentage field if non-nil, zero value otherwise.
+GetAccountType returns the AccountType field if non-nil, zero value otherwise.
 
-### GetPercentageOk
+### GetAccountTypeOk
 
-`func (o *InlineResponse200465) GetPercentageOk() (*float32, bool)`
+`func (o *InlineResponse200465) GetAccountTypeOk() (*string, bool)`
 
-GetPercentageOk returns a tuple with the Percentage field if it's non-nil, zero value otherwise
+GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPercentage
+### SetAccountType
 
-`func (o *InlineResponse200465) SetPercentage(v float32)`
+`func (o *InlineResponse200465) SetAccountType(v string)`
 
-SetPercentage sets Percentage field to given value.
+SetAccountType sets AccountType field to given value.
 
-### HasPercentage
+### HasAccountType
 
-`func (o *InlineResponse200465) HasPercentage() bool`
+`func (o *InlineResponse200465) HasAccountType() bool`
 
-HasPercentage returns a boolean if a field has been set.
+HasAccountType returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

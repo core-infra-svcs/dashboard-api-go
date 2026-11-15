@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems**](OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems.md) | List of device-to-profile assignments to remove. | 
+**AuthorityId** | **string** | ID of the feature certificate authority to revoke | 
 
 ## Methods
 
 ### NewInlineObject297
 
-`func NewInlineObject297(items []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems, ) *InlineObject297`
+`func NewInlineObject297(authorityId string, ) *InlineObject297`
 
 NewInlineObject297 instantiates a new InlineObject297 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject297WithDefaults instantiates a new InlineObject297 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetAuthorityId
 
-`func (o *InlineObject297) GetItems() []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems`
+`func (o *InlineObject297) GetAuthorityId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetAuthorityId returns the AuthorityId field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetAuthorityIdOk
 
-`func (o *InlineObject297) GetItemsOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems, bool)`
+`func (o *InlineObject297) GetAuthorityIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetAuthorityIdOk returns a tuple with the AuthorityId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetAuthorityId
 
-`func (o *InlineObject297) SetItems(v []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems)`
+`func (o *InlineObject297) SetAuthorityId(v string)`
 
-SetItems sets Items field to given value.
+SetAuthorityId sets AuthorityId field to given value.
 
 
 

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## CreateDeviceLiveToolsRoutingTableLookup
 
-> InlineResponse20111 CreateDeviceLiveToolsRoutingTableLookup(ctx, serial).CreateDeviceLiveToolsRoutingTableLookup(createDeviceLiveToolsRoutingTableLookup).Execute()
+> InlineResponse20112 CreateDeviceLiveToolsRoutingTableLookup(ctx, serial).CreateDeviceLiveToolsRoutingTableLookup(createDeviceLiveToolsRoutingTableLookup).Execute()
 
 Enqueue a job to perform a routing table lookup request for a device
 
@@ -31,7 +31,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsRoutingTableLookup := *openapiclient.NewInlineObject30() // InlineObject30 |  (optional)
+    createDeviceLiveToolsRoutingTableLookup := *openapiclient.NewInlineObject32() // InlineObject32 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LookupsApi.CreateDeviceLiveToolsRoutingTableLookup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceLiveToolsRoutingTableLookup`: InlineResponse20111
+    // response from `CreateDeviceLiveToolsRoutingTableLookup`: InlineResponse20112
     fmt.Fprintf(os.Stdout, "Response from `LookupsApi.CreateDeviceLiveToolsRoutingTableLookup`: %v\n", resp)
 }
 ```
@@ -61,11 +61,11 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsRouti
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsRoutingTableLookup** | [**InlineObject30**](InlineObject30.md) |  | 
+ **createDeviceLiveToolsRoutingTableLookup** | [**InlineObject32**](InlineObject32.md) |  | 
 
 ### Return type
 
-[**InlineResponse20111**](InlineResponse20111.md)
+[**InlineResponse20112**](InlineResponse20112.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsRoutingTableLookup
 
-> InlineResponse20042 GetDeviceLiveToolsRoutingTableLookup(ctx, serial, id).Execute()
+> InlineResponse20044 GetDeviceLiveToolsRoutingTableLookup(ctx, serial, id).Execute()
 
 Return a routing table live tool lookup job for a device
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LookupsApi.GetDeviceLiveToolsRoutingTableLookup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsRoutingTableLookup`: InlineResponse20042
+    // response from `GetDeviceLiveToolsRoutingTableLookup`: InlineResponse20044
     fmt.Fprintf(os.Stdout, "Response from `LookupsApi.GetDeviceLiveToolsRoutingTableLookup`: %v\n", resp)
 }
 ```
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20042**](InlineResponse20042.md)
+[**InlineResponse20044**](InlineResponse20044.md)
 
 ### Authorization
 

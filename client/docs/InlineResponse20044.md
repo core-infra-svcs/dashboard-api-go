@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ThroughputTestId** | Pointer to **string** | ID of throughput test job | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your throughput test request | [optional] 
-**Status** | Pointer to **string** | Status of the throughput test request | [optional] 
-**Result** | Pointer to [**InlineResponse20113Result**](InlineResponse20113Result.md) |  | [optional] 
-**Request** | Pointer to [**InlineResponse20113Request**](InlineResponse20113Request.md) |  | [optional] 
-**Error** | Pointer to **string** | Description of the error. | [optional] 
+**LookupId** | Pointer to **string** | Id of the route table lookup request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your routing table lookup request. | [optional] 
+**Request** | Pointer to [**InlineResponse20112Request**](InlineResponse20112Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the routing table lookup request. | [optional] 
+**Entries** | Pointer to [**[]InlineResponse20044Entries**](InlineResponse20044Entries.md) | Routing table entries that match the search criteria | [optional] 
+**Errors** | Pointer to **[]string** | An error message for a failed execution | [optional] 
 
 ## Methods
 
@@ -30,30 +30,30 @@ NewInlineResponse20044WithDefaults instantiates a new InlineResponse20044 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetThroughputTestId
+### GetLookupId
 
-`func (o *InlineResponse20044) GetThroughputTestId() string`
+`func (o *InlineResponse20044) GetLookupId() string`
 
-GetThroughputTestId returns the ThroughputTestId field if non-nil, zero value otherwise.
+GetLookupId returns the LookupId field if non-nil, zero value otherwise.
 
-### GetThroughputTestIdOk
+### GetLookupIdOk
 
-`func (o *InlineResponse20044) GetThroughputTestIdOk() (*string, bool)`
+`func (o *InlineResponse20044) GetLookupIdOk() (*string, bool)`
 
-GetThroughputTestIdOk returns a tuple with the ThroughputTestId field if it's non-nil, zero value otherwise
+GetLookupIdOk returns a tuple with the LookupId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetThroughputTestId
+### SetLookupId
 
-`func (o *InlineResponse20044) SetThroughputTestId(v string)`
+`func (o *InlineResponse20044) SetLookupId(v string)`
 
-SetThroughputTestId sets ThroughputTestId field to given value.
+SetLookupId sets LookupId field to given value.
 
-### HasThroughputTestId
+### HasLookupId
 
-`func (o *InlineResponse20044) HasThroughputTestId() bool`
+`func (o *InlineResponse20044) HasLookupId() bool`
 
-HasThroughputTestId returns a boolean if a field has been set.
+HasLookupId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -80,6 +80,31 @@ SetUrl sets Url field to given value.
 
 HasUrl returns a boolean if a field has been set.
 
+### GetRequest
+
+`func (o *InlineResponse20044) GetRequest() InlineResponse20112Request`
+
+GetRequest returns the Request field if non-nil, zero value otherwise.
+
+### GetRequestOk
+
+`func (o *InlineResponse20044) GetRequestOk() (*InlineResponse20112Request, bool)`
+
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequest
+
+`func (o *InlineResponse20044) SetRequest(v InlineResponse20112Request)`
+
+SetRequest sets Request field to given value.
+
+### HasRequest
+
+`func (o *InlineResponse20044) HasRequest() bool`
+
+HasRequest returns a boolean if a field has been set.
+
 ### GetStatus
 
 `func (o *InlineResponse20044) GetStatus() string`
@@ -105,80 +130,55 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetResult
+### GetEntries
 
-`func (o *InlineResponse20044) GetResult() InlineResponse20113Result`
+`func (o *InlineResponse20044) GetEntries() []InlineResponse20044Entries`
 
-GetResult returns the Result field if non-nil, zero value otherwise.
+GetEntries returns the Entries field if non-nil, zero value otherwise.
 
-### GetResultOk
+### GetEntriesOk
 
-`func (o *InlineResponse20044) GetResultOk() (*InlineResponse20113Result, bool)`
+`func (o *InlineResponse20044) GetEntriesOk() (*[]InlineResponse20044Entries, bool)`
 
-GetResultOk returns a tuple with the Result field if it's non-nil, zero value otherwise
+GetEntriesOk returns a tuple with the Entries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResult
+### SetEntries
 
-`func (o *InlineResponse20044) SetResult(v InlineResponse20113Result)`
+`func (o *InlineResponse20044) SetEntries(v []InlineResponse20044Entries)`
 
-SetResult sets Result field to given value.
+SetEntries sets Entries field to given value.
 
-### HasResult
+### HasEntries
 
-`func (o *InlineResponse20044) HasResult() bool`
+`func (o *InlineResponse20044) HasEntries() bool`
 
-HasResult returns a boolean if a field has been set.
+HasEntries returns a boolean if a field has been set.
 
-### GetRequest
+### GetErrors
 
-`func (o *InlineResponse20044) GetRequest() InlineResponse20113Request`
+`func (o *InlineResponse20044) GetErrors() []string`
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+GetErrors returns the Errors field if non-nil, zero value otherwise.
 
-### GetRequestOk
+### GetErrorsOk
 
-`func (o *InlineResponse20044) GetRequestOk() (*InlineResponse20113Request, bool)`
+`func (o *InlineResponse20044) GetErrorsOk() (*[]string, bool)`
 
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetErrors
 
-`func (o *InlineResponse20044) SetRequest(v InlineResponse20113Request)`
+`func (o *InlineResponse20044) SetErrors(v []string)`
 
-SetRequest sets Request field to given value.
+SetErrors sets Errors field to given value.
 
-### HasRequest
+### HasErrors
 
-`func (o *InlineResponse20044) HasRequest() bool`
+`func (o *InlineResponse20044) HasErrors() bool`
 
-HasRequest returns a boolean if a field has been set.
-
-### GetError
-
-`func (o *InlineResponse20044) GetError() string`
-
-GetError returns the Error field if non-nil, zero value otherwise.
-
-### GetErrorOk
-
-`func (o *InlineResponse20044) GetErrorOk() (*string, bool)`
-
-GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetError
-
-`func (o *InlineResponse20044) SetError(v string)`
-
-SetError sets Error field to given value.
-
-### HasError
-
-`func (o *InlineResponse20044) HasError() bool`
-
-HasError returns a boolean if a field has been set.
+HasErrors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

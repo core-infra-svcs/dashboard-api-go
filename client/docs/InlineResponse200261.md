@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Concentrator** | Pointer to [**InlineResponse200261Concentrator**](InlineResponse200261Concentrator.md) |  | [optional] 
-**Failover** | Pointer to [**InlineResponse200261Failover**](InlineResponse200261Failover.md) |  | [optional] 
-**SplitTunnel** | Pointer to [**InlineResponse200261SplitTunnel**](InlineResponse200261SplitTunnel.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
+**Ranges** | Pointer to [**[]InlineResponse200261Ranges**](InlineResponse200261Ranges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
+**RangesInSeconds** | Pointer to [**[]InlineResponse200261RangesInSeconds**](InlineResponse200261RangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200261WithDefaults instantiates a new InlineResponse200261 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConcentrator
+### GetEnabled
 
-`func (o *InlineResponse200261) GetConcentrator() InlineResponse200261Concentrator`
+`func (o *InlineResponse200261) GetEnabled() bool`
 
-GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetConcentratorOk
+### GetEnabledOk
 
-`func (o *InlineResponse200261) GetConcentratorOk() (*InlineResponse200261Concentrator, bool)`
+`func (o *InlineResponse200261) GetEnabledOk() (*bool, bool)`
 
-GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConcentrator
+### SetEnabled
 
-`func (o *InlineResponse200261) SetConcentrator(v InlineResponse200261Concentrator)`
+`func (o *InlineResponse200261) SetEnabled(v bool)`
 
-SetConcentrator sets Concentrator field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasConcentrator
+### HasEnabled
 
-`func (o *InlineResponse200261) HasConcentrator() bool`
+`func (o *InlineResponse200261) HasEnabled() bool`
 
-HasConcentrator returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetFailover
+### GetRanges
 
-`func (o *InlineResponse200261) GetFailover() InlineResponse200261Failover`
+`func (o *InlineResponse200261) GetRanges() []InlineResponse200261Ranges`
 
-GetFailover returns the Failover field if non-nil, zero value otherwise.
+GetRanges returns the Ranges field if non-nil, zero value otherwise.
 
-### GetFailoverOk
+### GetRangesOk
 
-`func (o *InlineResponse200261) GetFailoverOk() (*InlineResponse200261Failover, bool)`
+`func (o *InlineResponse200261) GetRangesOk() (*[]InlineResponse200261Ranges, bool)`
 
-GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
+GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFailover
+### SetRanges
 
-`func (o *InlineResponse200261) SetFailover(v InlineResponse200261Failover)`
+`func (o *InlineResponse200261) SetRanges(v []InlineResponse200261Ranges)`
 
-SetFailover sets Failover field to given value.
+SetRanges sets Ranges field to given value.
 
-### HasFailover
+### HasRanges
 
-`func (o *InlineResponse200261) HasFailover() bool`
+`func (o *InlineResponse200261) HasRanges() bool`
 
-HasFailover returns a boolean if a field has been set.
+HasRanges returns a boolean if a field has been set.
 
-### GetSplitTunnel
+### GetRangesInSeconds
 
-`func (o *InlineResponse200261) GetSplitTunnel() InlineResponse200261SplitTunnel`
+`func (o *InlineResponse200261) GetRangesInSeconds() []InlineResponse200261RangesInSeconds`
 
-GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
+GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
 
-### GetSplitTunnelOk
+### GetRangesInSecondsOk
 
-`func (o *InlineResponse200261) GetSplitTunnelOk() (*InlineResponse200261SplitTunnel, bool)`
+`func (o *InlineResponse200261) GetRangesInSecondsOk() (*[]InlineResponse200261RangesInSeconds, bool)`
 
-GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
+GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSplitTunnel
+### SetRangesInSeconds
 
-`func (o *InlineResponse200261) SetSplitTunnel(v InlineResponse200261SplitTunnel)`
+`func (o *InlineResponse200261) SetRangesInSeconds(v []InlineResponse200261RangesInSeconds)`
 
-SetSplitTunnel sets SplitTunnel field to given value.
+SetRangesInSeconds sets RangesInSeconds field to given value.
 
-### HasSplitTunnel
+### HasRangesInSeconds
 
-`func (o *InlineResponse200261) HasSplitTunnel() bool`
+`func (o *InlineResponse200261) HasRangesInSeconds() bool`
 
-HasSplitTunnel returns a boolean if a field has been set.
+HasRangesInSeconds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

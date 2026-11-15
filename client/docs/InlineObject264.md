@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** | Controls how the configuration payload in the request body is applied to the resource. This parameter dictates the declarative mode:  * **&#x60;complete&#x60;**: The request body represents the entire desired configuration for this resource. Any existing configurations that are not included in the payload will be removed. * **&#x60;partial&#x60; (default)**: The request body contains only the configurations to be created or modified. Existing configurations that are not specified in the payload will be preserved.  | [optional] 
-**Recursive** | Pointer to **bool** | Controls how the configuration payload in the request body applies to the rule group hierarchy. When true, the API applies each declared override to the rule group itself and its descendants unless the payload explicitly sets a descendant override. When false (default), the API applies overrides only to the rule groups listed in the payload.  | [optional] 
-**Items** | [**[]OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRuleGroupsOverridesDeclareItems**](OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRuleGroupsOverridesDeclareItems.md) | Desired overrides state | 
+**Contents** | **string** | The private key and certificate used to inspect HTTPS traffic. The certificate must be in .pem format. | 
+**Serials** | **[]string** | Serial numbers of the security appliances that will receive the new HTTPS certificate for HTTPS Inspection | 
 
 ## Methods
 
 ### NewInlineObject264
 
-`func NewInlineObject264(items []OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRuleGroupsOverridesDeclareItems, ) *InlineObject264`
+`func NewInlineObject264(contents string, serials []string, ) *InlineObject264`
 
 NewInlineObject264 instantiates a new InlineObject264 object
 This constructor will assign default values to properties that have it defined,
@@ -27,74 +26,44 @@ NewInlineObject264WithDefaults instantiates a new InlineObject264 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetContents
 
-`func (o *InlineObject264) GetMode() string`
+`func (o *InlineObject264) GetContents() string`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetContents returns the Contents field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetContentsOk
 
-`func (o *InlineObject264) GetModeOk() (*string, bool)`
+`func (o *InlineObject264) GetContentsOk() (*string, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetContentsOk returns a tuple with the Contents field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetContents
 
-`func (o *InlineObject264) SetMode(v string)`
+`func (o *InlineObject264) SetContents(v string)`
 
-SetMode sets Mode field to given value.
+SetContents sets Contents field to given value.
 
-### HasMode
 
-`func (o *InlineObject264) HasMode() bool`
+### GetSerials
 
-HasMode returns a boolean if a field has been set.
+`func (o *InlineObject264) GetSerials() []string`
 
-### GetRecursive
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-`func (o *InlineObject264) GetRecursive() bool`
+### GetSerialsOk
 
-GetRecursive returns the Recursive field if non-nil, zero value otherwise.
+`func (o *InlineObject264) GetSerialsOk() (*[]string, bool)`
 
-### GetRecursiveOk
-
-`func (o *InlineObject264) GetRecursiveOk() (*bool, bool)`
-
-GetRecursiveOk returns a tuple with the Recursive field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRecursive
+### SetSerials
 
-`func (o *InlineObject264) SetRecursive(v bool)`
+`func (o *InlineObject264) SetSerials(v []string)`
 
-SetRecursive sets Recursive field to given value.
-
-### HasRecursive
-
-`func (o *InlineObject264) HasRecursive() bool`
-
-HasRecursive returns a boolean if a field has been set.
-
-### GetItems
-
-`func (o *InlineObject264) GetItems() []OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRuleGroupsOverridesDeclareItems`
-
-GetItems returns the Items field if non-nil, zero value otherwise.
-
-### GetItemsOk
-
-`func (o *InlineObject264) GetItemsOk() (*[]OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRuleGroupsOverridesDeclareItems, bool)`
-
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetItems
-
-`func (o *InlineObject264) SetItems(v []OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRuleGroupsOverridesDeclareItems)`
-
-SetItems sets Items field to given value.
+SetSerials sets Serials field to given value.
 
 
 

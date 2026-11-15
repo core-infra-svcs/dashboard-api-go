@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only) | [optional] 
-**ObjectIds** | Pointer to **[]string** | A list of Policy Object ID&#39;s that this NetworkObjectGroup should be associated to (note: these ID&#39;s will replace the existing associated Policy Objects) | [optional] 
+**RulesetId** | **string** | ID of the ruleset to assign | 
+**PolicyId** | **string** | ID of the policy to assign the ruleset to | 
+**Priority** | Pointer to **int32** | Priority of the ruleset assignment (lower numbers &#x3D; higher priority) | [optional] 
+**Staged** | Pointer to **bool** | Stage an assignment without applying it immediately to the policy | [optional] 
 
 ## Methods
 
 ### NewInlineObject351
 
-`func NewInlineObject351() *InlineObject351`
+`func NewInlineObject351(rulesetId string, policyId string, ) *InlineObject351`
 
 NewInlineObject351 instantiates a new InlineObject351 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +28,95 @@ NewInlineObject351WithDefaults instantiates a new InlineObject351 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetRulesetId
 
-`func (o *InlineObject351) GetName() string`
+`func (o *InlineObject351) GetRulesetId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRulesetId returns the RulesetId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRulesetIdOk
 
-`func (o *InlineObject351) GetNameOk() (*string, bool)`
+`func (o *InlineObject351) GetRulesetIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRulesetIdOk returns a tuple with the RulesetId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRulesetId
 
-`func (o *InlineObject351) SetName(v string)`
+`func (o *InlineObject351) SetRulesetId(v string)`
 
-SetName sets Name field to given value.
+SetRulesetId sets RulesetId field to given value.
 
-### HasName
 
-`func (o *InlineObject351) HasName() bool`
+### GetPolicyId
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject351) GetPolicyId() string`
 
-### GetObjectIds
+GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
 
-`func (o *InlineObject351) GetObjectIds() []string`
+### GetPolicyIdOk
 
-GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
+`func (o *InlineObject351) GetPolicyIdOk() (*string, bool)`
 
-### GetObjectIdsOk
-
-`func (o *InlineObject351) GetObjectIdsOk() (*[]string, bool)`
-
-GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
+GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetObjectIds
+### SetPolicyId
 
-`func (o *InlineObject351) SetObjectIds(v []string)`
+`func (o *InlineObject351) SetPolicyId(v string)`
 
-SetObjectIds sets ObjectIds field to given value.
+SetPolicyId sets PolicyId field to given value.
 
-### HasObjectIds
 
-`func (o *InlineObject351) HasObjectIds() bool`
+### GetPriority
 
-HasObjectIds returns a boolean if a field has been set.
+`func (o *InlineObject351) GetPriority() int32`
+
+GetPriority returns the Priority field if non-nil, zero value otherwise.
+
+### GetPriorityOk
+
+`func (o *InlineObject351) GetPriorityOk() (*int32, bool)`
+
+GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPriority
+
+`func (o *InlineObject351) SetPriority(v int32)`
+
+SetPriority sets Priority field to given value.
+
+### HasPriority
+
+`func (o *InlineObject351) HasPriority() bool`
+
+HasPriority returns a boolean if a field has been set.
+
+### GetStaged
+
+`func (o *InlineObject351) GetStaged() bool`
+
+GetStaged returns the Staged field if non-nil, zero value otherwise.
+
+### GetStagedOk
+
+`func (o *InlineObject351) GetStagedOk() (*bool, bool)`
+
+GetStagedOk returns a tuple with the Staged field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStaged
+
+`func (o *InlineObject351) SetStaged(v bool)`
+
+SetStaged sets Staged field to given value.
+
+### HasStaged
+
+`func (o *InlineObject351) HasStaged() bool`
+
+HasStaged returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

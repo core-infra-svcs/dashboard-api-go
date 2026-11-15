@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RuleGroupId** | Pointer to **string** | Identifier for the rule group the counts belong to. | [optional] 
-**Policy** | Pointer to [**InlineResponse200299Policy**](InlineResponse200299Policy.md) |  | [optional] 
-**Counts** | Pointer to [**InlineResponse200299Counts**](InlineResponse200299Counts.md) |  | [optional] 
+**PolicyId** | Pointer to **NullableString** | Identifier for the policy (present for default base policies). | [optional] 
+**Name** | Pointer to **string** | Display name of the policy. | [optional] 
+**Description** | Pointer to **NullableString** | Details about the policy. | [optional] 
+**BasePolicy** | Pointer to [**NullableInlineResponse200299BasePolicy**](InlineResponse200299BasePolicy.md) |  | [optional] 
+**IsBasePolicy** | Pointer to **bool** | Indicates whether the policy is one of the default base policies. | [optional] 
 
 ## Methods
 
@@ -27,80 +29,160 @@ NewInlineResponse200299ItemsWithDefaults instantiates a new InlineResponse200299
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRuleGroupId
+### GetPolicyId
 
-`func (o *InlineResponse200299Items) GetRuleGroupId() string`
+`func (o *InlineResponse200299Items) GetPolicyId() string`
 
-GetRuleGroupId returns the RuleGroupId field if non-nil, zero value otherwise.
+GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
 
-### GetRuleGroupIdOk
+### GetPolicyIdOk
 
-`func (o *InlineResponse200299Items) GetRuleGroupIdOk() (*string, bool)`
+`func (o *InlineResponse200299Items) GetPolicyIdOk() (*string, bool)`
 
-GetRuleGroupIdOk returns a tuple with the RuleGroupId field if it's non-nil, zero value otherwise
+GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRuleGroupId
+### SetPolicyId
 
-`func (o *InlineResponse200299Items) SetRuleGroupId(v string)`
+`func (o *InlineResponse200299Items) SetPolicyId(v string)`
 
-SetRuleGroupId sets RuleGroupId field to given value.
+SetPolicyId sets PolicyId field to given value.
 
-### HasRuleGroupId
+### HasPolicyId
 
-`func (o *InlineResponse200299Items) HasRuleGroupId() bool`
+`func (o *InlineResponse200299Items) HasPolicyId() bool`
 
-HasRuleGroupId returns a boolean if a field has been set.
+HasPolicyId returns a boolean if a field has been set.
 
-### GetPolicy
+### SetPolicyIdNil
 
-`func (o *InlineResponse200299Items) GetPolicy() InlineResponse200299Policy`
+`func (o *InlineResponse200299Items) SetPolicyIdNil(b bool)`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+ SetPolicyIdNil sets the value for PolicyId to be an explicit nil
 
-### GetPolicyOk
+### UnsetPolicyId
+`func (o *InlineResponse200299Items) UnsetPolicyId()`
 
-`func (o *InlineResponse200299Items) GetPolicyOk() (*InlineResponse200299Policy, bool)`
+UnsetPolicyId ensures that no value is present for PolicyId, not even an explicit nil
+### GetName
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+`func (o *InlineResponse200299Items) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200299Items) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetName
 
-`func (o *InlineResponse200299Items) SetPolicy(v InlineResponse200299Policy)`
+`func (o *InlineResponse200299Items) SetName(v string)`
 
-SetPolicy sets Policy field to given value.
+SetName sets Name field to given value.
 
-### HasPolicy
+### HasName
 
-`func (o *InlineResponse200299Items) HasPolicy() bool`
+`func (o *InlineResponse200299Items) HasName() bool`
 
-HasPolicy returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetCounts
+### GetDescription
 
-`func (o *InlineResponse200299Items) GetCounts() InlineResponse200299Counts`
+`func (o *InlineResponse200299Items) GetDescription() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetDescriptionOk
 
-`func (o *InlineResponse200299Items) GetCountsOk() (*InlineResponse200299Counts, bool)`
+`func (o *InlineResponse200299Items) GetDescriptionOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetDescription
 
-`func (o *InlineResponse200299Items) SetCounts(v InlineResponse200299Counts)`
+`func (o *InlineResponse200299Items) SetDescription(v string)`
 
-SetCounts sets Counts field to given value.
+SetDescription sets Description field to given value.
 
-### HasCounts
+### HasDescription
 
-`func (o *InlineResponse200299Items) HasCounts() bool`
+`func (o *InlineResponse200299Items) HasDescription() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
+
+### SetDescriptionNil
+
+`func (o *InlineResponse200299Items) SetDescriptionNil(b bool)`
+
+ SetDescriptionNil sets the value for Description to be an explicit nil
+
+### UnsetDescription
+`func (o *InlineResponse200299Items) UnsetDescription()`
+
+UnsetDescription ensures that no value is present for Description, not even an explicit nil
+### GetBasePolicy
+
+`func (o *InlineResponse200299Items) GetBasePolicy() InlineResponse200299BasePolicy`
+
+GetBasePolicy returns the BasePolicy field if non-nil, zero value otherwise.
+
+### GetBasePolicyOk
+
+`func (o *InlineResponse200299Items) GetBasePolicyOk() (*InlineResponse200299BasePolicy, bool)`
+
+GetBasePolicyOk returns a tuple with the BasePolicy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBasePolicy
+
+`func (o *InlineResponse200299Items) SetBasePolicy(v InlineResponse200299BasePolicy)`
+
+SetBasePolicy sets BasePolicy field to given value.
+
+### HasBasePolicy
+
+`func (o *InlineResponse200299Items) HasBasePolicy() bool`
+
+HasBasePolicy returns a boolean if a field has been set.
+
+### SetBasePolicyNil
+
+`func (o *InlineResponse200299Items) SetBasePolicyNil(b bool)`
+
+ SetBasePolicyNil sets the value for BasePolicy to be an explicit nil
+
+### UnsetBasePolicy
+`func (o *InlineResponse200299Items) UnsetBasePolicy()`
+
+UnsetBasePolicy ensures that no value is present for BasePolicy, not even an explicit nil
+### GetIsBasePolicy
+
+`func (o *InlineResponse200299Items) GetIsBasePolicy() bool`
+
+GetIsBasePolicy returns the IsBasePolicy field if non-nil, zero value otherwise.
+
+### GetIsBasePolicyOk
+
+`func (o *InlineResponse200299Items) GetIsBasePolicyOk() (*bool, bool)`
+
+GetIsBasePolicyOk returns a tuple with the IsBasePolicy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsBasePolicy
+
+`func (o *InlineResponse200299Items) SetIsBasePolicy(v bool)`
+
+SetIsBasePolicy sets IsBasePolicy field to given value.
+
+### HasIsBasePolicy
+
+`func (o *InlineResponse200299Items) HasIsBasePolicy() bool`
+
+HasIsBasePolicy returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

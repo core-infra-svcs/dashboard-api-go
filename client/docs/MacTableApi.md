@@ -31,7 +31,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsMacTable := *openapiclient.NewInlineObject23() // InlineObject23 |  (optional)
+    createDeviceLiveToolsMacTable := *openapiclient.NewInlineObject24() // InlineObject24 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsMacTa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsMacTable** | [**InlineObject23**](InlineObject23.md) |  | 
+ **createDeviceLiveToolsMacTable** | [**InlineObject24**](InlineObject24.md) |  | 
 
 ### Return type
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsMacTable
 
-> InlineResponse20035 GetDeviceLiveToolsMacTable(ctx, serial, macTableId).Execute()
+> InlineResponse20036 GetDeviceLiveToolsMacTable(ctx, serial, macTableId).Execute()
 
 Return a MAC table live tool job.
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MacTableApi.GetDeviceLiveToolsMacTable``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsMacTable`: InlineResponse20035
+    // response from `GetDeviceLiveToolsMacTable`: InlineResponse20036
     fmt.Fprintf(os.Stdout, "Response from `MacTableApi.GetDeviceLiveToolsMacTable`: %v\n", resp)
 }
 ```
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20035**](InlineResponse20035.md)
+[**InlineResponse20036**](InlineResponse20036.md)
 
 ### Authorization
 

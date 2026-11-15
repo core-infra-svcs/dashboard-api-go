@@ -4,22 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the new profile. Must be unique. This parameter is required. | 
-**MotionBasedRetentionEnabled** | Pointer to **bool** | Deletes footage older than 3 days in which no motion was detected. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras. | [optional] 
-**RestrictedBandwidthModeEnabled** | Pointer to **bool** | Disable features that require additional bandwidth such as Motion Recap. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras. | [optional] 
-**AudioRecordingEnabled** | Pointer to **bool** | Whether or not to record audio. Can be either true or false. Defaults to false. | [optional] 
-**CloudArchiveEnabled** | Pointer to **bool** | Create redundant video backup using Cloud Archive. Can be either true or false. Defaults to false. | [optional] 
-**MotionDetectorVersion** | Pointer to **int32** | The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2. | [optional] 
-**SmartRetention** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention1**](NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention1.md) |  | [optional] 
-**ScheduleId** | Pointer to **NullableString** | Schedule for which this camera will record video, or &#39;null&#39; to always record. | [optional] 
-**MaxRetentionDays** | Pointer to **NullableInt32** | The maximum number of days for which the data will be stored, or &#39;null&#39; to keep data until storage space runs out. If the former, it can be in the range of one to ninety days. | [optional] 
-**VideoSettings** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1.md) |  | [optional] 
+**Confirmed** | Pointer to **bool** | Whether to accept the confirmation warnings for these changes. Defaults to true, which accepts confirmation warnings and preserves the existing update behavior. Set to false to opt in to confirmation warnings. Review the warnings returned in confirmations, then retry with confirmed: true to accept them. Fatal errors must be corrected before retrying. | [optional] 
+**Mode** | **string** | The site-to-site VPN mode. Can be one of &#39;none&#39;, &#39;spoke&#39; or &#39;hub&#39; | 
+**NatTraversal** | Pointer to [**NetworksNetworkIdApplianceVpnSiteToSiteVpnNatTraversal**](NetworksNetworkIdApplianceVpnSiteToSiteVpnNatTraversal.md) |  | [optional] 
+**Hubs** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs**](NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs.md) | The list of VPN hubs, in order of preference. In spoke mode, at least 1 hub is required. | [optional] 
+**Subnets** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets**](NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets.md) | The list of local VPN subnets and their VPN presence. VLAN entries include vlanId and subnetting where applicable. When the corresponding NFO is enabled, NAT settings are returned for every VLAN; non-VLAN entries omit vlanId, subnetting, and nat.legacy. | [optional] 
+**Sgt** | Pointer to [**InlineResponse200114Sgt**](InlineResponse200114Sgt.md) |  | [optional] 
+**Subnet** | Pointer to [**InlineResponse200114Subnet**](InlineResponse200114Subnet.md) |  | [optional] 
+**HostTranslations** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations**](NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations.md) | The list of VPN host translations. Host translations are supported starting from MX firmware version 26.1.2 | [optional] 
 
 ## Methods
 
 ### NewInlineObject101
 
-`func NewInlineObject101(name string, ) *InlineObject101`
+`func NewInlineObject101(mode string, ) *InlineObject101`
 
 NewInlineObject101 instantiates a new InlineObject101 object
 This constructor will assign default values to properties that have it defined,
@@ -34,270 +32,200 @@ NewInlineObject101WithDefaults instantiates a new InlineObject101 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetConfirmed
 
-`func (o *InlineObject101) GetName() string`
+`func (o *InlineObject101) GetConfirmed() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetConfirmedOk
 
-`func (o *InlineObject101) GetNameOk() (*string, bool)`
+`func (o *InlineObject101) GetConfirmedOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetConfirmed
 
-`func (o *InlineObject101) SetName(v string)`
+`func (o *InlineObject101) SetConfirmed(v bool)`
 
-SetName sets Name field to given value.
+SetConfirmed sets Confirmed field to given value.
 
+### HasConfirmed
 
-### GetMotionBasedRetentionEnabled
+`func (o *InlineObject101) HasConfirmed() bool`
 
-`func (o *InlineObject101) GetMotionBasedRetentionEnabled() bool`
+HasConfirmed returns a boolean if a field has been set.
 
-GetMotionBasedRetentionEnabled returns the MotionBasedRetentionEnabled field if non-nil, zero value otherwise.
+### GetMode
 
-### GetMotionBasedRetentionEnabledOk
+`func (o *InlineObject101) GetMode() string`
 
-`func (o *InlineObject101) GetMotionBasedRetentionEnabledOk() (*bool, bool)`
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-GetMotionBasedRetentionEnabledOk returns a tuple with the MotionBasedRetentionEnabled field if it's non-nil, zero value otherwise
+### GetModeOk
+
+`func (o *InlineObject101) GetModeOk() (*string, bool)`
+
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMotionBasedRetentionEnabled
+### SetMode
 
-`func (o *InlineObject101) SetMotionBasedRetentionEnabled(v bool)`
+`func (o *InlineObject101) SetMode(v string)`
 
-SetMotionBasedRetentionEnabled sets MotionBasedRetentionEnabled field to given value.
+SetMode sets Mode field to given value.
 
-### HasMotionBasedRetentionEnabled
 
-`func (o *InlineObject101) HasMotionBasedRetentionEnabled() bool`
+### GetNatTraversal
 
-HasMotionBasedRetentionEnabled returns a boolean if a field has been set.
+`func (o *InlineObject101) GetNatTraversal() NetworksNetworkIdApplianceVpnSiteToSiteVpnNatTraversal`
 
-### GetRestrictedBandwidthModeEnabled
+GetNatTraversal returns the NatTraversal field if non-nil, zero value otherwise.
 
-`func (o *InlineObject101) GetRestrictedBandwidthModeEnabled() bool`
+### GetNatTraversalOk
 
-GetRestrictedBandwidthModeEnabled returns the RestrictedBandwidthModeEnabled field if non-nil, zero value otherwise.
+`func (o *InlineObject101) GetNatTraversalOk() (*NetworksNetworkIdApplianceVpnSiteToSiteVpnNatTraversal, bool)`
 
-### GetRestrictedBandwidthModeEnabledOk
-
-`func (o *InlineObject101) GetRestrictedBandwidthModeEnabledOk() (*bool, bool)`
-
-GetRestrictedBandwidthModeEnabledOk returns a tuple with the RestrictedBandwidthModeEnabled field if it's non-nil, zero value otherwise
+GetNatTraversalOk returns a tuple with the NatTraversal field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRestrictedBandwidthModeEnabled
+### SetNatTraversal
 
-`func (o *InlineObject101) SetRestrictedBandwidthModeEnabled(v bool)`
+`func (o *InlineObject101) SetNatTraversal(v NetworksNetworkIdApplianceVpnSiteToSiteVpnNatTraversal)`
 
-SetRestrictedBandwidthModeEnabled sets RestrictedBandwidthModeEnabled field to given value.
+SetNatTraversal sets NatTraversal field to given value.
 
-### HasRestrictedBandwidthModeEnabled
+### HasNatTraversal
 
-`func (o *InlineObject101) HasRestrictedBandwidthModeEnabled() bool`
+`func (o *InlineObject101) HasNatTraversal() bool`
 
-HasRestrictedBandwidthModeEnabled returns a boolean if a field has been set.
+HasNatTraversal returns a boolean if a field has been set.
 
-### GetAudioRecordingEnabled
+### GetHubs
 
-`func (o *InlineObject101) GetAudioRecordingEnabled() bool`
+`func (o *InlineObject101) GetHubs() []NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs`
 
-GetAudioRecordingEnabled returns the AudioRecordingEnabled field if non-nil, zero value otherwise.
+GetHubs returns the Hubs field if non-nil, zero value otherwise.
 
-### GetAudioRecordingEnabledOk
+### GetHubsOk
 
-`func (o *InlineObject101) GetAudioRecordingEnabledOk() (*bool, bool)`
+`func (o *InlineObject101) GetHubsOk() (*[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs, bool)`
 
-GetAudioRecordingEnabledOk returns a tuple with the AudioRecordingEnabled field if it's non-nil, zero value otherwise
+GetHubsOk returns a tuple with the Hubs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAudioRecordingEnabled
+### SetHubs
 
-`func (o *InlineObject101) SetAudioRecordingEnabled(v bool)`
+`func (o *InlineObject101) SetHubs(v []NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs)`
 
-SetAudioRecordingEnabled sets AudioRecordingEnabled field to given value.
+SetHubs sets Hubs field to given value.
 
-### HasAudioRecordingEnabled
+### HasHubs
 
-`func (o *InlineObject101) HasAudioRecordingEnabled() bool`
+`func (o *InlineObject101) HasHubs() bool`
 
-HasAudioRecordingEnabled returns a boolean if a field has been set.
+HasHubs returns a boolean if a field has been set.
 
-### GetCloudArchiveEnabled
+### GetSubnets
 
-`func (o *InlineObject101) GetCloudArchiveEnabled() bool`
+`func (o *InlineObject101) GetSubnets() []NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets`
 
-GetCloudArchiveEnabled returns the CloudArchiveEnabled field if non-nil, zero value otherwise.
+GetSubnets returns the Subnets field if non-nil, zero value otherwise.
 
-### GetCloudArchiveEnabledOk
+### GetSubnetsOk
 
-`func (o *InlineObject101) GetCloudArchiveEnabledOk() (*bool, bool)`
+`func (o *InlineObject101) GetSubnetsOk() (*[]NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets, bool)`
 
-GetCloudArchiveEnabledOk returns a tuple with the CloudArchiveEnabled field if it's non-nil, zero value otherwise
+GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCloudArchiveEnabled
+### SetSubnets
 
-`func (o *InlineObject101) SetCloudArchiveEnabled(v bool)`
+`func (o *InlineObject101) SetSubnets(v []NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets)`
 
-SetCloudArchiveEnabled sets CloudArchiveEnabled field to given value.
+SetSubnets sets Subnets field to given value.
 
-### HasCloudArchiveEnabled
+### HasSubnets
 
-`func (o *InlineObject101) HasCloudArchiveEnabled() bool`
+`func (o *InlineObject101) HasSubnets() bool`
 
-HasCloudArchiveEnabled returns a boolean if a field has been set.
+HasSubnets returns a boolean if a field has been set.
 
-### GetMotionDetectorVersion
+### GetSgt
 
-`func (o *InlineObject101) GetMotionDetectorVersion() int32`
+`func (o *InlineObject101) GetSgt() InlineResponse200114Sgt`
 
-GetMotionDetectorVersion returns the MotionDetectorVersion field if non-nil, zero value otherwise.
+GetSgt returns the Sgt field if non-nil, zero value otherwise.
 
-### GetMotionDetectorVersionOk
+### GetSgtOk
 
-`func (o *InlineObject101) GetMotionDetectorVersionOk() (*int32, bool)`
+`func (o *InlineObject101) GetSgtOk() (*InlineResponse200114Sgt, bool)`
 
-GetMotionDetectorVersionOk returns a tuple with the MotionDetectorVersion field if it's non-nil, zero value otherwise
+GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMotionDetectorVersion
+### SetSgt
 
-`func (o *InlineObject101) SetMotionDetectorVersion(v int32)`
+`func (o *InlineObject101) SetSgt(v InlineResponse200114Sgt)`
 
-SetMotionDetectorVersion sets MotionDetectorVersion field to given value.
+SetSgt sets Sgt field to given value.
 
-### HasMotionDetectorVersion
+### HasSgt
 
-`func (o *InlineObject101) HasMotionDetectorVersion() bool`
+`func (o *InlineObject101) HasSgt() bool`
 
-HasMotionDetectorVersion returns a boolean if a field has been set.
+HasSgt returns a boolean if a field has been set.
 
-### GetSmartRetention
+### GetSubnet
 
-`func (o *InlineObject101) GetSmartRetention() NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention1`
+`func (o *InlineObject101) GetSubnet() InlineResponse200114Subnet`
 
-GetSmartRetention returns the SmartRetention field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetSmartRetentionOk
+### GetSubnetOk
 
-`func (o *InlineObject101) GetSmartRetentionOk() (*NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention1, bool)`
+`func (o *InlineObject101) GetSubnetOk() (*InlineResponse200114Subnet, bool)`
 
-GetSmartRetentionOk returns a tuple with the SmartRetention field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSmartRetention
+### SetSubnet
 
-`func (o *InlineObject101) SetSmartRetention(v NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention1)`
+`func (o *InlineObject101) SetSubnet(v InlineResponse200114Subnet)`
 
-SetSmartRetention sets SmartRetention field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasSmartRetention
+### HasSubnet
 
-`func (o *InlineObject101) HasSmartRetention() bool`
+`func (o *InlineObject101) HasSubnet() bool`
 
-HasSmartRetention returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
 
-### GetScheduleId
+### GetHostTranslations
 
-`func (o *InlineObject101) GetScheduleId() string`
+`func (o *InlineObject101) GetHostTranslations() []NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations`
 
-GetScheduleId returns the ScheduleId field if non-nil, zero value otherwise.
+GetHostTranslations returns the HostTranslations field if non-nil, zero value otherwise.
 
-### GetScheduleIdOk
+### GetHostTranslationsOk
 
-`func (o *InlineObject101) GetScheduleIdOk() (*string, bool)`
+`func (o *InlineObject101) GetHostTranslationsOk() (*[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations, bool)`
 
-GetScheduleIdOk returns a tuple with the ScheduleId field if it's non-nil, zero value otherwise
+GetHostTranslationsOk returns a tuple with the HostTranslations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScheduleId
+### SetHostTranslations
 
-`func (o *InlineObject101) SetScheduleId(v string)`
+`func (o *InlineObject101) SetHostTranslations(v []NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations)`
 
-SetScheduleId sets ScheduleId field to given value.
+SetHostTranslations sets HostTranslations field to given value.
 
-### HasScheduleId
+### HasHostTranslations
 
-`func (o *InlineObject101) HasScheduleId() bool`
+`func (o *InlineObject101) HasHostTranslations() bool`
 
-HasScheduleId returns a boolean if a field has been set.
-
-### SetScheduleIdNil
-
-`func (o *InlineObject101) SetScheduleIdNil(b bool)`
-
- SetScheduleIdNil sets the value for ScheduleId to be an explicit nil
-
-### UnsetScheduleId
-`func (o *InlineObject101) UnsetScheduleId()`
-
-UnsetScheduleId ensures that no value is present for ScheduleId, not even an explicit nil
-### GetMaxRetentionDays
-
-`func (o *InlineObject101) GetMaxRetentionDays() int32`
-
-GetMaxRetentionDays returns the MaxRetentionDays field if non-nil, zero value otherwise.
-
-### GetMaxRetentionDaysOk
-
-`func (o *InlineObject101) GetMaxRetentionDaysOk() (*int32, bool)`
-
-GetMaxRetentionDaysOk returns a tuple with the MaxRetentionDays field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMaxRetentionDays
-
-`func (o *InlineObject101) SetMaxRetentionDays(v int32)`
-
-SetMaxRetentionDays sets MaxRetentionDays field to given value.
-
-### HasMaxRetentionDays
-
-`func (o *InlineObject101) HasMaxRetentionDays() bool`
-
-HasMaxRetentionDays returns a boolean if a field has been set.
-
-### SetMaxRetentionDaysNil
-
-`func (o *InlineObject101) SetMaxRetentionDaysNil(b bool)`
-
- SetMaxRetentionDaysNil sets the value for MaxRetentionDays to be an explicit nil
-
-### UnsetMaxRetentionDays
-`func (o *InlineObject101) UnsetMaxRetentionDays()`
-
-UnsetMaxRetentionDays ensures that no value is present for MaxRetentionDays, not even an explicit nil
-### GetVideoSettings
-
-`func (o *InlineObject101) GetVideoSettings() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1`
-
-GetVideoSettings returns the VideoSettings field if non-nil, zero value otherwise.
-
-### GetVideoSettingsOk
-
-`func (o *InlineObject101) GetVideoSettingsOk() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1, bool)`
-
-GetVideoSettingsOk returns a tuple with the VideoSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVideoSettings
-
-`func (o *InlineObject101) SetVideoSettings(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1)`
-
-SetVideoSettings sets VideoSettings field to given value.
-
-### HasVideoSettings
-
-`func (o *InlineObject101) HasVideoSettings() bool`
-
-HasVideoSettings returns a boolean if a field has been set.
+HasHostTranslations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

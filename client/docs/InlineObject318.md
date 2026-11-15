@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClaimId** | **string** | The unique order claim id | 
+**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
 
 ## Methods
 
 ### NewInlineObject318
 
-`func NewInlineObject318(claimId string, ) *InlineObject318`
+`func NewInlineObject318() *InlineObject318`
 
 NewInlineObject318 instantiates a new InlineObject318 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject318WithDefaults instantiates a new InlineObject318 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClaimId
+### GetLimitScopeToNetworks
 
-`func (o *InlineObject318) GetClaimId() string`
+`func (o *InlineObject318) GetLimitScopeToNetworks() []string`
 
-GetClaimId returns the ClaimId field if non-nil, zero value otherwise.
+GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
 
-### GetClaimIdOk
+### GetLimitScopeToNetworksOk
 
-`func (o *InlineObject318) GetClaimIdOk() (*string, bool)`
+`func (o *InlineObject318) GetLimitScopeToNetworksOk() (*[]string, bool)`
 
-GetClaimIdOk returns a tuple with the ClaimId field if it's non-nil, zero value otherwise
+GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClaimId
+### SetLimitScopeToNetworks
 
-`func (o *InlineObject318) SetClaimId(v string)`
+`func (o *InlineObject318) SetLimitScopeToNetworks(v []string)`
 
-SetClaimId sets ClaimId field to given value.
+SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
 
+### HasLimitScopeToNetworks
+
+`func (o *InlineObject318) HasLimitScopeToNetworks() bool`
+
+HasLimitScopeToNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

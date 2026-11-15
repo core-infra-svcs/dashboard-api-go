@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1**](OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1.md) | List of zero touch deployments to create | 
-**Meta** | Pointer to [**InlineResponse200283Meta**](InlineResponse200283Meta.md) |  | [optional] 
+**SiteId** | Pointer to **string** | Site ID of the site to update | [optional] 
+**Routing** | Pointer to [**OrganizationsOrganizationIdSaseSitesSiteIdRouting**](OrganizationsOrganizationIdSaseSitesSiteIdRouting.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject370
 
-`func NewInlineObject370(items []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1, ) *InlineObject370`
+`func NewInlineObject370() *InlineObject370`
 
 NewInlineObject370 instantiates a new InlineObject370 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,55 @@ NewInlineObject370WithDefaults instantiates a new InlineObject370 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetSiteId
 
-`func (o *InlineObject370) GetItems() []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1`
+`func (o *InlineObject370) GetSiteId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetSiteId returns the SiteId field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetSiteIdOk
 
-`func (o *InlineObject370) GetItemsOk() (*[]OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1, bool)`
+`func (o *InlineObject370) GetSiteIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetSiteIdOk returns a tuple with the SiteId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetSiteId
 
-`func (o *InlineObject370) SetItems(v []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1)`
+`func (o *InlineObject370) SetSiteId(v string)`
 
-SetItems sets Items field to given value.
+SetSiteId sets SiteId field to given value.
 
+### HasSiteId
 
-### GetMeta
+`func (o *InlineObject370) HasSiteId() bool`
 
-`func (o *InlineObject370) GetMeta() InlineResponse200283Meta`
+HasSiteId returns a boolean if a field has been set.
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+### GetRouting
 
-### GetMetaOk
+`func (o *InlineObject370) GetRouting() OrganizationsOrganizationIdSaseSitesSiteIdRouting`
 
-`func (o *InlineObject370) GetMetaOk() (*InlineResponse200283Meta, bool)`
+GetRouting returns the Routing field if non-nil, zero value otherwise.
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+### GetRoutingOk
+
+`func (o *InlineObject370) GetRoutingOk() (*OrganizationsOrganizationIdSaseSitesSiteIdRouting, bool)`
+
+GetRoutingOk returns a tuple with the Routing field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetRouting
 
-`func (o *InlineObject370) SetMeta(v InlineResponse200283Meta)`
+`func (o *InlineObject370) SetRouting(v OrganizationsOrganizationIdSaseSitesSiteIdRouting)`
 
-SetMeta sets Meta field to given value.
+SetRouting sets Routing field to given value.
 
-### HasMeta
+### HasRouting
 
-`func (o *InlineObject370) HasMeta() bool`
+`func (o *InlineObject370) HasRouting() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasRouting returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BasicServiceSets** | Pointer to [**[]InlineResponse20065BasicServiceSets**](InlineResponse20065BasicServiceSets.md) | SSID status list | [optional] 
+**Serial** | Pointer to **string** | The serial number for the device | [optional] 
+**LatencyStats** | Pointer to [**InlineResponse20065LatencyStats**](InlineResponse20065LatencyStats.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse20065WithDefaults instantiates a new InlineResponse20065 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBasicServiceSets
+### GetSerial
 
-`func (o *InlineResponse20065) GetBasicServiceSets() []InlineResponse20065BasicServiceSets`
+`func (o *InlineResponse20065) GetSerial() string`
 
-GetBasicServiceSets returns the BasicServiceSets field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetBasicServiceSetsOk
+### GetSerialOk
 
-`func (o *InlineResponse20065) GetBasicServiceSetsOk() (*[]InlineResponse20065BasicServiceSets, bool)`
+`func (o *InlineResponse20065) GetSerialOk() (*string, bool)`
 
-GetBasicServiceSetsOk returns a tuple with the BasicServiceSets field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBasicServiceSets
+### SetSerial
 
-`func (o *InlineResponse20065) SetBasicServiceSets(v []InlineResponse20065BasicServiceSets)`
+`func (o *InlineResponse20065) SetSerial(v string)`
 
-SetBasicServiceSets sets BasicServiceSets field to given value.
+SetSerial sets Serial field to given value.
 
-### HasBasicServiceSets
+### HasSerial
 
-`func (o *InlineResponse20065) HasBasicServiceSets() bool`
+`func (o *InlineResponse20065) HasSerial() bool`
 
-HasBasicServiceSets returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
+
+### GetLatencyStats
+
+`func (o *InlineResponse20065) GetLatencyStats() InlineResponse20065LatencyStats`
+
+GetLatencyStats returns the LatencyStats field if non-nil, zero value otherwise.
+
+### GetLatencyStatsOk
+
+`func (o *InlineResponse20065) GetLatencyStatsOk() (*InlineResponse20065LatencyStats, bool)`
+
+GetLatencyStatsOk returns a tuple with the LatencyStats field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLatencyStats
+
+`func (o *InlineResponse20065) SetLatencyStats(v InlineResponse20065LatencyStats)`
+
+SetLatencyStats sets LatencyStats field to given value.
+
+### HasLatencyStats
+
+`func (o *InlineResponse20065) HasLatencyStats() bool`
+
+HasLatencyStats returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

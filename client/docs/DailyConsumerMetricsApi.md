@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationSummarySustainabilityDailyConsumerMetricsNetworks
 
-> InlineResponse200457 GetOrganizationSummarySustainabilityDailyConsumerMetricsNetworks(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> InlineResponse200469 GetOrganizationSummarySustainabilityDailyConsumerMetricsNetworks(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Lists daily consumer metrics for networks.
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DailyConsumerMetricsApi.GetOrganizationSummarySustainabilityDailyConsumerMetricsNetworks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummarySustainabilityDailyConsumerMetricsNetworks`: InlineResponse200457
+    // response from `GetOrganizationSummarySustainabilityDailyConsumerMetricsNetworks`: InlineResponse200469
     fmt.Fprintf(os.Stdout, "Response from `DailyConsumerMetricsApi.GetOrganizationSummarySustainabilityDailyConsumerMetricsNetworks`: %v\n", resp)
 }
 ```
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200457**](InlineResponse200457.md)
+[**InlineResponse200469**](InlineResponse200469.md)
 
 ### Authorization
 

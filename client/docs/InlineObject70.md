@@ -4,9 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Prefix** | Pointer to **string** | A static IPv6 prefix | [optional] 
-**Origin** | Pointer to [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1.md) |  | [optional] 
-**Description** | Pointer to **string** | A name or description for the prefix | [optional] 
+**Enabled** | Pointer to **bool** | The status of the port | [optional] 
+**DropUntaggedTraffic** | Pointer to **bool** | Trunk port can Drop all Untagged traffic. When true, no VLAN is required. Access ports cannot have dropUntaggedTraffic set to true. | [optional] 
+**Type** | Pointer to **string** | The type of the port: &#39;access&#39; or &#39;trunk&#39;. | [optional] 
+**Vlan** | Pointer to **int32** | Native VLAN when the port is in Trunk mode. Access VLAN when the port is in Access mode. | [optional] 
+**AllowedVlans** | Pointer to **string** | Comma-delimited list of VLAN IDs (e.g. &#39;2,15&#39;) for all devices. Secure Routers also support VLAN ranges (e.g. &#39;2-10,15&#39;). Use &#39;all&#39; to permit all VLANs on the port. | [optional] 
+**AccessPolicy** | Pointer to **string** | The name of the policy. Only applicable to Access ports. Valid values are: &#39;open&#39;, &#39;8021x-radius&#39;, &#39;mac-radius&#39;, &#39;hybrid-radius&#39;, &#39;access-manager&#39; for MX64 or Z3 or any MX supporting the per port authentication feature. Otherwise, &#39;open&#39; is the only valid value and &#39;open&#39; is the default value if the field is missing. | [optional] 
+**Sgt** | Pointer to [**NetworksNetworkIdAppliancePortsSgt**](NetworksNetworkIdAppliancePortsSgt.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +31,180 @@ NewInlineObject70WithDefaults instantiates a new InlineObject70 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPrefix
+### GetEnabled
 
-`func (o *InlineObject70) GetPrefix() string`
+`func (o *InlineObject70) GetEnabled() bool`
 
-GetPrefix returns the Prefix field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetPrefixOk
+### GetEnabledOk
 
-`func (o *InlineObject70) GetPrefixOk() (*string, bool)`
+`func (o *InlineObject70) GetEnabledOk() (*bool, bool)`
 
-GetPrefixOk returns a tuple with the Prefix field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPrefix
+### SetEnabled
 
-`func (o *InlineObject70) SetPrefix(v string)`
+`func (o *InlineObject70) SetEnabled(v bool)`
 
-SetPrefix sets Prefix field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasPrefix
+### HasEnabled
 
-`func (o *InlineObject70) HasPrefix() bool`
+`func (o *InlineObject70) HasEnabled() bool`
 
-HasPrefix returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetOrigin
+### GetDropUntaggedTraffic
 
-`func (o *InlineObject70) GetOrigin() NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1`
+`func (o *InlineObject70) GetDropUntaggedTraffic() bool`
 
-GetOrigin returns the Origin field if non-nil, zero value otherwise.
+GetDropUntaggedTraffic returns the DropUntaggedTraffic field if non-nil, zero value otherwise.
 
-### GetOriginOk
+### GetDropUntaggedTrafficOk
 
-`func (o *InlineObject70) GetOriginOk() (*NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1, bool)`
+`func (o *InlineObject70) GetDropUntaggedTrafficOk() (*bool, bool)`
 
-GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
+GetDropUntaggedTrafficOk returns a tuple with the DropUntaggedTraffic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrigin
+### SetDropUntaggedTraffic
 
-`func (o *InlineObject70) SetOrigin(v NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1)`
+`func (o *InlineObject70) SetDropUntaggedTraffic(v bool)`
 
-SetOrigin sets Origin field to given value.
+SetDropUntaggedTraffic sets DropUntaggedTraffic field to given value.
 
-### HasOrigin
+### HasDropUntaggedTraffic
 
-`func (o *InlineObject70) HasOrigin() bool`
+`func (o *InlineObject70) HasDropUntaggedTraffic() bool`
 
-HasOrigin returns a boolean if a field has been set.
+HasDropUntaggedTraffic returns a boolean if a field has been set.
 
-### GetDescription
+### GetType
 
-`func (o *InlineObject70) GetDescription() string`
+`func (o *InlineObject70) GetType() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetTypeOk
 
-`func (o *InlineObject70) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject70) GetTypeOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetType
 
-`func (o *InlineObject70) SetDescription(v string)`
+`func (o *InlineObject70) SetType(v string)`
 
-SetDescription sets Description field to given value.
+SetType sets Type field to given value.
 
-### HasDescription
+### HasType
 
-`func (o *InlineObject70) HasDescription() bool`
+`func (o *InlineObject70) HasType() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
+
+### GetVlan
+
+`func (o *InlineObject70) GetVlan() int32`
+
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
+
+### GetVlanOk
+
+`func (o *InlineObject70) GetVlanOk() (*int32, bool)`
+
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlan
+
+`func (o *InlineObject70) SetVlan(v int32)`
+
+SetVlan sets Vlan field to given value.
+
+### HasVlan
+
+`func (o *InlineObject70) HasVlan() bool`
+
+HasVlan returns a boolean if a field has been set.
+
+### GetAllowedVlans
+
+`func (o *InlineObject70) GetAllowedVlans() string`
+
+GetAllowedVlans returns the AllowedVlans field if non-nil, zero value otherwise.
+
+### GetAllowedVlansOk
+
+`func (o *InlineObject70) GetAllowedVlansOk() (*string, bool)`
+
+GetAllowedVlansOk returns a tuple with the AllowedVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllowedVlans
+
+`func (o *InlineObject70) SetAllowedVlans(v string)`
+
+SetAllowedVlans sets AllowedVlans field to given value.
+
+### HasAllowedVlans
+
+`func (o *InlineObject70) HasAllowedVlans() bool`
+
+HasAllowedVlans returns a boolean if a field has been set.
+
+### GetAccessPolicy
+
+`func (o *InlineObject70) GetAccessPolicy() string`
+
+GetAccessPolicy returns the AccessPolicy field if non-nil, zero value otherwise.
+
+### GetAccessPolicyOk
+
+`func (o *InlineObject70) GetAccessPolicyOk() (*string, bool)`
+
+GetAccessPolicyOk returns a tuple with the AccessPolicy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessPolicy
+
+`func (o *InlineObject70) SetAccessPolicy(v string)`
+
+SetAccessPolicy sets AccessPolicy field to given value.
+
+### HasAccessPolicy
+
+`func (o *InlineObject70) HasAccessPolicy() bool`
+
+HasAccessPolicy returns a boolean if a field has been set.
+
+### GetSgt
+
+`func (o *InlineObject70) GetSgt() NetworksNetworkIdAppliancePortsSgt`
+
+GetSgt returns the Sgt field if non-nil, zero value otherwise.
+
+### GetSgtOk
+
+`func (o *InlineObject70) GetSgtOk() (*NetworksNetworkIdAppliancePortsSgt, bool)`
+
+GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSgt
+
+`func (o *InlineObject70) SetSgt(v NetworksNetworkIdAppliancePortsSgt)`
+
+SetSgt sets Sgt field to given value.
+
+### HasSgt
+
+`func (o *InlineObject70) HasSgt() bool`
+
+HasSgt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

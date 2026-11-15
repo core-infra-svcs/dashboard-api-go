@@ -4,19 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Unique identifier for the quality retention profile | [optional] 
-**NetworkId** | Pointer to **string** | Network ID | [optional] 
-**Name** | Pointer to **string** | Name of the quality retention profile | [optional] 
-**RestrictedBandwidthModeEnabled** | Pointer to **bool** | Whether restricted bandwidth mode is enabled | [optional] 
-**MotionBasedRetentionEnabled** | Pointer to **bool** | Whether motion-based retention is enabled | [optional] 
-**AudioRecordingEnabled** | Pointer to **bool** | Whether audio recording is enabled | [optional] 
-**CloudArchiveEnabled** | Pointer to **bool** | Whether cloud archive is enabled | [optional] 
-**MaxRetentionDays** | Pointer to **int32** | Maximum retention days | [optional] 
-**ScheduleId** | Pointer to **NullableString** | Schedule ID | [optional] 
-**MotionDetectorVersion** | Pointer to **int32** | Motion detector version | [optional] 
-**SmartRetention** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention**](NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention.md) |  | [optional] 
-**AxisVideoQuality** | Pointer to **string** | Video quality settings applied to all Axis cameras | [optional] 
-**VideoSettings** | Pointer to [**map[string]NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings.md) | Video quality and resolution settings for camera models | [optional] 
+**Enabled** | Pointer to **bool** | Is the warm spare enabled | [optional] 
+**PrimarySerial** | Pointer to **string** | Serial number of the primary appliance | [optional] 
+**SpareSerial** | Pointer to **string** | Serial number of the warm spare appliance | [optional] 
+**UplinkMode** | Pointer to **string** | Uplink mode, either virtual or public | [optional] 
+**Wan1** | Pointer to [**InlineResponse200115Wan1**](InlineResponse200115Wan1.md) |  | [optional] 
+**Wan2** | Pointer to [**InlineResponse200115Wan2**](InlineResponse200115Wan2.md) |  | [optional] 
 
 ## Methods
 
@@ -37,340 +30,155 @@ NewInlineResponse200115WithDefaults instantiates a new InlineResponse200115 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetEnabled
 
-`func (o *InlineResponse200115) GetId() string`
+`func (o *InlineResponse200115) GetEnabled() bool`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetEnabledOk
 
-`func (o *InlineResponse200115) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200115) GetEnabledOk() (*bool, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetEnabled
 
-`func (o *InlineResponse200115) SetId(v string)`
+`func (o *InlineResponse200115) SetEnabled(v bool)`
 
-SetId sets Id field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasId
+### HasEnabled
 
-`func (o *InlineResponse200115) HasId() bool`
+`func (o *InlineResponse200115) HasEnabled() bool`
 
-HasId returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetNetworkId
+### GetPrimarySerial
 
-`func (o *InlineResponse200115) GetNetworkId() string`
+`func (o *InlineResponse200115) GetPrimarySerial() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetPrimarySerial returns the PrimarySerial field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetPrimarySerialOk
 
-`func (o *InlineResponse200115) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200115) GetPrimarySerialOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetPrimarySerialOk returns a tuple with the PrimarySerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetPrimarySerial
 
-`func (o *InlineResponse200115) SetNetworkId(v string)`
+`func (o *InlineResponse200115) SetPrimarySerial(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetPrimarySerial sets PrimarySerial field to given value.
 
-### HasNetworkId
+### HasPrimarySerial
 
-`func (o *InlineResponse200115) HasNetworkId() bool`
+`func (o *InlineResponse200115) HasPrimarySerial() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasPrimarySerial returns a boolean if a field has been set.
 
-### GetName
+### GetSpareSerial
 
-`func (o *InlineResponse200115) GetName() string`
+`func (o *InlineResponse200115) GetSpareSerial() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSpareSerial returns the SpareSerial field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSpareSerialOk
 
-`func (o *InlineResponse200115) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200115) GetSpareSerialOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSpareSerialOk returns a tuple with the SpareSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSpareSerial
 
-`func (o *InlineResponse200115) SetName(v string)`
+`func (o *InlineResponse200115) SetSpareSerial(v string)`
 
-SetName sets Name field to given value.
+SetSpareSerial sets SpareSerial field to given value.
 
-### HasName
+### HasSpareSerial
 
-`func (o *InlineResponse200115) HasName() bool`
+`func (o *InlineResponse200115) HasSpareSerial() bool`
 
-HasName returns a boolean if a field has been set.
+HasSpareSerial returns a boolean if a field has been set.
 
-### GetRestrictedBandwidthModeEnabled
+### GetUplinkMode
 
-`func (o *InlineResponse200115) GetRestrictedBandwidthModeEnabled() bool`
+`func (o *InlineResponse200115) GetUplinkMode() string`
 
-GetRestrictedBandwidthModeEnabled returns the RestrictedBandwidthModeEnabled field if non-nil, zero value otherwise.
+GetUplinkMode returns the UplinkMode field if non-nil, zero value otherwise.
 
-### GetRestrictedBandwidthModeEnabledOk
+### GetUplinkModeOk
 
-`func (o *InlineResponse200115) GetRestrictedBandwidthModeEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200115) GetUplinkModeOk() (*string, bool)`
 
-GetRestrictedBandwidthModeEnabledOk returns a tuple with the RestrictedBandwidthModeEnabled field if it's non-nil, zero value otherwise
+GetUplinkModeOk returns a tuple with the UplinkMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRestrictedBandwidthModeEnabled
+### SetUplinkMode
 
-`func (o *InlineResponse200115) SetRestrictedBandwidthModeEnabled(v bool)`
+`func (o *InlineResponse200115) SetUplinkMode(v string)`
 
-SetRestrictedBandwidthModeEnabled sets RestrictedBandwidthModeEnabled field to given value.
+SetUplinkMode sets UplinkMode field to given value.
 
-### HasRestrictedBandwidthModeEnabled
+### HasUplinkMode
 
-`func (o *InlineResponse200115) HasRestrictedBandwidthModeEnabled() bool`
+`func (o *InlineResponse200115) HasUplinkMode() bool`
 
-HasRestrictedBandwidthModeEnabled returns a boolean if a field has been set.
+HasUplinkMode returns a boolean if a field has been set.
 
-### GetMotionBasedRetentionEnabled
+### GetWan1
 
-`func (o *InlineResponse200115) GetMotionBasedRetentionEnabled() bool`
+`func (o *InlineResponse200115) GetWan1() InlineResponse200115Wan1`
 
-GetMotionBasedRetentionEnabled returns the MotionBasedRetentionEnabled field if non-nil, zero value otherwise.
+GetWan1 returns the Wan1 field if non-nil, zero value otherwise.
 
-### GetMotionBasedRetentionEnabledOk
+### GetWan1Ok
 
-`func (o *InlineResponse200115) GetMotionBasedRetentionEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200115) GetWan1Ok() (*InlineResponse200115Wan1, bool)`
 
-GetMotionBasedRetentionEnabledOk returns a tuple with the MotionBasedRetentionEnabled field if it's non-nil, zero value otherwise
+GetWan1Ok returns a tuple with the Wan1 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMotionBasedRetentionEnabled
+### SetWan1
 
-`func (o *InlineResponse200115) SetMotionBasedRetentionEnabled(v bool)`
+`func (o *InlineResponse200115) SetWan1(v InlineResponse200115Wan1)`
 
-SetMotionBasedRetentionEnabled sets MotionBasedRetentionEnabled field to given value.
+SetWan1 sets Wan1 field to given value.
 
-### HasMotionBasedRetentionEnabled
+### HasWan1
 
-`func (o *InlineResponse200115) HasMotionBasedRetentionEnabled() bool`
+`func (o *InlineResponse200115) HasWan1() bool`
 
-HasMotionBasedRetentionEnabled returns a boolean if a field has been set.
+HasWan1 returns a boolean if a field has been set.
 
-### GetAudioRecordingEnabled
+### GetWan2
 
-`func (o *InlineResponse200115) GetAudioRecordingEnabled() bool`
+`func (o *InlineResponse200115) GetWan2() InlineResponse200115Wan2`
 
-GetAudioRecordingEnabled returns the AudioRecordingEnabled field if non-nil, zero value otherwise.
+GetWan2 returns the Wan2 field if non-nil, zero value otherwise.
 
-### GetAudioRecordingEnabledOk
+### GetWan2Ok
 
-`func (o *InlineResponse200115) GetAudioRecordingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200115) GetWan2Ok() (*InlineResponse200115Wan2, bool)`
 
-GetAudioRecordingEnabledOk returns a tuple with the AudioRecordingEnabled field if it's non-nil, zero value otherwise
+GetWan2Ok returns a tuple with the Wan2 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAudioRecordingEnabled
+### SetWan2
 
-`func (o *InlineResponse200115) SetAudioRecordingEnabled(v bool)`
+`func (o *InlineResponse200115) SetWan2(v InlineResponse200115Wan2)`
 
-SetAudioRecordingEnabled sets AudioRecordingEnabled field to given value.
+SetWan2 sets Wan2 field to given value.
 
-### HasAudioRecordingEnabled
+### HasWan2
 
-`func (o *InlineResponse200115) HasAudioRecordingEnabled() bool`
+`func (o *InlineResponse200115) HasWan2() bool`
 
-HasAudioRecordingEnabled returns a boolean if a field has been set.
-
-### GetCloudArchiveEnabled
-
-`func (o *InlineResponse200115) GetCloudArchiveEnabled() bool`
-
-GetCloudArchiveEnabled returns the CloudArchiveEnabled field if non-nil, zero value otherwise.
-
-### GetCloudArchiveEnabledOk
-
-`func (o *InlineResponse200115) GetCloudArchiveEnabledOk() (*bool, bool)`
-
-GetCloudArchiveEnabledOk returns a tuple with the CloudArchiveEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCloudArchiveEnabled
-
-`func (o *InlineResponse200115) SetCloudArchiveEnabled(v bool)`
-
-SetCloudArchiveEnabled sets CloudArchiveEnabled field to given value.
-
-### HasCloudArchiveEnabled
-
-`func (o *InlineResponse200115) HasCloudArchiveEnabled() bool`
-
-HasCloudArchiveEnabled returns a boolean if a field has been set.
-
-### GetMaxRetentionDays
-
-`func (o *InlineResponse200115) GetMaxRetentionDays() int32`
-
-GetMaxRetentionDays returns the MaxRetentionDays field if non-nil, zero value otherwise.
-
-### GetMaxRetentionDaysOk
-
-`func (o *InlineResponse200115) GetMaxRetentionDaysOk() (*int32, bool)`
-
-GetMaxRetentionDaysOk returns a tuple with the MaxRetentionDays field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMaxRetentionDays
-
-`func (o *InlineResponse200115) SetMaxRetentionDays(v int32)`
-
-SetMaxRetentionDays sets MaxRetentionDays field to given value.
-
-### HasMaxRetentionDays
-
-`func (o *InlineResponse200115) HasMaxRetentionDays() bool`
-
-HasMaxRetentionDays returns a boolean if a field has been set.
-
-### GetScheduleId
-
-`func (o *InlineResponse200115) GetScheduleId() string`
-
-GetScheduleId returns the ScheduleId field if non-nil, zero value otherwise.
-
-### GetScheduleIdOk
-
-`func (o *InlineResponse200115) GetScheduleIdOk() (*string, bool)`
-
-GetScheduleIdOk returns a tuple with the ScheduleId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetScheduleId
-
-`func (o *InlineResponse200115) SetScheduleId(v string)`
-
-SetScheduleId sets ScheduleId field to given value.
-
-### HasScheduleId
-
-`func (o *InlineResponse200115) HasScheduleId() bool`
-
-HasScheduleId returns a boolean if a field has been set.
-
-### SetScheduleIdNil
-
-`func (o *InlineResponse200115) SetScheduleIdNil(b bool)`
-
- SetScheduleIdNil sets the value for ScheduleId to be an explicit nil
-
-### UnsetScheduleId
-`func (o *InlineResponse200115) UnsetScheduleId()`
-
-UnsetScheduleId ensures that no value is present for ScheduleId, not even an explicit nil
-### GetMotionDetectorVersion
-
-`func (o *InlineResponse200115) GetMotionDetectorVersion() int32`
-
-GetMotionDetectorVersion returns the MotionDetectorVersion field if non-nil, zero value otherwise.
-
-### GetMotionDetectorVersionOk
-
-`func (o *InlineResponse200115) GetMotionDetectorVersionOk() (*int32, bool)`
-
-GetMotionDetectorVersionOk returns a tuple with the MotionDetectorVersion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMotionDetectorVersion
-
-`func (o *InlineResponse200115) SetMotionDetectorVersion(v int32)`
-
-SetMotionDetectorVersion sets MotionDetectorVersion field to given value.
-
-### HasMotionDetectorVersion
-
-`func (o *InlineResponse200115) HasMotionDetectorVersion() bool`
-
-HasMotionDetectorVersion returns a boolean if a field has been set.
-
-### GetSmartRetention
-
-`func (o *InlineResponse200115) GetSmartRetention() NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention`
-
-GetSmartRetention returns the SmartRetention field if non-nil, zero value otherwise.
-
-### GetSmartRetentionOk
-
-`func (o *InlineResponse200115) GetSmartRetentionOk() (*NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention, bool)`
-
-GetSmartRetentionOk returns a tuple with the SmartRetention field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSmartRetention
-
-`func (o *InlineResponse200115) SetSmartRetention(v NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention)`
-
-SetSmartRetention sets SmartRetention field to given value.
-
-### HasSmartRetention
-
-`func (o *InlineResponse200115) HasSmartRetention() bool`
-
-HasSmartRetention returns a boolean if a field has been set.
-
-### GetAxisVideoQuality
-
-`func (o *InlineResponse200115) GetAxisVideoQuality() string`
-
-GetAxisVideoQuality returns the AxisVideoQuality field if non-nil, zero value otherwise.
-
-### GetAxisVideoQualityOk
-
-`func (o *InlineResponse200115) GetAxisVideoQualityOk() (*string, bool)`
-
-GetAxisVideoQualityOk returns a tuple with the AxisVideoQuality field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAxisVideoQuality
-
-`func (o *InlineResponse200115) SetAxisVideoQuality(v string)`
-
-SetAxisVideoQuality sets AxisVideoQuality field to given value.
-
-### HasAxisVideoQuality
-
-`func (o *InlineResponse200115) HasAxisVideoQuality() bool`
-
-HasAxisVideoQuality returns a boolean if a field has been set.
-
-### GetVideoSettings
-
-`func (o *InlineResponse200115) GetVideoSettings() map[string]NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings`
-
-GetVideoSettings returns the VideoSettings field if non-nil, zero value otherwise.
-
-### GetVideoSettingsOk
-
-`func (o *InlineResponse200115) GetVideoSettingsOk() (*map[string]NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings, bool)`
-
-GetVideoSettingsOk returns a tuple with the VideoSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVideoSettings
-
-`func (o *InlineResponse200115) SetVideoSettings(v map[string]NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings)`
-
-SetVideoSettings sets VideoSettings field to given value.
-
-### HasVideoSettings
-
-`func (o *InlineResponse200115) HasVideoSettings() bool`
-
-HasVideoSettings returns a boolean if a field has been set.
+HasWan2 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

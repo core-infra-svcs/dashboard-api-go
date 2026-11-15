@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SummaryId** | Pointer to **string** | Id of the route table summary request. Used to check the status of the request. | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your routing table summary request. | [optional] 
-**Status** | Pointer to **string** | Status of the routing table summary request. | [optional] 
+**LookupId** | Pointer to **string** | Id of the route table lookup request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your routing table lookup request. | [optional] 
+**Request** | Pointer to [**InlineResponse20112Request**](InlineResponse20112Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the routing table lookup request. | [optional] 
 **Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
 
 ## Methods
@@ -28,30 +29,30 @@ NewInlineResponse20112WithDefaults instantiates a new InlineResponse20112 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSummaryId
+### GetLookupId
 
-`func (o *InlineResponse20112) GetSummaryId() string`
+`func (o *InlineResponse20112) GetLookupId() string`
 
-GetSummaryId returns the SummaryId field if non-nil, zero value otherwise.
+GetLookupId returns the LookupId field if non-nil, zero value otherwise.
 
-### GetSummaryIdOk
+### GetLookupIdOk
 
-`func (o *InlineResponse20112) GetSummaryIdOk() (*string, bool)`
+`func (o *InlineResponse20112) GetLookupIdOk() (*string, bool)`
 
-GetSummaryIdOk returns a tuple with the SummaryId field if it's non-nil, zero value otherwise
+GetLookupIdOk returns a tuple with the LookupId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSummaryId
+### SetLookupId
 
-`func (o *InlineResponse20112) SetSummaryId(v string)`
+`func (o *InlineResponse20112) SetLookupId(v string)`
 
-SetSummaryId sets SummaryId field to given value.
+SetLookupId sets LookupId field to given value.
 
-### HasSummaryId
+### HasLookupId
 
-`func (o *InlineResponse20112) HasSummaryId() bool`
+`func (o *InlineResponse20112) HasLookupId() bool`
 
-HasSummaryId returns a boolean if a field has been set.
+HasLookupId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -77,6 +78,31 @@ SetUrl sets Url field to given value.
 `func (o *InlineResponse20112) HasUrl() bool`
 
 HasUrl returns a boolean if a field has been set.
+
+### GetRequest
+
+`func (o *InlineResponse20112) GetRequest() InlineResponse20112Request`
+
+GetRequest returns the Request field if non-nil, zero value otherwise.
+
+### GetRequestOk
+
+`func (o *InlineResponse20112) GetRequestOk() (*InlineResponse20112Request, bool)`
+
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequest
+
+`func (o *InlineResponse20112) SetRequest(v InlineResponse20112Request)`
+
+SetRequest sets Request field to given value.
+
+### HasRequest
+
+`func (o *InlineResponse20112) HasRequest() bool`
+
+HasRequest returns a boolean if a field has been set.
 
 ### GetStatus
 

@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]InlineResponse200336Items**](InlineResponse200336Items.md) | List of SSIDs tunneling through campus gateway clusters | 
-**Meta** | [**InlineResponse200335Meta**](InlineResponse200335Meta.md) |  | 
+**Id** | Pointer to **string** | Permission scope id | [optional] 
+**Name** | Pointer to **string** | Name of permission scope | [optional] 
+**Level** | Pointer to **string** | Permission scope level | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200336
 
-`func NewInlineResponse200336(items []InlineResponse200336Items, meta InlineResponse200335Meta, ) *InlineResponse200336`
+`func NewInlineResponse200336() *InlineResponse200336`
 
 NewInlineResponse200336 instantiates a new InlineResponse200336 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +27,80 @@ NewInlineResponse200336WithDefaults instantiates a new InlineResponse200336 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetId
 
-`func (o *InlineResponse200336) GetItems() []InlineResponse200336Items`
+`func (o *InlineResponse200336) GetId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetIdOk
 
-`func (o *InlineResponse200336) GetItemsOk() (*[]InlineResponse200336Items, bool)`
+`func (o *InlineResponse200336) GetIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetId
 
-`func (o *InlineResponse200336) SetItems(v []InlineResponse200336Items)`
+`func (o *InlineResponse200336) SetId(v string)`
 
-SetItems sets Items field to given value.
+SetId sets Id field to given value.
 
+### HasId
 
-### GetMeta
+`func (o *InlineResponse200336) HasId() bool`
 
-`func (o *InlineResponse200336) GetMeta() InlineResponse200335Meta`
+HasId returns a boolean if a field has been set.
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+### GetName
 
-### GetMetaOk
+`func (o *InlineResponse200336) GetName() string`
 
-`func (o *InlineResponse200336) GetMetaOk() (*InlineResponse200335Meta, bool)`
+GetName returns the Name field if non-nil, zero value otherwise.
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+### GetNameOk
+
+`func (o *InlineResponse200336) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetName
 
-`func (o *InlineResponse200336) SetMeta(v InlineResponse200335Meta)`
+`func (o *InlineResponse200336) SetName(v string)`
 
-SetMeta sets Meta field to given value.
+SetName sets Name field to given value.
 
+### HasName
+
+`func (o *InlineResponse200336) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetLevel
+
+`func (o *InlineResponse200336) GetLevel() string`
+
+GetLevel returns the Level field if non-nil, zero value otherwise.
+
+### GetLevelOk
+
+`func (o *InlineResponse200336) GetLevelOk() (*string, bool)`
+
+GetLevelOk returns a tuple with the Level field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLevel
+
+`func (o *InlineResponse200336) SetLevel(v string)`
+
+SetLevel sets Level field to given value.
+
+### HasLevel
+
+`func (o *InlineResponse200336) HasLevel() bool`
+
+HasLevel returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

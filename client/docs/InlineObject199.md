@@ -4,17 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the new template | 
-**Body** | Pointer to **string** | The liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
-**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders1.md) | The liquid template used with the webhook headers. | [optional] 
-**BodyFile** | Pointer to **string** | A Base64 encoded file containing liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
-**HeadersFile** | Pointer to **string** | A Base64 encoded file containing the liquid template used with the webhook headers. | [optional] 
+**Name** | **string** | Name of the profile, string length must be from 1 to 255 characters | 
+**ActiveVlans** | Pointer to **string** | The active VLANs for the VLAN profile. Only applicable to trunk ports. The given range must be inclusive of all named VLANs. | [optional] 
+**VlanNames** | [**[]NetworksNetworkIdVlanProfilesVlanNames1**](NetworksNetworkIdVlanProfilesVlanNames1.md) | An array of named VLANs | 
+**VlanGroups** | [**[]NetworksNetworkIdVlanProfilesVlanGroups1**](NetworksNetworkIdVlanProfilesVlanGroups1.md) | An array of VLAN groups | 
 
 ## Methods
 
 ### NewInlineObject199
 
-`func NewInlineObject199(name string, ) *InlineObject199`
+`func NewInlineObject199(name string, vlanNames []NetworksNetworkIdVlanProfilesVlanNames1, vlanGroups []NetworksNetworkIdVlanProfilesVlanGroups1, ) *InlineObject199`
 
 NewInlineObject199 instantiates a new InlineObject199 object
 This constructor will assign default values to properties that have it defined,
@@ -49,115 +48,70 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetBody
+### GetActiveVlans
 
-`func (o *InlineObject199) GetBody() string`
+`func (o *InlineObject199) GetActiveVlans() string`
 
-GetBody returns the Body field if non-nil, zero value otherwise.
+GetActiveVlans returns the ActiveVlans field if non-nil, zero value otherwise.
 
-### GetBodyOk
+### GetActiveVlansOk
 
-`func (o *InlineObject199) GetBodyOk() (*string, bool)`
+`func (o *InlineObject199) GetActiveVlansOk() (*string, bool)`
 
-GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
+GetActiveVlansOk returns a tuple with the ActiveVlans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBody
+### SetActiveVlans
 
-`func (o *InlineObject199) SetBody(v string)`
+`func (o *InlineObject199) SetActiveVlans(v string)`
 
-SetBody sets Body field to given value.
+SetActiveVlans sets ActiveVlans field to given value.
 
-### HasBody
+### HasActiveVlans
 
-`func (o *InlineObject199) HasBody() bool`
+`func (o *InlineObject199) HasActiveVlans() bool`
 
-HasBody returns a boolean if a field has been set.
+HasActiveVlans returns a boolean if a field has been set.
 
-### GetHeaders
+### GetVlanNames
 
-`func (o *InlineObject199) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1`
+`func (o *InlineObject199) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames1`
 
-GetHeaders returns the Headers field if non-nil, zero value otherwise.
+GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
 
-### GetHeadersOk
+### GetVlanNamesOk
 
-`func (o *InlineObject199) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1, bool)`
+`func (o *InlineObject199) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames1, bool)`
 
-GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
+GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHeaders
+### SetVlanNames
 
-`func (o *InlineObject199) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1)`
+`func (o *InlineObject199) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames1)`
 
-SetHeaders sets Headers field to given value.
+SetVlanNames sets VlanNames field to given value.
 
-### HasHeaders
 
-`func (o *InlineObject199) HasHeaders() bool`
+### GetVlanGroups
 
-HasHeaders returns a boolean if a field has been set.
+`func (o *InlineObject199) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups1`
 
-### SetHeadersNil
+GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
 
-`func (o *InlineObject199) SetHeadersNil(b bool)`
+### GetVlanGroupsOk
 
- SetHeadersNil sets the value for Headers to be an explicit nil
+`func (o *InlineObject199) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups1, bool)`
 
-### UnsetHeaders
-`func (o *InlineObject199) UnsetHeaders()`
-
-UnsetHeaders ensures that no value is present for Headers, not even an explicit nil
-### GetBodyFile
-
-`func (o *InlineObject199) GetBodyFile() string`
-
-GetBodyFile returns the BodyFile field if non-nil, zero value otherwise.
-
-### GetBodyFileOk
-
-`func (o *InlineObject199) GetBodyFileOk() (*string, bool)`
-
-GetBodyFileOk returns a tuple with the BodyFile field if it's non-nil, zero value otherwise
+GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBodyFile
+### SetVlanGroups
 
-`func (o *InlineObject199) SetBodyFile(v string)`
+`func (o *InlineObject199) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups1)`
 
-SetBodyFile sets BodyFile field to given value.
+SetVlanGroups sets VlanGroups field to given value.
 
-### HasBodyFile
-
-`func (o *InlineObject199) HasBodyFile() bool`
-
-HasBodyFile returns a boolean if a field has been set.
-
-### GetHeadersFile
-
-`func (o *InlineObject199) GetHeadersFile() string`
-
-GetHeadersFile returns the HeadersFile field if non-nil, zero value otherwise.
-
-### GetHeadersFileOk
-
-`func (o *InlineObject199) GetHeadersFileOk() (*string, bool)`
-
-GetHeadersFileOk returns a tuple with the HeadersFile field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHeadersFile
-
-`func (o *InlineObject199) SetHeadersFile(v string)`
-
-SetHeadersFile sets HeadersFile field to given value.
-
-### HasHeadersFile
-
-`func (o *InlineObject199) HasHeadersFile() bool`
-
-HasHeadersFile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

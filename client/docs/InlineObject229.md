@@ -4,13 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CcxNameIeEnabled** | Pointer to **bool** | When true, enables CCX name IE, which allows the AP to broadcast its device name as part of its beacon (as defined by the network admin in the Dashboard). | [optional] 
+**Name** | **string** | The name of the Identity PSK | 
+**Passphrase** | Pointer to **string** | The passphrase for client authentication. If left blank, one will be auto-generated. | [optional] 
+**GroupPolicyId** | **string** | The group policy to be applied to clients | 
+**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires. Will not expire if left blank. | [optional] 
 
 ## Methods
 
 ### NewInlineObject229
 
-`func NewInlineObject229() *InlineObject229`
+`func NewInlineObject229(name string, groupPolicyId string, ) *InlineObject229`
 
 NewInlineObject229 instantiates a new InlineObject229 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +28,95 @@ NewInlineObject229WithDefaults instantiates a new InlineObject229 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCcxNameIeEnabled
+### GetName
 
-`func (o *InlineObject229) GetCcxNameIeEnabled() bool`
+`func (o *InlineObject229) GetName() string`
 
-GetCcxNameIeEnabled returns the CcxNameIeEnabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCcxNameIeEnabledOk
+### GetNameOk
 
-`func (o *InlineObject229) GetCcxNameIeEnabledOk() (*bool, bool)`
+`func (o *InlineObject229) GetNameOk() (*string, bool)`
 
-GetCcxNameIeEnabledOk returns a tuple with the CcxNameIeEnabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCcxNameIeEnabled
+### SetName
 
-`func (o *InlineObject229) SetCcxNameIeEnabled(v bool)`
+`func (o *InlineObject229) SetName(v string)`
 
-SetCcxNameIeEnabled sets CcxNameIeEnabled field to given value.
+SetName sets Name field to given value.
 
-### HasCcxNameIeEnabled
 
-`func (o *InlineObject229) HasCcxNameIeEnabled() bool`
+### GetPassphrase
 
-HasCcxNameIeEnabled returns a boolean if a field has been set.
+`func (o *InlineObject229) GetPassphrase() string`
+
+GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
+
+### GetPassphraseOk
+
+`func (o *InlineObject229) GetPassphraseOk() (*string, bool)`
+
+GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPassphrase
+
+`func (o *InlineObject229) SetPassphrase(v string)`
+
+SetPassphrase sets Passphrase field to given value.
+
+### HasPassphrase
+
+`func (o *InlineObject229) HasPassphrase() bool`
+
+HasPassphrase returns a boolean if a field has been set.
+
+### GetGroupPolicyId
+
+`func (o *InlineObject229) GetGroupPolicyId() string`
+
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+
+### GetGroupPolicyIdOk
+
+`func (o *InlineObject229) GetGroupPolicyIdOk() (*string, bool)`
+
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupPolicyId
+
+`func (o *InlineObject229) SetGroupPolicyId(v string)`
+
+SetGroupPolicyId sets GroupPolicyId field to given value.
+
+
+### GetExpiresAt
+
+`func (o *InlineObject229) GetExpiresAt() time.Time`
+
+GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
+
+### GetExpiresAtOk
+
+`func (o *InlineObject229) GetExpiresAtOk() (*time.Time, bool)`
+
+GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExpiresAt
+
+`func (o *InlineObject229) SetExpiresAt(v time.Time)`
+
+SetExpiresAt sets ExpiresAt field to given value.
+
+### HasExpiresAt
+
+`func (o *InlineObject229) HasExpiresAt() bool`
+
+HasExpiresAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

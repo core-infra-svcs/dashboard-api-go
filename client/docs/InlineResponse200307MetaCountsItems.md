@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Total** | Pointer to **int32** | The total number of items in the dataset | [optional] 
-**Remaining** | Pointer to **int32** | The number of items in the dataset available on subsequent pages | [optional] 
+**Total** | Pointer to **int32** | Total overrides available | [optional] 
+**Remaining** | Pointer to **int32** | Overrides remaining on subsequent pages | [optional] 
 
 ## Methods
 

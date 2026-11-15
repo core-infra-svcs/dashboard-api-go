@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClientTrackingMethod** | Pointer to **string** | Client tracking method of a network | [optional] 
-**DeploymentMode** | Pointer to **string** | Deployment mode of a network | [optional] 
-**DynamicDns** | Pointer to [**NetworksNetworkIdApplianceSettingsDynamicDns**](NetworksNetworkIdApplianceSettingsDynamicDns.md) |  | [optional] 
+**Enabled** | **bool** | Whether HTTPS inspection is enabled. | 
+**AllowLists** | Pointer to [**NetworksNetworkIdApplianceSecurityHttpsInspectionAllowLists**](NetworksNetworkIdApplianceSecurityHttpsInspectionAllowLists.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject76
 
-`func NewInlineObject76() *InlineObject76`
+`func NewInlineObject76(enabled bool, ) *InlineObject76`
 
 NewInlineObject76 instantiates a new InlineObject76 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +26,50 @@ NewInlineObject76WithDefaults instantiates a new InlineObject76 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClientTrackingMethod
+### GetEnabled
 
-`func (o *InlineObject76) GetClientTrackingMethod() string`
+`func (o *InlineObject76) GetEnabled() bool`
 
-GetClientTrackingMethod returns the ClientTrackingMethod field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetClientTrackingMethodOk
+### GetEnabledOk
 
-`func (o *InlineObject76) GetClientTrackingMethodOk() (*string, bool)`
+`func (o *InlineObject76) GetEnabledOk() (*bool, bool)`
 
-GetClientTrackingMethodOk returns a tuple with the ClientTrackingMethod field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientTrackingMethod
+### SetEnabled
 
-`func (o *InlineObject76) SetClientTrackingMethod(v string)`
+`func (o *InlineObject76) SetEnabled(v bool)`
 
-SetClientTrackingMethod sets ClientTrackingMethod field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasClientTrackingMethod
 
-`func (o *InlineObject76) HasClientTrackingMethod() bool`
+### GetAllowLists
 
-HasClientTrackingMethod returns a boolean if a field has been set.
+`func (o *InlineObject76) GetAllowLists() NetworksNetworkIdApplianceSecurityHttpsInspectionAllowLists`
 
-### GetDeploymentMode
+GetAllowLists returns the AllowLists field if non-nil, zero value otherwise.
 
-`func (o *InlineObject76) GetDeploymentMode() string`
+### GetAllowListsOk
 
-GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
+`func (o *InlineObject76) GetAllowListsOk() (*NetworksNetworkIdApplianceSecurityHttpsInspectionAllowLists, bool)`
 
-### GetDeploymentModeOk
-
-`func (o *InlineObject76) GetDeploymentModeOk() (*string, bool)`
-
-GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
+GetAllowListsOk returns a tuple with the AllowLists field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeploymentMode
+### SetAllowLists
 
-`func (o *InlineObject76) SetDeploymentMode(v string)`
+`func (o *InlineObject76) SetAllowLists(v NetworksNetworkIdApplianceSecurityHttpsInspectionAllowLists)`
 
-SetDeploymentMode sets DeploymentMode field to given value.
+SetAllowLists sets AllowLists field to given value.
 
-### HasDeploymentMode
+### HasAllowLists
 
-`func (o *InlineObject76) HasDeploymentMode() bool`
+`func (o *InlineObject76) HasAllowLists() bool`
 
-HasDeploymentMode returns a boolean if a field has been set.
-
-### GetDynamicDns
-
-`func (o *InlineObject76) GetDynamicDns() NetworksNetworkIdApplianceSettingsDynamicDns`
-
-GetDynamicDns returns the DynamicDns field if non-nil, zero value otherwise.
-
-### GetDynamicDnsOk
-
-`func (o *InlineObject76) GetDynamicDnsOk() (*NetworksNetworkIdApplianceSettingsDynamicDns, bool)`
-
-GetDynamicDnsOk returns a tuple with the DynamicDns field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDynamicDns
-
-`func (o *InlineObject76) SetDynamicDns(v NetworksNetworkIdApplianceSettingsDynamicDns)`
-
-SetDynamicDns sets DynamicDns field to given value.
-
-### HasDynamicDns
-
-`func (o *InlineObject76) HasDynamicDns() bool`
-
-HasDynamicDns returns a boolean if a field has been set.
+HasAllowLists returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

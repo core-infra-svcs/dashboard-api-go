@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200344Items**](InlineResponse200344Items.md) | List of eSIM Devices | [optional] 
+**Items** | Pointer to [**[]InlineResponse200344Items**](InlineResponse200344Items.md) | List of campus gateway clusters with their associated network information | [optional] 
 **Meta** | Pointer to [**InlineResponse200344Meta**](InlineResponse200344Meta.md) |  | [optional] 
 
 ## Methods

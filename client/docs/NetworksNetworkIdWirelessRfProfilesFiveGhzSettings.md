@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **MinBitrate** | Pointer to **int32** | Sets min bitrate (Mbps) of 5Ghz band. Can be one of &#39;6&#39;, &#39;9&#39;, &#39;12&#39;, &#39;18&#39;, &#39;24&#39;, &#39;36&#39;, &#39;48&#39; or &#39;54&#39;. Defaults to 12. | [optional] 
 **ValidAutoChannels** | Pointer to **[]int32** | Sets valid auto channels for 5Ghz band. Can be one of &#39;36&#39;, &#39;40&#39;, &#39;44&#39;, &#39;48&#39;, &#39;52&#39;, &#39;56&#39;, &#39;60&#39;, &#39;64&#39;, &#39;100&#39;, &#39;104&#39;, &#39;108&#39;, &#39;112&#39;, &#39;116&#39;, &#39;120&#39;, &#39;124&#39;, &#39;128&#39;, &#39;132&#39;, &#39;136&#39;, &#39;140&#39;, &#39;144&#39;, &#39;149&#39;, &#39;153&#39;, &#39;157&#39;, &#39;161&#39; or &#39;165&#39;. Defaults to [36, 40, 44, 48, 52, 56, 60, 64, 100, 104, 108, 112, 116, 120, 124, 128, 132, 136, 140, 144, 149, 153, 157, 161, 165]. | [optional] 
 **ChannelWidth** | Pointer to **string** | Sets channel width (MHz) for 5Ghz band. Can be one of &#39;auto&#39;, &#39;20&#39;, &#39;40&#39; or &#39;80&#39;. Defaults to auto. | [optional] 
-**Dot11ax** | Pointer to [**InlineResponse200244FiveGhzSettingsDot11ax**](InlineResponse200244FiveGhzSettingsDot11ax.md) |  | [optional] 
+**Dot11ax** | Pointer to [**InlineResponse200247FiveGhzSettingsDot11ax**](InlineResponse200247FiveGhzSettingsDot11ax.md) |  | [optional] 
 **Rxsop** | Pointer to **NullableInt32** | The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default. | [optional] 
 
 ## Methods
@@ -158,20 +158,20 @@ HasChannelWidth returns a boolean if a field has been set.
 
 ### GetDot11ax
 
-`func (o *NetworksNetworkIdWirelessRfProfilesFiveGhzSettings) GetDot11ax() InlineResponse200244FiveGhzSettingsDot11ax`
+`func (o *NetworksNetworkIdWirelessRfProfilesFiveGhzSettings) GetDot11ax() InlineResponse200247FiveGhzSettingsDot11ax`
 
 GetDot11ax returns the Dot11ax field if non-nil, zero value otherwise.
 
 ### GetDot11axOk
 
-`func (o *NetworksNetworkIdWirelessRfProfilesFiveGhzSettings) GetDot11axOk() (*InlineResponse200244FiveGhzSettingsDot11ax, bool)`
+`func (o *NetworksNetworkIdWirelessRfProfilesFiveGhzSettings) GetDot11axOk() (*InlineResponse200247FiveGhzSettingsDot11ax, bool)`
 
 GetDot11axOk returns a tuple with the Dot11ax field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDot11ax
 
-`func (o *NetworksNetworkIdWirelessRfProfilesFiveGhzSettings) SetDot11ax(v InlineResponse200244FiveGhzSettingsDot11ax)`
+`func (o *NetworksNetworkIdWirelessRfProfilesFiveGhzSettings) SetDot11ax(v InlineResponse200247FiveGhzSettingsDot11ax)`
 
 SetDot11ax sets Dot11ax field to given value.
 

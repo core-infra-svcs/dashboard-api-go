@@ -4,17 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of the client | [optional] 
-**Mac** | Pointer to **string** | MAC address of the client | [optional] 
-**NetworkId** | Pointer to **string** | Network ID | [optional] 
-**Name** | Pointer to **string** | Name of the client | [optional] 
-**DeviceName** | Pointer to **string** | Bluetooth device name | [optional] 
-**Manufacturer** | Pointer to **string** | Name of the manufacturer | [optional] 
-**LastSeen** | Pointer to **int32** | Epoch timestamp of the device&#39;s last appearance | [optional] 
-**SeenByDeviceMac** | Pointer to **string** | Seen by device MAC | [optional] 
-**InSightAlert** | Pointer to **bool** | Device in sight alert | [optional] 
-**OutOfSightAlert** | Pointer to **bool** | Device out of sight alert | [optional] 
-**Tags** | Pointer to **[]string** | A list of tags applied to the device | [optional] 
+**Mode** | Pointer to **string** | The site-to-site VPN mode. | [optional] 
+**Hubs** | Pointer to [**[]InlineResponse200114Hubs**](InlineResponse200114Hubs.md) | The list of VPN hubs, in order of preference. | [optional] 
+**Subnets** | Pointer to [**[]InlineResponse200114Subnets**](InlineResponse200114Subnets.md) | The list of local VPN subnets and their VPN presence. VLAN entries include vlanId and subnetting where applicable. When the corresponding NFO is enabled, NAT settings are returned for every VLAN; non-VLAN entries omit vlanId, subnetting, and nat.legacy. | [optional] 
+**Sgt** | Pointer to [**InlineResponse200114Sgt**](InlineResponse200114Sgt.md) |  | [optional] 
+**Subnet** | Pointer to [**InlineResponse200114Subnet**](InlineResponse200114Subnet.md) |  | [optional] 
+**HostTranslations** | Pointer to [**[]InlineResponse200114HostTranslations**](InlineResponse200114HostTranslations.md) | The list of VPN host translations. Host translations are supported starting from MX firmware version 26.1.2 | [optional] 
+**NatTraversal** | Pointer to [**InlineResponse200114NatTraversal**](InlineResponse200114NatTraversal.md) |  | [optional] 
 
 ## Methods
 
@@ -35,280 +31,180 @@ NewInlineResponse200114WithDefaults instantiates a new InlineResponse200114 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetMode
 
-`func (o *InlineResponse200114) GetId() string`
+`func (o *InlineResponse200114) GetMode() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetModeOk
 
-`func (o *InlineResponse200114) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200114) GetModeOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetMode
 
-`func (o *InlineResponse200114) SetId(v string)`
+`func (o *InlineResponse200114) SetMode(v string)`
 
-SetId sets Id field to given value.
+SetMode sets Mode field to given value.
 
-### HasId
+### HasMode
 
-`func (o *InlineResponse200114) HasId() bool`
+`func (o *InlineResponse200114) HasMode() bool`
 
-HasId returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetMac
+### GetHubs
 
-`func (o *InlineResponse200114) GetMac() string`
+`func (o *InlineResponse200114) GetHubs() []InlineResponse200114Hubs`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetHubs returns the Hubs field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetHubsOk
 
-`func (o *InlineResponse200114) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200114) GetHubsOk() (*[]InlineResponse200114Hubs, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetHubsOk returns a tuple with the Hubs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetHubs
 
-`func (o *InlineResponse200114) SetMac(v string)`
+`func (o *InlineResponse200114) SetHubs(v []InlineResponse200114Hubs)`
 
-SetMac sets Mac field to given value.
+SetHubs sets Hubs field to given value.
 
-### HasMac
+### HasHubs
 
-`func (o *InlineResponse200114) HasMac() bool`
+`func (o *InlineResponse200114) HasHubs() bool`
 
-HasMac returns a boolean if a field has been set.
+HasHubs returns a boolean if a field has been set.
 
-### GetNetworkId
+### GetSubnets
 
-`func (o *InlineResponse200114) GetNetworkId() string`
+`func (o *InlineResponse200114) GetSubnets() []InlineResponse200114Subnets`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetSubnets returns the Subnets field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetSubnetsOk
 
-`func (o *InlineResponse200114) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200114) GetSubnetsOk() (*[]InlineResponse200114Subnets, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetSubnets
 
-`func (o *InlineResponse200114) SetNetworkId(v string)`
+`func (o *InlineResponse200114) SetSubnets(v []InlineResponse200114Subnets)`
 
-SetNetworkId sets NetworkId field to given value.
+SetSubnets sets Subnets field to given value.
 
-### HasNetworkId
+### HasSubnets
 
-`func (o *InlineResponse200114) HasNetworkId() bool`
+`func (o *InlineResponse200114) HasSubnets() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasSubnets returns a boolean if a field has been set.
 
-### GetName
+### GetSgt
 
-`func (o *InlineResponse200114) GetName() string`
+`func (o *InlineResponse200114) GetSgt() InlineResponse200114Sgt`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSgt returns the Sgt field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSgtOk
 
-`func (o *InlineResponse200114) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200114) GetSgtOk() (*InlineResponse200114Sgt, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSgt
 
-`func (o *InlineResponse200114) SetName(v string)`
+`func (o *InlineResponse200114) SetSgt(v InlineResponse200114Sgt)`
 
-SetName sets Name field to given value.
+SetSgt sets Sgt field to given value.
 
-### HasName
+### HasSgt
 
-`func (o *InlineResponse200114) HasName() bool`
+`func (o *InlineResponse200114) HasSgt() bool`
 
-HasName returns a boolean if a field has been set.
+HasSgt returns a boolean if a field has been set.
 
-### GetDeviceName
+### GetSubnet
 
-`func (o *InlineResponse200114) GetDeviceName() string`
+`func (o *InlineResponse200114) GetSubnet() InlineResponse200114Subnet`
 
-GetDeviceName returns the DeviceName field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetDeviceNameOk
+### GetSubnetOk
 
-`func (o *InlineResponse200114) GetDeviceNameOk() (*string, bool)`
+`func (o *InlineResponse200114) GetSubnetOk() (*InlineResponse200114Subnet, bool)`
 
-GetDeviceNameOk returns a tuple with the DeviceName field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceName
+### SetSubnet
 
-`func (o *InlineResponse200114) SetDeviceName(v string)`
+`func (o *InlineResponse200114) SetSubnet(v InlineResponse200114Subnet)`
 
-SetDeviceName sets DeviceName field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasDeviceName
+### HasSubnet
 
-`func (o *InlineResponse200114) HasDeviceName() bool`
+`func (o *InlineResponse200114) HasSubnet() bool`
 
-HasDeviceName returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
 
-### GetManufacturer
+### GetHostTranslations
 
-`func (o *InlineResponse200114) GetManufacturer() string`
+`func (o *InlineResponse200114) GetHostTranslations() []InlineResponse200114HostTranslations`
 
-GetManufacturer returns the Manufacturer field if non-nil, zero value otherwise.
+GetHostTranslations returns the HostTranslations field if non-nil, zero value otherwise.
 
-### GetManufacturerOk
+### GetHostTranslationsOk
 
-`func (o *InlineResponse200114) GetManufacturerOk() (*string, bool)`
+`func (o *InlineResponse200114) GetHostTranslationsOk() (*[]InlineResponse200114HostTranslations, bool)`
 
-GetManufacturerOk returns a tuple with the Manufacturer field if it's non-nil, zero value otherwise
+GetHostTranslationsOk returns a tuple with the HostTranslations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetManufacturer
+### SetHostTranslations
 
-`func (o *InlineResponse200114) SetManufacturer(v string)`
+`func (o *InlineResponse200114) SetHostTranslations(v []InlineResponse200114HostTranslations)`
 
-SetManufacturer sets Manufacturer field to given value.
+SetHostTranslations sets HostTranslations field to given value.
 
-### HasManufacturer
+### HasHostTranslations
 
-`func (o *InlineResponse200114) HasManufacturer() bool`
+`func (o *InlineResponse200114) HasHostTranslations() bool`
 
-HasManufacturer returns a boolean if a field has been set.
+HasHostTranslations returns a boolean if a field has been set.
 
-### GetLastSeen
+### GetNatTraversal
 
-`func (o *InlineResponse200114) GetLastSeen() int32`
+`func (o *InlineResponse200114) GetNatTraversal() InlineResponse200114NatTraversal`
 
-GetLastSeen returns the LastSeen field if non-nil, zero value otherwise.
+GetNatTraversal returns the NatTraversal field if non-nil, zero value otherwise.
 
-### GetLastSeenOk
+### GetNatTraversalOk
 
-`func (o *InlineResponse200114) GetLastSeenOk() (*int32, bool)`
+`func (o *InlineResponse200114) GetNatTraversalOk() (*InlineResponse200114NatTraversal, bool)`
 
-GetLastSeenOk returns a tuple with the LastSeen field if it's non-nil, zero value otherwise
+GetNatTraversalOk returns a tuple with the NatTraversal field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastSeen
+### SetNatTraversal
 
-`func (o *InlineResponse200114) SetLastSeen(v int32)`
+`func (o *InlineResponse200114) SetNatTraversal(v InlineResponse200114NatTraversal)`
 
-SetLastSeen sets LastSeen field to given value.
+SetNatTraversal sets NatTraversal field to given value.
 
-### HasLastSeen
+### HasNatTraversal
 
-`func (o *InlineResponse200114) HasLastSeen() bool`
+`func (o *InlineResponse200114) HasNatTraversal() bool`
 
-HasLastSeen returns a boolean if a field has been set.
-
-### GetSeenByDeviceMac
-
-`func (o *InlineResponse200114) GetSeenByDeviceMac() string`
-
-GetSeenByDeviceMac returns the SeenByDeviceMac field if non-nil, zero value otherwise.
-
-### GetSeenByDeviceMacOk
-
-`func (o *InlineResponse200114) GetSeenByDeviceMacOk() (*string, bool)`
-
-GetSeenByDeviceMacOk returns a tuple with the SeenByDeviceMac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSeenByDeviceMac
-
-`func (o *InlineResponse200114) SetSeenByDeviceMac(v string)`
-
-SetSeenByDeviceMac sets SeenByDeviceMac field to given value.
-
-### HasSeenByDeviceMac
-
-`func (o *InlineResponse200114) HasSeenByDeviceMac() bool`
-
-HasSeenByDeviceMac returns a boolean if a field has been set.
-
-### GetInSightAlert
-
-`func (o *InlineResponse200114) GetInSightAlert() bool`
-
-GetInSightAlert returns the InSightAlert field if non-nil, zero value otherwise.
-
-### GetInSightAlertOk
-
-`func (o *InlineResponse200114) GetInSightAlertOk() (*bool, bool)`
-
-GetInSightAlertOk returns a tuple with the InSightAlert field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetInSightAlert
-
-`func (o *InlineResponse200114) SetInSightAlert(v bool)`
-
-SetInSightAlert sets InSightAlert field to given value.
-
-### HasInSightAlert
-
-`func (o *InlineResponse200114) HasInSightAlert() bool`
-
-HasInSightAlert returns a boolean if a field has been set.
-
-### GetOutOfSightAlert
-
-`func (o *InlineResponse200114) GetOutOfSightAlert() bool`
-
-GetOutOfSightAlert returns the OutOfSightAlert field if non-nil, zero value otherwise.
-
-### GetOutOfSightAlertOk
-
-`func (o *InlineResponse200114) GetOutOfSightAlertOk() (*bool, bool)`
-
-GetOutOfSightAlertOk returns a tuple with the OutOfSightAlert field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOutOfSightAlert
-
-`func (o *InlineResponse200114) SetOutOfSightAlert(v bool)`
-
-SetOutOfSightAlert sets OutOfSightAlert field to given value.
-
-### HasOutOfSightAlert
-
-`func (o *InlineResponse200114) HasOutOfSightAlert() bool`
-
-HasOutOfSightAlert returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse200114) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse200114) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse200114) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse200114) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
+HasNatTraversal returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

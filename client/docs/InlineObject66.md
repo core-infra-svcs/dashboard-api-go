@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Port** | Pointer to [**NetworksNetworkIdApplianceInterfacesL3Port**](NetworksNetworkIdApplianceInterfacesL3Port.md) |  | [optional] 
-**Ipv4** | [**NetworksNetworkIdApplianceInterfacesL3Ipv4**](NetworksNetworkIdApplianceInterfacesL3Ipv4.md) |  | 
+**Rules** | [**[]NetworksNetworkIdApplianceFirewallPortForwardingRulesRules**](NetworksNetworkIdApplianceFirewallPortForwardingRulesRules.md) | An array of port forwarding params | 
 
 ## Methods
 
 ### NewInlineObject66
 
-`func NewInlineObject66(ipv4 NetworksNetworkIdApplianceInterfacesL3Ipv4, ) *InlineObject66`
+`func NewInlineObject66(rules []NetworksNetworkIdApplianceFirewallPortForwardingRulesRules, ) *InlineObject66`
 
 NewInlineObject66 instantiates a new InlineObject66 object
 This constructor will assign default values to properties that have it defined,
@@ -26,49 +25,24 @@ NewInlineObject66WithDefaults instantiates a new InlineObject66 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPort
+### GetRules
 
-`func (o *InlineObject66) GetPort() NetworksNetworkIdApplianceInterfacesL3Port`
+`func (o *InlineObject66) GetRules() []NetworksNetworkIdApplianceFirewallPortForwardingRulesRules`
 
-GetPort returns the Port field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetPortOk
+### GetRulesOk
 
-`func (o *InlineObject66) GetPortOk() (*NetworksNetworkIdApplianceInterfacesL3Port, bool)`
+`func (o *InlineObject66) GetRulesOk() (*[]NetworksNetworkIdApplianceFirewallPortForwardingRulesRules, bool)`
 
-GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPort
+### SetRules
 
-`func (o *InlineObject66) SetPort(v NetworksNetworkIdApplianceInterfacesL3Port)`
+`func (o *InlineObject66) SetRules(v []NetworksNetworkIdApplianceFirewallPortForwardingRulesRules)`
 
-SetPort sets Port field to given value.
-
-### HasPort
-
-`func (o *InlineObject66) HasPort() bool`
-
-HasPort returns a boolean if a field has been set.
-
-### GetIpv4
-
-`func (o *InlineObject66) GetIpv4() NetworksNetworkIdApplianceInterfacesL3Ipv4`
-
-GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
-
-### GetIpv4Ok
-
-`func (o *InlineObject66) GetIpv4Ok() (*NetworksNetworkIdApplianceInterfacesL3Ipv4, bool)`
-
-GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpv4
-
-`func (o *InlineObject66) SetIpv4(v NetworksNetworkIdApplianceInterfacesL3Ipv4)`
-
-SetIpv4 sets Ipv4 field to given value.
+SetRules sets Rules field to given value.
 
 
 

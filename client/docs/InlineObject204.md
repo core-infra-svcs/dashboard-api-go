@@ -4,13 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultPolicy** | **string** | Allows clients to access rogue networks. Blocked by default. | 
+**Url** | **string** | The URL where the test webhook will be sent | 
+**SharedSecret** | Pointer to **string** | The shared secret the test webhook will send. Optional. Defaults to HTTP server&#39;s shared secret. Otherwise, defaults to an empty string. | [optional] 
+**PayloadTemplateId** | Pointer to **string** | The ID of the payload template of the test webhook. Defaults to the HTTP server&#39;s template ID if one exists for the given URL, or Generic template ID otherwise | [optional] 
+**PayloadTemplateName** | Pointer to **string** | The name of the payload template. | [optional] 
+**AlertTypeId** | Pointer to **string** | The type of alert which the test webhook will send. Optional. Defaults to power_supply_down. | [optional] [default to "power_supply_down"]
 
 ## Methods
 
 ### NewInlineObject204
 
-`func NewInlineObject204(defaultPolicy string, ) *InlineObject204`
+`func NewInlineObject204(url string, ) *InlineObject204`
 
 NewInlineObject204 instantiates a new InlineObject204 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +29,125 @@ NewInlineObject204WithDefaults instantiates a new InlineObject204 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultPolicy
+### GetUrl
 
-`func (o *InlineObject204) GetDefaultPolicy() string`
+`func (o *InlineObject204) GetUrl() string`
 
-GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetDefaultPolicyOk
+### GetUrlOk
 
-`func (o *InlineObject204) GetDefaultPolicyOk() (*string, bool)`
+`func (o *InlineObject204) GetUrlOk() (*string, bool)`
 
-GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultPolicy
+### SetUrl
 
-`func (o *InlineObject204) SetDefaultPolicy(v string)`
+`func (o *InlineObject204) SetUrl(v string)`
 
-SetDefaultPolicy sets DefaultPolicy field to given value.
+SetUrl sets Url field to given value.
 
+
+### GetSharedSecret
+
+`func (o *InlineObject204) GetSharedSecret() string`
+
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
+
+### GetSharedSecretOk
+
+`func (o *InlineObject204) GetSharedSecretOk() (*string, bool)`
+
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSharedSecret
+
+`func (o *InlineObject204) SetSharedSecret(v string)`
+
+SetSharedSecret sets SharedSecret field to given value.
+
+### HasSharedSecret
+
+`func (o *InlineObject204) HasSharedSecret() bool`
+
+HasSharedSecret returns a boolean if a field has been set.
+
+### GetPayloadTemplateId
+
+`func (o *InlineObject204) GetPayloadTemplateId() string`
+
+GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
+
+### GetPayloadTemplateIdOk
+
+`func (o *InlineObject204) GetPayloadTemplateIdOk() (*string, bool)`
+
+GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPayloadTemplateId
+
+`func (o *InlineObject204) SetPayloadTemplateId(v string)`
+
+SetPayloadTemplateId sets PayloadTemplateId field to given value.
+
+### HasPayloadTemplateId
+
+`func (o *InlineObject204) HasPayloadTemplateId() bool`
+
+HasPayloadTemplateId returns a boolean if a field has been set.
+
+### GetPayloadTemplateName
+
+`func (o *InlineObject204) GetPayloadTemplateName() string`
+
+GetPayloadTemplateName returns the PayloadTemplateName field if non-nil, zero value otherwise.
+
+### GetPayloadTemplateNameOk
+
+`func (o *InlineObject204) GetPayloadTemplateNameOk() (*string, bool)`
+
+GetPayloadTemplateNameOk returns a tuple with the PayloadTemplateName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPayloadTemplateName
+
+`func (o *InlineObject204) SetPayloadTemplateName(v string)`
+
+SetPayloadTemplateName sets PayloadTemplateName field to given value.
+
+### HasPayloadTemplateName
+
+`func (o *InlineObject204) HasPayloadTemplateName() bool`
+
+HasPayloadTemplateName returns a boolean if a field has been set.
+
+### GetAlertTypeId
+
+`func (o *InlineObject204) GetAlertTypeId() string`
+
+GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
+
+### GetAlertTypeIdOk
+
+`func (o *InlineObject204) GetAlertTypeIdOk() (*string, bool)`
+
+GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAlertTypeId
+
+`func (o *InlineObject204) SetAlertTypeId(v string)`
+
+SetAlertTypeId sets AlertTypeId field to given value.
+
+### HasAlertTypeId
+
+`func (o *InlineObject204) HasAlertTypeId() bool`
+
+HasAlertTypeId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

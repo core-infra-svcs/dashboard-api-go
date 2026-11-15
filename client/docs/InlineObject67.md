@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Port** | Pointer to [**NullableNetworksNetworkIdApplianceInterfacesL3InterfaceIdPort**](NetworksNetworkIdApplianceInterfacesL3InterfaceIdPort.md) |  | [optional] 
-**Ipv4** | Pointer to [**InlineResponse20116Ipv4**](InlineResponse20116Ipv4.md) |  | [optional] 
+**SpoofingProtection** | Pointer to [**InlineResponse20086SpoofingProtection**](InlineResponse20086SpoofingProtection.md) |  | [optional] 
 
 ## Methods
 
@@ -26,65 +25,30 @@ NewInlineObject67WithDefaults instantiates a new InlineObject67 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPort
+### GetSpoofingProtection
 
-`func (o *InlineObject67) GetPort() NetworksNetworkIdApplianceInterfacesL3InterfaceIdPort`
+`func (o *InlineObject67) GetSpoofingProtection() InlineResponse20086SpoofingProtection`
 
-GetPort returns the Port field if non-nil, zero value otherwise.
+GetSpoofingProtection returns the SpoofingProtection field if non-nil, zero value otherwise.
 
-### GetPortOk
+### GetSpoofingProtectionOk
 
-`func (o *InlineObject67) GetPortOk() (*NetworksNetworkIdApplianceInterfacesL3InterfaceIdPort, bool)`
+`func (o *InlineObject67) GetSpoofingProtectionOk() (*InlineResponse20086SpoofingProtection, bool)`
 
-GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
+GetSpoofingProtectionOk returns a tuple with the SpoofingProtection field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPort
+### SetSpoofingProtection
 
-`func (o *InlineObject67) SetPort(v NetworksNetworkIdApplianceInterfacesL3InterfaceIdPort)`
+`func (o *InlineObject67) SetSpoofingProtection(v InlineResponse20086SpoofingProtection)`
 
-SetPort sets Port field to given value.
+SetSpoofingProtection sets SpoofingProtection field to given value.
 
-### HasPort
+### HasSpoofingProtection
 
-`func (o *InlineObject67) HasPort() bool`
+`func (o *InlineObject67) HasSpoofingProtection() bool`
 
-HasPort returns a boolean if a field has been set.
-
-### SetPortNil
-
-`func (o *InlineObject67) SetPortNil(b bool)`
-
- SetPortNil sets the value for Port to be an explicit nil
-
-### UnsetPort
-`func (o *InlineObject67) UnsetPort()`
-
-UnsetPort ensures that no value is present for Port, not even an explicit nil
-### GetIpv4
-
-`func (o *InlineObject67) GetIpv4() InlineResponse20116Ipv4`
-
-GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
-
-### GetIpv4Ok
-
-`func (o *InlineObject67) GetIpv4Ok() (*InlineResponse20116Ipv4, bool)`
-
-GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpv4
-
-`func (o *InlineObject67) SetIpv4(v InlineResponse20116Ipv4)`
-
-SetIpv4 sets Ipv4 field to given value.
-
-### HasIpv4
-
-`func (o *InlineObject67) HasIpv4() bool`
-
-HasIpv4 returns a boolean if a field has been set.
+HasSpoofingProtection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

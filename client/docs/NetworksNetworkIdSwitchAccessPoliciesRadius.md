@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **ReAuthenticationInterval** | Pointer to **NullableInt32** | Re-authentication period in seconds. Will be null if hostMode is Multi-Auth | [optional] 
 **Cache** | Pointer to [**NetworksNetworkIdSwitchAccessPoliciesRadiusCache**](NetworksNetworkIdSwitchAccessPoliciesRadiusCache.md) |  | [optional] 
 **Authentication** | Pointer to [**NetworksNetworkIdSwitchAccessPoliciesRadiusAuthentication**](NetworksNetworkIdSwitchAccessPoliciesRadiusAuthentication.md) |  | [optional] 
-**PreAuthenticationGroupPolicyId** | Pointer to **string** | Group policy Number for pre-authentication group policy (Requires MS 18 or higher) | [optional] 
+**PreAuthenticationGroupPolicyId** | Pointer to **NullableString** | Group policy Number for pre-authentication group policy (Requires MS 18 or higher) | [optional] 
 
 ## Methods
 
@@ -252,6 +252,16 @@ SetPreAuthenticationGroupPolicyId sets PreAuthenticationGroupPolicyId field to g
 
 HasPreAuthenticationGroupPolicyId returns a boolean if a field has been set.
 
+### SetPreAuthenticationGroupPolicyIdNil
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) SetPreAuthenticationGroupPolicyIdNil(b bool)`
+
+ SetPreAuthenticationGroupPolicyIdNil sets the value for PreAuthenticationGroupPolicyId to be an explicit nil
+
+### UnsetPreAuthenticationGroupPolicyId
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) UnsetPreAuthenticationGroupPolicyId()`
+
+UnsetPreAuthenticationGroupPolicyId ensures that no value is present for PreAuthenticationGroupPolicyId, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

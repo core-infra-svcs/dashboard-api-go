@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Api** | [**NetworksNetworkIdApplianceUmbrellaAccountConnectApi**](NetworksNetworkIdApplianceUmbrellaAccountConnectApi.md) |  | 
+**BandwidthLimits** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits**](NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject88
 
-`func NewInlineObject88(api NetworksNetworkIdApplianceUmbrellaAccountConnectApi, ) *InlineObject88`
+`func NewInlineObject88() *InlineObject88`
 
 NewInlineObject88 instantiates a new InlineObject88 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject88WithDefaults instantiates a new InlineObject88 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetApi
+### GetBandwidthLimits
 
-`func (o *InlineObject88) GetApi() NetworksNetworkIdApplianceUmbrellaAccountConnectApi`
+`func (o *InlineObject88) GetBandwidthLimits() NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+GetBandwidthLimits returns the BandwidthLimits field if non-nil, zero value otherwise.
 
-### GetApiOk
+### GetBandwidthLimitsOk
 
-`func (o *InlineObject88) GetApiOk() (*NetworksNetworkIdApplianceUmbrellaAccountConnectApi, bool)`
+`func (o *InlineObject88) GetBandwidthLimitsOk() (*NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits, bool)`
 
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetBandwidthLimitsOk returns a tuple with the BandwidthLimits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetBandwidthLimits
 
-`func (o *InlineObject88) SetApi(v NetworksNetworkIdApplianceUmbrellaAccountConnectApi)`
+`func (o *InlineObject88) SetBandwidthLimits(v NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits)`
 
-SetApi sets Api field to given value.
+SetBandwidthLimits sets BandwidthLimits field to given value.
 
+### HasBandwidthLimits
+
+`func (o *InlineObject88) HasBandwidthLimits() bool`
+
+HasBandwidthLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

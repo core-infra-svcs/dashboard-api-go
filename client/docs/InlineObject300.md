@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | A list of serials of devices to update | 
-**Details** | [**[]NetworksNetworkIdDevicesClaimDetails**](NetworksNetworkIdDevicesClaimDetails.md) | An array of details | 
+**Name** | **string** | The name of the configuration template | 
+**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article&lt;/a&gt;. Not applicable if copying from existing network or template | [optional] 
+**CopyFromNetworkId** | Pointer to **string** | The ID of the network or config template to copy configuration from | [optional] 
 
 ## Methods
 
 ### NewInlineObject300
 
-`func NewInlineObject300(serials []string, details []NetworksNetworkIdDevicesClaimDetails, ) *InlineObject300`
+`func NewInlineObject300(name string, ) *InlineObject300`
 
 NewInlineObject300 instantiates a new InlineObject300 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +27,75 @@ NewInlineObject300WithDefaults instantiates a new InlineObject300 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetName
 
-`func (o *InlineObject300) GetSerials() []string`
+`func (o *InlineObject300) GetName() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetNameOk
 
-`func (o *InlineObject300) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject300) GetNameOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetName
 
-`func (o *InlineObject300) SetSerials(v []string)`
+`func (o *InlineObject300) SetName(v string)`
 
-SetSerials sets Serials field to given value.
+SetName sets Name field to given value.
 
 
-### GetDetails
+### GetTimeZone
 
-`func (o *InlineObject300) GetDetails() []NetworksNetworkIdDevicesClaimDetails`
+`func (o *InlineObject300) GetTimeZone() string`
 
-GetDetails returns the Details field if non-nil, zero value otherwise.
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
 
-### GetDetailsOk
+### GetTimeZoneOk
 
-`func (o *InlineObject300) GetDetailsOk() (*[]NetworksNetworkIdDevicesClaimDetails, bool)`
+`func (o *InlineObject300) GetTimeZoneOk() (*string, bool)`
 
-GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDetails
+### SetTimeZone
 
-`func (o *InlineObject300) SetDetails(v []NetworksNetworkIdDevicesClaimDetails)`
+`func (o *InlineObject300) SetTimeZone(v string)`
 
-SetDetails sets Details field to given value.
+SetTimeZone sets TimeZone field to given value.
 
+### HasTimeZone
+
+`func (o *InlineObject300) HasTimeZone() bool`
+
+HasTimeZone returns a boolean if a field has been set.
+
+### GetCopyFromNetworkId
+
+`func (o *InlineObject300) GetCopyFromNetworkId() string`
+
+GetCopyFromNetworkId returns the CopyFromNetworkId field if non-nil, zero value otherwise.
+
+### GetCopyFromNetworkIdOk
+
+`func (o *InlineObject300) GetCopyFromNetworkIdOk() (*string, bool)`
+
+GetCopyFromNetworkIdOk returns a tuple with the CopyFromNetworkId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCopyFromNetworkId
+
+`func (o *InlineObject300) SetCopyFromNetworkId(v string)`
+
+SetCopyFromNetworkId sets CopyFromNetworkId field to given value.
+
+### HasCopyFromNetworkId
+
+`func (o *InlineObject300) HasCopyFromNetworkId() bool`
+
+HasCopyFromNetworkId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

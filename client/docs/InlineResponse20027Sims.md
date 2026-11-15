@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **IsPrimary** | Pointer to **bool** | If true, this SIM is activated on platform bootup. It must be true on single-SIM devices and is a required field for dual-SIM MGs unless it is being configured using &#39;simOrdering&#39;. | [optional] [default to false]
 **Status** | Pointer to **string** | Status of the SIM card. | [optional] 
 **Apns** | Pointer to [**[]InlineResponse20027Apns**](InlineResponse20027Apns.md) | APN configurations. If empty, the default APN will be used. | [optional] 
+**Ips** | Pointer to [**[]InlineResponse20027Ips**](InlineResponse20027Ips.md) | IP configurations for each cellular data connection. | [optional] 
 
 ## Methods
 
@@ -205,6 +206,31 @@ SetApns sets Apns field to given value.
 `func (o *InlineResponse20027Sims) HasApns() bool`
 
 HasApns returns a boolean if a field has been set.
+
+### GetIps
+
+`func (o *InlineResponse20027Sims) GetIps() []InlineResponse20027Ips`
+
+GetIps returns the Ips field if non-nil, zero value otherwise.
+
+### GetIpsOk
+
+`func (o *InlineResponse20027Sims) GetIpsOk() (*[]InlineResponse20027Ips, bool)`
+
+GetIpsOk returns a tuple with the Ips field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIps
+
+`func (o *InlineResponse20027Sims) SetIps(v []InlineResponse20027Ips)`
+
+SetIps sets Ips field to given value.
+
+### HasIps
+
+`func (o *InlineResponse20027Sims) HasIps() bool`
+
+HasIps returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

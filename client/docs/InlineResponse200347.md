@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200347Items**](InlineResponse200347Items.md) | List of Cellular Service Provider Communication Plans | [optional] 
-**Meta** | Pointer to [**InlineResponse200347Meta**](InlineResponse200347Meta.md) |  | [optional] 
+**Items** | [**[]InlineResponse200347Items**](InlineResponse200347Items.md) | APs tunneling through the MCG clusters | 
+**Meta** | [**InlineResponse200342Meta**](InlineResponse200342Meta.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200347
 
-`func NewInlineResponse200347() *InlineResponse200347`
+`func NewInlineResponse200347(items []InlineResponse200347Items, meta InlineResponse200342Meta, ) *InlineResponse200347`
 
 NewInlineResponse200347 instantiates a new InlineResponse200347 object
 This constructor will assign default values to properties that have it defined,
@@ -45,36 +45,26 @@ and a boolean to check if the value has been set.
 
 SetItems sets Items field to given value.
 
-### HasItems
-
-`func (o *InlineResponse200347) HasItems() bool`
-
-HasItems returns a boolean if a field has been set.
 
 ### GetMeta
 
-`func (o *InlineResponse200347) GetMeta() InlineResponse200347Meta`
+`func (o *InlineResponse200347) GetMeta() InlineResponse200342Meta`
 
 GetMeta returns the Meta field if non-nil, zero value otherwise.
 
 ### GetMetaOk
 
-`func (o *InlineResponse200347) GetMetaOk() (*InlineResponse200347Meta, bool)`
+`func (o *InlineResponse200347) GetMetaOk() (*InlineResponse200342Meta, bool)`
 
 GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMeta
 
-`func (o *InlineResponse200347) SetMeta(v InlineResponse200347Meta)`
+`func (o *InlineResponse200347) SetMeta(v InlineResponse200342Meta)`
 
 SetMeta sets Meta field to given value.
 
-### HasMeta
-
-`func (o *InlineResponse200347) HasMeta() bool`
-
-HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

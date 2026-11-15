@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Unique identifier for the application category | [optional] 
-**Name** | Pointer to **string** | Name of the application category | [optional] 
-**Applications** | Pointer to [**[]OrganizationsOrganizationIdPoliciesGlobalFirewallApplicationCategoriesApplications**](OrganizationsOrganizationIdPoliciesGlobalFirewallApplicationCategoriesApplications.md) | List of applications in this category | [optional] 
+**DestOrganizationId** | Pointer to **string** | The ID of the organization to move the licenses to | [optional] 
+**LicenseIds** | Pointer to **[]string** | A list of IDs of licenses to move to the new organization | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200420WithDefaults instantiates a new InlineResponse200420 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetDestOrganizationId
 
-`func (o *InlineResponse200420) GetId() string`
+`func (o *InlineResponse200420) GetDestOrganizationId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetDestOrganizationIdOk
 
-`func (o *InlineResponse200420) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200420) GetDestOrganizationIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetDestOrganizationId
 
-`func (o *InlineResponse200420) SetId(v string)`
+`func (o *InlineResponse200420) SetDestOrganizationId(v string)`
 
-SetId sets Id field to given value.
+SetDestOrganizationId sets DestOrganizationId field to given value.
 
-### HasId
+### HasDestOrganizationId
 
-`func (o *InlineResponse200420) HasId() bool`
+`func (o *InlineResponse200420) HasDestOrganizationId() bool`
 
-HasId returns a boolean if a field has been set.
+HasDestOrganizationId returns a boolean if a field has been set.
 
-### GetName
+### GetLicenseIds
 
-`func (o *InlineResponse200420) GetName() string`
+`func (o *InlineResponse200420) GetLicenseIds() []string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetLicenseIds returns the LicenseIds field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetLicenseIdsOk
 
-`func (o *InlineResponse200420) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200420) GetLicenseIdsOk() (*[]string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetLicenseIdsOk returns a tuple with the LicenseIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetLicenseIds
 
-`func (o *InlineResponse200420) SetName(v string)`
+`func (o *InlineResponse200420) SetLicenseIds(v []string)`
 
-SetName sets Name field to given value.
+SetLicenseIds sets LicenseIds field to given value.
 
-### HasName
+### HasLicenseIds
 
-`func (o *InlineResponse200420) HasName() bool`
+`func (o *InlineResponse200420) HasLicenseIds() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetApplications
-
-`func (o *InlineResponse200420) GetApplications() []OrganizationsOrganizationIdPoliciesGlobalFirewallApplicationCategoriesApplications`
-
-GetApplications returns the Applications field if non-nil, zero value otherwise.
-
-### GetApplicationsOk
-
-`func (o *InlineResponse200420) GetApplicationsOk() (*[]OrganizationsOrganizationIdPoliciesGlobalFirewallApplicationCategoriesApplications, bool)`
-
-GetApplicationsOk returns a tuple with the Applications field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetApplications
-
-`func (o *InlineResponse200420) SetApplications(v []OrganizationsOrganizationIdPoliciesGlobalFirewallApplicationCategoriesApplications)`
-
-SetApplications sets Applications field to given value.
-
-### HasApplications
-
-`func (o *InlineResponse200420) HasApplications() bool`
-
-HasApplications returns a boolean if a field has been set.
+HasLicenseIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

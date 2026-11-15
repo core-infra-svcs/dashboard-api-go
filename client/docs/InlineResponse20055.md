@@ -4,25 +4,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**InterfaceId** | Pointer to **string** | The ID | [optional] 
-**Name** | Pointer to **string** | The name | [optional] 
-**Mode** | Pointer to **string** | The mode | [optional] 
-**Subnet** | Pointer to **string** | IPv4 subnet | [optional] 
-**InterfaceIp** | Pointer to **string** | IPv4 address | [optional] 
-**Mtu** | Pointer to **int32** | Interface MTU | [optional] 
-**Serial** | Pointer to **string** | Device serial | [optional] 
-**SwitchPortId** | Pointer to **string** | Switch Port ID when in Routed mode | [optional] 
-**MulticastRouting** | Pointer to **string** | Multicast routing status | [optional] 
-**VlanId** | Pointer to **int32** | VLAN ID | [optional] 
-**UplinkV4** | Pointer to **bool** | When true, this interface is used as static IPv4 uplink | [optional] 
-**UplinkV6** | Pointer to **bool** | When true, this interface is used as static IPv6 uplink | [optional] 
-**OspfSettings** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfSettings**](DevicesSerialSwitchRoutingInterfacesOspfSettings.md) |  | [optional] 
-**OspfV3** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfV3**](DevicesSerialSwitchRoutingInterfacesOspfV3.md) |  | [optional] 
-**Ipv6** | Pointer to [**DevicesSerialSwitchRoutingInterfacesIpv6**](DevicesSerialSwitchRoutingInterfacesIpv6.md) |  | [optional] 
-**Vrf** | Pointer to [**DevicesSerialSwitchRoutingInterfacesVrf**](DevicesSerialSwitchRoutingInterfacesVrf.md) |  | [optional] 
-**Loopback** | Pointer to **map[string]interface{}** | Loopback Interface settings | [optional] 
-**BidirectionalForwardingDetection** | Pointer to [**DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection**](DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection.md) |  | [optional] 
-**DefaultGateway** | Pointer to **string** | IPv4 default gateway | [optional] 
+**PortId** | Pointer to **string** | The string identifier of this port on the switch. This is commonly just the port number but may contain additional identifying information such as the slot and module-type if the port is located on a port module. | [optional] 
+**Enabled** | Pointer to **bool** | Whether the port is configured to be enabled. | [optional] 
+**Status** | Pointer to **string** | The current connection status of the port. | [optional] 
+**IsUplink** | Pointer to **bool** | Whether the port is the switch&#39;s uplink. | [optional] 
+**Errors** | Pointer to **[]string** | All errors present on the port. | [optional] 
+**Warnings** | Pointer to **[]string** | All warnings present on the port. | [optional] 
+**Speed** | Pointer to **string** | The current data transfer rate which the port is operating at. | [optional] 
+**Duplex** | Pointer to **string** | The current duplex of a connected port. | [optional] 
+**SpanningTree** | Pointer to [**DevicesSerialSwitchPortsStatusesSpanningTree**](DevicesSerialSwitchPortsStatusesSpanningTree.md) |  | [optional] 
+**Poe** | Pointer to [**DevicesSerialSwitchPortsStatusesPoe**](DevicesSerialSwitchPortsStatusesPoe.md) |  | [optional] 
+**UsageInKb** | Pointer to [**DevicesSerialSwitchPortsStatusesUsageInKb**](DevicesSerialSwitchPortsStatusesUsageInKb.md) |  | [optional] 
+**Cdp** | Pointer to [**DevicesSerialSwitchPortsStatusesCdp**](DevicesSerialSwitchPortsStatusesCdp.md) |  | [optional] 
+**Lldp** | Pointer to [**DevicesSerialSwitchPortsStatusesLldp**](DevicesSerialSwitchPortsStatusesLldp.md) |  | [optional] 
+**ClientCount** | Pointer to **int32** | The number of clients connected through this port. | [optional] 
+**PowerUsageInWh** | Pointer to **float32** | How much power (in watt-hours) has been delivered by this port during the timespan. Note that this data is collected periodically from the switch. Any data from the past five minutes may be incomplete. | [optional] 
+**TrafficInKbps** | Pointer to [**DevicesSerialSwitchPortsStatusesTrafficInKbps**](DevicesSerialSwitchPortsStatusesTrafficInKbps.md) |  | [optional] 
+**SecurePort** | Pointer to [**DevicesSerialSwitchPortsStatusesSecurePort**](DevicesSerialSwitchPortsStatusesSecurePort.md) |  | [optional] 
 
 ## Methods
 
@@ -43,480 +41,430 @@ NewInlineResponse20055WithDefaults instantiates a new InlineResponse20055 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetInterfaceId
+### GetPortId
 
-`func (o *InlineResponse20055) GetInterfaceId() string`
+`func (o *InlineResponse20055) GetPortId() string`
 
-GetInterfaceId returns the InterfaceId field if non-nil, zero value otherwise.
+GetPortId returns the PortId field if non-nil, zero value otherwise.
 
-### GetInterfaceIdOk
+### GetPortIdOk
 
-`func (o *InlineResponse20055) GetInterfaceIdOk() (*string, bool)`
+`func (o *InlineResponse20055) GetPortIdOk() (*string, bool)`
 
-GetInterfaceIdOk returns a tuple with the InterfaceId field if it's non-nil, zero value otherwise
+GetPortIdOk returns a tuple with the PortId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaceId
+### SetPortId
 
-`func (o *InlineResponse20055) SetInterfaceId(v string)`
+`func (o *InlineResponse20055) SetPortId(v string)`
 
-SetInterfaceId sets InterfaceId field to given value.
+SetPortId sets PortId field to given value.
 
-### HasInterfaceId
+### HasPortId
 
-`func (o *InlineResponse20055) HasInterfaceId() bool`
+`func (o *InlineResponse20055) HasPortId() bool`
 
-HasInterfaceId returns a boolean if a field has been set.
+HasPortId returns a boolean if a field has been set.
 
-### GetName
+### GetEnabled
 
-`func (o *InlineResponse20055) GetName() string`
+`func (o *InlineResponse20055) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineResponse20055) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20055) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineResponse20055) SetName(v string)`
+`func (o *InlineResponse20055) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasName
+### HasEnabled
 
-`func (o *InlineResponse20055) HasName() bool`
+`func (o *InlineResponse20055) HasEnabled() bool`
 
-HasName returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetMode
+### GetStatus
 
-`func (o *InlineResponse20055) GetMode() string`
+`func (o *InlineResponse20055) GetStatus() string`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetStatusOk
 
-`func (o *InlineResponse20055) GetModeOk() (*string, bool)`
+`func (o *InlineResponse20055) GetStatusOk() (*string, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetStatus
 
-`func (o *InlineResponse20055) SetMode(v string)`
+`func (o *InlineResponse20055) SetStatus(v string)`
 
-SetMode sets Mode field to given value.
+SetStatus sets Status field to given value.
 
-### HasMode
+### HasStatus
 
-`func (o *InlineResponse20055) HasMode() bool`
+`func (o *InlineResponse20055) HasStatus() bool`
 
-HasMode returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetSubnet
+### GetIsUplink
 
-`func (o *InlineResponse20055) GetSubnet() string`
+`func (o *InlineResponse20055) GetIsUplink() bool`
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+GetIsUplink returns the IsUplink field if non-nil, zero value otherwise.
 
-### GetSubnetOk
+### GetIsUplinkOk
 
-`func (o *InlineResponse20055) GetSubnetOk() (*string, bool)`
+`func (o *InlineResponse20055) GetIsUplinkOk() (*bool, bool)`
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+GetIsUplinkOk returns a tuple with the IsUplink field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetIsUplink
 
-`func (o *InlineResponse20055) SetSubnet(v string)`
+`func (o *InlineResponse20055) SetIsUplink(v bool)`
 
-SetSubnet sets Subnet field to given value.
+SetIsUplink sets IsUplink field to given value.
 
-### HasSubnet
+### HasIsUplink
 
-`func (o *InlineResponse20055) HasSubnet() bool`
+`func (o *InlineResponse20055) HasIsUplink() bool`
 
-HasSubnet returns a boolean if a field has been set.
+HasIsUplink returns a boolean if a field has been set.
 
-### GetInterfaceIp
+### GetErrors
 
-`func (o *InlineResponse20055) GetInterfaceIp() string`
+`func (o *InlineResponse20055) GetErrors() []string`
 
-GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
+GetErrors returns the Errors field if non-nil, zero value otherwise.
 
-### GetInterfaceIpOk
+### GetErrorsOk
 
-`func (o *InlineResponse20055) GetInterfaceIpOk() (*string, bool)`
+`func (o *InlineResponse20055) GetErrorsOk() (*[]string, bool)`
 
-GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaceIp
+### SetErrors
 
-`func (o *InlineResponse20055) SetInterfaceIp(v string)`
+`func (o *InlineResponse20055) SetErrors(v []string)`
 
-SetInterfaceIp sets InterfaceIp field to given value.
+SetErrors sets Errors field to given value.
 
-### HasInterfaceIp
+### HasErrors
 
-`func (o *InlineResponse20055) HasInterfaceIp() bool`
+`func (o *InlineResponse20055) HasErrors() bool`
 
-HasInterfaceIp returns a boolean if a field has been set.
+HasErrors returns a boolean if a field has been set.
 
-### GetMtu
+### GetWarnings
 
-`func (o *InlineResponse20055) GetMtu() int32`
+`func (o *InlineResponse20055) GetWarnings() []string`
 
-GetMtu returns the Mtu field if non-nil, zero value otherwise.
+GetWarnings returns the Warnings field if non-nil, zero value otherwise.
 
-### GetMtuOk
+### GetWarningsOk
 
-`func (o *InlineResponse20055) GetMtuOk() (*int32, bool)`
+`func (o *InlineResponse20055) GetWarningsOk() (*[]string, bool)`
 
-GetMtuOk returns a tuple with the Mtu field if it's non-nil, zero value otherwise
+GetWarningsOk returns a tuple with the Warnings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMtu
+### SetWarnings
 
-`func (o *InlineResponse20055) SetMtu(v int32)`
+`func (o *InlineResponse20055) SetWarnings(v []string)`
 
-SetMtu sets Mtu field to given value.
+SetWarnings sets Warnings field to given value.
 
-### HasMtu
+### HasWarnings
 
-`func (o *InlineResponse20055) HasMtu() bool`
+`func (o *InlineResponse20055) HasWarnings() bool`
 
-HasMtu returns a boolean if a field has been set.
+HasWarnings returns a boolean if a field has been set.
 
-### GetSerial
+### GetSpeed
 
-`func (o *InlineResponse20055) GetSerial() string`
+`func (o *InlineResponse20055) GetSpeed() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetSpeed returns the Speed field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetSpeedOk
 
-`func (o *InlineResponse20055) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse20055) GetSpeedOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetSpeedOk returns a tuple with the Speed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetSpeed
 
-`func (o *InlineResponse20055) SetSerial(v string)`
+`func (o *InlineResponse20055) SetSpeed(v string)`
 
-SetSerial sets Serial field to given value.
+SetSpeed sets Speed field to given value.
 
-### HasSerial
+### HasSpeed
 
-`func (o *InlineResponse20055) HasSerial() bool`
+`func (o *InlineResponse20055) HasSpeed() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasSpeed returns a boolean if a field has been set.
 
-### GetSwitchPortId
+### GetDuplex
 
-`func (o *InlineResponse20055) GetSwitchPortId() string`
+`func (o *InlineResponse20055) GetDuplex() string`
 
-GetSwitchPortId returns the SwitchPortId field if non-nil, zero value otherwise.
+GetDuplex returns the Duplex field if non-nil, zero value otherwise.
 
-### GetSwitchPortIdOk
+### GetDuplexOk
 
-`func (o *InlineResponse20055) GetSwitchPortIdOk() (*string, bool)`
+`func (o *InlineResponse20055) GetDuplexOk() (*string, bool)`
 
-GetSwitchPortIdOk returns a tuple with the SwitchPortId field if it's non-nil, zero value otherwise
+GetDuplexOk returns a tuple with the Duplex field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchPortId
+### SetDuplex
 
-`func (o *InlineResponse20055) SetSwitchPortId(v string)`
+`func (o *InlineResponse20055) SetDuplex(v string)`
 
-SetSwitchPortId sets SwitchPortId field to given value.
+SetDuplex sets Duplex field to given value.
 
-### HasSwitchPortId
+### HasDuplex
 
-`func (o *InlineResponse20055) HasSwitchPortId() bool`
+`func (o *InlineResponse20055) HasDuplex() bool`
 
-HasSwitchPortId returns a boolean if a field has been set.
+HasDuplex returns a boolean if a field has been set.
 
-### GetMulticastRouting
+### GetSpanningTree
 
-`func (o *InlineResponse20055) GetMulticastRouting() string`
+`func (o *InlineResponse20055) GetSpanningTree() DevicesSerialSwitchPortsStatusesSpanningTree`
 
-GetMulticastRouting returns the MulticastRouting field if non-nil, zero value otherwise.
+GetSpanningTree returns the SpanningTree field if non-nil, zero value otherwise.
 
-### GetMulticastRoutingOk
+### GetSpanningTreeOk
 
-`func (o *InlineResponse20055) GetMulticastRoutingOk() (*string, bool)`
+`func (o *InlineResponse20055) GetSpanningTreeOk() (*DevicesSerialSwitchPortsStatusesSpanningTree, bool)`
 
-GetMulticastRoutingOk returns a tuple with the MulticastRouting field if it's non-nil, zero value otherwise
+GetSpanningTreeOk returns a tuple with the SpanningTree field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMulticastRouting
+### SetSpanningTree
 
-`func (o *InlineResponse20055) SetMulticastRouting(v string)`
+`func (o *InlineResponse20055) SetSpanningTree(v DevicesSerialSwitchPortsStatusesSpanningTree)`
 
-SetMulticastRouting sets MulticastRouting field to given value.
+SetSpanningTree sets SpanningTree field to given value.
 
-### HasMulticastRouting
+### HasSpanningTree
 
-`func (o *InlineResponse20055) HasMulticastRouting() bool`
+`func (o *InlineResponse20055) HasSpanningTree() bool`
 
-HasMulticastRouting returns a boolean if a field has been set.
+HasSpanningTree returns a boolean if a field has been set.
 
-### GetVlanId
+### GetPoe
 
-`func (o *InlineResponse20055) GetVlanId() int32`
+`func (o *InlineResponse20055) GetPoe() DevicesSerialSwitchPortsStatusesPoe`
 
-GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+GetPoe returns the Poe field if non-nil, zero value otherwise.
 
-### GetVlanIdOk
+### GetPoeOk
 
-`func (o *InlineResponse20055) GetVlanIdOk() (*int32, bool)`
+`func (o *InlineResponse20055) GetPoeOk() (*DevicesSerialSwitchPortsStatusesPoe, bool)`
 
-GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+GetPoeOk returns a tuple with the Poe field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanId
+### SetPoe
 
-`func (o *InlineResponse20055) SetVlanId(v int32)`
+`func (o *InlineResponse20055) SetPoe(v DevicesSerialSwitchPortsStatusesPoe)`
 
-SetVlanId sets VlanId field to given value.
+SetPoe sets Poe field to given value.
 
-### HasVlanId
+### HasPoe
 
-`func (o *InlineResponse20055) HasVlanId() bool`
+`func (o *InlineResponse20055) HasPoe() bool`
 
-HasVlanId returns a boolean if a field has been set.
+HasPoe returns a boolean if a field has been set.
 
-### GetUplinkV4
+### GetUsageInKb
 
-`func (o *InlineResponse20055) GetUplinkV4() bool`
+`func (o *InlineResponse20055) GetUsageInKb() DevicesSerialSwitchPortsStatusesUsageInKb`
 
-GetUplinkV4 returns the UplinkV4 field if non-nil, zero value otherwise.
+GetUsageInKb returns the UsageInKb field if non-nil, zero value otherwise.
 
-### GetUplinkV4Ok
+### GetUsageInKbOk
 
-`func (o *InlineResponse20055) GetUplinkV4Ok() (*bool, bool)`
+`func (o *InlineResponse20055) GetUsageInKbOk() (*DevicesSerialSwitchPortsStatusesUsageInKb, bool)`
 
-GetUplinkV4Ok returns a tuple with the UplinkV4 field if it's non-nil, zero value otherwise
+GetUsageInKbOk returns a tuple with the UsageInKb field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinkV4
+### SetUsageInKb
 
-`func (o *InlineResponse20055) SetUplinkV4(v bool)`
+`func (o *InlineResponse20055) SetUsageInKb(v DevicesSerialSwitchPortsStatusesUsageInKb)`
 
-SetUplinkV4 sets UplinkV4 field to given value.
+SetUsageInKb sets UsageInKb field to given value.
 
-### HasUplinkV4
+### HasUsageInKb
 
-`func (o *InlineResponse20055) HasUplinkV4() bool`
+`func (o *InlineResponse20055) HasUsageInKb() bool`
 
-HasUplinkV4 returns a boolean if a field has been set.
+HasUsageInKb returns a boolean if a field has been set.
 
-### GetUplinkV6
+### GetCdp
 
-`func (o *InlineResponse20055) GetUplinkV6() bool`
+`func (o *InlineResponse20055) GetCdp() DevicesSerialSwitchPortsStatusesCdp`
 
-GetUplinkV6 returns the UplinkV6 field if non-nil, zero value otherwise.
+GetCdp returns the Cdp field if non-nil, zero value otherwise.
 
-### GetUplinkV6Ok
+### GetCdpOk
 
-`func (o *InlineResponse20055) GetUplinkV6Ok() (*bool, bool)`
+`func (o *InlineResponse20055) GetCdpOk() (*DevicesSerialSwitchPortsStatusesCdp, bool)`
 
-GetUplinkV6Ok returns a tuple with the UplinkV6 field if it's non-nil, zero value otherwise
+GetCdpOk returns a tuple with the Cdp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinkV6
+### SetCdp
 
-`func (o *InlineResponse20055) SetUplinkV6(v bool)`
+`func (o *InlineResponse20055) SetCdp(v DevicesSerialSwitchPortsStatusesCdp)`
 
-SetUplinkV6 sets UplinkV6 field to given value.
+SetCdp sets Cdp field to given value.
 
-### HasUplinkV6
+### HasCdp
 
-`func (o *InlineResponse20055) HasUplinkV6() bool`
+`func (o *InlineResponse20055) HasCdp() bool`
 
-HasUplinkV6 returns a boolean if a field has been set.
+HasCdp returns a boolean if a field has been set.
 
-### GetOspfSettings
+### GetLldp
 
-`func (o *InlineResponse20055) GetOspfSettings() DevicesSerialSwitchRoutingInterfacesOspfSettings`
+`func (o *InlineResponse20055) GetLldp() DevicesSerialSwitchPortsStatusesLldp`
 
-GetOspfSettings returns the OspfSettings field if non-nil, zero value otherwise.
+GetLldp returns the Lldp field if non-nil, zero value otherwise.
 
-### GetOspfSettingsOk
+### GetLldpOk
 
-`func (o *InlineResponse20055) GetOspfSettingsOk() (*DevicesSerialSwitchRoutingInterfacesOspfSettings, bool)`
+`func (o *InlineResponse20055) GetLldpOk() (*DevicesSerialSwitchPortsStatusesLldp, bool)`
 
-GetOspfSettingsOk returns a tuple with the OspfSettings field if it's non-nil, zero value otherwise
+GetLldpOk returns a tuple with the Lldp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOspfSettings
+### SetLldp
 
-`func (o *InlineResponse20055) SetOspfSettings(v DevicesSerialSwitchRoutingInterfacesOspfSettings)`
+`func (o *InlineResponse20055) SetLldp(v DevicesSerialSwitchPortsStatusesLldp)`
 
-SetOspfSettings sets OspfSettings field to given value.
+SetLldp sets Lldp field to given value.
 
-### HasOspfSettings
+### HasLldp
 
-`func (o *InlineResponse20055) HasOspfSettings() bool`
+`func (o *InlineResponse20055) HasLldp() bool`
 
-HasOspfSettings returns a boolean if a field has been set.
+HasLldp returns a boolean if a field has been set.
 
-### GetOspfV3
+### GetClientCount
 
-`func (o *InlineResponse20055) GetOspfV3() DevicesSerialSwitchRoutingInterfacesOspfV3`
+`func (o *InlineResponse20055) GetClientCount() int32`
 
-GetOspfV3 returns the OspfV3 field if non-nil, zero value otherwise.
+GetClientCount returns the ClientCount field if non-nil, zero value otherwise.
 
-### GetOspfV3Ok
+### GetClientCountOk
 
-`func (o *InlineResponse20055) GetOspfV3Ok() (*DevicesSerialSwitchRoutingInterfacesOspfV3, bool)`
+`func (o *InlineResponse20055) GetClientCountOk() (*int32, bool)`
 
-GetOspfV3Ok returns a tuple with the OspfV3 field if it's non-nil, zero value otherwise
+GetClientCountOk returns a tuple with the ClientCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOspfV3
+### SetClientCount
 
-`func (o *InlineResponse20055) SetOspfV3(v DevicesSerialSwitchRoutingInterfacesOspfV3)`
+`func (o *InlineResponse20055) SetClientCount(v int32)`
 
-SetOspfV3 sets OspfV3 field to given value.
+SetClientCount sets ClientCount field to given value.
 
-### HasOspfV3
+### HasClientCount
 
-`func (o *InlineResponse20055) HasOspfV3() bool`
+`func (o *InlineResponse20055) HasClientCount() bool`
 
-HasOspfV3 returns a boolean if a field has been set.
+HasClientCount returns a boolean if a field has been set.
 
-### GetIpv6
+### GetPowerUsageInWh
 
-`func (o *InlineResponse20055) GetIpv6() DevicesSerialSwitchRoutingInterfacesIpv6`
+`func (o *InlineResponse20055) GetPowerUsageInWh() float32`
 
-GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
+GetPowerUsageInWh returns the PowerUsageInWh field if non-nil, zero value otherwise.
 
-### GetIpv6Ok
+### GetPowerUsageInWhOk
 
-`func (o *InlineResponse20055) GetIpv6Ok() (*DevicesSerialSwitchRoutingInterfacesIpv6, bool)`
+`func (o *InlineResponse20055) GetPowerUsageInWhOk() (*float32, bool)`
 
-GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
+GetPowerUsageInWhOk returns a tuple with the PowerUsageInWh field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpv6
+### SetPowerUsageInWh
 
-`func (o *InlineResponse20055) SetIpv6(v DevicesSerialSwitchRoutingInterfacesIpv6)`
+`func (o *InlineResponse20055) SetPowerUsageInWh(v float32)`
 
-SetIpv6 sets Ipv6 field to given value.
+SetPowerUsageInWh sets PowerUsageInWh field to given value.
 
-### HasIpv6
+### HasPowerUsageInWh
 
-`func (o *InlineResponse20055) HasIpv6() bool`
+`func (o *InlineResponse20055) HasPowerUsageInWh() bool`
 
-HasIpv6 returns a boolean if a field has been set.
+HasPowerUsageInWh returns a boolean if a field has been set.
 
-### GetVrf
+### GetTrafficInKbps
 
-`func (o *InlineResponse20055) GetVrf() DevicesSerialSwitchRoutingInterfacesVrf`
+`func (o *InlineResponse20055) GetTrafficInKbps() DevicesSerialSwitchPortsStatusesTrafficInKbps`
 
-GetVrf returns the Vrf field if non-nil, zero value otherwise.
+GetTrafficInKbps returns the TrafficInKbps field if non-nil, zero value otherwise.
 
-### GetVrfOk
+### GetTrafficInKbpsOk
 
-`func (o *InlineResponse20055) GetVrfOk() (*DevicesSerialSwitchRoutingInterfacesVrf, bool)`
+`func (o *InlineResponse20055) GetTrafficInKbpsOk() (*DevicesSerialSwitchPortsStatusesTrafficInKbps, bool)`
 
-GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+GetTrafficInKbpsOk returns a tuple with the TrafficInKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVrf
+### SetTrafficInKbps
 
-`func (o *InlineResponse20055) SetVrf(v DevicesSerialSwitchRoutingInterfacesVrf)`
+`func (o *InlineResponse20055) SetTrafficInKbps(v DevicesSerialSwitchPortsStatusesTrafficInKbps)`
 
-SetVrf sets Vrf field to given value.
+SetTrafficInKbps sets TrafficInKbps field to given value.
 
-### HasVrf
+### HasTrafficInKbps
 
-`func (o *InlineResponse20055) HasVrf() bool`
+`func (o *InlineResponse20055) HasTrafficInKbps() bool`
 
-HasVrf returns a boolean if a field has been set.
+HasTrafficInKbps returns a boolean if a field has been set.
 
-### GetLoopback
+### GetSecurePort
 
-`func (o *InlineResponse20055) GetLoopback() map[string]interface{}`
+`func (o *InlineResponse20055) GetSecurePort() DevicesSerialSwitchPortsStatusesSecurePort`
 
-GetLoopback returns the Loopback field if non-nil, zero value otherwise.
+GetSecurePort returns the SecurePort field if non-nil, zero value otherwise.
 
-### GetLoopbackOk
+### GetSecurePortOk
 
-`func (o *InlineResponse20055) GetLoopbackOk() (*map[string]interface{}, bool)`
+`func (o *InlineResponse20055) GetSecurePortOk() (*DevicesSerialSwitchPortsStatusesSecurePort, bool)`
 
-GetLoopbackOk returns a tuple with the Loopback field if it's non-nil, zero value otherwise
+GetSecurePortOk returns a tuple with the SecurePort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLoopback
+### SetSecurePort
 
-`func (o *InlineResponse20055) SetLoopback(v map[string]interface{})`
+`func (o *InlineResponse20055) SetSecurePort(v DevicesSerialSwitchPortsStatusesSecurePort)`
 
-SetLoopback sets Loopback field to given value.
+SetSecurePort sets SecurePort field to given value.
 
-### HasLoopback
+### HasSecurePort
 
-`func (o *InlineResponse20055) HasLoopback() bool`
+`func (o *InlineResponse20055) HasSecurePort() bool`
 
-HasLoopback returns a boolean if a field has been set.
-
-### GetBidirectionalForwardingDetection
-
-`func (o *InlineResponse20055) GetBidirectionalForwardingDetection() DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection`
-
-GetBidirectionalForwardingDetection returns the BidirectionalForwardingDetection field if non-nil, zero value otherwise.
-
-### GetBidirectionalForwardingDetectionOk
-
-`func (o *InlineResponse20055) GetBidirectionalForwardingDetectionOk() (*DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection, bool)`
-
-GetBidirectionalForwardingDetectionOk returns a tuple with the BidirectionalForwardingDetection field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBidirectionalForwardingDetection
-
-`func (o *InlineResponse20055) SetBidirectionalForwardingDetection(v DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection)`
-
-SetBidirectionalForwardingDetection sets BidirectionalForwardingDetection field to given value.
-
-### HasBidirectionalForwardingDetection
-
-`func (o *InlineResponse20055) HasBidirectionalForwardingDetection() bool`
-
-HasBidirectionalForwardingDetection returns a boolean if a field has been set.
-
-### GetDefaultGateway
-
-`func (o *InlineResponse20055) GetDefaultGateway() string`
-
-GetDefaultGateway returns the DefaultGateway field if non-nil, zero value otherwise.
-
-### GetDefaultGatewayOk
-
-`func (o *InlineResponse20055) GetDefaultGatewayOk() (*string, bool)`
-
-GetDefaultGatewayOk returns a tuple with the DefaultGateway field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDefaultGateway
-
-`func (o *InlineResponse20055) SetDefaultGateway(v string)`
-
-SetDefaultGateway sets DefaultGateway field to given value.
-
-### HasDefaultGateway
-
-`func (o *InlineResponse20055) HasDefaultGateway() bool`
-
-HasDefaultGateway returns a boolean if a field has been set.
+HasSecurePort returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

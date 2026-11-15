@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** | Controls how the configuration payload in the request body is applied to the resource. This parameter dictates the declarative mode:  * **&#x60;complete&#x60;**: The request body represents the entire desired configuration for this resource. Any existing configurations that are not included in the payload will be removed. This effectively performs a full replacement or overwrite of the resource&#39;s configuration. * **&#x60;partial&#x60; (default)**: The request body contains only the configurations to be created or modified. Existing configurations that are not specified in the payload will be preserved. This performs a merge or partial update, applying only the changes specified.  | [optional] 
-**Items** | [**[]OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRulesOverridesDeclareItems**](OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRulesOverridesDeclareItems.md) | Desired overrides state | 
+**Policy** | [**OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdPolicy**](OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdPolicy.md) |  | 
 
 ## Methods
 
 ### NewInlineObject267
 
-`func NewInlineObject267(items []OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRulesOverridesDeclareItems, ) *InlineObject267`
+`func NewInlineObject267(policy OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdPolicy, ) *InlineObject267`
 
 NewInlineObject267 instantiates a new InlineObject267 object
 This constructor will assign default values to properties that have it defined,
@@ -26,49 +25,24 @@ NewInlineObject267WithDefaults instantiates a new InlineObject267 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetPolicy
 
-`func (o *InlineObject267) GetMode() string`
+`func (o *InlineObject267) GetPolicy() OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdPolicy`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetPolicyOk
 
-`func (o *InlineObject267) GetModeOk() (*string, bool)`
+`func (o *InlineObject267) GetPolicyOk() (*OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdPolicy, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetPolicy
 
-`func (o *InlineObject267) SetMode(v string)`
+`func (o *InlineObject267) SetPolicy(v OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdPolicy)`
 
-SetMode sets Mode field to given value.
-
-### HasMode
-
-`func (o *InlineObject267) HasMode() bool`
-
-HasMode returns a boolean if a field has been set.
-
-### GetItems
-
-`func (o *InlineObject267) GetItems() []OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRulesOverridesDeclareItems`
-
-GetItems returns the Items field if non-nil, zero value otherwise.
-
-### GetItemsOk
-
-`func (o *InlineObject267) GetItemsOk() (*[]OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRulesOverridesDeclareItems, bool)`
-
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetItems
-
-`func (o *InlineObject267) SetItems(v []OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRulesOverridesDeclareItems)`
-
-SetItems sets Items field to given value.
+SetPolicy sets Policy field to given value.
 
 
 

@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, mDNS gateway is enabled for this SSID and cluster. | [optional] 
-**Rules** | Pointer to [**[]NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules**](NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules.md) | List of mDNS forwarding rules. | [optional] 
+**Name** | Pointer to **string** | The name of the camera wireless profile. | [optional] 
+**Ssid** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesWirelessProfileIdSsid**](NetworksNetworkIdCameraWirelessProfilesWirelessProfileIdSsid.md) |  | [optional] 
+**Identity** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesIdentity**](NetworksNetworkIdCameraWirelessProfilesIdentity.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineObject107WithDefaults instantiates a new InlineObject107 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetName
 
-`func (o *InlineObject107) GetEnabled() bool`
+`func (o *InlineObject107) GetName() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNameOk
 
-`func (o *InlineObject107) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject107) GetNameOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetName
 
-`func (o *InlineObject107) SetEnabled(v bool)`
+`func (o *InlineObject107) SetName(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetName sets Name field to given value.
 
-### HasEnabled
+### HasName
 
-`func (o *InlineObject107) HasEnabled() bool`
+`func (o *InlineObject107) HasName() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetRules
+### GetSsid
 
-`func (o *InlineObject107) GetRules() []NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules`
+`func (o *InlineObject107) GetSsid() NetworksNetworkIdCameraWirelessProfilesWirelessProfileIdSsid`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetSsidOk
 
-`func (o *InlineObject107) GetRulesOk() (*[]NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules, bool)`
+`func (o *InlineObject107) GetSsidOk() (*NetworksNetworkIdCameraWirelessProfilesWirelessProfileIdSsid, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetSsid
 
-`func (o *InlineObject107) SetRules(v []NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules)`
+`func (o *InlineObject107) SetSsid(v NetworksNetworkIdCameraWirelessProfilesWirelessProfileIdSsid)`
 
-SetRules sets Rules field to given value.
+SetSsid sets Ssid field to given value.
 
-### HasRules
+### HasSsid
 
-`func (o *InlineObject107) HasRules() bool`
+`func (o *InlineObject107) HasSsid() bool`
 
-HasRules returns a boolean if a field has been set.
+HasSsid returns a boolean if a field has been set.
+
+### GetIdentity
+
+`func (o *InlineObject107) GetIdentity() NetworksNetworkIdCameraWirelessProfilesIdentity`
+
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
+
+### GetIdentityOk
+
+`func (o *InlineObject107) GetIdentityOk() (*NetworksNetworkIdCameraWirelessProfilesIdentity, bool)`
+
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIdentity
+
+`func (o *InlineObject107) SetIdentity(v NetworksNetworkIdCameraWirelessProfilesIdentity)`
+
+SetIdentity sets Identity field to given value.
+
+### HasIdentity
+
+`func (o *InlineObject107) HasIdentity() bool`
+
+HasIdentity returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

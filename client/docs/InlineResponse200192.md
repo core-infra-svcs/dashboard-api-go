@@ -4,11 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set | [optional] 
-**UseOobMgmt** | Pointer to **bool** | Boolean value to use out-of-band management interface when configured | [optional] 
-**VlanId** | Pointer to **int32** | Alternate management VLAN, must be between 1 and 4094 | [optional] 
-**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39; or &#39;syslog&#39; | [optional] 
-**Switches** | Pointer to [**[]InlineResponse200192Switches**](InlineResponse200192Switches.md) | Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put &#39;switches&#39; in the body when updating template networks. Also, an empty &#39;switches&#39; array will remove all previous assignments | [optional] 
+**ResultingNetworks** | Pointer to [**[]InlineResponse20069**](InlineResponse20069.md) | Networks after the split | [optional] 
 
 ## Methods
 
@@ -29,130 +25,30 @@ NewInlineResponse200192WithDefaults instantiates a new InlineResponse200192 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetResultingNetworks
 
-`func (o *InlineResponse200192) GetEnabled() bool`
+`func (o *InlineResponse200192) GetResultingNetworks() []InlineResponse20069`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetResultingNetworks returns the ResultingNetworks field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetResultingNetworksOk
 
-`func (o *InlineResponse200192) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200192) GetResultingNetworksOk() (*[]InlineResponse20069, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetResultingNetworksOk returns a tuple with the ResultingNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetResultingNetworks
 
-`func (o *InlineResponse200192) SetEnabled(v bool)`
+`func (o *InlineResponse200192) SetResultingNetworks(v []InlineResponse20069)`
 
-SetEnabled sets Enabled field to given value.
+SetResultingNetworks sets ResultingNetworks field to given value.
 
-### HasEnabled
+### HasResultingNetworks
 
-`func (o *InlineResponse200192) HasEnabled() bool`
+`func (o *InlineResponse200192) HasResultingNetworks() bool`
 
-HasEnabled returns a boolean if a field has been set.
-
-### GetUseOobMgmt
-
-`func (o *InlineResponse200192) GetUseOobMgmt() bool`
-
-GetUseOobMgmt returns the UseOobMgmt field if non-nil, zero value otherwise.
-
-### GetUseOobMgmtOk
-
-`func (o *InlineResponse200192) GetUseOobMgmtOk() (*bool, bool)`
-
-GetUseOobMgmtOk returns a tuple with the UseOobMgmt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUseOobMgmt
-
-`func (o *InlineResponse200192) SetUseOobMgmt(v bool)`
-
-SetUseOobMgmt sets UseOobMgmt field to given value.
-
-### HasUseOobMgmt
-
-`func (o *InlineResponse200192) HasUseOobMgmt() bool`
-
-HasUseOobMgmt returns a boolean if a field has been set.
-
-### GetVlanId
-
-`func (o *InlineResponse200192) GetVlanId() int32`
-
-GetVlanId returns the VlanId field if non-nil, zero value otherwise.
-
-### GetVlanIdOk
-
-`func (o *InlineResponse200192) GetVlanIdOk() (*int32, bool)`
-
-GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlanId
-
-`func (o *InlineResponse200192) SetVlanId(v int32)`
-
-SetVlanId sets VlanId field to given value.
-
-### HasVlanId
-
-`func (o *InlineResponse200192) HasVlanId() bool`
-
-HasVlanId returns a boolean if a field has been set.
-
-### GetProtocols
-
-`func (o *InlineResponse200192) GetProtocols() []string`
-
-GetProtocols returns the Protocols field if non-nil, zero value otherwise.
-
-### GetProtocolsOk
-
-`func (o *InlineResponse200192) GetProtocolsOk() (*[]string, bool)`
-
-GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProtocols
-
-`func (o *InlineResponse200192) SetProtocols(v []string)`
-
-SetProtocols sets Protocols field to given value.
-
-### HasProtocols
-
-`func (o *InlineResponse200192) HasProtocols() bool`
-
-HasProtocols returns a boolean if a field has been set.
-
-### GetSwitches
-
-`func (o *InlineResponse200192) GetSwitches() []InlineResponse200192Switches`
-
-GetSwitches returns the Switches field if non-nil, zero value otherwise.
-
-### GetSwitchesOk
-
-`func (o *InlineResponse200192) GetSwitchesOk() (*[]InlineResponse200192Switches, bool)`
-
-GetSwitchesOk returns a tuple with the Switches field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSwitches
-
-`func (o *InlineResponse200192) SetSwitches(v []InlineResponse200192Switches)`
-
-SetSwitches sets Switches field to given value.
-
-### HasSwitches
-
-`func (o *InlineResponse200192) HasSwitches() bool`
-
-HasSwitches returns a boolean if a field has been set.
+HasResultingNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

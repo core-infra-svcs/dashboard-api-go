@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the SSID profile | 
-**Precedence** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsProfilesPrecedence**](OrganizationsOrganizationIdWirelessSsidsProfilesPrecedence.md) |  | [optional] 
-**Ssid** | [**OrganizationsOrganizationIdWirelessSsidsProfilesSsid**](OrganizationsOrganizationIdWirelessSsidsProfilesSsid.md) |  | 
+**Items** | [**[]OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1**](OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1.md) | List of zero touch deployments to create | 
+**Meta** | Pointer to [**InlineResponse200286Meta**](InlineResponse200286Meta.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject379
 
-`func NewInlineObject379(name string, ssid OrganizationsOrganizationIdWirelessSsidsProfilesSsid, ) *InlineObject379`
+`func NewInlineObject379(items []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1, ) *InlineObject379`
 
 NewInlineObject379 instantiates a new InlineObject379 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +26,50 @@ NewInlineObject379WithDefaults instantiates a new InlineObject379 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetItems
 
-`func (o *InlineObject379) GetName() string`
+`func (o *InlineObject379) GetItems() []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetItemsOk
 
-`func (o *InlineObject379) GetNameOk() (*string, bool)`
+`func (o *InlineObject379) GetItemsOk() (*[]OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetItems
 
-`func (o *InlineObject379) SetName(v string)`
+`func (o *InlineObject379) SetItems(v []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1)`
 
-SetName sets Name field to given value.
+SetItems sets Items field to given value.
 
 
-### GetPrecedence
+### GetMeta
 
-`func (o *InlineObject379) GetPrecedence() OrganizationsOrganizationIdWirelessSsidsProfilesPrecedence`
+`func (o *InlineObject379) GetMeta() InlineResponse200286Meta`
 
-GetPrecedence returns the Precedence field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetPrecedenceOk
+### GetMetaOk
 
-`func (o *InlineObject379) GetPrecedenceOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesPrecedence, bool)`
+`func (o *InlineObject379) GetMetaOk() (*InlineResponse200286Meta, bool)`
 
-GetPrecedenceOk returns a tuple with the Precedence field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPrecedence
+### SetMeta
 
-`func (o *InlineObject379) SetPrecedence(v OrganizationsOrganizationIdWirelessSsidsProfilesPrecedence)`
+`func (o *InlineObject379) SetMeta(v InlineResponse200286Meta)`
 
-SetPrecedence sets Precedence field to given value.
+SetMeta sets Meta field to given value.
 
-### HasPrecedence
+### HasMeta
 
-`func (o *InlineObject379) HasPrecedence() bool`
+`func (o *InlineObject379) HasMeta() bool`
 
-HasPrecedence returns a boolean if a field has been set.
-
-### GetSsid
-
-`func (o *InlineObject379) GetSsid() OrganizationsOrganizationIdWirelessSsidsProfilesSsid`
-
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
-
-### GetSsidOk
-
-`func (o *InlineObject379) GetSsidOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesSsid, bool)`
-
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSsid
-
-`func (o *InlineObject379) SetSsid(v OrganizationsOrganizationIdWirelessSsidsProfilesSsid)`
-
-SetSsid sets Ssid field to given value.
-
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -5,14 +5,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Cluster** | [**OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateCluster**](OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateCluster.md) |  | 
-**Network** | [**OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateNetwork**](OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateNetwork.md) |  | 
+**Network** | [**InlineResponse20091Network**](InlineResponse20091Network.md) |  | 
 **Data** | [**OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateData**](OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateData.md) |  | 
 
 ## Methods
 
 ### NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems
 
-`func NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems(cluster OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateCluster, network OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateNetwork, data OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateData, ) *OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems`
+`func NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems(cluster OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateCluster, network InlineResponse20091Network, data OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateData, ) *OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems`
 
 NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems instantiates a new OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems object
 This constructor will assign default values to properties that have it defined,
@@ -49,20 +49,20 @@ SetCluster sets Cluster field to given value.
 
 ### GetNetwork
 
-`func (o *OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems) GetNetwork() OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateNetwork`
+`func (o *OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems) GetNetwork() InlineResponse20091Network`
 
 GetNetwork returns the Network field if non-nil, zero value otherwise.
 
 ### GetNetworkOk
 
-`func (o *OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems) GetNetworkOk() (*OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateNetwork, bool)`
+`func (o *OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems) GetNetworkOk() (*InlineResponse20091Network, bool)`
 
 GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetwork
 
-`func (o *OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems) SetNetwork(v OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateNetwork)`
+`func (o *OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems) SetNetwork(v InlineResponse20091Network)`
 
 SetNetwork sets Network field to given value.
 

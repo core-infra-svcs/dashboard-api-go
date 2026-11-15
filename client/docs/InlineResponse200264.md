@@ -4,18 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of the action batch. Can be used to check the status of the action batch at /organizations/{organizationId}/actionBatches/{actionBatchId} | [optional] 
-**OrganizationId** | Pointer to **string** | ID of the organization this action batch belongs to | [optional] 
-**Confirmed** | Pointer to **bool** | Flag describing whether the action should be previewed before executing or not | [optional] 
-**Synchronous** | Pointer to **bool** | Flag describing whether actions should run synchronously or asynchronously | [optional] 
-**Status** | Pointer to [**OrganizationsOrganizationIdActionBatchesStatus**](OrganizationsOrganizationIdActionBatchesStatus.md) |  | [optional] 
-**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions**](OrganizationsOrganizationIdActionBatchesActions.md) | A set of changes made as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
+**Concentrator** | Pointer to [**InlineResponse200264Concentrator**](InlineResponse200264Concentrator.md) |  | [optional] 
+**Failover** | Pointer to [**InlineResponse200264Failover**](InlineResponse200264Failover.md) |  | [optional] 
+**SplitTunnel** | Pointer to [**InlineResponse200264SplitTunnel**](InlineResponse200264SplitTunnel.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200264
 
-`func NewInlineResponse200264(actions []OrganizationsOrganizationIdActionBatchesActions, ) *InlineResponse200264`
+`func NewInlineResponse200264() *InlineResponse200264`
 
 NewInlineResponse200264 instantiates a new InlineResponse200264 object
 This constructor will assign default values to properties that have it defined,
@@ -30,150 +27,80 @@ NewInlineResponse200264WithDefaults instantiates a new InlineResponse200264 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetConcentrator
 
-`func (o *InlineResponse200264) GetId() string`
+`func (o *InlineResponse200264) GetConcentrator() InlineResponse200264Concentrator`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetConcentratorOk
 
-`func (o *InlineResponse200264) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200264) GetConcentratorOk() (*InlineResponse200264Concentrator, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetConcentrator
 
-`func (o *InlineResponse200264) SetId(v string)`
+`func (o *InlineResponse200264) SetConcentrator(v InlineResponse200264Concentrator)`
 
-SetId sets Id field to given value.
+SetConcentrator sets Concentrator field to given value.
 
-### HasId
+### HasConcentrator
 
-`func (o *InlineResponse200264) HasId() bool`
+`func (o *InlineResponse200264) HasConcentrator() bool`
 
-HasId returns a boolean if a field has been set.
+HasConcentrator returns a boolean if a field has been set.
 
-### GetOrganizationId
+### GetFailover
 
-`func (o *InlineResponse200264) GetOrganizationId() string`
+`func (o *InlineResponse200264) GetFailover() InlineResponse200264Failover`
 
-GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
+GetFailover returns the Failover field if non-nil, zero value otherwise.
 
-### GetOrganizationIdOk
+### GetFailoverOk
 
-`func (o *InlineResponse200264) GetOrganizationIdOk() (*string, bool)`
+`func (o *InlineResponse200264) GetFailoverOk() (*InlineResponse200264Failover, bool)`
 
-GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
+GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrganizationId
+### SetFailover
 
-`func (o *InlineResponse200264) SetOrganizationId(v string)`
+`func (o *InlineResponse200264) SetFailover(v InlineResponse200264Failover)`
 
-SetOrganizationId sets OrganizationId field to given value.
+SetFailover sets Failover field to given value.
 
-### HasOrganizationId
+### HasFailover
 
-`func (o *InlineResponse200264) HasOrganizationId() bool`
+`func (o *InlineResponse200264) HasFailover() bool`
 
-HasOrganizationId returns a boolean if a field has been set.
+HasFailover returns a boolean if a field has been set.
 
-### GetConfirmed
+### GetSplitTunnel
 
-`func (o *InlineResponse200264) GetConfirmed() bool`
+`func (o *InlineResponse200264) GetSplitTunnel() InlineResponse200264SplitTunnel`
 
-GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
 
-### GetConfirmedOk
+### GetSplitTunnelOk
 
-`func (o *InlineResponse200264) GetConfirmedOk() (*bool, bool)`
+`func (o *InlineResponse200264) GetSplitTunnelOk() (*InlineResponse200264SplitTunnel, bool)`
 
-GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfirmed
+### SetSplitTunnel
 
-`func (o *InlineResponse200264) SetConfirmed(v bool)`
+`func (o *InlineResponse200264) SetSplitTunnel(v InlineResponse200264SplitTunnel)`
 
-SetConfirmed sets Confirmed field to given value.
+SetSplitTunnel sets SplitTunnel field to given value.
 
-### HasConfirmed
+### HasSplitTunnel
 
-`func (o *InlineResponse200264) HasConfirmed() bool`
+`func (o *InlineResponse200264) HasSplitTunnel() bool`
 
-HasConfirmed returns a boolean if a field has been set.
-
-### GetSynchronous
-
-`func (o *InlineResponse200264) GetSynchronous() bool`
-
-GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
-
-### GetSynchronousOk
-
-`func (o *InlineResponse200264) GetSynchronousOk() (*bool, bool)`
-
-GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSynchronous
-
-`func (o *InlineResponse200264) SetSynchronous(v bool)`
-
-SetSynchronous sets Synchronous field to given value.
-
-### HasSynchronous
-
-`func (o *InlineResponse200264) HasSynchronous() bool`
-
-HasSynchronous returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse200264) GetStatus() OrganizationsOrganizationIdActionBatchesStatus`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse200264) GetStatusOk() (*OrganizationsOrganizationIdActionBatchesStatus, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse200264) SetStatus(v OrganizationsOrganizationIdActionBatchesStatus)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse200264) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetActions
-
-`func (o *InlineResponse200264) GetActions() []OrganizationsOrganizationIdActionBatchesActions`
-
-GetActions returns the Actions field if non-nil, zero value otherwise.
-
-### GetActionsOk
-
-`func (o *InlineResponse200264) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions, bool)`
-
-GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetActions
-
-`func (o *InlineResponse200264) SetActions(v []OrganizationsOrganizationIdActionBatchesActions)`
-
-SetActions sets Actions field to given value.
-
+HasSplitTunnel returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

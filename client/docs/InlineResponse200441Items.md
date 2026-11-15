@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SiteId** | Pointer to **string** | Site ID | [optional] 
-**Name** | Pointer to **string** | Site name | [optional] 
-**History** | Pointer to [**[]InlineResponse200441History**](InlineResponse200441History.md) | Site level connectivity history | [optional] 
-**Devices** | Pointer to [**InlineResponse200441Devices**](InlineResponse200441Devices.md) |  | [optional] 
+**Policy** | [**InlineResponse200441Policy**](InlineResponse200441Policy.md) |  | 
+**Network** | [**InlineResponse200441Network**](InlineResponse200441Network.md) |  | 
+**Firewall** | [**InlineResponse200441Firewall**](InlineResponse200441Firewall.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200441Items
 
-`func NewInlineResponse200441Items() *InlineResponse200441Items`
+`func NewInlineResponse200441Items(policy InlineResponse200441Policy, network InlineResponse200441Network, firewall InlineResponse200441Firewall, ) *InlineResponse200441Items`
 
 NewInlineResponse200441Items instantiates a new InlineResponse200441Items object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +27,65 @@ NewInlineResponse200441ItemsWithDefaults instantiates a new InlineResponse200441
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSiteId
+### GetPolicy
 
-`func (o *InlineResponse200441Items) GetSiteId() string`
+`func (o *InlineResponse200441Items) GetPolicy() InlineResponse200441Policy`
 
-GetSiteId returns the SiteId field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetSiteIdOk
+### GetPolicyOk
 
-`func (o *InlineResponse200441Items) GetSiteIdOk() (*string, bool)`
+`func (o *InlineResponse200441Items) GetPolicyOk() (*InlineResponse200441Policy, bool)`
 
-GetSiteIdOk returns a tuple with the SiteId field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSiteId
+### SetPolicy
 
-`func (o *InlineResponse200441Items) SetSiteId(v string)`
+`func (o *InlineResponse200441Items) SetPolicy(v InlineResponse200441Policy)`
 
-SetSiteId sets SiteId field to given value.
+SetPolicy sets Policy field to given value.
 
-### HasSiteId
 
-`func (o *InlineResponse200441Items) HasSiteId() bool`
+### GetNetwork
 
-HasSiteId returns a boolean if a field has been set.
+`func (o *InlineResponse200441Items) GetNetwork() InlineResponse200441Network`
 
-### GetName
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200441Items) GetName() string`
+### GetNetworkOk
 
-GetName returns the Name field if non-nil, zero value otherwise.
+`func (o *InlineResponse200441Items) GetNetworkOk() (*InlineResponse200441Network, bool)`
 
-### GetNameOk
-
-`func (o *InlineResponse200441Items) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetNetwork
 
-`func (o *InlineResponse200441Items) SetName(v string)`
+`func (o *InlineResponse200441Items) SetNetwork(v InlineResponse200441Network)`
 
-SetName sets Name field to given value.
+SetNetwork sets Network field to given value.
 
-### HasName
 
-`func (o *InlineResponse200441Items) HasName() bool`
+### GetFirewall
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineResponse200441Items) GetFirewall() InlineResponse200441Firewall`
 
-### GetHistory
+GetFirewall returns the Firewall field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200441Items) GetHistory() []InlineResponse200441History`
+### GetFirewallOk
 
-GetHistory returns the History field if non-nil, zero value otherwise.
+`func (o *InlineResponse200441Items) GetFirewallOk() (*InlineResponse200441Firewall, bool)`
 
-### GetHistoryOk
-
-`func (o *InlineResponse200441Items) GetHistoryOk() (*[]InlineResponse200441History, bool)`
-
-GetHistoryOk returns a tuple with the History field if it's non-nil, zero value otherwise
+GetFirewallOk returns a tuple with the Firewall field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHistory
+### SetFirewall
 
-`func (o *InlineResponse200441Items) SetHistory(v []InlineResponse200441History)`
+`func (o *InlineResponse200441Items) SetFirewall(v InlineResponse200441Firewall)`
 
-SetHistory sets History field to given value.
+SetFirewall sets Firewall field to given value.
 
-### HasHistory
-
-`func (o *InlineResponse200441Items) HasHistory() bool`
-
-HasHistory returns a boolean if a field has been set.
-
-### GetDevices
-
-`func (o *InlineResponse200441Items) GetDevices() InlineResponse200441Devices`
-
-GetDevices returns the Devices field if non-nil, zero value otherwise.
-
-### GetDevicesOk
-
-`func (o *InlineResponse200441Items) GetDevicesOk() (*InlineResponse200441Devices, bool)`
-
-GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDevices
-
-`func (o *InlineResponse200441Items) SetDevices(v InlineResponse200441Devices)`
-
-SetDevices sets Devices field to given value.
-
-### HasDevices
-
-`func (o *InlineResponse200441Items) HasDevices() bool`
-
-HasDevices returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

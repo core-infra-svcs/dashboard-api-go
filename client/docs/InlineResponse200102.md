@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Umbrella** | Pointer to [**InlineResponse200102Umbrella**](InlineResponse200102Umbrella.md) |  | [optional] 
+**BandwidthLimits** | Pointer to [**InlineResponse200102BandwidthLimits**](InlineResponse200102BandwidthLimits.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200102WithDefaults instantiates a new InlineResponse200102 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUmbrella
+### GetBandwidthLimits
 
-`func (o *InlineResponse200102) GetUmbrella() InlineResponse200102Umbrella`
+`func (o *InlineResponse200102) GetBandwidthLimits() InlineResponse200102BandwidthLimits`
 
-GetUmbrella returns the Umbrella field if non-nil, zero value otherwise.
+GetBandwidthLimits returns the BandwidthLimits field if non-nil, zero value otherwise.
 
-### GetUmbrellaOk
+### GetBandwidthLimitsOk
 
-`func (o *InlineResponse200102) GetUmbrellaOk() (*InlineResponse200102Umbrella, bool)`
+`func (o *InlineResponse200102) GetBandwidthLimitsOk() (*InlineResponse200102BandwidthLimits, bool)`
 
-GetUmbrellaOk returns a tuple with the Umbrella field if it's non-nil, zero value otherwise
+GetBandwidthLimitsOk returns a tuple with the BandwidthLimits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUmbrella
+### SetBandwidthLimits
 
-`func (o *InlineResponse200102) SetUmbrella(v InlineResponse200102Umbrella)`
+`func (o *InlineResponse200102) SetBandwidthLimits(v InlineResponse200102BandwidthLimits)`
 
-SetUmbrella sets Umbrella field to given value.
+SetBandwidthLimits sets BandwidthLimits field to given value.
 
-### HasUmbrella
+### HasBandwidthLimits
 
-`func (o *InlineResponse200102) HasUmbrella() bool`
+`func (o *InlineResponse200102) HasBandwidthLimits() bool`
 
-HasUmbrella returns a boolean if a field has been set.
+HasBandwidthLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

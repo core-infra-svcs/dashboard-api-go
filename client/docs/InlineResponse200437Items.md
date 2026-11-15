@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Connector ID | [optional] 
-**Name** | Pointer to **string** | Connector name | [optional] 
-**Region** | Pointer to [**InlineResponse200437Region**](InlineResponse200437Region.md) |  | [optional] 
-**State** | Pointer to **string** | Connector state | [optional] 
-**Counts** | Pointer to [**InlineResponse200437Counts**](InlineResponse200437Counts.md) |  | [optional] 
+**AssignmentId** | Pointer to **string** | ID of the assignment | [optional] 
+**PolicyId** | Pointer to **string** | ID of the assigned policy | [optional] 
+**AdaptivePolicyGroupId** | Pointer to **string** | Adaptive policy group ID | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse200437ItemsWithDefaults instantiates a new InlineResponse200437
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetAssignmentId
 
-`func (o *InlineResponse200437Items) GetId() string`
+`func (o *InlineResponse200437Items) GetAssignmentId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetAssignmentId returns the AssignmentId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetAssignmentIdOk
 
-`func (o *InlineResponse200437Items) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200437Items) GetAssignmentIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetAssignmentIdOk returns a tuple with the AssignmentId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetAssignmentId
 
-`func (o *InlineResponse200437Items) SetId(v string)`
+`func (o *InlineResponse200437Items) SetAssignmentId(v string)`
 
-SetId sets Id field to given value.
+SetAssignmentId sets AssignmentId field to given value.
 
-### HasId
+### HasAssignmentId
 
-`func (o *InlineResponse200437Items) HasId() bool`
+`func (o *InlineResponse200437Items) HasAssignmentId() bool`
 
-HasId returns a boolean if a field has been set.
+HasAssignmentId returns a boolean if a field has been set.
 
-### GetName
+### GetPolicyId
 
-`func (o *InlineResponse200437Items) GetName() string`
+`func (o *InlineResponse200437Items) GetPolicyId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetPolicyIdOk
 
-`func (o *InlineResponse200437Items) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200437Items) GetPolicyIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetPolicyId
 
-`func (o *InlineResponse200437Items) SetName(v string)`
+`func (o *InlineResponse200437Items) SetPolicyId(v string)`
 
-SetName sets Name field to given value.
+SetPolicyId sets PolicyId field to given value.
 
-### HasName
+### HasPolicyId
 
-`func (o *InlineResponse200437Items) HasName() bool`
+`func (o *InlineResponse200437Items) HasPolicyId() bool`
 
-HasName returns a boolean if a field has been set.
+HasPolicyId returns a boolean if a field has been set.
 
-### GetRegion
+### GetAdaptivePolicyGroupId
 
-`func (o *InlineResponse200437Items) GetRegion() InlineResponse200437Region`
+`func (o *InlineResponse200437Items) GetAdaptivePolicyGroupId() string`
 
-GetRegion returns the Region field if non-nil, zero value otherwise.
+GetAdaptivePolicyGroupId returns the AdaptivePolicyGroupId field if non-nil, zero value otherwise.
 
-### GetRegionOk
+### GetAdaptivePolicyGroupIdOk
 
-`func (o *InlineResponse200437Items) GetRegionOk() (*InlineResponse200437Region, bool)`
+`func (o *InlineResponse200437Items) GetAdaptivePolicyGroupIdOk() (*string, bool)`
 
-GetRegionOk returns a tuple with the Region field if it's non-nil, zero value otherwise
+GetAdaptivePolicyGroupIdOk returns a tuple with the AdaptivePolicyGroupId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRegion
+### SetAdaptivePolicyGroupId
 
-`func (o *InlineResponse200437Items) SetRegion(v InlineResponse200437Region)`
+`func (o *InlineResponse200437Items) SetAdaptivePolicyGroupId(v string)`
 
-SetRegion sets Region field to given value.
+SetAdaptivePolicyGroupId sets AdaptivePolicyGroupId field to given value.
 
-### HasRegion
+### HasAdaptivePolicyGroupId
 
-`func (o *InlineResponse200437Items) HasRegion() bool`
+`func (o *InlineResponse200437Items) HasAdaptivePolicyGroupId() bool`
 
-HasRegion returns a boolean if a field has been set.
-
-### GetState
-
-`func (o *InlineResponse200437Items) GetState() string`
-
-GetState returns the State field if non-nil, zero value otherwise.
-
-### GetStateOk
-
-`func (o *InlineResponse200437Items) GetStateOk() (*string, bool)`
-
-GetStateOk returns a tuple with the State field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetState
-
-`func (o *InlineResponse200437Items) SetState(v string)`
-
-SetState sets State field to given value.
-
-### HasState
-
-`func (o *InlineResponse200437Items) HasState() bool`
-
-HasState returns a boolean if a field has been set.
-
-### GetCounts
-
-`func (o *InlineResponse200437Items) GetCounts() InlineResponse200437Counts`
-
-GetCounts returns the Counts field if non-nil, zero value otherwise.
-
-### GetCountsOk
-
-`func (o *InlineResponse200437Items) GetCountsOk() (*InlineResponse200437Counts, bool)`
-
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCounts
-
-`func (o *InlineResponse200437Items) SetCounts(v InlineResponse200437Counts)`
-
-SetCounts sets Counts field to given value.
-
-### HasCounts
-
-`func (o *InlineResponse200437Items) HasCounts() bool`
-
-HasCounts returns a boolean if a field has been set.
+HasAdaptivePolicyGroupId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,18 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Comment** | Pointer to **string** | Description of the rule (optional) | [optional] 
-**Policy** | **string** | &#39;allow&#39; or &#39;deny&#39; traffic specified by this rule | 
-**IpVer** | Pointer to **string** | IP version to which this rule applies (must be one of &#39;both&#39;, &#39;ipv4&#39; or &#39;ipv6&#39;). Defaults to &#39;both&#39; if not specified. | [optional] 
-**Protocol** | **string** | The type of protocol (must be &#39;tcp&#39;, &#39;udp&#39;, &#39;icmp&#39;, &#39;icmp6&#39; or &#39;any&#39;) | 
-**DestPort** | Pointer to **string** | Comma-separated list of destination port(s) (integer in the range 1-65535), or &#39;any&#39; | [optional] 
-**DestCidr** | **string** | Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or &#39;any&#39; | 
+**Description** | Pointer to **string** | Desctiption of the bonjour forwarding rule | [optional] 
+**VlanId** | Pointer to **string** | The ID of the service VLAN. Required | [optional] 
+**Services** | Pointer to **[]string** | A list of Bonjour services. At least one service must be specified. Available services are &#39;All Services&#39;, &#39;AFP&#39;, &#39;AirPlay&#39;, &#39;Apple screen share&#39;, &#39;BitTorrent&#39;, &#39;Chromecast&#39;, &#39;FTP&#39;, &#39;iChat&#39;, &#39;iTunes&#39;, &#39;Printers&#39;, &#39;Samba&#39;, &#39;Scanners&#39;, &#39;Spotify&#39; and &#39;SSH&#39; | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200252Rules
 
-`func NewInlineResponse200252Rules(policy string, protocol string, destCidr string, ) *InlineResponse200252Rules`
+`func NewInlineResponse200252Rules() *InlineResponse200252Rules`
 
 NewInlineResponse200252Rules instantiates a new InlineResponse200252Rules object
 This constructor will assign default values to properties that have it defined,
@@ -30,140 +27,80 @@ NewInlineResponse200252RulesWithDefaults instantiates a new InlineResponse200252
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetComment
+### GetDescription
 
-`func (o *InlineResponse200252Rules) GetComment() string`
+`func (o *InlineResponse200252Rules) GetDescription() string`
 
-GetComment returns the Comment field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetCommentOk
+### GetDescriptionOk
 
-`func (o *InlineResponse200252Rules) GetCommentOk() (*string, bool)`
+`func (o *InlineResponse200252Rules) GetDescriptionOk() (*string, bool)`
 
-GetCommentOk returns a tuple with the Comment field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetComment
+### SetDescription
 
-`func (o *InlineResponse200252Rules) SetComment(v string)`
+`func (o *InlineResponse200252Rules) SetDescription(v string)`
 
-SetComment sets Comment field to given value.
+SetDescription sets Description field to given value.
 
-### HasComment
+### HasDescription
 
-`func (o *InlineResponse200252Rules) HasComment() bool`
+`func (o *InlineResponse200252Rules) HasDescription() bool`
 
-HasComment returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetPolicy
+### GetVlanId
 
-`func (o *InlineResponse200252Rules) GetPolicy() string`
+`func (o *InlineResponse200252Rules) GetVlanId() string`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-### GetPolicyOk
+### GetVlanIdOk
 
-`func (o *InlineResponse200252Rules) GetPolicyOk() (*string, bool)`
+`func (o *InlineResponse200252Rules) GetVlanIdOk() (*string, bool)`
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetVlanId
 
-`func (o *InlineResponse200252Rules) SetPolicy(v string)`
+`func (o *InlineResponse200252Rules) SetVlanId(v string)`
 
-SetPolicy sets Policy field to given value.
+SetVlanId sets VlanId field to given value.
 
+### HasVlanId
 
-### GetIpVer
+`func (o *InlineResponse200252Rules) HasVlanId() bool`
 
-`func (o *InlineResponse200252Rules) GetIpVer() string`
+HasVlanId returns a boolean if a field has been set.
 
-GetIpVer returns the IpVer field if non-nil, zero value otherwise.
+### GetServices
 
-### GetIpVerOk
+`func (o *InlineResponse200252Rules) GetServices() []string`
 
-`func (o *InlineResponse200252Rules) GetIpVerOk() (*string, bool)`
+GetServices returns the Services field if non-nil, zero value otherwise.
 
-GetIpVerOk returns a tuple with the IpVer field if it's non-nil, zero value otherwise
+### GetServicesOk
+
+`func (o *InlineResponse200252Rules) GetServicesOk() (*[]string, bool)`
+
+GetServicesOk returns a tuple with the Services field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpVer
+### SetServices
 
-`func (o *InlineResponse200252Rules) SetIpVer(v string)`
+`func (o *InlineResponse200252Rules) SetServices(v []string)`
 
-SetIpVer sets IpVer field to given value.
+SetServices sets Services field to given value.
 
-### HasIpVer
+### HasServices
 
-`func (o *InlineResponse200252Rules) HasIpVer() bool`
+`func (o *InlineResponse200252Rules) HasServices() bool`
 
-HasIpVer returns a boolean if a field has been set.
-
-### GetProtocol
-
-`func (o *InlineResponse200252Rules) GetProtocol() string`
-
-GetProtocol returns the Protocol field if non-nil, zero value otherwise.
-
-### GetProtocolOk
-
-`func (o *InlineResponse200252Rules) GetProtocolOk() (*string, bool)`
-
-GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProtocol
-
-`func (o *InlineResponse200252Rules) SetProtocol(v string)`
-
-SetProtocol sets Protocol field to given value.
-
-
-### GetDestPort
-
-`func (o *InlineResponse200252Rules) GetDestPort() string`
-
-GetDestPort returns the DestPort field if non-nil, zero value otherwise.
-
-### GetDestPortOk
-
-`func (o *InlineResponse200252Rules) GetDestPortOk() (*string, bool)`
-
-GetDestPortOk returns a tuple with the DestPort field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDestPort
-
-`func (o *InlineResponse200252Rules) SetDestPort(v string)`
-
-SetDestPort sets DestPort field to given value.
-
-### HasDestPort
-
-`func (o *InlineResponse200252Rules) HasDestPort() bool`
-
-HasDestPort returns a boolean if a field has been set.
-
-### GetDestCidr
-
-`func (o *InlineResponse200252Rules) GetDestCidr() string`
-
-GetDestCidr returns the DestCidr field if non-nil, zero value otherwise.
-
-### GetDestCidrOk
-
-`func (o *InlineResponse200252Rules) GetDestCidrOk() (*string, bool)`
-
-GetDestCidrOk returns a tuple with the DestCidr field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDestCidr
-
-`func (o *InlineResponse200252Rules) SetDestCidr(v string)`
-
-SetDestCidr sets DestCidr field to given value.
-
+HasServices returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

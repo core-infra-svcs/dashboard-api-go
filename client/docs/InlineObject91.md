@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**NetworksNetworkIdApplianceUmbrellaPoliciesRemovePolicy**](NetworksNetworkIdApplianceUmbrellaPoliciesRemovePolicy.md) |  | 
+**Api** | [**NetworksNetworkIdApplianceUmbrellaAccountConnectApi**](NetworksNetworkIdApplianceUmbrellaAccountConnectApi.md) |  | 
 
 ## Methods
 
 ### NewInlineObject91
 
-`func NewInlineObject91(policy NetworksNetworkIdApplianceUmbrellaPoliciesRemovePolicy, ) *InlineObject91`
+`func NewInlineObject91(api NetworksNetworkIdApplianceUmbrellaAccountConnectApi, ) *InlineObject91`
 
 NewInlineObject91 instantiates a new InlineObject91 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject91WithDefaults instantiates a new InlineObject91 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPolicy
+### GetApi
 
-`func (o *InlineObject91) GetPolicy() NetworksNetworkIdApplianceUmbrellaPoliciesRemovePolicy`
+`func (o *InlineObject91) GetApi() NetworksNetworkIdApplianceUmbrellaAccountConnectApi`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+GetApi returns the Api field if non-nil, zero value otherwise.
 
-### GetPolicyOk
+### GetApiOk
 
-`func (o *InlineObject91) GetPolicyOk() (*NetworksNetworkIdApplianceUmbrellaPoliciesRemovePolicy, bool)`
+`func (o *InlineObject91) GetApiOk() (*NetworksNetworkIdApplianceUmbrellaAccountConnectApi, bool)`
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetApi
 
-`func (o *InlineObject91) SetPolicy(v NetworksNetworkIdApplianceUmbrellaPoliciesRemovePolicy)`
+`func (o *InlineObject91) SetApi(v NetworksNetworkIdApplianceUmbrellaAccountConnectApi)`
 
-SetPolicy sets Policy field to given value.
+SetApi sets Api field to given value.
 
 
 

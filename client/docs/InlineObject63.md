@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | [**[]NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules**](NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules.md) | An array of 1:1 nat rules | 
+**Rules** | [**[]NetworksNetworkIdApplianceFirewallMulticastForwardingRules**](NetworksNetworkIdApplianceFirewallMulticastForwardingRules.md) | Static multicast forwarding rules. Pass an empty array to clear all rules. | 
 
 ## Methods
 
 ### NewInlineObject63
 
-`func NewInlineObject63(rules []NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules, ) *InlineObject63`
+`func NewInlineObject63(rules []NetworksNetworkIdApplianceFirewallMulticastForwardingRules, ) *InlineObject63`
 
 NewInlineObject63 instantiates a new InlineObject63 object
 This constructor will assign default values to properties that have it defined,
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetRules
 
-`func (o *InlineObject63) GetRules() []NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules`
+`func (o *InlineObject63) GetRules() []NetworksNetworkIdApplianceFirewallMulticastForwardingRules`
 
 GetRules returns the Rules field if non-nil, zero value otherwise.
 
 ### GetRulesOk
 
-`func (o *InlineObject63) GetRulesOk() (*[]NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules, bool)`
+`func (o *InlineObject63) GetRulesOk() (*[]NetworksNetworkIdApplianceFirewallMulticastForwardingRules, bool)`
 
 GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRules
 
-`func (o *InlineObject63) SetRules(v []NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules)`
+`func (o *InlineObject63) SetRules(v []NetworksNetworkIdApplianceFirewallMulticastForwardingRules)`
 
 SetRules sets Rules field to given value.
 

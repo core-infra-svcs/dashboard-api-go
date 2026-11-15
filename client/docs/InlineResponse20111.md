@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LookupId** | Pointer to **string** | Id of the route table lookup request. Used to check the status of the request. | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your routing table lookup request. | [optional] 
+**JobId** | Pointer to **string** | ID of the route details request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this URL to check the status of your route details request. | [optional] 
 **Request** | Pointer to [**InlineResponse20111Request**](InlineResponse20111Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the routing table lookup request. | [optional] 
+**Status** | Pointer to **string** | Status of the route details request. | [optional] 
 **Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
 
 ## Methods
@@ -29,30 +29,30 @@ NewInlineResponse20111WithDefaults instantiates a new InlineResponse20111 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLookupId
+### GetJobId
 
-`func (o *InlineResponse20111) GetLookupId() string`
+`func (o *InlineResponse20111) GetJobId() string`
 
-GetLookupId returns the LookupId field if non-nil, zero value otherwise.
+GetJobId returns the JobId field if non-nil, zero value otherwise.
 
-### GetLookupIdOk
+### GetJobIdOk
 
-`func (o *InlineResponse20111) GetLookupIdOk() (*string, bool)`
+`func (o *InlineResponse20111) GetJobIdOk() (*string, bool)`
 
-GetLookupIdOk returns a tuple with the LookupId field if it's non-nil, zero value otherwise
+GetJobIdOk returns a tuple with the JobId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLookupId
+### SetJobId
 
-`func (o *InlineResponse20111) SetLookupId(v string)`
+`func (o *InlineResponse20111) SetJobId(v string)`
 
-SetLookupId sets LookupId field to given value.
+SetJobId sets JobId field to given value.
 
-### HasLookupId
+### HasJobId
 
-`func (o *InlineResponse20111) HasLookupId() bool`
+`func (o *InlineResponse20111) HasJobId() bool`
 
-HasLookupId returns a boolean if a field has been set.
+HasJobId returns a boolean if a field has been set.
 
 ### GetUrl
 

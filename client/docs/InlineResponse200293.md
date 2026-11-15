@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200293Items**](InlineResponse200293Items.md) | Combined list of intrusion and base policies | [optional] 
+**Items** | Pointer to [**[]InlineResponse200293Items**](InlineResponse200293Items.md) | Packet counter overviews per Secure Router | [optional] 
 **Meta** | Pointer to [**InlineResponse200293Meta**](InlineResponse200293Meta.md) |  | [optional] 
 
 ## Methods

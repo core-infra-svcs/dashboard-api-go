@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200375Items**](InlineResponse200375Items.md) | List of packet capture files | [optional] 
+**Items** | Pointer to [**[]InlineResponse200375Items**](InlineResponse200375Items.md) | List of Cellular Data Management Profile device assignments. Maximum 1000 assignments per page. | [optional] 
 **Meta** | Pointer to [**InlineResponse200375Meta**](InlineResponse200375Meta.md) |  | [optional] 
 
 ## Methods

@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, OpenRoaming is enabled on the SSID. | [optional] 
-**TenantId** | Pointer to **string** | The OpenRoaming DNA Spaces tenant ID. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200256Rules**](InlineResponse200256Rules.md) | An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule). | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200256WithDefaults instantiates a new InlineResponse200256 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetRules
 
-`func (o *InlineResponse200256) GetEnabled() bool`
+`func (o *InlineResponse200256) GetRules() []InlineResponse200256Rules`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetRulesOk
 
-`func (o *InlineResponse200256) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200256) GetRulesOk() (*[]InlineResponse200256Rules, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetRules
 
-`func (o *InlineResponse200256) SetEnabled(v bool)`
+`func (o *InlineResponse200256) SetRules(v []InlineResponse200256Rules)`
 
-SetEnabled sets Enabled field to given value.
+SetRules sets Rules field to given value.
 
-### HasEnabled
+### HasRules
 
-`func (o *InlineResponse200256) HasEnabled() bool`
+`func (o *InlineResponse200256) HasRules() bool`
 
-HasEnabled returns a boolean if a field has been set.
-
-### GetTenantId
-
-`func (o *InlineResponse200256) GetTenantId() string`
-
-GetTenantId returns the TenantId field if non-nil, zero value otherwise.
-
-### GetTenantIdOk
-
-`func (o *InlineResponse200256) GetTenantIdOk() (*string, bool)`
-
-GetTenantIdOk returns a tuple with the TenantId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTenantId
-
-`func (o *InlineResponse200256) SetTenantId(v string)`
-
-SetTenantId sets TenantId field to given value.
-
-### HasTenantId
-
-`func (o *InlineResponse200256) HasTenantId() bool`
-
-HasTenantId returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,12 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Dashboard network ID | [optional] 
-**Name** | Pointer to **string** | Dashboard network name | [optional] 
-**Enabled** | Pointer to **bool** | Is warm spare enabled | [optional] 
-**Mode** | Pointer to **string** | HA mode (disabled|active-passive|active-active) | [optional] 
-**Designations** | Pointer to [**[]InlineResponse20073Designations**](InlineResponse20073Designations.md) | Ordered HA roles (1&#x3D;primary, 2&#x3D;spare) | [optional] 
-**Uplink** | Pointer to [**InlineResponse20073Uplink**](InlineResponse20073Uplink.md) |  | [optional] 
+**AllowedUrlPatterns** | Pointer to **[]string** | A list of URL patterns that are allowed | [optional] 
+**BlockedUrlPatterns** | Pointer to **[]string** | A list of URL patterns that are blocked | [optional] 
+**BlockedUrlCategories** | Pointer to [**[]InlineResponse20073BlockedUrlCategories**](InlineResponse20073BlockedUrlCategories.md) | A list of URL categories to block | [optional] 
+**UrlCategoryListSize** | Pointer to **string** | URL category list size which is either &#39;topSites&#39; or &#39;fullList&#39; | [optional] 
 
 ## Methods
 
@@ -30,155 +28,105 @@ NewInlineResponse20073WithDefaults instantiates a new InlineResponse20073 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetAllowedUrlPatterns
 
-`func (o *InlineResponse20073) GetNetworkId() string`
+`func (o *InlineResponse20073) GetAllowedUrlPatterns() []string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetAllowedUrlPatterns returns the AllowedUrlPatterns field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetAllowedUrlPatternsOk
 
-`func (o *InlineResponse20073) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse20073) GetAllowedUrlPatternsOk() (*[]string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetAllowedUrlPatternsOk returns a tuple with the AllowedUrlPatterns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetAllowedUrlPatterns
 
-`func (o *InlineResponse20073) SetNetworkId(v string)`
+`func (o *InlineResponse20073) SetAllowedUrlPatterns(v []string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetAllowedUrlPatterns sets AllowedUrlPatterns field to given value.
 
-### HasNetworkId
+### HasAllowedUrlPatterns
 
-`func (o *InlineResponse20073) HasNetworkId() bool`
+`func (o *InlineResponse20073) HasAllowedUrlPatterns() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasAllowedUrlPatterns returns a boolean if a field has been set.
 
-### GetName
+### GetBlockedUrlPatterns
 
-`func (o *InlineResponse20073) GetName() string`
+`func (o *InlineResponse20073) GetBlockedUrlPatterns() []string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetBlockedUrlPatterns returns the BlockedUrlPatterns field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetBlockedUrlPatternsOk
 
-`func (o *InlineResponse20073) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20073) GetBlockedUrlPatternsOk() (*[]string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetBlockedUrlPatternsOk returns a tuple with the BlockedUrlPatterns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetBlockedUrlPatterns
 
-`func (o *InlineResponse20073) SetName(v string)`
+`func (o *InlineResponse20073) SetBlockedUrlPatterns(v []string)`
 
-SetName sets Name field to given value.
+SetBlockedUrlPatterns sets BlockedUrlPatterns field to given value.
 
-### HasName
+### HasBlockedUrlPatterns
 
-`func (o *InlineResponse20073) HasName() bool`
+`func (o *InlineResponse20073) HasBlockedUrlPatterns() bool`
 
-HasName returns a boolean if a field has been set.
+HasBlockedUrlPatterns returns a boolean if a field has been set.
 
-### GetEnabled
+### GetBlockedUrlCategories
 
-`func (o *InlineResponse20073) GetEnabled() bool`
+`func (o *InlineResponse20073) GetBlockedUrlCategories() []InlineResponse20073BlockedUrlCategories`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetBlockedUrlCategories returns the BlockedUrlCategories field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetBlockedUrlCategoriesOk
 
-`func (o *InlineResponse20073) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20073) GetBlockedUrlCategoriesOk() (*[]InlineResponse20073BlockedUrlCategories, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetBlockedUrlCategoriesOk returns a tuple with the BlockedUrlCategories field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetBlockedUrlCategories
 
-`func (o *InlineResponse20073) SetEnabled(v bool)`
+`func (o *InlineResponse20073) SetBlockedUrlCategories(v []InlineResponse20073BlockedUrlCategories)`
 
-SetEnabled sets Enabled field to given value.
+SetBlockedUrlCategories sets BlockedUrlCategories field to given value.
 
-### HasEnabled
+### HasBlockedUrlCategories
 
-`func (o *InlineResponse20073) HasEnabled() bool`
+`func (o *InlineResponse20073) HasBlockedUrlCategories() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasBlockedUrlCategories returns a boolean if a field has been set.
 
-### GetMode
+### GetUrlCategoryListSize
 
-`func (o *InlineResponse20073) GetMode() string`
+`func (o *InlineResponse20073) GetUrlCategoryListSize() string`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetUrlCategoryListSize returns the UrlCategoryListSize field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetUrlCategoryListSizeOk
 
-`func (o *InlineResponse20073) GetModeOk() (*string, bool)`
+`func (o *InlineResponse20073) GetUrlCategoryListSizeOk() (*string, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetUrlCategoryListSizeOk returns a tuple with the UrlCategoryListSize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetUrlCategoryListSize
 
-`func (o *InlineResponse20073) SetMode(v string)`
+`func (o *InlineResponse20073) SetUrlCategoryListSize(v string)`
 
-SetMode sets Mode field to given value.
+SetUrlCategoryListSize sets UrlCategoryListSize field to given value.
 
-### HasMode
+### HasUrlCategoryListSize
 
-`func (o *InlineResponse20073) HasMode() bool`
+`func (o *InlineResponse20073) HasUrlCategoryListSize() bool`
 
-HasMode returns a boolean if a field has been set.
-
-### GetDesignations
-
-`func (o *InlineResponse20073) GetDesignations() []InlineResponse20073Designations`
-
-GetDesignations returns the Designations field if non-nil, zero value otherwise.
-
-### GetDesignationsOk
-
-`func (o *InlineResponse20073) GetDesignationsOk() (*[]InlineResponse20073Designations, bool)`
-
-GetDesignationsOk returns a tuple with the Designations field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDesignations
-
-`func (o *InlineResponse20073) SetDesignations(v []InlineResponse20073Designations)`
-
-SetDesignations sets Designations field to given value.
-
-### HasDesignations
-
-`func (o *InlineResponse20073) HasDesignations() bool`
-
-HasDesignations returns a boolean if a field has been set.
-
-### GetUplink
-
-`func (o *InlineResponse20073) GetUplink() InlineResponse20073Uplink`
-
-GetUplink returns the Uplink field if non-nil, zero value otherwise.
-
-### GetUplinkOk
-
-`func (o *InlineResponse20073) GetUplinkOk() (*InlineResponse20073Uplink, bool)`
-
-GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUplink
-
-`func (o *InlineResponse20073) SetUplink(v InlineResponse20073Uplink)`
-
-SetUplink sets Uplink field to given value.
-
-### HasUplink
-
-`func (o *InlineResponse20073) HasUplink() bool`
-
-HasUplink returns a boolean if a field has been set.
+HasUrlCategoryListSize returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BrandingPolicyIds** | Pointer to **[]string** |       An ordered list of branding policy IDs that determines the priority order of how to apply the policies  | [optional] 
+**Name** | **string** | Name of the alert profile | 
+**NetworkIds** | **[]string** | Networks associated with this alert profile | 
+**AlertTypes** | **[]string** | Alert types associated with this alert profile | 
+**AlertScheduleId** | Pointer to **NullableString** | ID of the alert schedule associated with this profile | [optional] 
+**Configuration** | [**OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration**](OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration.md) |  | 
 
 ## Methods
 
 ### NewInlineObject278
 
-`func NewInlineObject278() *InlineObject278`
+`func NewInlineObject278(name string, networkIds []string, alertTypes []string, configuration OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration, ) *InlineObject278`
 
 NewInlineObject278 instantiates a new InlineObject278 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +29,120 @@ NewInlineObject278WithDefaults instantiates a new InlineObject278 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBrandingPolicyIds
+### GetName
 
-`func (o *InlineObject278) GetBrandingPolicyIds() []string`
+`func (o *InlineObject278) GetName() string`
 
-GetBrandingPolicyIds returns the BrandingPolicyIds field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetBrandingPolicyIdsOk
+### GetNameOk
 
-`func (o *InlineObject278) GetBrandingPolicyIdsOk() (*[]string, bool)`
+`func (o *InlineObject278) GetNameOk() (*string, bool)`
 
-GetBrandingPolicyIdsOk returns a tuple with the BrandingPolicyIds field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBrandingPolicyIds
+### SetName
 
-`func (o *InlineObject278) SetBrandingPolicyIds(v []string)`
+`func (o *InlineObject278) SetName(v string)`
 
-SetBrandingPolicyIds sets BrandingPolicyIds field to given value.
+SetName sets Name field to given value.
 
-### HasBrandingPolicyIds
 
-`func (o *InlineObject278) HasBrandingPolicyIds() bool`
+### GetNetworkIds
 
-HasBrandingPolicyIds returns a boolean if a field has been set.
+`func (o *InlineObject278) GetNetworkIds() []string`
+
+GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+
+### GetNetworkIdsOk
+
+`func (o *InlineObject278) GetNetworkIdsOk() (*[]string, bool)`
+
+GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkIds
+
+`func (o *InlineObject278) SetNetworkIds(v []string)`
+
+SetNetworkIds sets NetworkIds field to given value.
+
+
+### GetAlertTypes
+
+`func (o *InlineObject278) GetAlertTypes() []string`
+
+GetAlertTypes returns the AlertTypes field if non-nil, zero value otherwise.
+
+### GetAlertTypesOk
+
+`func (o *InlineObject278) GetAlertTypesOk() (*[]string, bool)`
+
+GetAlertTypesOk returns a tuple with the AlertTypes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAlertTypes
+
+`func (o *InlineObject278) SetAlertTypes(v []string)`
+
+SetAlertTypes sets AlertTypes field to given value.
+
+
+### GetAlertScheduleId
+
+`func (o *InlineObject278) GetAlertScheduleId() string`
+
+GetAlertScheduleId returns the AlertScheduleId field if non-nil, zero value otherwise.
+
+### GetAlertScheduleIdOk
+
+`func (o *InlineObject278) GetAlertScheduleIdOk() (*string, bool)`
+
+GetAlertScheduleIdOk returns a tuple with the AlertScheduleId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAlertScheduleId
+
+`func (o *InlineObject278) SetAlertScheduleId(v string)`
+
+SetAlertScheduleId sets AlertScheduleId field to given value.
+
+### HasAlertScheduleId
+
+`func (o *InlineObject278) HasAlertScheduleId() bool`
+
+HasAlertScheduleId returns a boolean if a field has been set.
+
+### SetAlertScheduleIdNil
+
+`func (o *InlineObject278) SetAlertScheduleIdNil(b bool)`
+
+ SetAlertScheduleIdNil sets the value for AlertScheduleId to be an explicit nil
+
+### UnsetAlertScheduleId
+`func (o *InlineObject278) UnsetAlertScheduleId()`
+
+UnsetAlertScheduleId ensures that no value is present for AlertScheduleId, not even an explicit nil
+### GetConfiguration
+
+`func (o *InlineObject278) GetConfiguration() OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration`
+
+GetConfiguration returns the Configuration field if non-nil, zero value otherwise.
+
+### GetConfigurationOk
+
+`func (o *InlineObject278) GetConfigurationOk() (*OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration, bool)`
+
+GetConfigurationOk returns a tuple with the Configuration field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetConfiguration
+
+`func (o *InlineObject278) SetConfiguration(v OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration)`
+
+SetConfiguration sets Configuration field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

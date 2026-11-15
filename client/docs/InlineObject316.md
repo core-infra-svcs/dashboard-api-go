@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Swaps** | [**[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps**](OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps.md) | List of replacments to perform | 
+**ScheduleId** | **string** | Delete the capture schedules of the specified capture schedule id | 
 
 ## Methods
 
 ### NewInlineObject316
 
-`func NewInlineObject316(swaps []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, ) *InlineObject316`
+`func NewInlineObject316(scheduleId string, ) *InlineObject316`
 
 NewInlineObject316 instantiates a new InlineObject316 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject316WithDefaults instantiates a new InlineObject316 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwaps
+### GetScheduleId
 
-`func (o *InlineObject316) GetSwaps() []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps`
+`func (o *InlineObject316) GetScheduleId() string`
 
-GetSwaps returns the Swaps field if non-nil, zero value otherwise.
+GetScheduleId returns the ScheduleId field if non-nil, zero value otherwise.
 
-### GetSwapsOk
+### GetScheduleIdOk
 
-`func (o *InlineObject316) GetSwapsOk() (*[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, bool)`
+`func (o *InlineObject316) GetScheduleIdOk() (*string, bool)`
 
-GetSwapsOk returns a tuple with the Swaps field if it's non-nil, zero value otherwise
+GetScheduleIdOk returns a tuple with the ScheduleId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwaps
+### SetScheduleId
 
-`func (o *InlineObject316) SetSwaps(v []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps)`
+`func (o *InlineObject316) SetScheduleId(v string)`
 
-SetSwaps sets Swaps field to given value.
+SetScheduleId sets ScheduleId field to given value.
 
 
 

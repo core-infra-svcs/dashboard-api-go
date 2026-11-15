@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Total** | Pointer to **int32** | Total number of policies available | [optional] 
-**Remaining** | Pointer to **int32** | Number of policies remaining on subsequent pages | [optional] 
+**Total** | Pointer to **int32** | Total number of devices matching the query | [optional] 
+**Remaining** | Pointer to **int32** | Remaining number of devices beyond this page | [optional] 
 
 ## Methods
 

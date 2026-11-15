@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the new profile. Must be unique. This param is required on creation. | 
-**TwoFourGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesTwoFourGhzSettings**](NetworksNetworkIdApplianceRfProfilesTwoFourGhzSettings.md) |  | [optional] 
-**FiveGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesFiveGhzSettings**](NetworksNetworkIdApplianceRfProfilesFiveGhzSettings.md) |  | [optional] 
-**PerSsidSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesPerSsidSettings**](NetworksNetworkIdApplianceRfProfilesPerSsidSettings.md) |  | [optional] 
+**Prefix** | **string** | A static IPv6 prefix | 
+**Origin** | [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1.md) |  | 
+**Description** | Pointer to **string** | A name or description for the prefix | [optional] 
 
 ## Methods
 
 ### NewInlineObject71
 
-`func NewInlineObject71(name string, ) *InlineObject71`
+`func NewInlineObject71(prefix string, origin NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1, ) *InlineObject71`
 
 NewInlineObject71 instantiates a new InlineObject71 object
 This constructor will assign default values to properties that have it defined,
@@ -28,100 +27,70 @@ NewInlineObject71WithDefaults instantiates a new InlineObject71 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetPrefix
 
-`func (o *InlineObject71) GetName() string`
+`func (o *InlineObject71) GetPrefix() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetPrefix returns the Prefix field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetPrefixOk
 
-`func (o *InlineObject71) GetNameOk() (*string, bool)`
+`func (o *InlineObject71) GetPrefixOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetPrefixOk returns a tuple with the Prefix field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetPrefix
 
-`func (o *InlineObject71) SetName(v string)`
+`func (o *InlineObject71) SetPrefix(v string)`
 
-SetName sets Name field to given value.
+SetPrefix sets Prefix field to given value.
 
 
-### GetTwoFourGhzSettings
+### GetOrigin
 
-`func (o *InlineObject71) GetTwoFourGhzSettings() NetworksNetworkIdApplianceRfProfilesTwoFourGhzSettings`
+`func (o *InlineObject71) GetOrigin() NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1`
 
-GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
+GetOrigin returns the Origin field if non-nil, zero value otherwise.
 
-### GetTwoFourGhzSettingsOk
+### GetOriginOk
 
-`func (o *InlineObject71) GetTwoFourGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesTwoFourGhzSettings, bool)`
+`func (o *InlineObject71) GetOriginOk() (*NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1, bool)`
 
-GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
+GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTwoFourGhzSettings
+### SetOrigin
 
-`func (o *InlineObject71) SetTwoFourGhzSettings(v NetworksNetworkIdApplianceRfProfilesTwoFourGhzSettings)`
+`func (o *InlineObject71) SetOrigin(v NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1)`
 
-SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
+SetOrigin sets Origin field to given value.
 
-### HasTwoFourGhzSettings
 
-`func (o *InlineObject71) HasTwoFourGhzSettings() bool`
+### GetDescription
 
-HasTwoFourGhzSettings returns a boolean if a field has been set.
+`func (o *InlineObject71) GetDescription() string`
 
-### GetFiveGhzSettings
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-`func (o *InlineObject71) GetFiveGhzSettings() NetworksNetworkIdApplianceRfProfilesFiveGhzSettings`
+### GetDescriptionOk
 
-GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
+`func (o *InlineObject71) GetDescriptionOk() (*string, bool)`
 
-### GetFiveGhzSettingsOk
-
-`func (o *InlineObject71) GetFiveGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesFiveGhzSettings, bool)`
-
-GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFiveGhzSettings
+### SetDescription
 
-`func (o *InlineObject71) SetFiveGhzSettings(v NetworksNetworkIdApplianceRfProfilesFiveGhzSettings)`
+`func (o *InlineObject71) SetDescription(v string)`
 
-SetFiveGhzSettings sets FiveGhzSettings field to given value.
+SetDescription sets Description field to given value.
 
-### HasFiveGhzSettings
+### HasDescription
 
-`func (o *InlineObject71) HasFiveGhzSettings() bool`
+`func (o *InlineObject71) HasDescription() bool`
 
-HasFiveGhzSettings returns a boolean if a field has been set.
-
-### GetPerSsidSettings
-
-`func (o *InlineObject71) GetPerSsidSettings() NetworksNetworkIdApplianceRfProfilesPerSsidSettings`
-
-GetPerSsidSettings returns the PerSsidSettings field if non-nil, zero value otherwise.
-
-### GetPerSsidSettingsOk
-
-`func (o *InlineObject71) GetPerSsidSettingsOk() (*NetworksNetworkIdApplianceRfProfilesPerSsidSettings, bool)`
-
-GetPerSsidSettingsOk returns a tuple with the PerSsidSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPerSsidSettings
-
-`func (o *InlineObject71) SetPerSsidSettings(v NetworksNetworkIdApplianceRfProfilesPerSsidSettings)`
-
-SetPerSsidSettings sets PerSsidSettings field to given value.
-
-### HasPerSsidSettings
-
-`func (o *InlineObject71) HasPerSsidSettings() bool`
-
-HasPerSsidSettings returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

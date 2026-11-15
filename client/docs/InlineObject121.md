@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Products** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedEventsProducts**](NetworksNetworkIdFirmwareUpgradesStagedEventsProducts.md) |  | [optional] 
-**Stages** | [**[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages**](NetworksNetworkIdFirmwareUpgradesStagedEventsStages.md) | All firmware upgrade stages in the network with their start time. | 
+**Servers** | [**[]NetworksNetworkIdDevicesSyslogServersServers**](NetworksNetworkIdDevicesSyslogServersServers.md) | A list of the syslog servers for this network; suggested maximum array size is 10 | 
 
 ## Methods
 
 ### NewInlineObject121
 
-`func NewInlineObject121(stages []NetworksNetworkIdFirmwareUpgradesStagedEventsStages, ) *InlineObject121`
+`func NewInlineObject121(servers []NetworksNetworkIdDevicesSyslogServersServers, ) *InlineObject121`
 
 NewInlineObject121 instantiates a new InlineObject121 object
 This constructor will assign default values to properties that have it defined,
@@ -26,49 +25,24 @@ NewInlineObject121WithDefaults instantiates a new InlineObject121 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProducts
+### GetServers
 
-`func (o *InlineObject121) GetProducts() NetworksNetworkIdFirmwareUpgradesStagedEventsProducts`
+`func (o *InlineObject121) GetServers() []NetworksNetworkIdDevicesSyslogServersServers`
 
-GetProducts returns the Products field if non-nil, zero value otherwise.
+GetServers returns the Servers field if non-nil, zero value otherwise.
 
-### GetProductsOk
+### GetServersOk
 
-`func (o *InlineObject121) GetProductsOk() (*NetworksNetworkIdFirmwareUpgradesStagedEventsProducts, bool)`
+`func (o *InlineObject121) GetServersOk() (*[]NetworksNetworkIdDevicesSyslogServersServers, bool)`
 
-GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
+GetServersOk returns a tuple with the Servers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProducts
+### SetServers
 
-`func (o *InlineObject121) SetProducts(v NetworksNetworkIdFirmwareUpgradesStagedEventsProducts)`
+`func (o *InlineObject121) SetServers(v []NetworksNetworkIdDevicesSyslogServersServers)`
 
-SetProducts sets Products field to given value.
-
-### HasProducts
-
-`func (o *InlineObject121) HasProducts() bool`
-
-HasProducts returns a boolean if a field has been set.
-
-### GetStages
-
-`func (o *InlineObject121) GetStages() []NetworksNetworkIdFirmwareUpgradesStagedEventsStages`
-
-GetStages returns the Stages field if non-nil, zero value otherwise.
-
-### GetStagesOk
-
-`func (o *InlineObject121) GetStagesOk() (*[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages, bool)`
-
-GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStages
-
-`func (o *InlineObject121) SetStages(v []NetworksNetworkIdFirmwareUpgradesStagedEventsStages)`
-
-SetStages sets Stages field to given value.
+SetServers sets Servers field to given value.
 
 
 

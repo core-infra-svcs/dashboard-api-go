@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkIds** | **[]string** | A list of network IDs to add to the network group | 
+**LicenseIdToRenew** | **string** | The ID of the SM license to renew. This license must already be assigned to an SM network | 
+**UnusedLicenseId** | **string** | The SM license to use to renew the seats on &#39;licenseIdToRenew&#39;. This license must have at least as many seats available as there are seats on &#39;licenseIdToRenew&#39; | 
 
 ## Methods
 
 ### NewInlineObject331
 
-`func NewInlineObject331(networkIds []string, ) *InlineObject331`
+`func NewInlineObject331(licenseIdToRenew string, unusedLicenseId string, ) *InlineObject331`
 
 NewInlineObject331 instantiates a new InlineObject331 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +26,44 @@ NewInlineObject331WithDefaults instantiates a new InlineObject331 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkIds
+### GetLicenseIdToRenew
 
-`func (o *InlineObject331) GetNetworkIds() []string`
+`func (o *InlineObject331) GetLicenseIdToRenew() string`
 
-GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+GetLicenseIdToRenew returns the LicenseIdToRenew field if non-nil, zero value otherwise.
 
-### GetNetworkIdsOk
+### GetLicenseIdToRenewOk
 
-`func (o *InlineObject331) GetNetworkIdsOk() (*[]string, bool)`
+`func (o *InlineObject331) GetLicenseIdToRenewOk() (*string, bool)`
 
-GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+GetLicenseIdToRenewOk returns a tuple with the LicenseIdToRenew field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkIds
+### SetLicenseIdToRenew
 
-`func (o *InlineObject331) SetNetworkIds(v []string)`
+`func (o *InlineObject331) SetLicenseIdToRenew(v string)`
 
-SetNetworkIds sets NetworkIds field to given value.
+SetLicenseIdToRenew sets LicenseIdToRenew field to given value.
+
+
+### GetUnusedLicenseId
+
+`func (o *InlineObject331) GetUnusedLicenseId() string`
+
+GetUnusedLicenseId returns the UnusedLicenseId field if non-nil, zero value otherwise.
+
+### GetUnusedLicenseIdOk
+
+`func (o *InlineObject331) GetUnusedLicenseIdOk() (*string, bool)`
+
+GetUnusedLicenseIdOk returns a tuple with the UnusedLicenseId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUnusedLicenseId
+
+`func (o *InlineObject331) SetUnusedLicenseId(v string)`
+
+SetUnusedLicenseId sets UnusedLicenseId field to given value.
 
 
 

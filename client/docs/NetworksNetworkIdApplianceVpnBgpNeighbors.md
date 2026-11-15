@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **AllowTransit** | Pointer to **bool** | When this feature is on, the Meraki device will advertise routes learned from other Autonomous Systems, thereby allowing traffic between Autonomous Systems to transit this AS. When absent, it defaults to false. | [optional] 
 **EbgpHoldTimer** | **int32** | The eBGP hold timer in seconds for each neighbor. The eBGP hold timer must be an integer between 12 and 240. | 
 **EbgpMultihop** | **int32** | Configure this if the neighbor is not adjacent. The eBGP multi-hop must be an integer between 1 and 255. | 
-**SourceInterface** | Pointer to **string** | The output interface for peering with the remote BGP peer. Valid values are: &#39;wan{NUMBER}&#39; (e.g. &#39;wan3&#39;) or &#39;vlan{VLAN ID}&#39; (e.g. &#39;vlan123&#39;) for MX; &#39;l3lan{ID}&#39; (e.g. &#39;l3lan123&#39;) for Secure Router L3 interfaces. | [optional] 
+**SourceInterface** | Pointer to **string** | The output interface for peering with the remote BGP peer. Valid values are: &#39;wan{NUMBER}&#39; (e.g. &#39;wan3&#39;) or &#39;vlan{VLAN ID}&#39; (e.g. &#39;vlan123&#39;) for MX; &#39;l3lan{ID}&#39; (e.g. &#39;l3lan123&#39;) or an eligible &#39;wan{NUMBER}&#39; for Secure/Catalyst Router. Secure/Catalyst Router WAN interfaces must be enabled, non-cellular uplinks on supported AutoVPN hub networks. NAT and no-NAT uplinks are supported. | [optional] 
 **NextHopIp** | Pointer to **string** | The IPv4 address of the remote BGP peer that will establish a TCP session with the local MX. | [optional] 
 **TtlSecurity** | Pointer to [**NetworksNetworkIdApplianceVpnBgpTtlSecurity**](NetworksNetworkIdApplianceVpnBgpTtlSecurity.md) |  | [optional] 
 **Authentication** | Pointer to [**NetworksNetworkIdApplianceVpnBgpAuthentication**](NetworksNetworkIdApplianceVpnBgpAuthentication.md) |  | [optional] 
@@ -19,9 +19,9 @@ Name | Type | Description | Notes
 **PathPrepend** | Pointer to **[]int32** | Prepends the AS_PATH BGP Attribute associated with routes received from the remote peer. Configurable value of ASNs to prepend. Length of the array may not exceed 10, and each ASN in the array must be an integer between 1 and 4294967295. AS_PATH is 4th in the decision tree when identical routes from multiple peers exist. | [optional] 
 **Weight** | Pointer to **int32** | Sets the local weight for routes received from the remote peer. Routes from peers with higher weights will be preferred. Must be an integer between 0 and 49 for Secure Appliance or between 0 and 65535 for Secure Router. | [optional] 
 **FilterIn** | Pointer to **[]string** | Filters routes received from an eBGP neighbor. Each entry must be an IPv4 CIDR string (e.g., &#39;10.0.0.0/8&#39; or &#39;10.0.0.5/32&#39;). | [optional] 
-**Filter** | Pointer to [**InlineResponse200110Filter**](InlineResponse200110Filter.md) |  | [optional] 
+**Filter** | Pointer to [**InlineResponse200113Filter**](InlineResponse200113Filter.md) |  | [optional] 
 **CommunityOut** | Pointer to **[]string** | List of BGP communities tagged to the routes advertised to an eBGP neighbor. | [optional] 
-**ExplicitOutboundRouteAdvertisement** | Pointer to [**NullableInlineResponse200110ExplicitOutboundRouteAdvertisement**](InlineResponse200110ExplicitOutboundRouteAdvertisement.md) |  | [optional] 
+**ExplicitOutboundRouteAdvertisement** | Pointer to [**NullableInlineResponse200113ExplicitOutboundRouteAdvertisement**](InlineResponse200113ExplicitOutboundRouteAdvertisement.md) |  | [optional] 
 
 ## Methods
 
@@ -404,20 +404,20 @@ HasFilterIn returns a boolean if a field has been set.
 
 ### GetFilter
 
-`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetFilter() InlineResponse200110Filter`
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetFilter() InlineResponse200113Filter`
 
 GetFilter returns the Filter field if non-nil, zero value otherwise.
 
 ### GetFilterOk
 
-`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetFilterOk() (*InlineResponse200110Filter, bool)`
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetFilterOk() (*InlineResponse200113Filter, bool)`
 
 GetFilterOk returns a tuple with the Filter field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFilter
 
-`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) SetFilter(v InlineResponse200110Filter)`
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) SetFilter(v InlineResponse200113Filter)`
 
 SetFilter sets Filter field to given value.
 
@@ -454,20 +454,20 @@ HasCommunityOut returns a boolean if a field has been set.
 
 ### GetExplicitOutboundRouteAdvertisement
 
-`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetExplicitOutboundRouteAdvertisement() InlineResponse200110ExplicitOutboundRouteAdvertisement`
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetExplicitOutboundRouteAdvertisement() InlineResponse200113ExplicitOutboundRouteAdvertisement`
 
 GetExplicitOutboundRouteAdvertisement returns the ExplicitOutboundRouteAdvertisement field if non-nil, zero value otherwise.
 
 ### GetExplicitOutboundRouteAdvertisementOk
 
-`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetExplicitOutboundRouteAdvertisementOk() (*InlineResponse200110ExplicitOutboundRouteAdvertisement, bool)`
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetExplicitOutboundRouteAdvertisementOk() (*InlineResponse200113ExplicitOutboundRouteAdvertisement, bool)`
 
 GetExplicitOutboundRouteAdvertisementOk returns a tuple with the ExplicitOutboundRouteAdvertisement field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetExplicitOutboundRouteAdvertisement
 
-`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) SetExplicitOutboundRouteAdvertisement(v InlineResponse200110ExplicitOutboundRouteAdvertisement)`
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) SetExplicitOutboundRouteAdvertisement(v InlineResponse200113ExplicitOutboundRouteAdvertisement)`
 
 SetExplicitOutboundRouteAdvertisement sets ExplicitOutboundRouteAdvertisement field to given value.
 

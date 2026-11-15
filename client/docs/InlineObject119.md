@@ -4,16 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UpgradeWindow** | Pointer to [**NetworksNetworkIdFirmwareUpgradesUpgradeWindow**](NetworksNetworkIdFirmwareUpgradesUpgradeWindow.md) |  | [optional] 
-**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
-**Products** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProducts**](NetworksNetworkIdFirmwareUpgradesProducts.md) |  | [optional] 
-**FeatureLossAcknowledgements** | Pointer to [**[]NetworksNetworkIdFirmwareUpgradesFeatureLossAcknowledgements**](NetworksNetworkIdFirmwareUpgradesFeatureLossAcknowledgements.md) | Acknowledges the target version has removed certain features that the network is currently using. | [optional] 
+**Size** | **string** | The size of the vMX you claim. It can be one of: small, medium, large, xlarge, 100 | 
 
 ## Methods
 
 ### NewInlineObject119
 
-`func NewInlineObject119() *InlineObject119`
+`func NewInlineObject119(size string, ) *InlineObject119`
 
 NewInlineObject119 instantiates a new InlineObject119 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +25,25 @@ NewInlineObject119WithDefaults instantiates a new InlineObject119 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUpgradeWindow
+### GetSize
 
-`func (o *InlineObject119) GetUpgradeWindow() NetworksNetworkIdFirmwareUpgradesUpgradeWindow`
+`func (o *InlineObject119) GetSize() string`
 
-GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
+GetSize returns the Size field if non-nil, zero value otherwise.
 
-### GetUpgradeWindowOk
+### GetSizeOk
 
-`func (o *InlineObject119) GetUpgradeWindowOk() (*NetworksNetworkIdFirmwareUpgradesUpgradeWindow, bool)`
+`func (o *InlineObject119) GetSizeOk() (*string, bool)`
 
-GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
+GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgradeWindow
+### SetSize
 
-`func (o *InlineObject119) SetUpgradeWindow(v NetworksNetworkIdFirmwareUpgradesUpgradeWindow)`
+`func (o *InlineObject119) SetSize(v string)`
 
-SetUpgradeWindow sets UpgradeWindow field to given value.
+SetSize sets Size field to given value.
 
-### HasUpgradeWindow
-
-`func (o *InlineObject119) HasUpgradeWindow() bool`
-
-HasUpgradeWindow returns a boolean if a field has been set.
-
-### GetTimezone
-
-`func (o *InlineObject119) GetTimezone() string`
-
-GetTimezone returns the Timezone field if non-nil, zero value otherwise.
-
-### GetTimezoneOk
-
-`func (o *InlineObject119) GetTimezoneOk() (*string, bool)`
-
-GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTimezone
-
-`func (o *InlineObject119) SetTimezone(v string)`
-
-SetTimezone sets Timezone field to given value.
-
-### HasTimezone
-
-`func (o *InlineObject119) HasTimezone() bool`
-
-HasTimezone returns a boolean if a field has been set.
-
-### GetProducts
-
-`func (o *InlineObject119) GetProducts() NetworksNetworkIdFirmwareUpgradesProducts`
-
-GetProducts returns the Products field if non-nil, zero value otherwise.
-
-### GetProductsOk
-
-`func (o *InlineObject119) GetProductsOk() (*NetworksNetworkIdFirmwareUpgradesProducts, bool)`
-
-GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProducts
-
-`func (o *InlineObject119) SetProducts(v NetworksNetworkIdFirmwareUpgradesProducts)`
-
-SetProducts sets Products field to given value.
-
-### HasProducts
-
-`func (o *InlineObject119) HasProducts() bool`
-
-HasProducts returns a boolean if a field has been set.
-
-### GetFeatureLossAcknowledgements
-
-`func (o *InlineObject119) GetFeatureLossAcknowledgements() []NetworksNetworkIdFirmwareUpgradesFeatureLossAcknowledgements`
-
-GetFeatureLossAcknowledgements returns the FeatureLossAcknowledgements field if non-nil, zero value otherwise.
-
-### GetFeatureLossAcknowledgementsOk
-
-`func (o *InlineObject119) GetFeatureLossAcknowledgementsOk() (*[]NetworksNetworkIdFirmwareUpgradesFeatureLossAcknowledgements, bool)`
-
-GetFeatureLossAcknowledgementsOk returns a tuple with the FeatureLossAcknowledgements field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFeatureLossAcknowledgements
-
-`func (o *InlineObject119) SetFeatureLossAcknowledgements(v []NetworksNetworkIdFirmwareUpgradesFeatureLossAcknowledgements)`
-
-SetFeatureLossAcknowledgements sets FeatureLossAcknowledgements field to given value.
-
-### HasFeatureLossAcknowledgements
-
-`func (o *InlineObject119) HasFeatureLossAcknowledgements() bool`
-
-HasFeatureLossAcknowledgements returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

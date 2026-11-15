@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of profile | [optional] 
-**Hostnames** | Pointer to **[]string** | The hostname patterns to match for redirection. For more information on Split DNS hostname pattern formatting, please consult the Split DNS KB. | [optional] 
-**Nameservers** | Pointer to [**OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers**](OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers.md) |  | [optional] 
+**Name** | **string** | Name of profile | 
+**Hostnames** | **[]string** | The hostname patterns to match for redirection. For more information on Split DNS hostname pattern formatting, please consult the Split DNS KB. | 
+**Nameservers** | [**OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1**](OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1.md) |  | 
 
 ## Methods
 
 ### NewInlineObject259
 
-`func NewInlineObject259() *InlineObject259`
+`func NewInlineObject259(name string, hostnames []string, nameservers OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1, ) *InlineObject259`
 
 NewInlineObject259 instantiates a new InlineObject259 object
 This constructor will assign default values to properties that have it defined,
@@ -46,11 +46,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject259) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetHostnames
 
@@ -71,36 +66,26 @@ and a boolean to check if the value has been set.
 
 SetHostnames sets Hostnames field to given value.
 
-### HasHostnames
-
-`func (o *InlineObject259) HasHostnames() bool`
-
-HasHostnames returns a boolean if a field has been set.
 
 ### GetNameservers
 
-`func (o *InlineObject259) GetNameservers() OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers`
+`func (o *InlineObject259) GetNameservers() OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1`
 
 GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
 
 ### GetNameserversOk
 
-`func (o *InlineObject259) GetNameserversOk() (*OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers, bool)`
+`func (o *InlineObject259) GetNameserversOk() (*OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1, bool)`
 
 GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNameservers
 
-`func (o *InlineObject259) SetNameservers(v OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers)`
+`func (o *InlineObject259) SetNameservers(v OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1)`
 
 SetNameservers sets Nameservers field to given value.
 
-### HasNameservers
-
-`func (o *InlineObject259) HasNameservers() bool`
-
-HasNameservers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

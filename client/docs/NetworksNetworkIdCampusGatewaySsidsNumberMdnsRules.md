@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Services** | Pointer to **[]string** | Names of the configured services | [optional] 
+**Services** | Pointer to **[]string** | Keys of predefined or custom mDNS services available to this network | [optional] 
 
 ## Methods
 

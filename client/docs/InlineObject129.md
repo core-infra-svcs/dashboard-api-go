@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Devices** | Pointer to [**[]NetworksNetworkIdFloorPlansAutoLocateJobsJobIdPublishDevices**](NetworksNetworkIdFloorPlansAutoLocateJobsJobIdPublishDevices.md) | The list of devices to publish positions for | [optional] 
+**Json** | Pointer to [**[]NetworksNetworkIdFirmwareUpgradesStagedStagesJson**](NetworksNetworkIdFirmwareUpgradesStagedStagesJson.md) | Array of Staged Upgrade Groups | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineObject129WithDefaults instantiates a new InlineObject129 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDevices
+### GetJson
 
-`func (o *InlineObject129) GetDevices() []NetworksNetworkIdFloorPlansAutoLocateJobsJobIdPublishDevices`
+`func (o *InlineObject129) GetJson() []NetworksNetworkIdFirmwareUpgradesStagedStagesJson`
 
-GetDevices returns the Devices field if non-nil, zero value otherwise.
+GetJson returns the Json field if non-nil, zero value otherwise.
 
-### GetDevicesOk
+### GetJsonOk
 
-`func (o *InlineObject129) GetDevicesOk() (*[]NetworksNetworkIdFloorPlansAutoLocateJobsJobIdPublishDevices, bool)`
+`func (o *InlineObject129) GetJsonOk() (*[]NetworksNetworkIdFirmwareUpgradesStagedStagesJson, bool)`
 
-GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
+GetJsonOk returns a tuple with the Json field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevices
+### SetJson
 
-`func (o *InlineObject129) SetDevices(v []NetworksNetworkIdFloorPlansAutoLocateJobsJobIdPublishDevices)`
+`func (o *InlineObject129) SetJson(v []NetworksNetworkIdFirmwareUpgradesStagedStagesJson)`
 
-SetDevices sets Devices field to given value.
+SetJson sets Json field to given value.
 
-### HasDevices
+### HasJson
 
-`func (o *InlineObject129) HasDevices() bool`
+`func (o *InlineObject129) HasJson() bool`
 
-HasDevices returns a boolean if a field has been set.
+HasJson returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

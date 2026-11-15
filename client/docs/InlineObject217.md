@@ -4,14 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MeshingEnabled** | Pointer to **bool** | Toggle for enabling or disabling meshing in a network | [optional] 
-**Ipv6BridgeEnabled** | Pointer to **bool** | Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode) | [optional] 
-**LocationAnalyticsEnabled** | Pointer to **bool** | Toggle for enabling or disabling location analytics for your network | [optional] 
-**UpgradeStrategy** | Pointer to **string** | The default strategy that network devices will use to perform an upgrade. Requires firmware version MR 26.8 or higher. | [optional] 
-**Upgrade** | Pointer to [**InlineResponse200245Upgrade**](InlineResponse200245Upgrade.md) |  | [optional] 
-**LedLightsOn** | Pointer to **bool** | Toggle for enabling or disabling LED lights on all APs in the network (making them run dark) | [optional] 
-**MulticastToUnicastConversion** | Pointer to [**InlineResponse200245MulticastToUnicastConversion**](InlineResponse200245MulticastToUnicastConversion.md) |  | [optional] 
-**NamedVlans** | Pointer to [**NetworksNetworkIdWirelessSettingsNamedVlans**](NetworksNetworkIdWirelessSettingsNamedVlans.md) |  | [optional] 
+**BusyHour** | Pointer to [**NetworksNetworkIdWirelessRadioRrmBusyHour**](NetworksNetworkIdWirelessRadioRrmBusyHour.md) |  | [optional] 
+**Channel** | Pointer to [**NetworksNetworkIdWirelessRadioRrmChannel**](NetworksNetworkIdWirelessRadioRrmChannel.md) |  | [optional] 
+**Fra** | Pointer to [**NetworksNetworkIdWirelessRadioRrmFra**](NetworksNetworkIdWirelessRadioRrmFra.md) |  | [optional] 
+**Ai** | Pointer to [**NetworksNetworkIdWirelessRadioRrmAi**](NetworksNetworkIdWirelessRadioRrmAi.md) |  | [optional] 
 
 ## Methods
 
@@ -32,205 +28,105 @@ NewInlineObject217WithDefaults instantiates a new InlineObject217 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMeshingEnabled
+### GetBusyHour
 
-`func (o *InlineObject217) GetMeshingEnabled() bool`
+`func (o *InlineObject217) GetBusyHour() NetworksNetworkIdWirelessRadioRrmBusyHour`
 
-GetMeshingEnabled returns the MeshingEnabled field if non-nil, zero value otherwise.
+GetBusyHour returns the BusyHour field if non-nil, zero value otherwise.
 
-### GetMeshingEnabledOk
+### GetBusyHourOk
 
-`func (o *InlineObject217) GetMeshingEnabledOk() (*bool, bool)`
+`func (o *InlineObject217) GetBusyHourOk() (*NetworksNetworkIdWirelessRadioRrmBusyHour, bool)`
 
-GetMeshingEnabledOk returns a tuple with the MeshingEnabled field if it's non-nil, zero value otherwise
+GetBusyHourOk returns a tuple with the BusyHour field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeshingEnabled
+### SetBusyHour
 
-`func (o *InlineObject217) SetMeshingEnabled(v bool)`
+`func (o *InlineObject217) SetBusyHour(v NetworksNetworkIdWirelessRadioRrmBusyHour)`
 
-SetMeshingEnabled sets MeshingEnabled field to given value.
+SetBusyHour sets BusyHour field to given value.
 
-### HasMeshingEnabled
+### HasBusyHour
 
-`func (o *InlineObject217) HasMeshingEnabled() bool`
+`func (o *InlineObject217) HasBusyHour() bool`
 
-HasMeshingEnabled returns a boolean if a field has been set.
+HasBusyHour returns a boolean if a field has been set.
 
-### GetIpv6BridgeEnabled
+### GetChannel
 
-`func (o *InlineObject217) GetIpv6BridgeEnabled() bool`
+`func (o *InlineObject217) GetChannel() NetworksNetworkIdWirelessRadioRrmChannel`
 
-GetIpv6BridgeEnabled returns the Ipv6BridgeEnabled field if non-nil, zero value otherwise.
+GetChannel returns the Channel field if non-nil, zero value otherwise.
 
-### GetIpv6BridgeEnabledOk
+### GetChannelOk
 
-`func (o *InlineObject217) GetIpv6BridgeEnabledOk() (*bool, bool)`
+`func (o *InlineObject217) GetChannelOk() (*NetworksNetworkIdWirelessRadioRrmChannel, bool)`
 
-GetIpv6BridgeEnabledOk returns a tuple with the Ipv6BridgeEnabled field if it's non-nil, zero value otherwise
+GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpv6BridgeEnabled
+### SetChannel
 
-`func (o *InlineObject217) SetIpv6BridgeEnabled(v bool)`
+`func (o *InlineObject217) SetChannel(v NetworksNetworkIdWirelessRadioRrmChannel)`
 
-SetIpv6BridgeEnabled sets Ipv6BridgeEnabled field to given value.
+SetChannel sets Channel field to given value.
 
-### HasIpv6BridgeEnabled
+### HasChannel
 
-`func (o *InlineObject217) HasIpv6BridgeEnabled() bool`
+`func (o *InlineObject217) HasChannel() bool`
 
-HasIpv6BridgeEnabled returns a boolean if a field has been set.
+HasChannel returns a boolean if a field has been set.
 
-### GetLocationAnalyticsEnabled
+### GetFra
 
-`func (o *InlineObject217) GetLocationAnalyticsEnabled() bool`
+`func (o *InlineObject217) GetFra() NetworksNetworkIdWirelessRadioRrmFra`
 
-GetLocationAnalyticsEnabled returns the LocationAnalyticsEnabled field if non-nil, zero value otherwise.
+GetFra returns the Fra field if non-nil, zero value otherwise.
 
-### GetLocationAnalyticsEnabledOk
+### GetFraOk
 
-`func (o *InlineObject217) GetLocationAnalyticsEnabledOk() (*bool, bool)`
+`func (o *InlineObject217) GetFraOk() (*NetworksNetworkIdWirelessRadioRrmFra, bool)`
 
-GetLocationAnalyticsEnabledOk returns a tuple with the LocationAnalyticsEnabled field if it's non-nil, zero value otherwise
+GetFraOk returns a tuple with the Fra field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLocationAnalyticsEnabled
+### SetFra
 
-`func (o *InlineObject217) SetLocationAnalyticsEnabled(v bool)`
+`func (o *InlineObject217) SetFra(v NetworksNetworkIdWirelessRadioRrmFra)`
 
-SetLocationAnalyticsEnabled sets LocationAnalyticsEnabled field to given value.
+SetFra sets Fra field to given value.
 
-### HasLocationAnalyticsEnabled
+### HasFra
 
-`func (o *InlineObject217) HasLocationAnalyticsEnabled() bool`
+`func (o *InlineObject217) HasFra() bool`
 
-HasLocationAnalyticsEnabled returns a boolean if a field has been set.
+HasFra returns a boolean if a field has been set.
 
-### GetUpgradeStrategy
+### GetAi
 
-`func (o *InlineObject217) GetUpgradeStrategy() string`
+`func (o *InlineObject217) GetAi() NetworksNetworkIdWirelessRadioRrmAi`
 
-GetUpgradeStrategy returns the UpgradeStrategy field if non-nil, zero value otherwise.
+GetAi returns the Ai field if non-nil, zero value otherwise.
 
-### GetUpgradeStrategyOk
+### GetAiOk
 
-`func (o *InlineObject217) GetUpgradeStrategyOk() (*string, bool)`
+`func (o *InlineObject217) GetAiOk() (*NetworksNetworkIdWirelessRadioRrmAi, bool)`
 
-GetUpgradeStrategyOk returns a tuple with the UpgradeStrategy field if it's non-nil, zero value otherwise
+GetAiOk returns a tuple with the Ai field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgradeStrategy
+### SetAi
 
-`func (o *InlineObject217) SetUpgradeStrategy(v string)`
+`func (o *InlineObject217) SetAi(v NetworksNetworkIdWirelessRadioRrmAi)`
 
-SetUpgradeStrategy sets UpgradeStrategy field to given value.
+SetAi sets Ai field to given value.
 
-### HasUpgradeStrategy
+### HasAi
 
-`func (o *InlineObject217) HasUpgradeStrategy() bool`
+`func (o *InlineObject217) HasAi() bool`
 
-HasUpgradeStrategy returns a boolean if a field has been set.
-
-### GetUpgrade
-
-`func (o *InlineObject217) GetUpgrade() InlineResponse200245Upgrade`
-
-GetUpgrade returns the Upgrade field if non-nil, zero value otherwise.
-
-### GetUpgradeOk
-
-`func (o *InlineObject217) GetUpgradeOk() (*InlineResponse200245Upgrade, bool)`
-
-GetUpgradeOk returns a tuple with the Upgrade field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpgrade
-
-`func (o *InlineObject217) SetUpgrade(v InlineResponse200245Upgrade)`
-
-SetUpgrade sets Upgrade field to given value.
-
-### HasUpgrade
-
-`func (o *InlineObject217) HasUpgrade() bool`
-
-HasUpgrade returns a boolean if a field has been set.
-
-### GetLedLightsOn
-
-`func (o *InlineObject217) GetLedLightsOn() bool`
-
-GetLedLightsOn returns the LedLightsOn field if non-nil, zero value otherwise.
-
-### GetLedLightsOnOk
-
-`func (o *InlineObject217) GetLedLightsOnOk() (*bool, bool)`
-
-GetLedLightsOnOk returns a tuple with the LedLightsOn field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLedLightsOn
-
-`func (o *InlineObject217) SetLedLightsOn(v bool)`
-
-SetLedLightsOn sets LedLightsOn field to given value.
-
-### HasLedLightsOn
-
-`func (o *InlineObject217) HasLedLightsOn() bool`
-
-HasLedLightsOn returns a boolean if a field has been set.
-
-### GetMulticastToUnicastConversion
-
-`func (o *InlineObject217) GetMulticastToUnicastConversion() InlineResponse200245MulticastToUnicastConversion`
-
-GetMulticastToUnicastConversion returns the MulticastToUnicastConversion field if non-nil, zero value otherwise.
-
-### GetMulticastToUnicastConversionOk
-
-`func (o *InlineObject217) GetMulticastToUnicastConversionOk() (*InlineResponse200245MulticastToUnicastConversion, bool)`
-
-GetMulticastToUnicastConversionOk returns a tuple with the MulticastToUnicastConversion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMulticastToUnicastConversion
-
-`func (o *InlineObject217) SetMulticastToUnicastConversion(v InlineResponse200245MulticastToUnicastConversion)`
-
-SetMulticastToUnicastConversion sets MulticastToUnicastConversion field to given value.
-
-### HasMulticastToUnicastConversion
-
-`func (o *InlineObject217) HasMulticastToUnicastConversion() bool`
-
-HasMulticastToUnicastConversion returns a boolean if a field has been set.
-
-### GetNamedVlans
-
-`func (o *InlineObject217) GetNamedVlans() NetworksNetworkIdWirelessSettingsNamedVlans`
-
-GetNamedVlans returns the NamedVlans field if non-nil, zero value otherwise.
-
-### GetNamedVlansOk
-
-`func (o *InlineObject217) GetNamedVlansOk() (*NetworksNetworkIdWirelessSettingsNamedVlans, bool)`
-
-GetNamedVlansOk returns a tuple with the NamedVlans field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNamedVlans
-
-`func (o *InlineObject217) SetNamedVlans(v NetworksNetworkIdWirelessSettingsNamedVlans)`
-
-SetNamedVlans sets NamedVlans field to given value.
-
-### HasNamedVlans
-
-`func (o *InlineObject217) HasNamedVlans() bool`
-
-HasNamedVlans returns a boolean if a field has been set.
+HasAi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

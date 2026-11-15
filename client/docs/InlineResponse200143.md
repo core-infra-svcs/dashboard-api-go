@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Success** | Pointer to **bool** | Status of attempt to publish auto locate job | [optional] 
+**Group** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedStagesGroup**](NetworksNetworkIdFirmwareUpgradesStagedStagesGroup.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200143WithDefaults instantiates a new InlineResponse200143 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSuccess
+### GetGroup
 
-`func (o *InlineResponse200143) GetSuccess() bool`
+`func (o *InlineResponse200143) GetGroup() NetworksNetworkIdFirmwareUpgradesStagedStagesGroup`
 
-GetSuccess returns the Success field if non-nil, zero value otherwise.
+GetGroup returns the Group field if non-nil, zero value otherwise.
 
-### GetSuccessOk
+### GetGroupOk
 
-`func (o *InlineResponse200143) GetSuccessOk() (*bool, bool)`
+`func (o *InlineResponse200143) GetGroupOk() (*NetworksNetworkIdFirmwareUpgradesStagedStagesGroup, bool)`
 
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
+GetGroupOk returns a tuple with the Group field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSuccess
+### SetGroup
 
-`func (o *InlineResponse200143) SetSuccess(v bool)`
+`func (o *InlineResponse200143) SetGroup(v NetworksNetworkIdFirmwareUpgradesStagedStagesGroup)`
 
-SetSuccess sets Success field to given value.
+SetGroup sets Group field to given value.
 
-### HasSuccess
+### HasGroup
 
-`func (o *InlineResponse200143) HasSuccess() bool`
+`func (o *InlineResponse200143) HasGroup() bool`
 
-HasSuccess returns a boolean if a field has been set.
+HasGroup returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultDestinations** | Pointer to [**InlineResponse20069DefaultDestinations**](InlineResponse20069DefaultDestinations.md) |  | [optional] 
-**Alerts** | Pointer to [**[]InlineResponse20069Alerts**](InlineResponse20069Alerts.md) | Alert-specific configuration for each type. Only alerts that pertain to the network can be updated. | [optional] 
-**Muting** | Pointer to [**InlineResponse20069Muting**](InlineResponse20069Muting.md) |  | [optional] 
+**RfProfileId** | Pointer to **NullableString** | The ID of an RF profile to assign to the device. If the value of this parameter is null, the appropriate basic RF profile (indoor or outdoor) will be assigned to the device. Assigning an RF profile will clear ALL manually configured overrides on the device (channel width, channel, power). | [optional] 
+**TwoFourGhzSettings** | Pointer to [**DevicesSerialApplianceRadioSettingsTwoFourGhzSettings**](DevicesSerialApplianceRadioSettingsTwoFourGhzSettings.md) |  | [optional] 
+**FiveGhzSettings** | Pointer to [**DevicesSerialApplianceRadioSettingsFiveGhzSettings**](DevicesSerialApplianceRadioSettingsFiveGhzSettings.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +27,90 @@ NewInlineObject51WithDefaults instantiates a new InlineObject51 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultDestinations
+### GetRfProfileId
 
-`func (o *InlineObject51) GetDefaultDestinations() InlineResponse20069DefaultDestinations`
+`func (o *InlineObject51) GetRfProfileId() string`
 
-GetDefaultDestinations returns the DefaultDestinations field if non-nil, zero value otherwise.
+GetRfProfileId returns the RfProfileId field if non-nil, zero value otherwise.
 
-### GetDefaultDestinationsOk
+### GetRfProfileIdOk
 
-`func (o *InlineObject51) GetDefaultDestinationsOk() (*InlineResponse20069DefaultDestinations, bool)`
+`func (o *InlineObject51) GetRfProfileIdOk() (*string, bool)`
 
-GetDefaultDestinationsOk returns a tuple with the DefaultDestinations field if it's non-nil, zero value otherwise
+GetRfProfileIdOk returns a tuple with the RfProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultDestinations
+### SetRfProfileId
 
-`func (o *InlineObject51) SetDefaultDestinations(v InlineResponse20069DefaultDestinations)`
+`func (o *InlineObject51) SetRfProfileId(v string)`
 
-SetDefaultDestinations sets DefaultDestinations field to given value.
+SetRfProfileId sets RfProfileId field to given value.
 
-### HasDefaultDestinations
+### HasRfProfileId
 
-`func (o *InlineObject51) HasDefaultDestinations() bool`
+`func (o *InlineObject51) HasRfProfileId() bool`
 
-HasDefaultDestinations returns a boolean if a field has been set.
+HasRfProfileId returns a boolean if a field has been set.
 
-### GetAlerts
+### SetRfProfileIdNil
 
-`func (o *InlineObject51) GetAlerts() []InlineResponse20069Alerts`
+`func (o *InlineObject51) SetRfProfileIdNil(b bool)`
 
-GetAlerts returns the Alerts field if non-nil, zero value otherwise.
+ SetRfProfileIdNil sets the value for RfProfileId to be an explicit nil
 
-### GetAlertsOk
+### UnsetRfProfileId
+`func (o *InlineObject51) UnsetRfProfileId()`
 
-`func (o *InlineObject51) GetAlertsOk() (*[]InlineResponse20069Alerts, bool)`
+UnsetRfProfileId ensures that no value is present for RfProfileId, not even an explicit nil
+### GetTwoFourGhzSettings
 
-GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
+`func (o *InlineObject51) GetTwoFourGhzSettings() DevicesSerialApplianceRadioSettingsTwoFourGhzSettings`
+
+GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
+
+### GetTwoFourGhzSettingsOk
+
+`func (o *InlineObject51) GetTwoFourGhzSettingsOk() (*DevicesSerialApplianceRadioSettingsTwoFourGhzSettings, bool)`
+
+GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlerts
+### SetTwoFourGhzSettings
 
-`func (o *InlineObject51) SetAlerts(v []InlineResponse20069Alerts)`
+`func (o *InlineObject51) SetTwoFourGhzSettings(v DevicesSerialApplianceRadioSettingsTwoFourGhzSettings)`
 
-SetAlerts sets Alerts field to given value.
+SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
 
-### HasAlerts
+### HasTwoFourGhzSettings
 
-`func (o *InlineObject51) HasAlerts() bool`
+`func (o *InlineObject51) HasTwoFourGhzSettings() bool`
 
-HasAlerts returns a boolean if a field has been set.
+HasTwoFourGhzSettings returns a boolean if a field has been set.
 
-### GetMuting
+### GetFiveGhzSettings
 
-`func (o *InlineObject51) GetMuting() InlineResponse20069Muting`
+`func (o *InlineObject51) GetFiveGhzSettings() DevicesSerialApplianceRadioSettingsFiveGhzSettings`
 
-GetMuting returns the Muting field if non-nil, zero value otherwise.
+GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
 
-### GetMutingOk
+### GetFiveGhzSettingsOk
 
-`func (o *InlineObject51) GetMutingOk() (*InlineResponse20069Muting, bool)`
+`func (o *InlineObject51) GetFiveGhzSettingsOk() (*DevicesSerialApplianceRadioSettingsFiveGhzSettings, bool)`
 
-GetMutingOk returns a tuple with the Muting field if it's non-nil, zero value otherwise
+GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMuting
+### SetFiveGhzSettings
 
-`func (o *InlineObject51) SetMuting(v InlineResponse20069Muting)`
+`func (o *InlineObject51) SetFiveGhzSettings(v DevicesSerialApplianceRadioSettingsFiveGhzSettings)`
 
-SetMuting sets Muting field to given value.
+SetFiveGhzSettings sets FiveGhzSettings field to given value.
 
-### HasMuting
+### HasFiveGhzSettings
 
-`func (o *InlineObject51) HasMuting() bool`
+`func (o *InlineObject51) HasFiveGhzSettings() bool`
 
-HasMuting returns a boolean if a field has been set.
+HasFiveGhzSettings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

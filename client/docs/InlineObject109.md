@@ -4,9 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DhcpLeaseTime** | Pointer to **string** | DHCP Lease time for all MG of the network. Possible values are &#39;30 minutes&#39;, &#39;1 hour&#39;, &#39;4 hours&#39;, &#39;12 hours&#39;, &#39;1 day&#39; or &#39;1 week&#39;. | [optional] 
-**DnsNameservers** | Pointer to **string** | DNS name servers mode for all MG of the network. Possible values are: &#39;upstream_dns&#39;, &#39;google_dns&#39;, &#39;opendns&#39;, &#39;custom&#39;. | [optional] 
-**DnsCustomNameservers** | Pointer to **[]string** | list of fixed IPs representing the the DNS Name servers when the mode is &#39;custom&#39; | [optional] 
+**Name** | Pointer to **string** | Name of the cluster | [optional] 
+**Uplinks** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersClusterIdUplinks**](NetworksNetworkIdCampusGatewayClustersClusterIdUplinks.md) | Uplink interface settings of the cluster | [optional] 
+**Tunnels** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersClusterIdTunnels**](NetworksNetworkIdCampusGatewayClustersClusterIdTunnels.md) | Tunnel interface settings of the cluster: Reuse uplink or specify tunnel interface | [optional] 
+**Nameservers** | Pointer to [**InlineResponse20119Nameservers**](InlineResponse20119Nameservers.md) |  | [optional] 
+**PortChannels** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels**](NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels.md) | Port channel settings of the cluster | [optional] 
+**Devices** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersClusterIdDevices**](NetworksNetworkIdCampusGatewayClustersClusterIdDevices.md) | Devices in the cluster | [optional] 
+**Notes** | Pointer to **string** | Notes about cluster with max size of 511 characters allowed | [optional] 
 
 ## Methods
 
@@ -27,80 +31,180 @@ NewInlineObject109WithDefaults instantiates a new InlineObject109 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDhcpLeaseTime
+### GetName
 
-`func (o *InlineObject109) GetDhcpLeaseTime() string`
+`func (o *InlineObject109) GetName() string`
 
-GetDhcpLeaseTime returns the DhcpLeaseTime field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDhcpLeaseTimeOk
+### GetNameOk
 
-`func (o *InlineObject109) GetDhcpLeaseTimeOk() (*string, bool)`
+`func (o *InlineObject109) GetNameOk() (*string, bool)`
 
-GetDhcpLeaseTimeOk returns a tuple with the DhcpLeaseTime field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDhcpLeaseTime
+### SetName
 
-`func (o *InlineObject109) SetDhcpLeaseTime(v string)`
+`func (o *InlineObject109) SetName(v string)`
 
-SetDhcpLeaseTime sets DhcpLeaseTime field to given value.
+SetName sets Name field to given value.
 
-### HasDhcpLeaseTime
+### HasName
 
-`func (o *InlineObject109) HasDhcpLeaseTime() bool`
+`func (o *InlineObject109) HasName() bool`
 
-HasDhcpLeaseTime returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetDnsNameservers
+### GetUplinks
 
-`func (o *InlineObject109) GetDnsNameservers() string`
+`func (o *InlineObject109) GetUplinks() []NetworksNetworkIdCampusGatewayClustersClusterIdUplinks`
 
-GetDnsNameservers returns the DnsNameservers field if non-nil, zero value otherwise.
+GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
 
-### GetDnsNameserversOk
+### GetUplinksOk
 
-`func (o *InlineObject109) GetDnsNameserversOk() (*string, bool)`
+`func (o *InlineObject109) GetUplinksOk() (*[]NetworksNetworkIdCampusGatewayClustersClusterIdUplinks, bool)`
 
-GetDnsNameserversOk returns a tuple with the DnsNameservers field if it's non-nil, zero value otherwise
+GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDnsNameservers
+### SetUplinks
 
-`func (o *InlineObject109) SetDnsNameservers(v string)`
+`func (o *InlineObject109) SetUplinks(v []NetworksNetworkIdCampusGatewayClustersClusterIdUplinks)`
 
-SetDnsNameservers sets DnsNameservers field to given value.
+SetUplinks sets Uplinks field to given value.
 
-### HasDnsNameservers
+### HasUplinks
 
-`func (o *InlineObject109) HasDnsNameservers() bool`
+`func (o *InlineObject109) HasUplinks() bool`
 
-HasDnsNameservers returns a boolean if a field has been set.
+HasUplinks returns a boolean if a field has been set.
 
-### GetDnsCustomNameservers
+### GetTunnels
 
-`func (o *InlineObject109) GetDnsCustomNameservers() []string`
+`func (o *InlineObject109) GetTunnels() []NetworksNetworkIdCampusGatewayClustersClusterIdTunnels`
 
-GetDnsCustomNameservers returns the DnsCustomNameservers field if non-nil, zero value otherwise.
+GetTunnels returns the Tunnels field if non-nil, zero value otherwise.
 
-### GetDnsCustomNameserversOk
+### GetTunnelsOk
 
-`func (o *InlineObject109) GetDnsCustomNameserversOk() (*[]string, bool)`
+`func (o *InlineObject109) GetTunnelsOk() (*[]NetworksNetworkIdCampusGatewayClustersClusterIdTunnels, bool)`
 
-GetDnsCustomNameserversOk returns a tuple with the DnsCustomNameservers field if it's non-nil, zero value otherwise
+GetTunnelsOk returns a tuple with the Tunnels field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDnsCustomNameservers
+### SetTunnels
 
-`func (o *InlineObject109) SetDnsCustomNameservers(v []string)`
+`func (o *InlineObject109) SetTunnels(v []NetworksNetworkIdCampusGatewayClustersClusterIdTunnels)`
 
-SetDnsCustomNameservers sets DnsCustomNameservers field to given value.
+SetTunnels sets Tunnels field to given value.
 
-### HasDnsCustomNameservers
+### HasTunnels
 
-`func (o *InlineObject109) HasDnsCustomNameservers() bool`
+`func (o *InlineObject109) HasTunnels() bool`
 
-HasDnsCustomNameservers returns a boolean if a field has been set.
+HasTunnels returns a boolean if a field has been set.
+
+### GetNameservers
+
+`func (o *InlineObject109) GetNameservers() InlineResponse20119Nameservers`
+
+GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
+
+### GetNameserversOk
+
+`func (o *InlineObject109) GetNameserversOk() (*InlineResponse20119Nameservers, bool)`
+
+GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNameservers
+
+`func (o *InlineObject109) SetNameservers(v InlineResponse20119Nameservers)`
+
+SetNameservers sets Nameservers field to given value.
+
+### HasNameservers
+
+`func (o *InlineObject109) HasNameservers() bool`
+
+HasNameservers returns a boolean if a field has been set.
+
+### GetPortChannels
+
+`func (o *InlineObject109) GetPortChannels() []NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels`
+
+GetPortChannels returns the PortChannels field if non-nil, zero value otherwise.
+
+### GetPortChannelsOk
+
+`func (o *InlineObject109) GetPortChannelsOk() (*[]NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels, bool)`
+
+GetPortChannelsOk returns a tuple with the PortChannels field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPortChannels
+
+`func (o *InlineObject109) SetPortChannels(v []NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels)`
+
+SetPortChannels sets PortChannels field to given value.
+
+### HasPortChannels
+
+`func (o *InlineObject109) HasPortChannels() bool`
+
+HasPortChannels returns a boolean if a field has been set.
+
+### GetDevices
+
+`func (o *InlineObject109) GetDevices() []NetworksNetworkIdCampusGatewayClustersClusterIdDevices`
+
+GetDevices returns the Devices field if non-nil, zero value otherwise.
+
+### GetDevicesOk
+
+`func (o *InlineObject109) GetDevicesOk() (*[]NetworksNetworkIdCampusGatewayClustersClusterIdDevices, bool)`
+
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDevices
+
+`func (o *InlineObject109) SetDevices(v []NetworksNetworkIdCampusGatewayClustersClusterIdDevices)`
+
+SetDevices sets Devices field to given value.
+
+### HasDevices
+
+`func (o *InlineObject109) HasDevices() bool`
+
+HasDevices returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineObject109) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineObject109) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineObject109) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineObject109) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

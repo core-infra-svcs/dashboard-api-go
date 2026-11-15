@@ -4,12 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AccessPoints** | Pointer to **[]string** | Device types in Access Points category | [optional] 
-**Switches** | Pointer to **[]string** | Device types in Switches category | [optional] 
-**Cameras** | Pointer to **[]string** | Device types in Cameras category | [optional] 
-**Sensors** | Pointer to **[]string** | Device types in Sensors category | [optional] 
-**SecurityAppliances** | Pointer to **[]string** | Device types in Security Appliances category | [optional] 
-**CellularGateways** | Pointer to **[]string** | Device types in Cellular Gateways category | [optional] 
+**Serial** | Pointer to **string** | Serial number of the sensor that took the readings. | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryNetwork**](OrganizationsOrganizationIdSensorReadingsHistoryNetwork.md) |  | [optional] 
+**Readings** | Pointer to [**[]OrganizationsOrganizationIdSensorReadingsLatestReadings**](OrganizationsOrganizationIdSensorReadingsLatestReadings.md) | Array of latest readings from the sensor. Each object represents a single reading for a single metric. | [optional] 
 
 ## Methods
 
@@ -30,155 +27,80 @@ NewInlineResponse200458WithDefaults instantiates a new InlineResponse200458 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAccessPoints
+### GetSerial
 
-`func (o *InlineResponse200458) GetAccessPoints() []string`
+`func (o *InlineResponse200458) GetSerial() string`
 
-GetAccessPoints returns the AccessPoints field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetAccessPointsOk
+### GetSerialOk
 
-`func (o *InlineResponse200458) GetAccessPointsOk() (*[]string, bool)`
+`func (o *InlineResponse200458) GetSerialOk() (*string, bool)`
 
-GetAccessPointsOk returns a tuple with the AccessPoints field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccessPoints
+### SetSerial
 
-`func (o *InlineResponse200458) SetAccessPoints(v []string)`
+`func (o *InlineResponse200458) SetSerial(v string)`
 
-SetAccessPoints sets AccessPoints field to given value.
+SetSerial sets Serial field to given value.
 
-### HasAccessPoints
+### HasSerial
 
-`func (o *InlineResponse200458) HasAccessPoints() bool`
+`func (o *InlineResponse200458) HasSerial() bool`
 
-HasAccessPoints returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetSwitches
+### GetNetwork
 
-`func (o *InlineResponse200458) GetSwitches() []string`
+`func (o *InlineResponse200458) GetNetwork() OrganizationsOrganizationIdSensorReadingsHistoryNetwork`
 
-GetSwitches returns the Switches field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetSwitchesOk
+### GetNetworkOk
 
-`func (o *InlineResponse200458) GetSwitchesOk() (*[]string, bool)`
+`func (o *InlineResponse200458) GetNetworkOk() (*OrganizationsOrganizationIdSensorReadingsHistoryNetwork, bool)`
 
-GetSwitchesOk returns a tuple with the Switches field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitches
+### SetNetwork
 
-`func (o *InlineResponse200458) SetSwitches(v []string)`
+`func (o *InlineResponse200458) SetNetwork(v OrganizationsOrganizationIdSensorReadingsHistoryNetwork)`
 
-SetSwitches sets Switches field to given value.
+SetNetwork sets Network field to given value.
 
-### HasSwitches
+### HasNetwork
 
-`func (o *InlineResponse200458) HasSwitches() bool`
+`func (o *InlineResponse200458) HasNetwork() bool`
 
-HasSwitches returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetCameras
+### GetReadings
 
-`func (o *InlineResponse200458) GetCameras() []string`
+`func (o *InlineResponse200458) GetReadings() []OrganizationsOrganizationIdSensorReadingsLatestReadings`
 
-GetCameras returns the Cameras field if non-nil, zero value otherwise.
+GetReadings returns the Readings field if non-nil, zero value otherwise.
 
-### GetCamerasOk
+### GetReadingsOk
 
-`func (o *InlineResponse200458) GetCamerasOk() (*[]string, bool)`
+`func (o *InlineResponse200458) GetReadingsOk() (*[]OrganizationsOrganizationIdSensorReadingsLatestReadings, bool)`
 
-GetCamerasOk returns a tuple with the Cameras field if it's non-nil, zero value otherwise
+GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCameras
+### SetReadings
 
-`func (o *InlineResponse200458) SetCameras(v []string)`
+`func (o *InlineResponse200458) SetReadings(v []OrganizationsOrganizationIdSensorReadingsLatestReadings)`
 
-SetCameras sets Cameras field to given value.
+SetReadings sets Readings field to given value.
 
-### HasCameras
+### HasReadings
 
-`func (o *InlineResponse200458) HasCameras() bool`
+`func (o *InlineResponse200458) HasReadings() bool`
 
-HasCameras returns a boolean if a field has been set.
-
-### GetSensors
-
-`func (o *InlineResponse200458) GetSensors() []string`
-
-GetSensors returns the Sensors field if non-nil, zero value otherwise.
-
-### GetSensorsOk
-
-`func (o *InlineResponse200458) GetSensorsOk() (*[]string, bool)`
-
-GetSensorsOk returns a tuple with the Sensors field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSensors
-
-`func (o *InlineResponse200458) SetSensors(v []string)`
-
-SetSensors sets Sensors field to given value.
-
-### HasSensors
-
-`func (o *InlineResponse200458) HasSensors() bool`
-
-HasSensors returns a boolean if a field has been set.
-
-### GetSecurityAppliances
-
-`func (o *InlineResponse200458) GetSecurityAppliances() []string`
-
-GetSecurityAppliances returns the SecurityAppliances field if non-nil, zero value otherwise.
-
-### GetSecurityAppliancesOk
-
-`func (o *InlineResponse200458) GetSecurityAppliancesOk() (*[]string, bool)`
-
-GetSecurityAppliancesOk returns a tuple with the SecurityAppliances field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSecurityAppliances
-
-`func (o *InlineResponse200458) SetSecurityAppliances(v []string)`
-
-SetSecurityAppliances sets SecurityAppliances field to given value.
-
-### HasSecurityAppliances
-
-`func (o *InlineResponse200458) HasSecurityAppliances() bool`
-
-HasSecurityAppliances returns a boolean if a field has been set.
-
-### GetCellularGateways
-
-`func (o *InlineResponse200458) GetCellularGateways() []string`
-
-GetCellularGateways returns the CellularGateways field if non-nil, zero value otherwise.
-
-### GetCellularGatewaysOk
-
-`func (o *InlineResponse200458) GetCellularGatewaysOk() (*[]string, bool)`
-
-GetCellularGatewaysOk returns a tuple with the CellularGateways field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCellularGateways
-
-`func (o *InlineResponse200458) SetCellularGateways(v []string)`
-
-SetCellularGateways sets CellularGateways field to given value.
-
-### HasCellularGateways
-
-`func (o *InlineResponse200458) HasCellularGateways() bool`
-
-HasCellularGateways returns a boolean if a field has been set.
+HasReadings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

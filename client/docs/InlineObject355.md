@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
-**SsoLoginUrl** | Pointer to **string** | Dashboard will redirect users to this URL to log in again when their sessions expire. | [optional] 
-**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
+**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeletePolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeletePolicy.md) |  | 
+**Targets** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeleteTargets**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeleteTargets.md) | Network enforcement targets to remove for the specified policy. Maximum 1000 per request. | 
 
 ## Methods
 
 ### NewInlineObject355
 
-`func NewInlineObject355() *InlineObject355`
+`func NewInlineObject355(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeletePolicy, targets []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeleteTargets, ) *InlineObject355`
 
 NewInlineObject355 instantiates a new InlineObject355 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +26,45 @@ NewInlineObject355WithDefaults instantiates a new InlineObject355 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetX509certSha1Fingerprint
+### GetPolicy
 
-`func (o *InlineObject355) GetX509certSha1Fingerprint() string`
+`func (o *InlineObject355) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeletePolicy`
 
-GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetX509certSha1FingerprintOk
+### GetPolicyOk
 
-`func (o *InlineObject355) GetX509certSha1FingerprintOk() (*string, bool)`
+`func (o *InlineObject355) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeletePolicy, bool)`
 
-GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetX509certSha1Fingerprint
+### SetPolicy
 
-`func (o *InlineObject355) SetX509certSha1Fingerprint(v string)`
+`func (o *InlineObject355) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeletePolicy)`
 
-SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
+SetPolicy sets Policy field to given value.
 
-### HasX509certSha1Fingerprint
 
-`func (o *InlineObject355) HasX509certSha1Fingerprint() bool`
+### GetTargets
 
-HasX509certSha1Fingerprint returns a boolean if a field has been set.
+`func (o *InlineObject355) GetTargets() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeleteTargets`
 
-### GetSsoLoginUrl
+GetTargets returns the Targets field if non-nil, zero value otherwise.
 
-`func (o *InlineObject355) GetSsoLoginUrl() string`
+### GetTargetsOk
 
-GetSsoLoginUrl returns the SsoLoginUrl field if non-nil, zero value otherwise.
+`func (o *InlineObject355) GetTargetsOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeleteTargets, bool)`
 
-### GetSsoLoginUrlOk
-
-`func (o *InlineObject355) GetSsoLoginUrlOk() (*string, bool)`
-
-GetSsoLoginUrlOk returns a tuple with the SsoLoginUrl field if it's non-nil, zero value otherwise
+GetTargetsOk returns a tuple with the Targets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsoLoginUrl
+### SetTargets
 
-`func (o *InlineObject355) SetSsoLoginUrl(v string)`
+`func (o *InlineObject355) SetTargets(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeleteTargets)`
 
-SetSsoLoginUrl sets SsoLoginUrl field to given value.
+SetTargets sets Targets field to given value.
 
-### HasSsoLoginUrl
-
-`func (o *InlineObject355) HasSsoLoginUrl() bool`
-
-HasSsoLoginUrl returns a boolean if a field has been set.
-
-### GetSloLogoutUrl
-
-`func (o *InlineObject355) GetSloLogoutUrl() string`
-
-GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
-
-### GetSloLogoutUrlOk
-
-`func (o *InlineObject355) GetSloLogoutUrlOk() (*string, bool)`
-
-GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSloLogoutUrl
-
-`func (o *InlineObject355) SetSloLogoutUrl(v string)`
-
-SetSloLogoutUrl sets SloLogoutUrl field to given value.
-
-### HasSloLogoutUrl
-
-`func (o *InlineObject355) HasSloLogoutUrl() bool`
-
-HasSloLogoutUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

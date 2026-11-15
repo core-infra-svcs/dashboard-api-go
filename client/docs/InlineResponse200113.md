@@ -4,17 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Network ID | [optional] 
-**OrganizationId** | Pointer to **string** | Organization ID | [optional] 
-**Name** | Pointer to **string** | Network name | [optional] 
-**ProductTypes** | Pointer to **[]string** | List of the product types that the network supports | [optional] 
-**TimeZone** | Pointer to **string** | Timezone of the network | [optional] 
-**Tags** | Pointer to **[]string** | Network tags | [optional] 
-**EnrollmentString** | Pointer to **string** | Enrollment string for the network | [optional] 
-**Url** | Pointer to **string** | URL to the network Dashboard UI | [optional] 
-**Notes** | Pointer to **string** | Notes for the network | [optional] 
-**IsBoundToConfigTemplate** | Pointer to **bool** | If the network is bound to a config template | [optional] 
-**ConfigTemplateId** | Pointer to **string** | ID of the config template the network is being bound to | [optional] 
+**Enabled** | Pointer to **bool** | Whether BGP is enabled on the appliance | [optional] 
+**AsNumber** | Pointer to **int32** | Organization-specific number of the Autonomous System to which the appliance belongs | [optional] 
+**IbgpHoldTimer** | Pointer to **int32** | The iBGP hold time in seconds | [optional] 
+**Ipv6** | Pointer to [**InlineResponse200113Ipv6**](InlineResponse200113Ipv6.md) |  | [optional] 
+**TunnelDownTermination** | Pointer to [**InlineResponse200113TunnelDownTermination**](InlineResponse200113TunnelDownTermination.md) |  | [optional] 
+**LocalAsNumber** | Pointer to **NullableInt32** | Network-specific local Autonomous System Number (ASN) to which the appliance belongs. | [optional] 
+**PriorityRoute** | Pointer to **NullableString** | Sets the priority route between eBGP and Auto VPN. | [optional] 
+**RouterId** | Pointer to **string** | The router ID of the appliance | [optional] 
+**Neighbors** | Pointer to [**[]InlineResponse200113Neighbors**](InlineResponse200113Neighbors.md) | List of eBGP neighbor configurations | [optional] 
 
 ## Methods
 
@@ -35,280 +33,250 @@ NewInlineResponse200113WithDefaults instantiates a new InlineResponse200113 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetEnabled
 
-`func (o *InlineResponse200113) GetId() string`
+`func (o *InlineResponse200113) GetEnabled() bool`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetEnabledOk
 
-`func (o *InlineResponse200113) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200113) GetEnabledOk() (*bool, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetEnabled
 
-`func (o *InlineResponse200113) SetId(v string)`
+`func (o *InlineResponse200113) SetEnabled(v bool)`
 
-SetId sets Id field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasId
+### HasEnabled
 
-`func (o *InlineResponse200113) HasId() bool`
+`func (o *InlineResponse200113) HasEnabled() bool`
 
-HasId returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetOrganizationId
+### GetAsNumber
 
-`func (o *InlineResponse200113) GetOrganizationId() string`
+`func (o *InlineResponse200113) GetAsNumber() int32`
 
-GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
+GetAsNumber returns the AsNumber field if non-nil, zero value otherwise.
 
-### GetOrganizationIdOk
+### GetAsNumberOk
 
-`func (o *InlineResponse200113) GetOrganizationIdOk() (*string, bool)`
+`func (o *InlineResponse200113) GetAsNumberOk() (*int32, bool)`
 
-GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
+GetAsNumberOk returns a tuple with the AsNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrganizationId
+### SetAsNumber
 
-`func (o *InlineResponse200113) SetOrganizationId(v string)`
+`func (o *InlineResponse200113) SetAsNumber(v int32)`
 
-SetOrganizationId sets OrganizationId field to given value.
+SetAsNumber sets AsNumber field to given value.
 
-### HasOrganizationId
+### HasAsNumber
 
-`func (o *InlineResponse200113) HasOrganizationId() bool`
+`func (o *InlineResponse200113) HasAsNumber() bool`
 
-HasOrganizationId returns a boolean if a field has been set.
+HasAsNumber returns a boolean if a field has been set.
 
-### GetName
+### GetIbgpHoldTimer
 
-`func (o *InlineResponse200113) GetName() string`
+`func (o *InlineResponse200113) GetIbgpHoldTimer() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetIbgpHoldTimer returns the IbgpHoldTimer field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetIbgpHoldTimerOk
 
-`func (o *InlineResponse200113) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200113) GetIbgpHoldTimerOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetIbgpHoldTimerOk returns a tuple with the IbgpHoldTimer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetIbgpHoldTimer
 
-`func (o *InlineResponse200113) SetName(v string)`
+`func (o *InlineResponse200113) SetIbgpHoldTimer(v int32)`
 
-SetName sets Name field to given value.
+SetIbgpHoldTimer sets IbgpHoldTimer field to given value.
 
-### HasName
+### HasIbgpHoldTimer
 
-`func (o *InlineResponse200113) HasName() bool`
+`func (o *InlineResponse200113) HasIbgpHoldTimer() bool`
 
-HasName returns a boolean if a field has been set.
+HasIbgpHoldTimer returns a boolean if a field has been set.
 
-### GetProductTypes
+### GetIpv6
 
-`func (o *InlineResponse200113) GetProductTypes() []string`
+`func (o *InlineResponse200113) GetIpv6() InlineResponse200113Ipv6`
 
-GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
+GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
 
-### GetProductTypesOk
+### GetIpv6Ok
 
-`func (o *InlineResponse200113) GetProductTypesOk() (*[]string, bool)`
+`func (o *InlineResponse200113) GetIpv6Ok() (*InlineResponse200113Ipv6, bool)`
 
-GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
+GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProductTypes
+### SetIpv6
 
-`func (o *InlineResponse200113) SetProductTypes(v []string)`
+`func (o *InlineResponse200113) SetIpv6(v InlineResponse200113Ipv6)`
 
-SetProductTypes sets ProductTypes field to given value.
+SetIpv6 sets Ipv6 field to given value.
 
-### HasProductTypes
+### HasIpv6
 
-`func (o *InlineResponse200113) HasProductTypes() bool`
+`func (o *InlineResponse200113) HasIpv6() bool`
 
-HasProductTypes returns a boolean if a field has been set.
+HasIpv6 returns a boolean if a field has been set.
 
-### GetTimeZone
+### GetTunnelDownTermination
 
-`func (o *InlineResponse200113) GetTimeZone() string`
+`func (o *InlineResponse200113) GetTunnelDownTermination() InlineResponse200113TunnelDownTermination`
 
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
+GetTunnelDownTermination returns the TunnelDownTermination field if non-nil, zero value otherwise.
 
-### GetTimeZoneOk
+### GetTunnelDownTerminationOk
 
-`func (o *InlineResponse200113) GetTimeZoneOk() (*string, bool)`
+`func (o *InlineResponse200113) GetTunnelDownTerminationOk() (*InlineResponse200113TunnelDownTermination, bool)`
 
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
+GetTunnelDownTerminationOk returns a tuple with the TunnelDownTermination field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeZone
+### SetTunnelDownTermination
 
-`func (o *InlineResponse200113) SetTimeZone(v string)`
+`func (o *InlineResponse200113) SetTunnelDownTermination(v InlineResponse200113TunnelDownTermination)`
 
-SetTimeZone sets TimeZone field to given value.
+SetTunnelDownTermination sets TunnelDownTermination field to given value.
 
-### HasTimeZone
+### HasTunnelDownTermination
 
-`func (o *InlineResponse200113) HasTimeZone() bool`
+`func (o *InlineResponse200113) HasTunnelDownTermination() bool`
 
-HasTimeZone returns a boolean if a field has been set.
+HasTunnelDownTermination returns a boolean if a field has been set.
 
-### GetTags
+### GetLocalAsNumber
 
-`func (o *InlineResponse200113) GetTags() []string`
+`func (o *InlineResponse200113) GetLocalAsNumber() int32`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetLocalAsNumber returns the LocalAsNumber field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetLocalAsNumberOk
 
-`func (o *InlineResponse200113) GetTagsOk() (*[]string, bool)`
+`func (o *InlineResponse200113) GetLocalAsNumberOk() (*int32, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetLocalAsNumberOk returns a tuple with the LocalAsNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetLocalAsNumber
 
-`func (o *InlineResponse200113) SetTags(v []string)`
+`func (o *InlineResponse200113) SetLocalAsNumber(v int32)`
 
-SetTags sets Tags field to given value.
+SetLocalAsNumber sets LocalAsNumber field to given value.
 
-### HasTags
+### HasLocalAsNumber
 
-`func (o *InlineResponse200113) HasTags() bool`
+`func (o *InlineResponse200113) HasLocalAsNumber() bool`
 
-HasTags returns a boolean if a field has been set.
+HasLocalAsNumber returns a boolean if a field has been set.
 
-### GetEnrollmentString
+### SetLocalAsNumberNil
 
-`func (o *InlineResponse200113) GetEnrollmentString() string`
+`func (o *InlineResponse200113) SetLocalAsNumberNil(b bool)`
 
-GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
+ SetLocalAsNumberNil sets the value for LocalAsNumber to be an explicit nil
 
-### GetEnrollmentStringOk
+### UnsetLocalAsNumber
+`func (o *InlineResponse200113) UnsetLocalAsNumber()`
 
-`func (o *InlineResponse200113) GetEnrollmentStringOk() (*string, bool)`
+UnsetLocalAsNumber ensures that no value is present for LocalAsNumber, not even an explicit nil
+### GetPriorityRoute
 
-GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
+`func (o *InlineResponse200113) GetPriorityRoute() string`
+
+GetPriorityRoute returns the PriorityRoute field if non-nil, zero value otherwise.
+
+### GetPriorityRouteOk
+
+`func (o *InlineResponse200113) GetPriorityRouteOk() (*string, bool)`
+
+GetPriorityRouteOk returns a tuple with the PriorityRoute field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnrollmentString
+### SetPriorityRoute
 
-`func (o *InlineResponse200113) SetEnrollmentString(v string)`
+`func (o *InlineResponse200113) SetPriorityRoute(v string)`
 
-SetEnrollmentString sets EnrollmentString field to given value.
+SetPriorityRoute sets PriorityRoute field to given value.
 
-### HasEnrollmentString
+### HasPriorityRoute
 
-`func (o *InlineResponse200113) HasEnrollmentString() bool`
+`func (o *InlineResponse200113) HasPriorityRoute() bool`
 
-HasEnrollmentString returns a boolean if a field has been set.
+HasPriorityRoute returns a boolean if a field has been set.
 
-### GetUrl
+### SetPriorityRouteNil
 
-`func (o *InlineResponse200113) GetUrl() string`
+`func (o *InlineResponse200113) SetPriorityRouteNil(b bool)`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+ SetPriorityRouteNil sets the value for PriorityRoute to be an explicit nil
 
-### GetUrlOk
+### UnsetPriorityRoute
+`func (o *InlineResponse200113) UnsetPriorityRoute()`
 
-`func (o *InlineResponse200113) GetUrlOk() (*string, bool)`
+UnsetPriorityRoute ensures that no value is present for PriorityRoute, not even an explicit nil
+### GetRouterId
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+`func (o *InlineResponse200113) GetRouterId() string`
+
+GetRouterId returns the RouterId field if non-nil, zero value otherwise.
+
+### GetRouterIdOk
+
+`func (o *InlineResponse200113) GetRouterIdOk() (*string, bool)`
+
+GetRouterIdOk returns a tuple with the RouterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetRouterId
 
-`func (o *InlineResponse200113) SetUrl(v string)`
+`func (o *InlineResponse200113) SetRouterId(v string)`
 
-SetUrl sets Url field to given value.
+SetRouterId sets RouterId field to given value.
 
-### HasUrl
+### HasRouterId
 
-`func (o *InlineResponse200113) HasUrl() bool`
+`func (o *InlineResponse200113) HasRouterId() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasRouterId returns a boolean if a field has been set.
 
-### GetNotes
+### GetNeighbors
 
-`func (o *InlineResponse200113) GetNotes() string`
+`func (o *InlineResponse200113) GetNeighbors() []InlineResponse200113Neighbors`
 
-GetNotes returns the Notes field if non-nil, zero value otherwise.
+GetNeighbors returns the Neighbors field if non-nil, zero value otherwise.
 
-### GetNotesOk
+### GetNeighborsOk
 
-`func (o *InlineResponse200113) GetNotesOk() (*string, bool)`
+`func (o *InlineResponse200113) GetNeighborsOk() (*[]InlineResponse200113Neighbors, bool)`
 
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+GetNeighborsOk returns a tuple with the Neighbors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNotes
+### SetNeighbors
 
-`func (o *InlineResponse200113) SetNotes(v string)`
+`func (o *InlineResponse200113) SetNeighbors(v []InlineResponse200113Neighbors)`
 
-SetNotes sets Notes field to given value.
+SetNeighbors sets Neighbors field to given value.
 
-### HasNotes
+### HasNeighbors
 
-`func (o *InlineResponse200113) HasNotes() bool`
+`func (o *InlineResponse200113) HasNeighbors() bool`
 
-HasNotes returns a boolean if a field has been set.
-
-### GetIsBoundToConfigTemplate
-
-`func (o *InlineResponse200113) GetIsBoundToConfigTemplate() bool`
-
-GetIsBoundToConfigTemplate returns the IsBoundToConfigTemplate field if non-nil, zero value otherwise.
-
-### GetIsBoundToConfigTemplateOk
-
-`func (o *InlineResponse200113) GetIsBoundToConfigTemplateOk() (*bool, bool)`
-
-GetIsBoundToConfigTemplateOk returns a tuple with the IsBoundToConfigTemplate field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsBoundToConfigTemplate
-
-`func (o *InlineResponse200113) SetIsBoundToConfigTemplate(v bool)`
-
-SetIsBoundToConfigTemplate sets IsBoundToConfigTemplate field to given value.
-
-### HasIsBoundToConfigTemplate
-
-`func (o *InlineResponse200113) HasIsBoundToConfigTemplate() bool`
-
-HasIsBoundToConfigTemplate returns a boolean if a field has been set.
-
-### GetConfigTemplateId
-
-`func (o *InlineResponse200113) GetConfigTemplateId() string`
-
-GetConfigTemplateId returns the ConfigTemplateId field if non-nil, zero value otherwise.
-
-### GetConfigTemplateIdOk
-
-`func (o *InlineResponse200113) GetConfigTemplateIdOk() (*string, bool)`
-
-GetConfigTemplateIdOk returns a tuple with the ConfigTemplateId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetConfigTemplateId
-
-`func (o *InlineResponse200113) SetConfigTemplateId(v string)`
-
-SetConfigTemplateId sets ConfigTemplateId field to given value.
-
-### HasConfigTemplateId
-
-`func (o *InlineResponse200113) HasConfigTemplateId() bool`
-
-HasConfigTemplateId returns a boolean if a field has been set.
+HasNeighbors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

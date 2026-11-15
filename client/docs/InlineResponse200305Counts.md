@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ByStatus** | Pointer to [**InlineResponse200305CountsByStatus**](InlineResponse200305CountsByStatus.md) |  | [optional] 
+**RuleGroups** | Pointer to [**InlineResponse200305CountsRuleGroups**](InlineResponse200305CountsRuleGroups.md) |  | [optional] 
+**Rules** | Pointer to [**InlineResponse200305CountsRules**](InlineResponse200305CountsRules.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200305CountsWithDefaults instantiates a new InlineResponse20030
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetByStatus
+### GetRuleGroups
 
-`func (o *InlineResponse200305Counts) GetByStatus() InlineResponse200305CountsByStatus`
+`func (o *InlineResponse200305Counts) GetRuleGroups() InlineResponse200305CountsRuleGroups`
 
-GetByStatus returns the ByStatus field if non-nil, zero value otherwise.
+GetRuleGroups returns the RuleGroups field if non-nil, zero value otherwise.
 
-### GetByStatusOk
+### GetRuleGroupsOk
 
-`func (o *InlineResponse200305Counts) GetByStatusOk() (*InlineResponse200305CountsByStatus, bool)`
+`func (o *InlineResponse200305Counts) GetRuleGroupsOk() (*InlineResponse200305CountsRuleGroups, bool)`
 
-GetByStatusOk returns a tuple with the ByStatus field if it's non-nil, zero value otherwise
+GetRuleGroupsOk returns a tuple with the RuleGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetByStatus
+### SetRuleGroups
 
-`func (o *InlineResponse200305Counts) SetByStatus(v InlineResponse200305CountsByStatus)`
+`func (o *InlineResponse200305Counts) SetRuleGroups(v InlineResponse200305CountsRuleGroups)`
 
-SetByStatus sets ByStatus field to given value.
+SetRuleGroups sets RuleGroups field to given value.
 
-### HasByStatus
+### HasRuleGroups
 
-`func (o *InlineResponse200305Counts) HasByStatus() bool`
+`func (o *InlineResponse200305Counts) HasRuleGroups() bool`
 
-HasByStatus returns a boolean if a field has been set.
+HasRuleGroups returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *InlineResponse200305Counts) GetRules() InlineResponse200305CountsRules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineResponse200305Counts) GetRulesOk() (*InlineResponse200305CountsRules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineResponse200305Counts) SetRules(v InlineResponse200305CountsRules)`
+
+SetRules sets Rules field to given value.
+
+### HasRules
+
+`func (o *InlineResponse200305Counts) HasRules() bool`
+
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

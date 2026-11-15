@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdPolicy**](OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdPolicy.md) |  | 
+**Enabled** | **bool** | Boolean indicating whether VRFs are enabled for the organization. | 
 
 ## Methods
 
 ### NewInlineObject263
 
-`func NewInlineObject263(policy OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdPolicy, ) *InlineObject263`
+`func NewInlineObject263(enabled bool, ) *InlineObject263`
 
 NewInlineObject263 instantiates a new InlineObject263 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject263WithDefaults instantiates a new InlineObject263 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPolicy
+### GetEnabled
 
-`func (o *InlineObject263) GetPolicy() OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdPolicy`
+`func (o *InlineObject263) GetEnabled() bool`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetPolicyOk
+### GetEnabledOk
 
-`func (o *InlineObject263) GetPolicyOk() (*OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdPolicy, bool)`
+`func (o *InlineObject263) GetEnabledOk() (*bool, bool)`
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetEnabled
 
-`func (o *InlineObject263) SetPolicy(v OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdPolicy)`
+`func (o *InlineObject263) SetEnabled(v bool)`
 
-SetPolicy sets Policy field to given value.
+SetEnabled sets Enabled field to given value.
 
 
 

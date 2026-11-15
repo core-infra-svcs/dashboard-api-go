@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CaptureIds** | **[]string** | Delete the packet captures of the specified capture ids | 
+**Name** | **string** | Name of the profile to be added. This must be unique. | 
+**Description** | **string** | Description of the profile to be added. | 
+**Rules** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules**](OrganizationsOrganizationIdDevicesCellularDataProfilesRules.md) | The rules associated with this profile. At least one rule and no more than two rules may be defined for a profile. | 
 
 ## Methods
 
 ### NewInlineObject303
 
-`func NewInlineObject303(captureIds []string, ) *InlineObject303`
+`func NewInlineObject303(name string, description string, rules []OrganizationsOrganizationIdDevicesCellularDataProfilesRules, ) *InlineObject303`
 
 NewInlineObject303 instantiates a new InlineObject303 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +27,64 @@ NewInlineObject303WithDefaults instantiates a new InlineObject303 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCaptureIds
+### GetName
 
-`func (o *InlineObject303) GetCaptureIds() []string`
+`func (o *InlineObject303) GetName() string`
 
-GetCaptureIds returns the CaptureIds field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCaptureIdsOk
+### GetNameOk
 
-`func (o *InlineObject303) GetCaptureIdsOk() (*[]string, bool)`
+`func (o *InlineObject303) GetNameOk() (*string, bool)`
 
-GetCaptureIdsOk returns a tuple with the CaptureIds field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCaptureIds
+### SetName
 
-`func (o *InlineObject303) SetCaptureIds(v []string)`
+`func (o *InlineObject303) SetName(v string)`
 
-SetCaptureIds sets CaptureIds field to given value.
+SetName sets Name field to given value.
+
+
+### GetDescription
+
+`func (o *InlineObject303) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineObject303) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineObject303) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+
+### GetRules
+
+`func (o *InlineObject303) GetRules() []OrganizationsOrganizationIdDevicesCellularDataProfilesRules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineObject303) GetRulesOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineObject303) SetRules(v []OrganizationsOrganizationIdDevicesCellularDataProfilesRules)`
+
+SetRules sets Rules field to given value.
 
 
 

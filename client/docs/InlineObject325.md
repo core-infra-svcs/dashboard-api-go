@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Destination** | [**OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination**](OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination.md) |  | 
-**Licenses** | [**[]OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses**](OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses.md) | The list of licenses to move | 
+**ClaimId** | **string** | The unique order claim id | 
+**Subscriptions** | Pointer to [**[]OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions**](OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions.md) | The individual subscriptions to claim | [optional] 
 
 ## Methods
 
 ### NewInlineObject325
 
-`func NewInlineObject325(destination OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination, licenses []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses, ) *InlineObject325`
+`func NewInlineObject325(claimId string, ) *InlineObject325`
 
 NewInlineObject325 instantiates a new InlineObject325 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +26,50 @@ NewInlineObject325WithDefaults instantiates a new InlineObject325 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestination
+### GetClaimId
 
-`func (o *InlineObject325) GetDestination() OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination`
+`func (o *InlineObject325) GetClaimId() string`
 
-GetDestination returns the Destination field if non-nil, zero value otherwise.
+GetClaimId returns the ClaimId field if non-nil, zero value otherwise.
 
-### GetDestinationOk
+### GetClaimIdOk
 
-`func (o *InlineObject325) GetDestinationOk() (*OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination, bool)`
+`func (o *InlineObject325) GetClaimIdOk() (*string, bool)`
 
-GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
+GetClaimIdOk returns a tuple with the ClaimId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestination
+### SetClaimId
 
-`func (o *InlineObject325) SetDestination(v OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination)`
+`func (o *InlineObject325) SetClaimId(v string)`
 
-SetDestination sets Destination field to given value.
+SetClaimId sets ClaimId field to given value.
 
 
-### GetLicenses
+### GetSubscriptions
 
-`func (o *InlineObject325) GetLicenses() []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses`
+`func (o *InlineObject325) GetSubscriptions() []OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions`
 
-GetLicenses returns the Licenses field if non-nil, zero value otherwise.
+GetSubscriptions returns the Subscriptions field if non-nil, zero value otherwise.
 
-### GetLicensesOk
+### GetSubscriptionsOk
 
-`func (o *InlineObject325) GetLicensesOk() (*[]OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses, bool)`
+`func (o *InlineObject325) GetSubscriptionsOk() (*[]OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions, bool)`
 
-GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
+GetSubscriptionsOk returns a tuple with the Subscriptions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenses
+### SetSubscriptions
 
-`func (o *InlineObject325) SetLicenses(v []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses)`
+`func (o *InlineObject325) SetSubscriptions(v []OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions)`
 
-SetLicenses sets Licenses field to given value.
+SetSubscriptions sets Subscriptions field to given value.
 
+### HasSubscriptions
+
+`func (o *InlineObject325) HasSubscriptions() bool`
+
+HasSubscriptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

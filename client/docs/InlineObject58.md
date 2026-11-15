@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules**](NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
-**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
+**Access** | **string** | A string indicating the rule for which IPs are allowed to use the specified service. Acceptable values are \&quot;blocked\&quot; (no remote IPs can access the service), \&quot;restricted\&quot; (only allowed IPs can access the service), and \&quot;unrestriced\&quot; (any remote IP can access the service). This field is required | 
+**AllowedIps** | Pointer to **[]string** | An array of allowed CIDRs that can access the service. This field is required if \&quot;access\&quot; is set to \&quot;restricted\&quot;. Otherwise this field is ignored | [optional] 
 
 ## Methods
 
 ### NewInlineObject58
 
-`func NewInlineObject58() *InlineObject58`
+`func NewInlineObject58(access string, ) *InlineObject58`
 
 NewInlineObject58 instantiates a new InlineObject58 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,50 @@ NewInlineObject58WithDefaults instantiates a new InlineObject58 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetAccess
 
-`func (o *InlineObject58) GetRules() []NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules`
+`func (o *InlineObject58) GetAccess() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetAccess returns the Access field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetAccessOk
 
-`func (o *InlineObject58) GetRulesOk() (*[]NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules, bool)`
+`func (o *InlineObject58) GetAccessOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetAccessOk returns a tuple with the Access field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetAccess
 
-`func (o *InlineObject58) SetRules(v []NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules)`
+`func (o *InlineObject58) SetAccess(v string)`
 
-SetRules sets Rules field to given value.
+SetAccess sets Access field to given value.
 
-### HasRules
 
-`func (o *InlineObject58) HasRules() bool`
+### GetAllowedIps
 
-HasRules returns a boolean if a field has been set.
+`func (o *InlineObject58) GetAllowedIps() []string`
 
-### GetSyslogDefaultRule
+GetAllowedIps returns the AllowedIps field if non-nil, zero value otherwise.
 
-`func (o *InlineObject58) GetSyslogDefaultRule() bool`
+### GetAllowedIpsOk
 
-GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
+`func (o *InlineObject58) GetAllowedIpsOk() (*[]string, bool)`
 
-### GetSyslogDefaultRuleOk
-
-`func (o *InlineObject58) GetSyslogDefaultRuleOk() (*bool, bool)`
-
-GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
+GetAllowedIpsOk returns a tuple with the AllowedIps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSyslogDefaultRule
+### SetAllowedIps
 
-`func (o *InlineObject58) SetSyslogDefaultRule(v bool)`
+`func (o *InlineObject58) SetAllowedIps(v []string)`
 
-SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
+SetAllowedIps sets AllowedIps field to given value.
 
-### HasSyslogDefaultRule
+### HasAllowedIps
 
-`func (o *InlineObject58) HasSyslogDefaultRule() bool`
+`func (o *InlineObject58) HasAllowedIps() bool`
 
-HasSyslogDefaultRule returns a boolean if a field has been set.
+HasAllowedIps returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

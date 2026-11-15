@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RfProfileId** | Pointer to **NullableString** | The ID of an RF profile to assign to the device. If the value of this parameter is null, the appropriate basic RF profile (indoor or outdoor) will be assigned to the device. Assigning an RF profile will clear ALL manually configured overrides on the device (channel width, channel, power). | [optional] 
-**TwoFourGhzSettings** | Pointer to [**DevicesSerialApplianceRadioSettingsTwoFourGhzSettings**](DevicesSerialApplianceRadioSettingsTwoFourGhzSettings.md) |  | [optional] 
-**FiveGhzSettings** | Pointer to [**DevicesSerialApplianceRadioSettingsFiveGhzSettings**](DevicesSerialApplianceRadioSettingsFiveGhzSettings.md) |  | [optional] 
+**Channel** | Pointer to **string** | Desired ESL channel for the device. Only configurable for devices assigned the High frequency ESL or sepioo IIoT role. Use &#39;Auto&#39; (case insensitive) to use the recommended channel | [optional] 
+**Enabled** | Pointer to **bool** | Turn ESL features on and off for this device | [optional] 
 
 ## Methods
 
@@ -27,90 +26,55 @@ NewInlineObject49WithDefaults instantiates a new InlineObject49 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRfProfileId
+### GetChannel
 
-`func (o *InlineObject49) GetRfProfileId() string`
+`func (o *InlineObject49) GetChannel() string`
 
-GetRfProfileId returns the RfProfileId field if non-nil, zero value otherwise.
+GetChannel returns the Channel field if non-nil, zero value otherwise.
 
-### GetRfProfileIdOk
+### GetChannelOk
 
-`func (o *InlineObject49) GetRfProfileIdOk() (*string, bool)`
+`func (o *InlineObject49) GetChannelOk() (*string, bool)`
 
-GetRfProfileIdOk returns a tuple with the RfProfileId field if it's non-nil, zero value otherwise
+GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRfProfileId
+### SetChannel
 
-`func (o *InlineObject49) SetRfProfileId(v string)`
+`func (o *InlineObject49) SetChannel(v string)`
 
-SetRfProfileId sets RfProfileId field to given value.
+SetChannel sets Channel field to given value.
 
-### HasRfProfileId
+### HasChannel
 
-`func (o *InlineObject49) HasRfProfileId() bool`
+`func (o *InlineObject49) HasChannel() bool`
 
-HasRfProfileId returns a boolean if a field has been set.
+HasChannel returns a boolean if a field has been set.
 
-### SetRfProfileIdNil
+### GetEnabled
 
-`func (o *InlineObject49) SetRfProfileIdNil(b bool)`
+`func (o *InlineObject49) GetEnabled() bool`
 
- SetRfProfileIdNil sets the value for RfProfileId to be an explicit nil
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### UnsetRfProfileId
-`func (o *InlineObject49) UnsetRfProfileId()`
+### GetEnabledOk
 
-UnsetRfProfileId ensures that no value is present for RfProfileId, not even an explicit nil
-### GetTwoFourGhzSettings
+`func (o *InlineObject49) GetEnabledOk() (*bool, bool)`
 
-`func (o *InlineObject49) GetTwoFourGhzSettings() DevicesSerialApplianceRadioSettingsTwoFourGhzSettings`
-
-GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
-
-### GetTwoFourGhzSettingsOk
-
-`func (o *InlineObject49) GetTwoFourGhzSettingsOk() (*DevicesSerialApplianceRadioSettingsTwoFourGhzSettings, bool)`
-
-GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTwoFourGhzSettings
+### SetEnabled
 
-`func (o *InlineObject49) SetTwoFourGhzSettings(v DevicesSerialApplianceRadioSettingsTwoFourGhzSettings)`
+`func (o *InlineObject49) SetEnabled(v bool)`
 
-SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasTwoFourGhzSettings
+### HasEnabled
 
-`func (o *InlineObject49) HasTwoFourGhzSettings() bool`
+`func (o *InlineObject49) HasEnabled() bool`
 
-HasTwoFourGhzSettings returns a boolean if a field has been set.
-
-### GetFiveGhzSettings
-
-`func (o *InlineObject49) GetFiveGhzSettings() DevicesSerialApplianceRadioSettingsFiveGhzSettings`
-
-GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
-
-### GetFiveGhzSettingsOk
-
-`func (o *InlineObject49) GetFiveGhzSettingsOk() (*DevicesSerialApplianceRadioSettingsFiveGhzSettings, bool)`
-
-GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFiveGhzSettings
-
-`func (o *InlineObject49) SetFiveGhzSettings(v DevicesSerialApplianceRadioSettingsFiveGhzSettings)`
-
-SetFiveGhzSettings sets FiveGhzSettings field to given value.
-
-### HasFiveGhzSettings
-
-`func (o *InlineObject49) HasFiveGhzSettings() bool`
-
-HasFiveGhzSettings returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

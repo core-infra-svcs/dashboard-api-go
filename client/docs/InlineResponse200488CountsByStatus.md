@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Online** | Pointer to **int32** | Active client count | [optional] 
+**Online** | Pointer to **int32** | Active client count. | [optional] 
 
 ## Methods
 

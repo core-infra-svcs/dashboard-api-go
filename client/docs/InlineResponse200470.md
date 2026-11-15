@@ -4,9 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Model** | Pointer to **string** | The device model | [optional] 
-**Count** | Pointer to **int32** | Total number of devices per model | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage.md) |  | [optional] 
+**AccessPoints** | Pointer to **[]string** | Device types in Access Points category | [optional] 
+**Switches** | Pointer to **[]string** | Device types in Switches category | [optional] 
+**Cameras** | Pointer to **[]string** | Device types in Cameras category | [optional] 
+**Sensors** | Pointer to **[]string** | Device types in Sensors category | [optional] 
+**SecurityAppliances** | Pointer to **[]string** | Device types in Security Appliances category | [optional] 
+**CellularGateways** | Pointer to **[]string** | Device types in Cellular Gateways category | [optional] 
 
 ## Methods
 
@@ -27,80 +30,155 @@ NewInlineResponse200470WithDefaults instantiates a new InlineResponse200470 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetModel
+### GetAccessPoints
 
-`func (o *InlineResponse200470) GetModel() string`
+`func (o *InlineResponse200470) GetAccessPoints() []string`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetAccessPoints returns the AccessPoints field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetAccessPointsOk
 
-`func (o *InlineResponse200470) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200470) GetAccessPointsOk() (*[]string, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetAccessPointsOk returns a tuple with the AccessPoints field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetAccessPoints
 
-`func (o *InlineResponse200470) SetModel(v string)`
+`func (o *InlineResponse200470) SetAccessPoints(v []string)`
 
-SetModel sets Model field to given value.
+SetAccessPoints sets AccessPoints field to given value.
 
-### HasModel
+### HasAccessPoints
 
-`func (o *InlineResponse200470) HasModel() bool`
+`func (o *InlineResponse200470) HasAccessPoints() bool`
 
-HasModel returns a boolean if a field has been set.
+HasAccessPoints returns a boolean if a field has been set.
 
-### GetCount
+### GetSwitches
 
-`func (o *InlineResponse200470) GetCount() int32`
+`func (o *InlineResponse200470) GetSwitches() []string`
 
-GetCount returns the Count field if non-nil, zero value otherwise.
+GetSwitches returns the Switches field if non-nil, zero value otherwise.
 
-### GetCountOk
+### GetSwitchesOk
 
-`func (o *InlineResponse200470) GetCountOk() (*int32, bool)`
+`func (o *InlineResponse200470) GetSwitchesOk() (*[]string, bool)`
 
-GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
+GetSwitchesOk returns a tuple with the Switches field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCount
+### SetSwitches
 
-`func (o *InlineResponse200470) SetCount(v int32)`
+`func (o *InlineResponse200470) SetSwitches(v []string)`
 
-SetCount sets Count field to given value.
+SetSwitches sets Switches field to given value.
 
-### HasCount
+### HasSwitches
 
-`func (o *InlineResponse200470) HasCount() bool`
+`func (o *InlineResponse200470) HasSwitches() bool`
 
-HasCount returns a boolean if a field has been set.
+HasSwitches returns a boolean if a field has been set.
 
-### GetUsage
+### GetCameras
 
-`func (o *InlineResponse200470) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage`
+`func (o *InlineResponse200470) GetCameras() []string`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetCameras returns the Cameras field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetCamerasOk
 
-`func (o *InlineResponse200470) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage, bool)`
+`func (o *InlineResponse200470) GetCamerasOk() (*[]string, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetCamerasOk returns a tuple with the Cameras field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetCameras
 
-`func (o *InlineResponse200470) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage)`
+`func (o *InlineResponse200470) SetCameras(v []string)`
 
-SetUsage sets Usage field to given value.
+SetCameras sets Cameras field to given value.
 
-### HasUsage
+### HasCameras
 
-`func (o *InlineResponse200470) HasUsage() bool`
+`func (o *InlineResponse200470) HasCameras() bool`
 
-HasUsage returns a boolean if a field has been set.
+HasCameras returns a boolean if a field has been set.
+
+### GetSensors
+
+`func (o *InlineResponse200470) GetSensors() []string`
+
+GetSensors returns the Sensors field if non-nil, zero value otherwise.
+
+### GetSensorsOk
+
+`func (o *InlineResponse200470) GetSensorsOk() (*[]string, bool)`
+
+GetSensorsOk returns a tuple with the Sensors field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSensors
+
+`func (o *InlineResponse200470) SetSensors(v []string)`
+
+SetSensors sets Sensors field to given value.
+
+### HasSensors
+
+`func (o *InlineResponse200470) HasSensors() bool`
+
+HasSensors returns a boolean if a field has been set.
+
+### GetSecurityAppliances
+
+`func (o *InlineResponse200470) GetSecurityAppliances() []string`
+
+GetSecurityAppliances returns the SecurityAppliances field if non-nil, zero value otherwise.
+
+### GetSecurityAppliancesOk
+
+`func (o *InlineResponse200470) GetSecurityAppliancesOk() (*[]string, bool)`
+
+GetSecurityAppliancesOk returns a tuple with the SecurityAppliances field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSecurityAppliances
+
+`func (o *InlineResponse200470) SetSecurityAppliances(v []string)`
+
+SetSecurityAppliances sets SecurityAppliances field to given value.
+
+### HasSecurityAppliances
+
+`func (o *InlineResponse200470) HasSecurityAppliances() bool`
+
+HasSecurityAppliances returns a boolean if a field has been set.
+
+### GetCellularGateways
+
+`func (o *InlineResponse200470) GetCellularGateways() []string`
+
+GetCellularGateways returns the CellularGateways field if non-nil, zero value otherwise.
+
+### GetCellularGatewaysOk
+
+`func (o *InlineResponse200470) GetCellularGatewaysOk() (*[]string, bool)`
+
+GetCellularGatewaysOk returns a tuple with the CellularGateways field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCellularGateways
+
+`func (o *InlineResponse200470) SetCellularGateways(v []string)`
+
+SetCellularGateways sets CellularGateways field to given value.
+
+### HasCellularGateways
+
+`func (o *InlineResponse200470) HasCellularGateways() bool`
+
+HasCellularGateways returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

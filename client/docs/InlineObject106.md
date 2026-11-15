@@ -4,19 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the cluster | [optional] 
-**Uplinks** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersClusterIdUplinks**](NetworksNetworkIdCampusGatewayClustersClusterIdUplinks.md) | Uplink interface settings of the cluster | [optional] 
-**Tunnels** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersClusterIdTunnels**](NetworksNetworkIdCampusGatewayClustersClusterIdTunnels.md) | Tunnel interface settings of the cluster: Reuse uplink or specify tunnel interface | [optional] 
-**Nameservers** | Pointer to [**InlineResponse20118Nameservers**](InlineResponse20118Nameservers.md) |  | [optional] 
-**PortChannels** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels**](NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels.md) | Port channel settings of the cluster | [optional] 
-**Devices** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersClusterIdDevices**](NetworksNetworkIdCampusGatewayClustersClusterIdDevices.md) | Devices in the cluster | [optional] 
-**Notes** | Pointer to **string** | Notes about cluster with max size of 511 characters allowed | [optional] 
+**Name** | **string** | The name of the camera wireless profile. This parameter is required. | 
+**Ssid** | [**NetworksNetworkIdCameraWirelessProfilesSsid1**](NetworksNetworkIdCameraWirelessProfilesSsid1.md) |  | 
+**Identity** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesIdentity**](NetworksNetworkIdCameraWirelessProfilesIdentity.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject106
 
-`func NewInlineObject106() *InlineObject106`
+`func NewInlineObject106(name string, ssid NetworksNetworkIdCameraWirelessProfilesSsid1, ) *InlineObject106`
 
 NewInlineObject106 instantiates a new InlineObject106 object
 This constructor will assign default values to properties that have it defined,
@@ -50,161 +46,51 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *InlineObject106) HasName() bool`
+### GetSsid
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject106) GetSsid() NetworksNetworkIdCameraWirelessProfilesSsid1`
 
-### GetUplinks
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
 
-`func (o *InlineObject106) GetUplinks() []NetworksNetworkIdCampusGatewayClustersClusterIdUplinks`
+### GetSsidOk
 
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+`func (o *InlineObject106) GetSsidOk() (*NetworksNetworkIdCameraWirelessProfilesSsid1, bool)`
 
-### GetUplinksOk
-
-`func (o *InlineObject106) GetUplinksOk() (*[]NetworksNetworkIdCampusGatewayClustersClusterIdUplinks, bool)`
-
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinks
+### SetSsid
 
-`func (o *InlineObject106) SetUplinks(v []NetworksNetworkIdCampusGatewayClustersClusterIdUplinks)`
+`func (o *InlineObject106) SetSsid(v NetworksNetworkIdCameraWirelessProfilesSsid1)`
 
-SetUplinks sets Uplinks field to given value.
+SetSsid sets Ssid field to given value.
 
-### HasUplinks
 
-`func (o *InlineObject106) HasUplinks() bool`
+### GetIdentity
 
-HasUplinks returns a boolean if a field has been set.
+`func (o *InlineObject106) GetIdentity() NetworksNetworkIdCameraWirelessProfilesIdentity`
 
-### GetTunnels
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
 
-`func (o *InlineObject106) GetTunnels() []NetworksNetworkIdCampusGatewayClustersClusterIdTunnels`
+### GetIdentityOk
 
-GetTunnels returns the Tunnels field if non-nil, zero value otherwise.
+`func (o *InlineObject106) GetIdentityOk() (*NetworksNetworkIdCameraWirelessProfilesIdentity, bool)`
 
-### GetTunnelsOk
-
-`func (o *InlineObject106) GetTunnelsOk() (*[]NetworksNetworkIdCampusGatewayClustersClusterIdTunnels, bool)`
-
-GetTunnelsOk returns a tuple with the Tunnels field if it's non-nil, zero value otherwise
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTunnels
+### SetIdentity
 
-`func (o *InlineObject106) SetTunnels(v []NetworksNetworkIdCampusGatewayClustersClusterIdTunnels)`
+`func (o *InlineObject106) SetIdentity(v NetworksNetworkIdCameraWirelessProfilesIdentity)`
 
-SetTunnels sets Tunnels field to given value.
+SetIdentity sets Identity field to given value.
 
-### HasTunnels
+### HasIdentity
 
-`func (o *InlineObject106) HasTunnels() bool`
+`func (o *InlineObject106) HasIdentity() bool`
 
-HasTunnels returns a boolean if a field has been set.
-
-### GetNameservers
-
-`func (o *InlineObject106) GetNameservers() InlineResponse20118Nameservers`
-
-GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
-
-### GetNameserversOk
-
-`func (o *InlineObject106) GetNameserversOk() (*InlineResponse20118Nameservers, bool)`
-
-GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNameservers
-
-`func (o *InlineObject106) SetNameservers(v InlineResponse20118Nameservers)`
-
-SetNameservers sets Nameservers field to given value.
-
-### HasNameservers
-
-`func (o *InlineObject106) HasNameservers() bool`
-
-HasNameservers returns a boolean if a field has been set.
-
-### GetPortChannels
-
-`func (o *InlineObject106) GetPortChannels() []NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels`
-
-GetPortChannels returns the PortChannels field if non-nil, zero value otherwise.
-
-### GetPortChannelsOk
-
-`func (o *InlineObject106) GetPortChannelsOk() (*[]NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels, bool)`
-
-GetPortChannelsOk returns a tuple with the PortChannels field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPortChannels
-
-`func (o *InlineObject106) SetPortChannels(v []NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels)`
-
-SetPortChannels sets PortChannels field to given value.
-
-### HasPortChannels
-
-`func (o *InlineObject106) HasPortChannels() bool`
-
-HasPortChannels returns a boolean if a field has been set.
-
-### GetDevices
-
-`func (o *InlineObject106) GetDevices() []NetworksNetworkIdCampusGatewayClustersClusterIdDevices`
-
-GetDevices returns the Devices field if non-nil, zero value otherwise.
-
-### GetDevicesOk
-
-`func (o *InlineObject106) GetDevicesOk() (*[]NetworksNetworkIdCampusGatewayClustersClusterIdDevices, bool)`
-
-GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDevices
-
-`func (o *InlineObject106) SetDevices(v []NetworksNetworkIdCampusGatewayClustersClusterIdDevices)`
-
-SetDevices sets Devices field to given value.
-
-### HasDevices
-
-`func (o *InlineObject106) HasDevices() bool`
-
-HasDevices returns a boolean if a field has been set.
-
-### GetNotes
-
-`func (o *InlineObject106) GetNotes() string`
-
-GetNotes returns the Notes field if non-nil, zero value otherwise.
-
-### GetNotesOk
-
-`func (o *InlineObject106) GetNotesOk() (*string, bool)`
-
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNotes
-
-`func (o *InlineObject106) SetNotes(v string)`
-
-SetNotes sets Notes field to given value.
-
-### HasNotes
-
-`func (o *InlineObject106) HasNotes() bool`
-
-HasNotes returns a boolean if a field has been set.
+HasIdentity returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

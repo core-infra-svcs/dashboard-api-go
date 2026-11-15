@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **EbgpHoldTimer** | Pointer to **int32** | The eBGP hold timer in seconds for each neighbor. The eBGP hold timer must be an integer between 12 and 240. | [optional] 
 **EbgpMultihop** | Pointer to **int32** | Configure this if the neighbor is not adjacent. The eBGP multi-hop must be an integer between 1 and 255. | [optional] 
 **SourceIp** | Pointer to **string** | Source IP of eBGP neighbor | [optional] 
+**Vrf** | Pointer to [**OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersEbgpNeighborVrf**](OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersEbgpNeighborVrf.md) |  | [optional] 
 **PathPrepend** | Pointer to **[]int32** | Prepends the AS_PATH BGP Attribute associated with routes received from the remote peer. Configurable value of ASNs to prepend. Length of the array may not exceed 10, and each ASN in the array must be an integer between 1 and 4294967295. AS_PATH is 4th in the decision tree when identical routes from multiple peers exist. | [optional] 
 **MultiExitDiscriminator** | Pointer to **int32** | Configures the local metric associated with routes received from the remote peer. Routes from peers with lower metrics are will be preferred. Must be an integer between 0 and 4294967295. MED is 6th in the decision tree when identical routes from multiple peers exist. | [optional] 
 **Weight** | Pointer to **int32** | Configures the local metric associated with routes received from the remote peer. Routes from peers with lower metrics are will be preferred. Must be an integer between 0 and 4294967295. MED is 6th in the decision tree when identical routes from multiple peers exist. | [optional] 
@@ -182,6 +183,31 @@ SetSourceIp sets SourceIp field to given value.
 `func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersEbgpNeighbor) HasSourceIp() bool`
 
 HasSourceIp returns a boolean if a field has been set.
+
+### GetVrf
+
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersEbgpNeighbor) GetVrf() OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersEbgpNeighborVrf`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersEbgpNeighbor) GetVrfOk() (*OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersEbgpNeighborVrf, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersEbgpNeighbor) SetVrf(v OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersEbgpNeighborVrf)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersEbgpNeighbor) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
 
 ### GetPathPrepend
 

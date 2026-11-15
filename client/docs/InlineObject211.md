@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | **NullableString** | AP profile ID | 
+**Hostname** | Pointer to **string** | Desired ESL hostname of the network | [optional] 
+**Enabled** | Pointer to **bool** | Turn ESL features on and off for this network | [optional] 
+**Mode** | Pointer to **string** | Electronic shelf label mode of the network. Valid options are &#39;Bluetooth&#39;, &#39;high frequency&#39; | [optional] 
 
 ## Methods
 
 ### NewInlineObject211
 
-`func NewInlineObject211(profileId NullableString, ) *InlineObject211`
+`func NewInlineObject211() *InlineObject211`
 
 NewInlineObject211 instantiates a new InlineObject211 object
 This constructor will assign default values to properties that have it defined,
@@ -25,36 +27,81 @@ NewInlineObject211WithDefaults instantiates a new InlineObject211 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetHostname
 
-`func (o *InlineObject211) GetProfileId() string`
+`func (o *InlineObject211) GetHostname() string`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetHostname returns the Hostname field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetHostnameOk
 
-`func (o *InlineObject211) GetProfileIdOk() (*string, bool)`
+`func (o *InlineObject211) GetHostnameOk() (*string, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetHostname
 
-`func (o *InlineObject211) SetProfileId(v string)`
+`func (o *InlineObject211) SetHostname(v string)`
 
-SetProfileId sets ProfileId field to given value.
+SetHostname sets Hostname field to given value.
 
+### HasHostname
 
-### SetProfileIdNil
+`func (o *InlineObject211) HasHostname() bool`
 
-`func (o *InlineObject211) SetProfileIdNil(b bool)`
+HasHostname returns a boolean if a field has been set.
 
- SetProfileIdNil sets the value for ProfileId to be an explicit nil
+### GetEnabled
 
-### UnsetProfileId
-`func (o *InlineObject211) UnsetProfileId()`
+`func (o *InlineObject211) GetEnabled() bool`
 
-UnsetProfileId ensures that no value is present for ProfileId, not even an explicit nil
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineObject211) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineObject211) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineObject211) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
+
+### GetMode
+
+`func (o *InlineObject211) GetMode() string`
+
+GetMode returns the Mode field if non-nil, zero value otherwise.
+
+### GetModeOk
+
+`func (o *InlineObject211) GetModeOk() (*string, bool)`
+
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMode
+
+`func (o *InlineObject211) SetMode(v string)`
+
+SetMode sets Mode field to given value.
+
+### HasMode
+
+`func (o *InlineObject211) HasMode() bool`
+
+HasMode returns a boolean if a field has been set.
+
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

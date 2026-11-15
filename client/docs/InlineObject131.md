@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Assignments** | [**[]NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments**](NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments.md) | List of floorplan assignments to update. Up to 100 floor plan assignments can be provided in a request. | 
+**Jobs** | [**[]NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs**](NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs.md) | The list of auto locate jobs to be scheduled. Up to 100 jobs can be provided in a request. | 
 
 ## Methods
 
 ### NewInlineObject131
 
-`func NewInlineObject131(assignments []NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments, ) *InlineObject131`
+`func NewInlineObject131(jobs []NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs, ) *InlineObject131`
 
 NewInlineObject131 instantiates a new InlineObject131 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject131WithDefaults instantiates a new InlineObject131 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAssignments
+### GetJobs
 
-`func (o *InlineObject131) GetAssignments() []NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments`
+`func (o *InlineObject131) GetJobs() []NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs`
 
-GetAssignments returns the Assignments field if non-nil, zero value otherwise.
+GetJobs returns the Jobs field if non-nil, zero value otherwise.
 
-### GetAssignmentsOk
+### GetJobsOk
 
-`func (o *InlineObject131) GetAssignmentsOk() (*[]NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments, bool)`
+`func (o *InlineObject131) GetJobsOk() (*[]NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs, bool)`
 
-GetAssignmentsOk returns a tuple with the Assignments field if it's non-nil, zero value otherwise
+GetJobsOk returns a tuple with the Jobs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssignments
+### SetJobs
 
-`func (o *InlineObject131) SetAssignments(v []NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments)`
+`func (o *InlineObject131) SetJobs(v []NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs)`
 
-SetAssignments sets Assignments field to given value.
+SetJobs sets Jobs field to given value.
 
 
 

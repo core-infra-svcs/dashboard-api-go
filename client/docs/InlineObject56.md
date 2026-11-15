@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Access** | **string** | A string indicating the rule for which IPs are allowed to use the specified service. Acceptable values are \&quot;blocked\&quot; (no remote IPs can access the service), \&quot;restricted\&quot; (only allowed IPs can access the service), and \&quot;unrestriced\&quot; (any remote IP can access the service). This field is required | 
-**AllowedIps** | Pointer to **[]string** | An array of allowed CIDRs that can access the service. This field is required if \&quot;access\&quot; is set to \&quot;restricted\&quot;. Otherwise this field is ignored | [optional] 
+**Enabled** | **bool** | Enable warm spare | 
+**Mode** | Pointer to **string** | HA mode (disabled|active-passive|active-active) | [optional] 
+**Designations** | Pointer to [**[]NetworksNetworkIdApplianceDevicesRedundancyDesignations**](NetworksNetworkIdApplianceDevicesRedundancyDesignations.md) | Ordered warm spare roles | [optional] 
+**Uplink** | Pointer to [**NetworksNetworkIdApplianceDevicesRedundancyUplink**](NetworksNetworkIdApplianceDevicesRedundancyUplink.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject56
 
-`func NewInlineObject56(access string, ) *InlineObject56`
+`func NewInlineObject56(enabled bool, ) *InlineObject56`
 
 NewInlineObject56 instantiates a new InlineObject56 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +28,100 @@ NewInlineObject56WithDefaults instantiates a new InlineObject56 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAccess
+### GetEnabled
 
-`func (o *InlineObject56) GetAccess() string`
+`func (o *InlineObject56) GetEnabled() bool`
 
-GetAccess returns the Access field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetAccessOk
+### GetEnabledOk
 
-`func (o *InlineObject56) GetAccessOk() (*string, bool)`
+`func (o *InlineObject56) GetEnabledOk() (*bool, bool)`
 
-GetAccessOk returns a tuple with the Access field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccess
+### SetEnabled
 
-`func (o *InlineObject56) SetAccess(v string)`
+`func (o *InlineObject56) SetEnabled(v bool)`
 
-SetAccess sets Access field to given value.
+SetEnabled sets Enabled field to given value.
 
 
-### GetAllowedIps
+### GetMode
 
-`func (o *InlineObject56) GetAllowedIps() []string`
+`func (o *InlineObject56) GetMode() string`
 
-GetAllowedIps returns the AllowedIps field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetAllowedIpsOk
+### GetModeOk
 
-`func (o *InlineObject56) GetAllowedIpsOk() (*[]string, bool)`
+`func (o *InlineObject56) GetModeOk() (*string, bool)`
 
-GetAllowedIpsOk returns a tuple with the AllowedIps field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedIps
+### SetMode
 
-`func (o *InlineObject56) SetAllowedIps(v []string)`
+`func (o *InlineObject56) SetMode(v string)`
 
-SetAllowedIps sets AllowedIps field to given value.
+SetMode sets Mode field to given value.
 
-### HasAllowedIps
+### HasMode
 
-`func (o *InlineObject56) HasAllowedIps() bool`
+`func (o *InlineObject56) HasMode() bool`
 
-HasAllowedIps returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
+
+### GetDesignations
+
+`func (o *InlineObject56) GetDesignations() []NetworksNetworkIdApplianceDevicesRedundancyDesignations`
+
+GetDesignations returns the Designations field if non-nil, zero value otherwise.
+
+### GetDesignationsOk
+
+`func (o *InlineObject56) GetDesignationsOk() (*[]NetworksNetworkIdApplianceDevicesRedundancyDesignations, bool)`
+
+GetDesignationsOk returns a tuple with the Designations field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDesignations
+
+`func (o *InlineObject56) SetDesignations(v []NetworksNetworkIdApplianceDevicesRedundancyDesignations)`
+
+SetDesignations sets Designations field to given value.
+
+### HasDesignations
+
+`func (o *InlineObject56) HasDesignations() bool`
+
+HasDesignations returns a boolean if a field has been set.
+
+### GetUplink
+
+`func (o *InlineObject56) GetUplink() NetworksNetworkIdApplianceDevicesRedundancyUplink`
+
+GetUplink returns the Uplink field if non-nil, zero value otherwise.
+
+### GetUplinkOk
+
+`func (o *InlineObject56) GetUplinkOk() (*NetworksNetworkIdApplianceDevicesRedundancyUplink, bool)`
+
+GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUplink
+
+`func (o *InlineObject56) SetUplink(v NetworksNetworkIdApplianceDevicesRedundancyUplink)`
+
+SetUplink sets Uplink field to given value.
+
+### HasUplink
+
+`func (o *InlineObject56) HasUplink() bool`
+
+HasUplink returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

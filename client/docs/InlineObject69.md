@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Prefix** | **string** | A static IPv6 prefix | 
-**Origin** | [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1.md) |  | 
-**Description** | Pointer to **string** | A name or description for the prefix | [optional] 
+**Port** | Pointer to [**NullableNetworksNetworkIdApplianceInterfacesL3InterfaceIdPort**](NetworksNetworkIdApplianceInterfacesL3InterfaceIdPort.md) |  | [optional] 
+**Ipv4** | Pointer to [**InlineResponse20117Ipv4**](InlineResponse20117Ipv4.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject69
 
-`func NewInlineObject69(prefix string, origin NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1, ) *InlineObject69`
+`func NewInlineObject69() *InlineObject69`
 
 NewInlineObject69 instantiates a new InlineObject69 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +26,65 @@ NewInlineObject69WithDefaults instantiates a new InlineObject69 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPrefix
+### GetPort
 
-`func (o *InlineObject69) GetPrefix() string`
+`func (o *InlineObject69) GetPort() NetworksNetworkIdApplianceInterfacesL3InterfaceIdPort`
 
-GetPrefix returns the Prefix field if non-nil, zero value otherwise.
+GetPort returns the Port field if non-nil, zero value otherwise.
 
-### GetPrefixOk
+### GetPortOk
 
-`func (o *InlineObject69) GetPrefixOk() (*string, bool)`
+`func (o *InlineObject69) GetPortOk() (*NetworksNetworkIdApplianceInterfacesL3InterfaceIdPort, bool)`
 
-GetPrefixOk returns a tuple with the Prefix field if it's non-nil, zero value otherwise
+GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPrefix
+### SetPort
 
-`func (o *InlineObject69) SetPrefix(v string)`
+`func (o *InlineObject69) SetPort(v NetworksNetworkIdApplianceInterfacesL3InterfaceIdPort)`
 
-SetPrefix sets Prefix field to given value.
+SetPort sets Port field to given value.
 
+### HasPort
 
-### GetOrigin
+`func (o *InlineObject69) HasPort() bool`
 
-`func (o *InlineObject69) GetOrigin() NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1`
+HasPort returns a boolean if a field has been set.
 
-GetOrigin returns the Origin field if non-nil, zero value otherwise.
+### SetPortNil
 
-### GetOriginOk
+`func (o *InlineObject69) SetPortNil(b bool)`
 
-`func (o *InlineObject69) GetOriginOk() (*NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1, bool)`
+ SetPortNil sets the value for Port to be an explicit nil
 
-GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
+### UnsetPort
+`func (o *InlineObject69) UnsetPort()`
+
+UnsetPort ensures that no value is present for Port, not even an explicit nil
+### GetIpv4
+
+`func (o *InlineObject69) GetIpv4() InlineResponse20117Ipv4`
+
+GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
+
+### GetIpv4Ok
+
+`func (o *InlineObject69) GetIpv4Ok() (*InlineResponse20117Ipv4, bool)`
+
+GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrigin
+### SetIpv4
 
-`func (o *InlineObject69) SetOrigin(v NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1)`
+`func (o *InlineObject69) SetIpv4(v InlineResponse20117Ipv4)`
 
-SetOrigin sets Origin field to given value.
+SetIpv4 sets Ipv4 field to given value.
 
+### HasIpv4
 
-### GetDescription
+`func (o *InlineObject69) HasIpv4() bool`
 
-`func (o *InlineObject69) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineObject69) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineObject69) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineObject69) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
+HasIpv4 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

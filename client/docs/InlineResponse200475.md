@@ -4,18 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the switch. | 
-**Serial** | **string** | The serial number of the switch. | 
-**Mac** | **string** | The MAC address of the switch. | 
-**Network** | [**OrganizationsOrganizationIdSwitchPortsBySwitchNetwork**](OrganizationsOrganizationIdSwitchPortsBySwitchNetwork.md) |  | 
-**Model** | **string** | The model of the switch. | 
-**Ports** | [**[]OrganizationsOrganizationIdSwitchPortsBySwitchPorts**](OrganizationsOrganizationIdSwitchPortsBySwitchPorts.md) | Ports belonging to the switch | 
+**Ts** | Pointer to **time.Time** | Timestamp of the start of the interval. | [optional] 
+**Draw** | Pointer to **float32** | The PoE power draw in watts for all switch ports in the organization for the given interval. | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200475
 
-`func NewInlineResponse200475(name string, serial string, mac string, network OrganizationsOrganizationIdSwitchPortsBySwitchNetwork, model string, ports []OrganizationsOrganizationIdSwitchPortsBySwitchPorts, ) *InlineResponse200475`
+`func NewInlineResponse200475() *InlineResponse200475`
 
 NewInlineResponse200475 instantiates a new InlineResponse200475 object
 This constructor will assign default values to properties that have it defined,
@@ -30,125 +26,55 @@ NewInlineResponse200475WithDefaults instantiates a new InlineResponse200475 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetTs
 
-`func (o *InlineResponse200475) GetName() string`
+`func (o *InlineResponse200475) GetTs() time.Time`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetTsOk
 
-`func (o *InlineResponse200475) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200475) GetTsOk() (*time.Time, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetTs
 
-`func (o *InlineResponse200475) SetName(v string)`
+`func (o *InlineResponse200475) SetTs(v time.Time)`
 
-SetName sets Name field to given value.
+SetTs sets Ts field to given value.
 
+### HasTs
 
-### GetSerial
+`func (o *InlineResponse200475) HasTs() bool`
 
-`func (o *InlineResponse200475) GetSerial() string`
+HasTs returns a boolean if a field has been set.
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+### GetDraw
 
-### GetSerialOk
+`func (o *InlineResponse200475) GetDraw() float32`
 
-`func (o *InlineResponse200475) GetSerialOk() (*string, bool)`
+GetDraw returns the Draw field if non-nil, zero value otherwise.
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+### GetDrawOk
+
+`func (o *InlineResponse200475) GetDrawOk() (*float32, bool)`
+
+GetDrawOk returns a tuple with the Draw field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetDraw
 
-`func (o *InlineResponse200475) SetSerial(v string)`
+`func (o *InlineResponse200475) SetDraw(v float32)`
 
-SetSerial sets Serial field to given value.
+SetDraw sets Draw field to given value.
 
+### HasDraw
 
-### GetMac
+`func (o *InlineResponse200475) HasDraw() bool`
 
-`func (o *InlineResponse200475) GetMac() string`
-
-GetMac returns the Mac field if non-nil, zero value otherwise.
-
-### GetMacOk
-
-`func (o *InlineResponse200475) GetMacOk() (*string, bool)`
-
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMac
-
-`func (o *InlineResponse200475) SetMac(v string)`
-
-SetMac sets Mac field to given value.
-
-
-### GetNetwork
-
-`func (o *InlineResponse200475) GetNetwork() OrganizationsOrganizationIdSwitchPortsBySwitchNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200475) GetNetworkOk() (*OrganizationsOrganizationIdSwitchPortsBySwitchNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200475) SetNetwork(v OrganizationsOrganizationIdSwitchPortsBySwitchNetwork)`
-
-SetNetwork sets Network field to given value.
-
-
-### GetModel
-
-`func (o *InlineResponse200475) GetModel() string`
-
-GetModel returns the Model field if non-nil, zero value otherwise.
-
-### GetModelOk
-
-`func (o *InlineResponse200475) GetModelOk() (*string, bool)`
-
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetModel
-
-`func (o *InlineResponse200475) SetModel(v string)`
-
-SetModel sets Model field to given value.
-
-
-### GetPorts
-
-`func (o *InlineResponse200475) GetPorts() []OrganizationsOrganizationIdSwitchPortsBySwitchPorts`
-
-GetPorts returns the Ports field if non-nil, zero value otherwise.
-
-### GetPortsOk
-
-`func (o *InlineResponse200475) GetPortsOk() (*[]OrganizationsOrganizationIdSwitchPortsBySwitchPorts, bool)`
-
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPorts
-
-`func (o *InlineResponse200475) SetPorts(v []OrganizationsOrganizationIdSwitchPortsBySwitchPorts)`
-
-SetPorts sets Ports field to given value.
-
+HasDraw returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

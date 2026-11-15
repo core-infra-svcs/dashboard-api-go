@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The new name of the network group | 
+**DestOrganizationId** | **string** | The ID of the organization to move the SM seats to | 
+**LicenseId** | **string** | The ID of the SM license to move the seats from | 
+**SeatCount** | **int32** | The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license | 
 
 ## Methods
 
 ### NewInlineObject330
 
-`func NewInlineObject330(name string, ) *InlineObject330`
+`func NewInlineObject330(destOrganizationId string, licenseId string, seatCount int32, ) *InlineObject330`
 
 NewInlineObject330 instantiates a new InlineObject330 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +27,64 @@ NewInlineObject330WithDefaults instantiates a new InlineObject330 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetDestOrganizationId
 
-`func (o *InlineObject330) GetName() string`
+`func (o *InlineObject330) GetDestOrganizationId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDestOrganizationIdOk
 
-`func (o *InlineObject330) GetNameOk() (*string, bool)`
+`func (o *InlineObject330) GetDestOrganizationIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDestOrganizationId
 
-`func (o *InlineObject330) SetName(v string)`
+`func (o *InlineObject330) SetDestOrganizationId(v string)`
 
-SetName sets Name field to given value.
+SetDestOrganizationId sets DestOrganizationId field to given value.
+
+
+### GetLicenseId
+
+`func (o *InlineObject330) GetLicenseId() string`
+
+GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
+
+### GetLicenseIdOk
+
+`func (o *InlineObject330) GetLicenseIdOk() (*string, bool)`
+
+GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLicenseId
+
+`func (o *InlineObject330) SetLicenseId(v string)`
+
+SetLicenseId sets LicenseId field to given value.
+
+
+### GetSeatCount
+
+`func (o *InlineObject330) GetSeatCount() int32`
+
+GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
+
+### GetSeatCountOk
+
+`func (o *InlineObject330) GetSeatCountOk() (*int32, bool)`
+
+GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeatCount
+
+`func (o *InlineObject330) SetSeatCount(v int32)`
+
+SetSeatCount sets SeatCount field to given value.
 
 
 

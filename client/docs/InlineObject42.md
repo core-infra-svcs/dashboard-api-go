@@ -4,18 +4,25 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name or description for layer 3 static route | [optional] 
-**Subnet** | **string** | The subnet which is routed via this static route and should be specified in CIDR notation (ex. 1.2.3.0/24) | 
-**NextHopIp** | **string** | IP address of the next hop device to which the device sends its traffic for the subnet | 
-**AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static route via OSPF | [optional] 
-**PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static route over OSPF routes | [optional] 
-**Vrf** | Pointer to [**DevicesSerialSwitchRoutingStaticRoutesVrf1**](DevicesSerialSwitchRoutingStaticRoutesVrf1.md) |  | [optional] 
+**Name** | Pointer to **string** | A friendly name or description for the interface or VLAN (max length 128 characters). | [optional] 
+**Subnet** | Pointer to **NullableString** | The network that this L3 interface is on, in CIDR notation (ex. 10.1.1.0/24). | [optional] 
+**SwitchPortId** | Pointer to **NullableString** | Switch Port ID when in Routed mode (IOS XE firmware 17.18 or higher required) | [optional] 
+**InterfaceIp** | Pointer to **NullableString** | The IP address that will be used for Layer 3 routing on this VLAN or subnet. This cannot be the same         as the device management IP. | [optional] 
+**Mtu** | Pointer to **NullableInt32** | The interface MTU. Applies to native switch layer 3 interfaces, including VLAN and routed modes. | [optional] 
+**MulticastRouting** | Pointer to **string** | Enable multicast support if, multicast routing between VLANs is required. Options are:         &#39;disabled&#39;, &#39;enabled&#39; or &#39;IGMP snooping querier&#39;. Default is &#39;disabled&#39;. | [optional] 
+**VlanId** | Pointer to **NullableInt32** | The VLAN this L3 interface is on. VLAN must be between 1 and 4094. | [optional] 
+**DefaultGateway** | Pointer to **string** | The next hop for any traffic that isn&#39;t going to a directly connected subnet or over a static route.         This IP address must exist in a subnet with a L3 interface. Required if this is the first IPv4 interface. | [optional] 
+**OspfSettings** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfSettings1**](DevicesSerialSwitchRoutingInterfacesOspfSettings1.md) |  | [optional] 
+**Ipv6** | Pointer to [**DevicesSerialSwitchRoutingInterfacesIpv61**](DevicesSerialSwitchRoutingInterfacesIpv61.md) |  | [optional] 
+**Vrf** | Pointer to [**DevicesSerialSwitchRoutingInterfacesVrf1**](DevicesSerialSwitchRoutingInterfacesVrf1.md) |  | [optional] 
+**Loopback** | Pointer to **map[string]interface{}** | The loopback settings of the interface. | [optional] 
+**BidirectionalForwardingDetection** | Pointer to [**DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection**](DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject42
 
-`func NewInlineObject42(subnet string, nextHopIp string, ) *InlineObject42`
+`func NewInlineObject42() *InlineObject42`
 
 NewInlineObject42 instantiates a new InlineObject42 object
 This constructor will assign default values to properties that have it defined,
@@ -74,93 +81,278 @@ and a boolean to check if the value has been set.
 
 SetSubnet sets Subnet field to given value.
 
+### HasSubnet
 
-### GetNextHopIp
+`func (o *InlineObject42) HasSubnet() bool`
 
-`func (o *InlineObject42) GetNextHopIp() string`
+HasSubnet returns a boolean if a field has been set.
 
-GetNextHopIp returns the NextHopIp field if non-nil, zero value otherwise.
+### SetSubnetNil
 
-### GetNextHopIpOk
+`func (o *InlineObject42) SetSubnetNil(b bool)`
 
-`func (o *InlineObject42) GetNextHopIpOk() (*string, bool)`
+ SetSubnetNil sets the value for Subnet to be an explicit nil
 
-GetNextHopIpOk returns a tuple with the NextHopIp field if it's non-nil, zero value otherwise
+### UnsetSubnet
+`func (o *InlineObject42) UnsetSubnet()`
+
+UnsetSubnet ensures that no value is present for Subnet, not even an explicit nil
+### GetSwitchPortId
+
+`func (o *InlineObject42) GetSwitchPortId() string`
+
+GetSwitchPortId returns the SwitchPortId field if non-nil, zero value otherwise.
+
+### GetSwitchPortIdOk
+
+`func (o *InlineObject42) GetSwitchPortIdOk() (*string, bool)`
+
+GetSwitchPortIdOk returns a tuple with the SwitchPortId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNextHopIp
+### SetSwitchPortId
 
-`func (o *InlineObject42) SetNextHopIp(v string)`
+`func (o *InlineObject42) SetSwitchPortId(v string)`
 
-SetNextHopIp sets NextHopIp field to given value.
+SetSwitchPortId sets SwitchPortId field to given value.
 
+### HasSwitchPortId
 
-### GetAdvertiseViaOspfEnabled
+`func (o *InlineObject42) HasSwitchPortId() bool`
 
-`func (o *InlineObject42) GetAdvertiseViaOspfEnabled() bool`
+HasSwitchPortId returns a boolean if a field has been set.
 
-GetAdvertiseViaOspfEnabled returns the AdvertiseViaOspfEnabled field if non-nil, zero value otherwise.
+### SetSwitchPortIdNil
 
-### GetAdvertiseViaOspfEnabledOk
+`func (o *InlineObject42) SetSwitchPortIdNil(b bool)`
 
-`func (o *InlineObject42) GetAdvertiseViaOspfEnabledOk() (*bool, bool)`
+ SetSwitchPortIdNil sets the value for SwitchPortId to be an explicit nil
 
-GetAdvertiseViaOspfEnabledOk returns a tuple with the AdvertiseViaOspfEnabled field if it's non-nil, zero value otherwise
+### UnsetSwitchPortId
+`func (o *InlineObject42) UnsetSwitchPortId()`
+
+UnsetSwitchPortId ensures that no value is present for SwitchPortId, not even an explicit nil
+### GetInterfaceIp
+
+`func (o *InlineObject42) GetInterfaceIp() string`
+
+GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
+
+### GetInterfaceIpOk
+
+`func (o *InlineObject42) GetInterfaceIpOk() (*string, bool)`
+
+GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdvertiseViaOspfEnabled
+### SetInterfaceIp
 
-`func (o *InlineObject42) SetAdvertiseViaOspfEnabled(v bool)`
+`func (o *InlineObject42) SetInterfaceIp(v string)`
 
-SetAdvertiseViaOspfEnabled sets AdvertiseViaOspfEnabled field to given value.
+SetInterfaceIp sets InterfaceIp field to given value.
 
-### HasAdvertiseViaOspfEnabled
+### HasInterfaceIp
 
-`func (o *InlineObject42) HasAdvertiseViaOspfEnabled() bool`
+`func (o *InlineObject42) HasInterfaceIp() bool`
 
-HasAdvertiseViaOspfEnabled returns a boolean if a field has been set.
+HasInterfaceIp returns a boolean if a field has been set.
 
-### GetPreferOverOspfRoutesEnabled
+### SetInterfaceIpNil
 
-`func (o *InlineObject42) GetPreferOverOspfRoutesEnabled() bool`
+`func (o *InlineObject42) SetInterfaceIpNil(b bool)`
 
-GetPreferOverOspfRoutesEnabled returns the PreferOverOspfRoutesEnabled field if non-nil, zero value otherwise.
+ SetInterfaceIpNil sets the value for InterfaceIp to be an explicit nil
 
-### GetPreferOverOspfRoutesEnabledOk
+### UnsetInterfaceIp
+`func (o *InlineObject42) UnsetInterfaceIp()`
 
-`func (o *InlineObject42) GetPreferOverOspfRoutesEnabledOk() (*bool, bool)`
+UnsetInterfaceIp ensures that no value is present for InterfaceIp, not even an explicit nil
+### GetMtu
 
-GetPreferOverOspfRoutesEnabledOk returns a tuple with the PreferOverOspfRoutesEnabled field if it's non-nil, zero value otherwise
+`func (o *InlineObject42) GetMtu() int32`
+
+GetMtu returns the Mtu field if non-nil, zero value otherwise.
+
+### GetMtuOk
+
+`func (o *InlineObject42) GetMtuOk() (*int32, bool)`
+
+GetMtuOk returns a tuple with the Mtu field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPreferOverOspfRoutesEnabled
+### SetMtu
 
-`func (o *InlineObject42) SetPreferOverOspfRoutesEnabled(v bool)`
+`func (o *InlineObject42) SetMtu(v int32)`
 
-SetPreferOverOspfRoutesEnabled sets PreferOverOspfRoutesEnabled field to given value.
+SetMtu sets Mtu field to given value.
 
-### HasPreferOverOspfRoutesEnabled
+### HasMtu
 
-`func (o *InlineObject42) HasPreferOverOspfRoutesEnabled() bool`
+`func (o *InlineObject42) HasMtu() bool`
 
-HasPreferOverOspfRoutesEnabled returns a boolean if a field has been set.
+HasMtu returns a boolean if a field has been set.
+
+### SetMtuNil
+
+`func (o *InlineObject42) SetMtuNil(b bool)`
+
+ SetMtuNil sets the value for Mtu to be an explicit nil
+
+### UnsetMtu
+`func (o *InlineObject42) UnsetMtu()`
+
+UnsetMtu ensures that no value is present for Mtu, not even an explicit nil
+### GetMulticastRouting
+
+`func (o *InlineObject42) GetMulticastRouting() string`
+
+GetMulticastRouting returns the MulticastRouting field if non-nil, zero value otherwise.
+
+### GetMulticastRoutingOk
+
+`func (o *InlineObject42) GetMulticastRoutingOk() (*string, bool)`
+
+GetMulticastRoutingOk returns a tuple with the MulticastRouting field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMulticastRouting
+
+`func (o *InlineObject42) SetMulticastRouting(v string)`
+
+SetMulticastRouting sets MulticastRouting field to given value.
+
+### HasMulticastRouting
+
+`func (o *InlineObject42) HasMulticastRouting() bool`
+
+HasMulticastRouting returns a boolean if a field has been set.
+
+### GetVlanId
+
+`func (o *InlineObject42) GetVlanId() int32`
+
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+
+### GetVlanIdOk
+
+`func (o *InlineObject42) GetVlanIdOk() (*int32, bool)`
+
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlanId
+
+`func (o *InlineObject42) SetVlanId(v int32)`
+
+SetVlanId sets VlanId field to given value.
+
+### HasVlanId
+
+`func (o *InlineObject42) HasVlanId() bool`
+
+HasVlanId returns a boolean if a field has been set.
+
+### SetVlanIdNil
+
+`func (o *InlineObject42) SetVlanIdNil(b bool)`
+
+ SetVlanIdNil sets the value for VlanId to be an explicit nil
+
+### UnsetVlanId
+`func (o *InlineObject42) UnsetVlanId()`
+
+UnsetVlanId ensures that no value is present for VlanId, not even an explicit nil
+### GetDefaultGateway
+
+`func (o *InlineObject42) GetDefaultGateway() string`
+
+GetDefaultGateway returns the DefaultGateway field if non-nil, zero value otherwise.
+
+### GetDefaultGatewayOk
+
+`func (o *InlineObject42) GetDefaultGatewayOk() (*string, bool)`
+
+GetDefaultGatewayOk returns a tuple with the DefaultGateway field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDefaultGateway
+
+`func (o *InlineObject42) SetDefaultGateway(v string)`
+
+SetDefaultGateway sets DefaultGateway field to given value.
+
+### HasDefaultGateway
+
+`func (o *InlineObject42) HasDefaultGateway() bool`
+
+HasDefaultGateway returns a boolean if a field has been set.
+
+### GetOspfSettings
+
+`func (o *InlineObject42) GetOspfSettings() DevicesSerialSwitchRoutingInterfacesOspfSettings1`
+
+GetOspfSettings returns the OspfSettings field if non-nil, zero value otherwise.
+
+### GetOspfSettingsOk
+
+`func (o *InlineObject42) GetOspfSettingsOk() (*DevicesSerialSwitchRoutingInterfacesOspfSettings1, bool)`
+
+GetOspfSettingsOk returns a tuple with the OspfSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOspfSettings
+
+`func (o *InlineObject42) SetOspfSettings(v DevicesSerialSwitchRoutingInterfacesOspfSettings1)`
+
+SetOspfSettings sets OspfSettings field to given value.
+
+### HasOspfSettings
+
+`func (o *InlineObject42) HasOspfSettings() bool`
+
+HasOspfSettings returns a boolean if a field has been set.
+
+### GetIpv6
+
+`func (o *InlineObject42) GetIpv6() DevicesSerialSwitchRoutingInterfacesIpv61`
+
+GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
+
+### GetIpv6Ok
+
+`func (o *InlineObject42) GetIpv6Ok() (*DevicesSerialSwitchRoutingInterfacesIpv61, bool)`
+
+GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpv6
+
+`func (o *InlineObject42) SetIpv6(v DevicesSerialSwitchRoutingInterfacesIpv61)`
+
+SetIpv6 sets Ipv6 field to given value.
+
+### HasIpv6
+
+`func (o *InlineObject42) HasIpv6() bool`
+
+HasIpv6 returns a boolean if a field has been set.
 
 ### GetVrf
 
-`func (o *InlineObject42) GetVrf() DevicesSerialSwitchRoutingStaticRoutesVrf1`
+`func (o *InlineObject42) GetVrf() DevicesSerialSwitchRoutingInterfacesVrf1`
 
 GetVrf returns the Vrf field if non-nil, zero value otherwise.
 
 ### GetVrfOk
 
-`func (o *InlineObject42) GetVrfOk() (*DevicesSerialSwitchRoutingStaticRoutesVrf1, bool)`
+`func (o *InlineObject42) GetVrfOk() (*DevicesSerialSwitchRoutingInterfacesVrf1, bool)`
 
 GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVrf
 
-`func (o *InlineObject42) SetVrf(v DevicesSerialSwitchRoutingStaticRoutesVrf1)`
+`func (o *InlineObject42) SetVrf(v DevicesSerialSwitchRoutingInterfacesVrf1)`
 
 SetVrf sets Vrf field to given value.
 
@@ -169,6 +361,56 @@ SetVrf sets Vrf field to given value.
 `func (o *InlineObject42) HasVrf() bool`
 
 HasVrf returns a boolean if a field has been set.
+
+### GetLoopback
+
+`func (o *InlineObject42) GetLoopback() map[string]interface{}`
+
+GetLoopback returns the Loopback field if non-nil, zero value otherwise.
+
+### GetLoopbackOk
+
+`func (o *InlineObject42) GetLoopbackOk() (*map[string]interface{}, bool)`
+
+GetLoopbackOk returns a tuple with the Loopback field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLoopback
+
+`func (o *InlineObject42) SetLoopback(v map[string]interface{})`
+
+SetLoopback sets Loopback field to given value.
+
+### HasLoopback
+
+`func (o *InlineObject42) HasLoopback() bool`
+
+HasLoopback returns a boolean if a field has been set.
+
+### GetBidirectionalForwardingDetection
+
+`func (o *InlineObject42) GetBidirectionalForwardingDetection() DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection`
+
+GetBidirectionalForwardingDetection returns the BidirectionalForwardingDetection field if non-nil, zero value otherwise.
+
+### GetBidirectionalForwardingDetectionOk
+
+`func (o *InlineObject42) GetBidirectionalForwardingDetectionOk() (*DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection, bool)`
+
+GetBidirectionalForwardingDetectionOk returns a tuple with the BidirectionalForwardingDetection field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBidirectionalForwardingDetection
+
+`func (o *InlineObject42) SetBidirectionalForwardingDetection(v DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection)`
+
+SetBidirectionalForwardingDetection sets BidirectionalForwardingDetection field to given value.
+
+### HasBidirectionalForwardingDetection
+
+`func (o *InlineObject42) HasBidirectionalForwardingDetection() bool`
+
+HasBidirectionalForwardingDetection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

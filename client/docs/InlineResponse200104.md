@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**InlineResponse200104Network**](InlineResponse200104Network.md) |  | [optional] 
-**Policies** | Pointer to [**[]InlineResponse200104Policies**](InlineResponse200104Policies.md) | Umbrella policies applied to the network. The maximum number of policies is determined by Cisco Umbrella account limits. | [optional] 
+**NetworkId** | **string** | ID of the network whose VPN exclusion rules are returned. | 
+**NetworkName** | **string** | Name of the network whose VPN exclusion rules are returned. | 
+**Custom** | [**[]InlineResponse200104Custom**](InlineResponse200104Custom.md) | Custom VPN exclusion rules. | 
+**MajorApplications** | [**[]InlineResponse200104MajorApplications**](InlineResponse200104MajorApplications.md) | Major Application based VPN exclusion rules. | 
 
 ## Methods
 
 ### NewInlineResponse200104
 
-`func NewInlineResponse200104() *InlineResponse200104`
+`func NewInlineResponse200104(networkId string, networkName string, custom []InlineResponse200104Custom, majorApplications []InlineResponse200104MajorApplications, ) *InlineResponse200104`
 
 NewInlineResponse200104 instantiates a new InlineResponse200104 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +28,85 @@ NewInlineResponse200104WithDefaults instantiates a new InlineResponse200104 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetNetworkId
 
-`func (o *InlineResponse200104) GetNetwork() InlineResponse200104Network`
+`func (o *InlineResponse200104) GetNetworkId() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200104) GetNetworkOk() (*InlineResponse200104Network, bool)`
+`func (o *InlineResponse200104) GetNetworkIdOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetNetworkId
 
-`func (o *InlineResponse200104) SetNetwork(v InlineResponse200104Network)`
+`func (o *InlineResponse200104) SetNetworkId(v string)`
 
-SetNetwork sets Network field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasNetwork
 
-`func (o *InlineResponse200104) HasNetwork() bool`
+### GetNetworkName
 
-HasNetwork returns a boolean if a field has been set.
+`func (o *InlineResponse200104) GetNetworkName() string`
 
-### GetPolicies
+GetNetworkName returns the NetworkName field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200104) GetPolicies() []InlineResponse200104Policies`
+### GetNetworkNameOk
 
-GetPolicies returns the Policies field if non-nil, zero value otherwise.
+`func (o *InlineResponse200104) GetNetworkNameOk() (*string, bool)`
 
-### GetPoliciesOk
-
-`func (o *InlineResponse200104) GetPoliciesOk() (*[]InlineResponse200104Policies, bool)`
-
-GetPoliciesOk returns a tuple with the Policies field if it's non-nil, zero value otherwise
+GetNetworkNameOk returns a tuple with the NetworkName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicies
+### SetNetworkName
 
-`func (o *InlineResponse200104) SetPolicies(v []InlineResponse200104Policies)`
+`func (o *InlineResponse200104) SetNetworkName(v string)`
 
-SetPolicies sets Policies field to given value.
+SetNetworkName sets NetworkName field to given value.
 
-### HasPolicies
 
-`func (o *InlineResponse200104) HasPolicies() bool`
+### GetCustom
 
-HasPolicies returns a boolean if a field has been set.
+`func (o *InlineResponse200104) GetCustom() []InlineResponse200104Custom`
+
+GetCustom returns the Custom field if non-nil, zero value otherwise.
+
+### GetCustomOk
+
+`func (o *InlineResponse200104) GetCustomOk() (*[]InlineResponse200104Custom, bool)`
+
+GetCustomOk returns a tuple with the Custom field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCustom
+
+`func (o *InlineResponse200104) SetCustom(v []InlineResponse200104Custom)`
+
+SetCustom sets Custom field to given value.
+
+
+### GetMajorApplications
+
+`func (o *InlineResponse200104) GetMajorApplications() []InlineResponse200104MajorApplications`
+
+GetMajorApplications returns the MajorApplications field if non-nil, zero value otherwise.
+
+### GetMajorApplicationsOk
+
+`func (o *InlineResponse200104) GetMajorApplicationsOk() (*[]InlineResponse200104MajorApplications, bool)`
+
+GetMajorApplicationsOk returns a tuple with the MajorApplications field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMajorApplications
+
+`func (o *InlineResponse200104) SetMajorApplications(v []InlineResponse200104MajorApplications)`
+
+SetMajorApplications sets MajorApplications field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

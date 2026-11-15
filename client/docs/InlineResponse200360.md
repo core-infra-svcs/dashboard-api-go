@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | Timestamp, in iso8601 format, at which the event happened | [optional] 
-**Device** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice.md) |  | [optional] 
-**Details** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails.md) |  | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork.md) |  | [optional] 
+**AuthorityId** | Pointer to **string** | ID of the deleted certificate authority | [optional] 
+**Name** | Pointer to **string** | Certificate authority name | [optional] 
+**DeletedAt** | Pointer to **string** | ISO8601 timestamp (UTC) when the certificate authority was deleted | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200360WithDefaults instantiates a new InlineResponse200360 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetAuthorityId
 
-`func (o *InlineResponse200360) GetTs() time.Time`
+`func (o *InlineResponse200360) GetAuthorityId() string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetAuthorityId returns the AuthorityId field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetAuthorityIdOk
 
-`func (o *InlineResponse200360) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200360) GetAuthorityIdOk() (*string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetAuthorityIdOk returns a tuple with the AuthorityId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetAuthorityId
 
-`func (o *InlineResponse200360) SetTs(v time.Time)`
+`func (o *InlineResponse200360) SetAuthorityId(v string)`
 
-SetTs sets Ts field to given value.
+SetAuthorityId sets AuthorityId field to given value.
 
-### HasTs
+### HasAuthorityId
 
-`func (o *InlineResponse200360) HasTs() bool`
+`func (o *InlineResponse200360) HasAuthorityId() bool`
 
-HasTs returns a boolean if a field has been set.
+HasAuthorityId returns a boolean if a field has been set.
 
-### GetDevice
+### GetName
 
-`func (o *InlineResponse200360) GetDevice() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice`
+`func (o *InlineResponse200360) GetName() string`
 
-GetDevice returns the Device field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDeviceOk
+### GetNameOk
 
-`func (o *InlineResponse200360) GetDeviceOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice, bool)`
+`func (o *InlineResponse200360) GetNameOk() (*string, bool)`
 
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevice
+### SetName
 
-`func (o *InlineResponse200360) SetDevice(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice)`
+`func (o *InlineResponse200360) SetName(v string)`
 
-SetDevice sets Device field to given value.
+SetName sets Name field to given value.
 
-### HasDevice
+### HasName
 
-`func (o *InlineResponse200360) HasDevice() bool`
+`func (o *InlineResponse200360) HasName() bool`
 
-HasDevice returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetDetails
+### GetDeletedAt
 
-`func (o *InlineResponse200360) GetDetails() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails`
+`func (o *InlineResponse200360) GetDeletedAt() string`
 
-GetDetails returns the Details field if non-nil, zero value otherwise.
+GetDeletedAt returns the DeletedAt field if non-nil, zero value otherwise.
 
-### GetDetailsOk
+### GetDeletedAtOk
 
-`func (o *InlineResponse200360) GetDetailsOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails, bool)`
+`func (o *InlineResponse200360) GetDeletedAtOk() (*string, bool)`
 
-GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
+GetDeletedAtOk returns a tuple with the DeletedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDetails
+### SetDeletedAt
 
-`func (o *InlineResponse200360) SetDetails(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails)`
+`func (o *InlineResponse200360) SetDeletedAt(v string)`
 
-SetDetails sets Details field to given value.
+SetDeletedAt sets DeletedAt field to given value.
 
-### HasDetails
+### HasDeletedAt
 
-`func (o *InlineResponse200360) HasDetails() bool`
+`func (o *InlineResponse200360) HasDeletedAt() bool`
 
-HasDetails returns a boolean if a field has been set.
-
-### GetNetwork
-
-`func (o *InlineResponse200360) GetNetwork() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200360) GetNetworkOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200360) SetNetwork(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200360) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
+HasDeletedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

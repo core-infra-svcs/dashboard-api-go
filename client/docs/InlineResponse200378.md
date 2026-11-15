@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UpdatedPriorities** | Pointer to [**[]InlineResponse200378UpdatedPriorities**](InlineResponse200378UpdatedPriorities.md) | List of updated priorities | [optional] 
+**Items** | Pointer to [**[]InlineResponse200378Items**](InlineResponse200378Items.md) | Devices with their current cellular data usage information. Maximum 1000 items per page. | [optional] 
+**Meta** | Pointer to [**InlineResponse200372Meta**](InlineResponse200372Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200378WithDefaults instantiates a new InlineResponse200378 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUpdatedPriorities
+### GetItems
 
-`func (o *InlineResponse200378) GetUpdatedPriorities() []InlineResponse200378UpdatedPriorities`
+`func (o *InlineResponse200378) GetItems() []InlineResponse200378Items`
 
-GetUpdatedPriorities returns the UpdatedPriorities field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetUpdatedPrioritiesOk
+### GetItemsOk
 
-`func (o *InlineResponse200378) GetUpdatedPrioritiesOk() (*[]InlineResponse200378UpdatedPriorities, bool)`
+`func (o *InlineResponse200378) GetItemsOk() (*[]InlineResponse200378Items, bool)`
 
-GetUpdatedPrioritiesOk returns a tuple with the UpdatedPriorities field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpdatedPriorities
+### SetItems
 
-`func (o *InlineResponse200378) SetUpdatedPriorities(v []InlineResponse200378UpdatedPriorities)`
+`func (o *InlineResponse200378) SetItems(v []InlineResponse200378Items)`
 
-SetUpdatedPriorities sets UpdatedPriorities field to given value.
+SetItems sets Items field to given value.
 
-### HasUpdatedPriorities
+### HasItems
 
-`func (o *InlineResponse200378) HasUpdatedPriorities() bool`
+`func (o *InlineResponse200378) HasItems() bool`
 
-HasUpdatedPriorities returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
+
+### GetMeta
+
+`func (o *InlineResponse200378) GetMeta() InlineResponse200372Meta`
+
+GetMeta returns the Meta field if non-nil, zero value otherwise.
+
+### GetMetaOk
+
+`func (o *InlineResponse200378) GetMetaOk() (*InlineResponse200372Meta, bool)`
+
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMeta
+
+`func (o *InlineResponse200378) SetMeta(v InlineResponse200372Meta)`
+
+SetMeta sets Meta field to given value.
+
+### HasMeta
+
+`func (o *InlineResponse200378) HasMeta() bool`
+
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClusterId** | Pointer to **string** | ID of the primary cluster | [optional] 
-**Network** | Pointer to [**InlineResponse200332Network**](InlineResponse200332Network.md) |  | [optional] 
-**Failover** | Pointer to [**OrganizationsOrganizationIdCampusGatewayClustersFailoverTargetsFailover**](OrganizationsOrganizationIdCampusGatewayClustersFailoverTargetsFailover.md) |  | [optional] 
+**BoundaryId** | Pointer to **string** | The boundary id | [optional] 
+**Type** | Pointer to **string** | The boundary type | [optional] 
+**Results** | Pointer to [**OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults**](OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200333WithDefaults instantiates a new InlineResponse200333 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClusterId
+### GetBoundaryId
 
-`func (o *InlineResponse200333) GetClusterId() string`
+`func (o *InlineResponse200333) GetBoundaryId() string`
 
-GetClusterId returns the ClusterId field if non-nil, zero value otherwise.
+GetBoundaryId returns the BoundaryId field if non-nil, zero value otherwise.
 
-### GetClusterIdOk
+### GetBoundaryIdOk
 
-`func (o *InlineResponse200333) GetClusterIdOk() (*string, bool)`
+`func (o *InlineResponse200333) GetBoundaryIdOk() (*string, bool)`
 
-GetClusterIdOk returns a tuple with the ClusterId field if it's non-nil, zero value otherwise
+GetBoundaryIdOk returns a tuple with the BoundaryId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClusterId
+### SetBoundaryId
 
-`func (o *InlineResponse200333) SetClusterId(v string)`
+`func (o *InlineResponse200333) SetBoundaryId(v string)`
 
-SetClusterId sets ClusterId field to given value.
+SetBoundaryId sets BoundaryId field to given value.
 
-### HasClusterId
+### HasBoundaryId
 
-`func (o *InlineResponse200333) HasClusterId() bool`
+`func (o *InlineResponse200333) HasBoundaryId() bool`
 
-HasClusterId returns a boolean if a field has been set.
+HasBoundaryId returns a boolean if a field has been set.
 
-### GetNetwork
+### GetType
 
-`func (o *InlineResponse200333) GetNetwork() InlineResponse200332Network`
+`func (o *InlineResponse200333) GetType() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetTypeOk
 
-`func (o *InlineResponse200333) GetNetworkOk() (*InlineResponse200332Network, bool)`
+`func (o *InlineResponse200333) GetTypeOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetType
 
-`func (o *InlineResponse200333) SetNetwork(v InlineResponse200332Network)`
+`func (o *InlineResponse200333) SetType(v string)`
 
-SetNetwork sets Network field to given value.
+SetType sets Type field to given value.
 
-### HasNetwork
+### HasType
 
-`func (o *InlineResponse200333) HasNetwork() bool`
+`func (o *InlineResponse200333) HasType() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetFailover
+### GetResults
 
-`func (o *InlineResponse200333) GetFailover() OrganizationsOrganizationIdCampusGatewayClustersFailoverTargetsFailover`
+`func (o *InlineResponse200333) GetResults() OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults`
 
-GetFailover returns the Failover field if non-nil, zero value otherwise.
+GetResults returns the Results field if non-nil, zero value otherwise.
 
-### GetFailoverOk
+### GetResultsOk
 
-`func (o *InlineResponse200333) GetFailoverOk() (*OrganizationsOrganizationIdCampusGatewayClustersFailoverTargetsFailover, bool)`
+`func (o *InlineResponse200333) GetResultsOk() (*OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults, bool)`
 
-GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
+GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFailover
+### SetResults
 
-`func (o *InlineResponse200333) SetFailover(v OrganizationsOrganizationIdCampusGatewayClustersFailoverTargetsFailover)`
+`func (o *InlineResponse200333) SetResults(v OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults)`
 
-SetFailover sets Failover field to given value.
+SetResults sets Results field to given value.
 
-### HasFailover
+### HasResults
 
-`func (o *InlineResponse200333) HasFailover() bool`
+`func (o *InlineResponse200333) HasResults() bool`
 
-HasFailover returns a boolean if a field has been set.
+HasResults returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

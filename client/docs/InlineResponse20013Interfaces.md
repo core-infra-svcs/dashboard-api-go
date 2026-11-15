@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Wan1** | Pointer to [**InlineResponse20013InterfacesWan1**](InlineResponse20013InterfacesWan1.md) |  | [optional] 
-**Wan2** | Pointer to [**InlineResponse20013InterfacesWan2**](InlineResponse20013InterfacesWan2.md) |  | [optional] 
+**Mtu** | Pointer to [**InlineResponse20013Mtu**](InlineResponse20013Mtu.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse20013InterfacesWithDefaults instantiates a new InlineResponse20
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWan1
+### GetMtu
 
-`func (o *InlineResponse20013Interfaces) GetWan1() InlineResponse20013InterfacesWan1`
+`func (o *InlineResponse20013Interfaces) GetMtu() InlineResponse20013Mtu`
 
-GetWan1 returns the Wan1 field if non-nil, zero value otherwise.
+GetMtu returns the Mtu field if non-nil, zero value otherwise.
 
-### GetWan1Ok
+### GetMtuOk
 
-`func (o *InlineResponse20013Interfaces) GetWan1Ok() (*InlineResponse20013InterfacesWan1, bool)`
+`func (o *InlineResponse20013Interfaces) GetMtuOk() (*InlineResponse20013Mtu, bool)`
 
-GetWan1Ok returns a tuple with the Wan1 field if it's non-nil, zero value otherwise
+GetMtuOk returns a tuple with the Mtu field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWan1
+### SetMtu
 
-`func (o *InlineResponse20013Interfaces) SetWan1(v InlineResponse20013InterfacesWan1)`
+`func (o *InlineResponse20013Interfaces) SetMtu(v InlineResponse20013Mtu)`
 
-SetWan1 sets Wan1 field to given value.
+SetMtu sets Mtu field to given value.
 
-### HasWan1
+### HasMtu
 
-`func (o *InlineResponse20013Interfaces) HasWan1() bool`
+`func (o *InlineResponse20013Interfaces) HasMtu() bool`
 
-HasWan1 returns a boolean if a field has been set.
-
-### GetWan2
-
-`func (o *InlineResponse20013Interfaces) GetWan2() InlineResponse20013InterfacesWan2`
-
-GetWan2 returns the Wan2 field if non-nil, zero value otherwise.
-
-### GetWan2Ok
-
-`func (o *InlineResponse20013Interfaces) GetWan2Ok() (*InlineResponse20013InterfacesWan2, bool)`
-
-GetWan2Ok returns a tuple with the Wan2 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWan2
-
-`func (o *InlineResponse20013Interfaces) SetWan2(v InlineResponse20013InterfacesWan2)`
-
-SetWan2 sets Wan2 field to given value.
-
-### HasWan2
-
-`func (o *InlineResponse20013Interfaces) HasWan2() bool`
-
-HasWan2 returns a boolean if a field has been set.
+HasMtu returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

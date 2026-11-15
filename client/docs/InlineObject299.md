@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | A list of Meraki Serials to migrate | 
-**Target** | **string** | The controller or management mode to which the devices will be migrated | 
+**Name** | **string** | The name of the new organization | 
 
 ## Methods
 
 ### NewInlineObject299
 
-`func NewInlineObject299(serials []string, target string, ) *InlineObject299`
+`func NewInlineObject299(name string, ) *InlineObject299`
 
 NewInlineObject299 instantiates a new InlineObject299 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +25,24 @@ NewInlineObject299WithDefaults instantiates a new InlineObject299 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetName
 
-`func (o *InlineObject299) GetSerials() []string`
+`func (o *InlineObject299) GetName() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetNameOk
 
-`func (o *InlineObject299) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject299) GetNameOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetName
 
-`func (o *InlineObject299) SetSerials(v []string)`
+`func (o *InlineObject299) SetName(v string)`
 
-SetSerials sets Serials field to given value.
-
-
-### GetTarget
-
-`func (o *InlineObject299) GetTarget() string`
-
-GetTarget returns the Target field if non-nil, zero value otherwise.
-
-### GetTargetOk
-
-`func (o *InlineObject299) GetTargetOk() (*string, bool)`
-
-GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTarget
-
-`func (o *InlineObject299) SetTarget(v string)`
-
-SetTarget sets Target field to given value.
+SetName sets Name field to given value.
 
 
 

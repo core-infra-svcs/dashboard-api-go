@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems**](OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems.md) | List of device-to-profile assignments to create. | 
+**AuthorityId** | **string** | ID of the certificate authority to delete | 
+**Name** | **string** | Certificate authority name | 
 
 ## Methods
 
 ### NewInlineObject296
 
-`func NewInlineObject296(items []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems, ) *InlineObject296`
+`func NewInlineObject296(authorityId string, name string, ) *InlineObject296`
 
 NewInlineObject296 instantiates a new InlineObject296 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +26,44 @@ NewInlineObject296WithDefaults instantiates a new InlineObject296 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetAuthorityId
 
-`func (o *InlineObject296) GetItems() []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems`
+`func (o *InlineObject296) GetAuthorityId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetAuthorityId returns the AuthorityId field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetAuthorityIdOk
 
-`func (o *InlineObject296) GetItemsOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems, bool)`
+`func (o *InlineObject296) GetAuthorityIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetAuthorityIdOk returns a tuple with the AuthorityId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetAuthorityId
 
-`func (o *InlineObject296) SetItems(v []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems)`
+`func (o *InlineObject296) SetAuthorityId(v string)`
 
-SetItems sets Items field to given value.
+SetAuthorityId sets AuthorityId field to given value.
+
+
+### GetName
+
+`func (o *InlineObject296) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineObject296) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineObject296) SetName(v string)`
+
+SetName sets Name field to given value.
 
 
 

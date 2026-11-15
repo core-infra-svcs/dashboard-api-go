@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Swaps** | [**[]OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps**](OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps.md) | Each object represents a swap for one eSIM | 
+**Items** | [**[]OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems**](OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems.md) | MCG cluster-network tunnel settings | 
 
 ## Methods
 
 ### NewInlineObject289
 
-`func NewInlineObject289(swaps []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps, ) *InlineObject289`
+`func NewInlineObject289(items []OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems, ) *InlineObject289`
 
 NewInlineObject289 instantiates a new InlineObject289 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject289WithDefaults instantiates a new InlineObject289 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwaps
+### GetItems
 
-`func (o *InlineObject289) GetSwaps() []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps`
+`func (o *InlineObject289) GetItems() []OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems`
 
-GetSwaps returns the Swaps field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetSwapsOk
+### GetItemsOk
 
-`func (o *InlineObject289) GetSwapsOk() (*[]OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps, bool)`
+`func (o *InlineObject289) GetItemsOk() (*[]OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems, bool)`
 
-GetSwapsOk returns a tuple with the Swaps field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwaps
+### SetItems
 
-`func (o *InlineObject289) SetSwaps(v []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps)`
+`func (o *InlineObject289) SetItems(v []OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems)`
 
-SetSwaps sets Swaps field to given value.
+SetItems sets Items field to given value.
 
 
 

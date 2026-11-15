@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200307Items**](InlineResponse200307Items.md) | List of the IPsec SLA policies for an organization | [optional] 
-**Meta** | Pointer to [**InlineResponse200307Meta**](InlineResponse200307Meta.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200104**](InlineResponse200104.md) | VPN exclusion rules by network | [optional] 
 
 ## Methods
 
@@ -28,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *InlineResponse200308) GetItems() []InlineResponse200307Items`
+`func (o *InlineResponse200308) GetItems() []InlineResponse200104`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *InlineResponse200308) GetItemsOk() (*[]InlineResponse200307Items, bool)`
+`func (o *InlineResponse200308) GetItemsOk() (*[]InlineResponse200104, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *InlineResponse200308) SetItems(v []InlineResponse200307Items)`
+`func (o *InlineResponse200308) SetItems(v []InlineResponse200104)`
 
 SetItems sets Items field to given value.
 
@@ -50,31 +49,6 @@ SetItems sets Items field to given value.
 `func (o *InlineResponse200308) HasItems() bool`
 
 HasItems returns a boolean if a field has been set.
-
-### GetMeta
-
-`func (o *InlineResponse200308) GetMeta() InlineResponse200307Meta`
-
-GetMeta returns the Meta field if non-nil, zero value otherwise.
-
-### GetMetaOk
-
-`func (o *InlineResponse200308) GetMetaOk() (*InlineResponse200307Meta, bool)`
-
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMeta
-
-`func (o *InlineResponse200308) SetMeta(v InlineResponse200307Meta)`
-
-SetMeta sets Meta field to given value.
-
-### HasMeta
-
-`func (o *InlineResponse200308) HasMeta() bool`
-
-HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

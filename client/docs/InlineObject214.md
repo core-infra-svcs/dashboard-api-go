@@ -4,16 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BusyHour** | Pointer to [**NetworksNetworkIdWirelessRadioRrmBusyHour**](NetworksNetworkIdWirelessRadioRrmBusyHour.md) |  | [optional] 
-**Channel** | Pointer to [**NetworksNetworkIdWirelessRadioRrmChannel**](NetworksNetworkIdWirelessRadioRrmChannel.md) |  | [optional] 
-**Fra** | Pointer to [**NetworksNetworkIdWirelessRadioRrmFra**](NetworksNetworkIdWirelessRadioRrmFra.md) |  | [optional] 
-**Ai** | Pointer to [**NetworksNetworkIdWirelessRadioRrmAi**](NetworksNetworkIdWirelessRadioRrmAi.md) |  | [optional] 
+**ProfileId** | **NullableString** | AP profile ID | 
 
 ## Methods
 
 ### NewInlineObject214
 
-`func NewInlineObject214() *InlineObject214`
+`func NewInlineObject214(profileId NullableString, ) *InlineObject214`
 
 NewInlineObject214 instantiates a new InlineObject214 object
 This constructor will assign default values to properties that have it defined,
@@ -28,106 +25,36 @@ NewInlineObject214WithDefaults instantiates a new InlineObject214 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBusyHour
+### GetProfileId
 
-`func (o *InlineObject214) GetBusyHour() NetworksNetworkIdWirelessRadioRrmBusyHour`
+`func (o *InlineObject214) GetProfileId() string`
 
-GetBusyHour returns the BusyHour field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetBusyHourOk
+### GetProfileIdOk
 
-`func (o *InlineObject214) GetBusyHourOk() (*NetworksNetworkIdWirelessRadioRrmBusyHour, bool)`
+`func (o *InlineObject214) GetProfileIdOk() (*string, bool)`
 
-GetBusyHourOk returns a tuple with the BusyHour field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBusyHour
+### SetProfileId
 
-`func (o *InlineObject214) SetBusyHour(v NetworksNetworkIdWirelessRadioRrmBusyHour)`
+`func (o *InlineObject214) SetProfileId(v string)`
 
-SetBusyHour sets BusyHour field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasBusyHour
 
-`func (o *InlineObject214) HasBusyHour() bool`
+### SetProfileIdNil
 
-HasBusyHour returns a boolean if a field has been set.
+`func (o *InlineObject214) SetProfileIdNil(b bool)`
 
-### GetChannel
+ SetProfileIdNil sets the value for ProfileId to be an explicit nil
 
-`func (o *InlineObject214) GetChannel() NetworksNetworkIdWirelessRadioRrmChannel`
+### UnsetProfileId
+`func (o *InlineObject214) UnsetProfileId()`
 
-GetChannel returns the Channel field if non-nil, zero value otherwise.
-
-### GetChannelOk
-
-`func (o *InlineObject214) GetChannelOk() (*NetworksNetworkIdWirelessRadioRrmChannel, bool)`
-
-GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetChannel
-
-`func (o *InlineObject214) SetChannel(v NetworksNetworkIdWirelessRadioRrmChannel)`
-
-SetChannel sets Channel field to given value.
-
-### HasChannel
-
-`func (o *InlineObject214) HasChannel() bool`
-
-HasChannel returns a boolean if a field has been set.
-
-### GetFra
-
-`func (o *InlineObject214) GetFra() NetworksNetworkIdWirelessRadioRrmFra`
-
-GetFra returns the Fra field if non-nil, zero value otherwise.
-
-### GetFraOk
-
-`func (o *InlineObject214) GetFraOk() (*NetworksNetworkIdWirelessRadioRrmFra, bool)`
-
-GetFraOk returns a tuple with the Fra field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFra
-
-`func (o *InlineObject214) SetFra(v NetworksNetworkIdWirelessRadioRrmFra)`
-
-SetFra sets Fra field to given value.
-
-### HasFra
-
-`func (o *InlineObject214) HasFra() bool`
-
-HasFra returns a boolean if a field has been set.
-
-### GetAi
-
-`func (o *InlineObject214) GetAi() NetworksNetworkIdWirelessRadioRrmAi`
-
-GetAi returns the Ai field if non-nil, zero value otherwise.
-
-### GetAiOk
-
-`func (o *InlineObject214) GetAiOk() (*NetworksNetworkIdWirelessRadioRrmAi, bool)`
-
-GetAiOk returns a tuple with the Ai field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAi
-
-`func (o *InlineObject214) SetAi(v NetworksNetworkIdWirelessRadioRrmAi)`
-
-SetAi sets Ai field to given value.
-
-### HasAi
-
-`func (o *InlineObject214) HasAi() bool`
-
-HasAi returns a boolean if a field has been set.
-
+UnsetProfileId ensures that no value is present for ProfileId, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | ID of the profile. | [optional] 
-**LastUpdatedAt** | Pointer to **string** | Time the profile was last updated in ISO8601Z. | [optional] 
-**Name** | Pointer to **string** | Name of the profile (names should be unique for all profiles defined for the org). | [optional] 
-**Description** | Pointer to **string** | The description of the profile. | [optional] 
-**Rules** | Pointer to [**[]InlineResponse200363Rules**](InlineResponse200363Rules.md) | The rules associated with this profile. At least one rule and no more than two rules may be defined for a profile. | [optional] 
+**Id** | Pointer to **string** | The ID of the network or config template to copy configuration from | [optional] 
+**Name** | Pointer to **string** | The name of the configuration template | [optional] 
+**ProductTypes** | Pointer to **[]string** | The product types of the configuration template | [optional] 
+**TimeZone** | Pointer to **NullableString** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article&lt;/a&gt;. Not applicable if copying from existing network or template | [optional] 
+**Url** | Pointer to **NullableString** | URL to the configuration template in the Dashboard | [optional] 
 
 ## Methods
 
@@ -29,55 +29,30 @@ NewInlineResponse200366WithDefaults instantiates a new InlineResponse200366 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetId
 
-`func (o *InlineResponse200366) GetProfileId() string`
+`func (o *InlineResponse200366) GetId() string`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetIdOk
 
-`func (o *InlineResponse200366) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200366) GetIdOk() (*string, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetId
 
-`func (o *InlineResponse200366) SetProfileId(v string)`
+`func (o *InlineResponse200366) SetId(v string)`
 
-SetProfileId sets ProfileId field to given value.
+SetId sets Id field to given value.
 
-### HasProfileId
+### HasId
 
-`func (o *InlineResponse200366) HasProfileId() bool`
+`func (o *InlineResponse200366) HasId() bool`
 
-HasProfileId returns a boolean if a field has been set.
-
-### GetLastUpdatedAt
-
-`func (o *InlineResponse200366) GetLastUpdatedAt() string`
-
-GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
-
-### GetLastUpdatedAtOk
-
-`func (o *InlineResponse200366) GetLastUpdatedAtOk() (*string, bool)`
-
-GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastUpdatedAt
-
-`func (o *InlineResponse200366) SetLastUpdatedAt(v string)`
-
-SetLastUpdatedAt sets LastUpdatedAt field to given value.
-
-### HasLastUpdatedAt
-
-`func (o *InlineResponse200366) HasLastUpdatedAt() bool`
-
-HasLastUpdatedAt returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -104,56 +79,101 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetDescription
+### GetProductTypes
 
-`func (o *InlineResponse200366) GetDescription() string`
+`func (o *InlineResponse200366) GetProductTypes() []string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetProductTypesOk
 
-`func (o *InlineResponse200366) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse200366) GetProductTypesOk() (*[]string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetProductTypes
 
-`func (o *InlineResponse200366) SetDescription(v string)`
+`func (o *InlineResponse200366) SetProductTypes(v []string)`
 
-SetDescription sets Description field to given value.
+SetProductTypes sets ProductTypes field to given value.
 
-### HasDescription
+### HasProductTypes
 
-`func (o *InlineResponse200366) HasDescription() bool`
+`func (o *InlineResponse200366) HasProductTypes() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasProductTypes returns a boolean if a field has been set.
 
-### GetRules
+### GetTimeZone
 
-`func (o *InlineResponse200366) GetRules() []InlineResponse200363Rules`
+`func (o *InlineResponse200366) GetTimeZone() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetTimeZoneOk
 
-`func (o *InlineResponse200366) GetRulesOk() (*[]InlineResponse200363Rules, bool)`
+`func (o *InlineResponse200366) GetTimeZoneOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetTimeZone
 
-`func (o *InlineResponse200366) SetRules(v []InlineResponse200363Rules)`
+`func (o *InlineResponse200366) SetTimeZone(v string)`
 
-SetRules sets Rules field to given value.
+SetTimeZone sets TimeZone field to given value.
 
-### HasRules
+### HasTimeZone
 
-`func (o *InlineResponse200366) HasRules() bool`
+`func (o *InlineResponse200366) HasTimeZone() bool`
 
-HasRules returns a boolean if a field has been set.
+HasTimeZone returns a boolean if a field has been set.
 
+### SetTimeZoneNil
+
+`func (o *InlineResponse200366) SetTimeZoneNil(b bool)`
+
+ SetTimeZoneNil sets the value for TimeZone to be an explicit nil
+
+### UnsetTimeZone
+`func (o *InlineResponse200366) UnsetTimeZone()`
+
+UnsetTimeZone ensures that no value is present for TimeZone, not even an explicit nil
+### GetUrl
+
+`func (o *InlineResponse200366) GetUrl() string`
+
+GetUrl returns the Url field if non-nil, zero value otherwise.
+
+### GetUrlOk
+
+`func (o *InlineResponse200366) GetUrlOk() (*string, bool)`
+
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrl
+
+`func (o *InlineResponse200366) SetUrl(v string)`
+
+SetUrl sets Url field to given value.
+
+### HasUrl
+
+`func (o *InlineResponse200366) HasUrl() bool`
+
+HasUrl returns a boolean if a field has been set.
+
+### SetUrlNil
+
+`func (o *InlineResponse200366) SetUrlNil(b bool)`
+
+ SetUrlNil sets the value for Url to be an explicit nil
+
+### UnsetUrl
+`func (o *InlineResponse200366) UnsetUrl()`
+
+UnsetUrl ensures that no value is present for Url, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

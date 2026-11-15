@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**InterfaceId** | Pointer to **string** | Interface ID | [optional] 
-**Ipv4** | Pointer to [**InlineResponse20116Ipv4**](InlineResponse20116Ipv4.md) |  | [optional] 
-**Port** | Pointer to [**InlineResponse20116Port**](InlineResponse20116Port.md) |  | [optional] 
+**EnrollmentId** | Pointer to **string** | Id to check the status of your enrollment | [optional] 
+**Url** | Pointer to **string** | Url to check the status of your enrollment | [optional] 
+**Request** | Pointer to [**InlineResponse20116Request**](InlineResponse20116Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the enrollment | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse20116WithDefaults instantiates a new InlineResponse20116 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetInterfaceId
+### GetEnrollmentId
 
-`func (o *InlineResponse20116) GetInterfaceId() string`
+`func (o *InlineResponse20116) GetEnrollmentId() string`
 
-GetInterfaceId returns the InterfaceId field if non-nil, zero value otherwise.
+GetEnrollmentId returns the EnrollmentId field if non-nil, zero value otherwise.
 
-### GetInterfaceIdOk
+### GetEnrollmentIdOk
 
-`func (o *InlineResponse20116) GetInterfaceIdOk() (*string, bool)`
+`func (o *InlineResponse20116) GetEnrollmentIdOk() (*string, bool)`
 
-GetInterfaceIdOk returns a tuple with the InterfaceId field if it's non-nil, zero value otherwise
+GetEnrollmentIdOk returns a tuple with the EnrollmentId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaceId
+### SetEnrollmentId
 
-`func (o *InlineResponse20116) SetInterfaceId(v string)`
+`func (o *InlineResponse20116) SetEnrollmentId(v string)`
 
-SetInterfaceId sets InterfaceId field to given value.
+SetEnrollmentId sets EnrollmentId field to given value.
 
-### HasInterfaceId
+### HasEnrollmentId
 
-`func (o *InlineResponse20116) HasInterfaceId() bool`
+`func (o *InlineResponse20116) HasEnrollmentId() bool`
 
-HasInterfaceId returns a boolean if a field has been set.
+HasEnrollmentId returns a boolean if a field has been set.
 
-### GetIpv4
+### GetUrl
 
-`func (o *InlineResponse20116) GetIpv4() InlineResponse20116Ipv4`
+`func (o *InlineResponse20116) GetUrl() string`
 
-GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetIpv4Ok
+### GetUrlOk
 
-`func (o *InlineResponse20116) GetIpv4Ok() (*InlineResponse20116Ipv4, bool)`
+`func (o *InlineResponse20116) GetUrlOk() (*string, bool)`
 
-GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpv4
+### SetUrl
 
-`func (o *InlineResponse20116) SetIpv4(v InlineResponse20116Ipv4)`
+`func (o *InlineResponse20116) SetUrl(v string)`
 
-SetIpv4 sets Ipv4 field to given value.
+SetUrl sets Url field to given value.
 
-### HasIpv4
+### HasUrl
 
-`func (o *InlineResponse20116) HasIpv4() bool`
+`func (o *InlineResponse20116) HasUrl() bool`
 
-HasIpv4 returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetPort
+### GetRequest
 
-`func (o *InlineResponse20116) GetPort() InlineResponse20116Port`
+`func (o *InlineResponse20116) GetRequest() InlineResponse20116Request`
 
-GetPort returns the Port field if non-nil, zero value otherwise.
+GetRequest returns the Request field if non-nil, zero value otherwise.
 
-### GetPortOk
+### GetRequestOk
 
-`func (o *InlineResponse20116) GetPortOk() (*InlineResponse20116Port, bool)`
+`func (o *InlineResponse20116) GetRequestOk() (*InlineResponse20116Request, bool)`
 
-GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPort
+### SetRequest
 
-`func (o *InlineResponse20116) SetPort(v InlineResponse20116Port)`
+`func (o *InlineResponse20116) SetRequest(v InlineResponse20116Request)`
 
-SetPort sets Port field to given value.
+SetRequest sets Request field to given value.
 
-### HasPort
+### HasRequest
 
-`func (o *InlineResponse20116) HasPort() bool`
+`func (o *InlineResponse20116) HasRequest() bool`
 
-HasPort returns a boolean if a field has been set.
+HasRequest returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *InlineResponse20116) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineResponse20116) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineResponse20116) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *InlineResponse20116) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

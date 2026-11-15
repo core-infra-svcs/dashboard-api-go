@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RfProfile** | Pointer to [**DevicesSerialWirelessRadioOverridesRfProfile**](DevicesSerialWirelessRadioOverridesRfProfile.md) |  | [optional] 
-**Radios** | Pointer to [**[]DevicesSerialWirelessRadioOverridesRadios**](DevicesSerialWirelessRadioOverridesRadios.md) | Radio overrides. If omitted, existing per-radio override settings remain unchanged. If provided, only the radios included in the array are updated; the array does not replace the device&#39;s full existing set of radio overrides. Read-only response fields for each radio, such as &#39;band&#39;, may be included in the request body and are ignored. | [optional] 
+**Uuid** | Pointer to **NullableString** | Desired UUID of the beacon. If the value is set to null it will reset to Dashboard&#39;s           automatically generated value. | [optional] 
+**Major** | Pointer to **NullableInt32** | Desired major value of the beacon. If the value is set to null it will reset to           Dashboard&#39;s automatically generated value. | [optional] 
+**Minor** | Pointer to **NullableInt32** | Desired minor value of the beacon. If the value is set to null it will reset to           Dashboard&#39;s automatically generated value. | [optional] 
 
 ## Methods
 
@@ -26,56 +27,111 @@ NewInlineObject48WithDefaults instantiates a new InlineObject48 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRfProfile
+### GetUuid
 
-`func (o *InlineObject48) GetRfProfile() DevicesSerialWirelessRadioOverridesRfProfile`
+`func (o *InlineObject48) GetUuid() string`
 
-GetRfProfile returns the RfProfile field if non-nil, zero value otherwise.
+GetUuid returns the Uuid field if non-nil, zero value otherwise.
 
-### GetRfProfileOk
+### GetUuidOk
 
-`func (o *InlineObject48) GetRfProfileOk() (*DevicesSerialWirelessRadioOverridesRfProfile, bool)`
+`func (o *InlineObject48) GetUuidOk() (*string, bool)`
 
-GetRfProfileOk returns a tuple with the RfProfile field if it's non-nil, zero value otherwise
+GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRfProfile
+### SetUuid
 
-`func (o *InlineObject48) SetRfProfile(v DevicesSerialWirelessRadioOverridesRfProfile)`
+`func (o *InlineObject48) SetUuid(v string)`
 
-SetRfProfile sets RfProfile field to given value.
+SetUuid sets Uuid field to given value.
 
-### HasRfProfile
+### HasUuid
 
-`func (o *InlineObject48) HasRfProfile() bool`
+`func (o *InlineObject48) HasUuid() bool`
 
-HasRfProfile returns a boolean if a field has been set.
+HasUuid returns a boolean if a field has been set.
 
-### GetRadios
+### SetUuidNil
 
-`func (o *InlineObject48) GetRadios() []DevicesSerialWirelessRadioOverridesRadios`
+`func (o *InlineObject48) SetUuidNil(b bool)`
 
-GetRadios returns the Radios field if non-nil, zero value otherwise.
+ SetUuidNil sets the value for Uuid to be an explicit nil
 
-### GetRadiosOk
+### UnsetUuid
+`func (o *InlineObject48) UnsetUuid()`
 
-`func (o *InlineObject48) GetRadiosOk() (*[]DevicesSerialWirelessRadioOverridesRadios, bool)`
+UnsetUuid ensures that no value is present for Uuid, not even an explicit nil
+### GetMajor
 
-GetRadiosOk returns a tuple with the Radios field if it's non-nil, zero value otherwise
+`func (o *InlineObject48) GetMajor() int32`
+
+GetMajor returns the Major field if non-nil, zero value otherwise.
+
+### GetMajorOk
+
+`func (o *InlineObject48) GetMajorOk() (*int32, bool)`
+
+GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRadios
+### SetMajor
 
-`func (o *InlineObject48) SetRadios(v []DevicesSerialWirelessRadioOverridesRadios)`
+`func (o *InlineObject48) SetMajor(v int32)`
 
-SetRadios sets Radios field to given value.
+SetMajor sets Major field to given value.
 
-### HasRadios
+### HasMajor
 
-`func (o *InlineObject48) HasRadios() bool`
+`func (o *InlineObject48) HasMajor() bool`
 
-HasRadios returns a boolean if a field has been set.
+HasMajor returns a boolean if a field has been set.
 
+### SetMajorNil
+
+`func (o *InlineObject48) SetMajorNil(b bool)`
+
+ SetMajorNil sets the value for Major to be an explicit nil
+
+### UnsetMajor
+`func (o *InlineObject48) UnsetMajor()`
+
+UnsetMajor ensures that no value is present for Major, not even an explicit nil
+### GetMinor
+
+`func (o *InlineObject48) GetMinor() int32`
+
+GetMinor returns the Minor field if non-nil, zero value otherwise.
+
+### GetMinorOk
+
+`func (o *InlineObject48) GetMinorOk() (*int32, bool)`
+
+GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMinor
+
+`func (o *InlineObject48) SetMinor(v int32)`
+
+SetMinor sets Minor field to given value.
+
+### HasMinor
+
+`func (o *InlineObject48) HasMinor() bool`
+
+HasMinor returns a boolean if a field has been set.
+
+### SetMinorNil
+
+`func (o *InlineObject48) SetMinorNil(b bool)`
+
+ SetMinorNil sets the value for Minor to be an explicit nil
+
+### UnsetMinor
+`func (o *InlineObject48) UnsetMinor()`
+
+UnsetMinor ensures that no value is present for Minor, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

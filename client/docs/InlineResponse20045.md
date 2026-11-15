@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WakeOnLanId** | Pointer to **string** | ID of the Wake-on-LAN job | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your ping request | [optional] 
-**Status** | Pointer to **string** | Status of the Wake-on-LAN request | [optional] 
-**Request** | Pointer to [**InlineResponse20114Request**](InlineResponse20114Request.md) |  | [optional] 
-**Error** | Pointer to **string** | An error message for a failed execution | [optional] 
+**SummaryId** | Pointer to **string** | Id of the route table summary request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your routing table summary request. | [optional] 
+**Status** | Pointer to **string** | Status of the routing table summary request. | [optional] 
+**Counts** | Pointer to [**InlineResponse20045Counts**](InlineResponse20045Counts.md) |  | [optional] 
+**Errors** | Pointer to **[]string** | An error message for a failed execution | [optional] 
 
 ## Methods
 
@@ -29,30 +29,30 @@ NewInlineResponse20045WithDefaults instantiates a new InlineResponse20045 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWakeOnLanId
+### GetSummaryId
 
-`func (o *InlineResponse20045) GetWakeOnLanId() string`
+`func (o *InlineResponse20045) GetSummaryId() string`
 
-GetWakeOnLanId returns the WakeOnLanId field if non-nil, zero value otherwise.
+GetSummaryId returns the SummaryId field if non-nil, zero value otherwise.
 
-### GetWakeOnLanIdOk
+### GetSummaryIdOk
 
-`func (o *InlineResponse20045) GetWakeOnLanIdOk() (*string, bool)`
+`func (o *InlineResponse20045) GetSummaryIdOk() (*string, bool)`
 
-GetWakeOnLanIdOk returns a tuple with the WakeOnLanId field if it's non-nil, zero value otherwise
+GetSummaryIdOk returns a tuple with the SummaryId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWakeOnLanId
+### SetSummaryId
 
-`func (o *InlineResponse20045) SetWakeOnLanId(v string)`
+`func (o *InlineResponse20045) SetSummaryId(v string)`
 
-SetWakeOnLanId sets WakeOnLanId field to given value.
+SetSummaryId sets SummaryId field to given value.
 
-### HasWakeOnLanId
+### HasSummaryId
 
-`func (o *InlineResponse20045) HasWakeOnLanId() bool`
+`func (o *InlineResponse20045) HasSummaryId() bool`
 
-HasWakeOnLanId returns a boolean if a field has been set.
+HasSummaryId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -104,55 +104,55 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetRequest
+### GetCounts
 
-`func (o *InlineResponse20045) GetRequest() InlineResponse20114Request`
+`func (o *InlineResponse20045) GetCounts() InlineResponse20045Counts`
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetRequestOk
+### GetCountsOk
 
-`func (o *InlineResponse20045) GetRequestOk() (*InlineResponse20114Request, bool)`
+`func (o *InlineResponse20045) GetCountsOk() (*InlineResponse20045Counts, bool)`
 
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetCounts
 
-`func (o *InlineResponse20045) SetRequest(v InlineResponse20114Request)`
+`func (o *InlineResponse20045) SetCounts(v InlineResponse20045Counts)`
 
-SetRequest sets Request field to given value.
+SetCounts sets Counts field to given value.
 
-### HasRequest
+### HasCounts
 
-`func (o *InlineResponse20045) HasRequest() bool`
+`func (o *InlineResponse20045) HasCounts() bool`
 
-HasRequest returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
-### GetError
+### GetErrors
 
-`func (o *InlineResponse20045) GetError() string`
+`func (o *InlineResponse20045) GetErrors() []string`
 
-GetError returns the Error field if non-nil, zero value otherwise.
+GetErrors returns the Errors field if non-nil, zero value otherwise.
 
-### GetErrorOk
+### GetErrorsOk
 
-`func (o *InlineResponse20045) GetErrorOk() (*string, bool)`
+`func (o *InlineResponse20045) GetErrorsOk() (*[]string, bool)`
 
-GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetError
+### SetErrors
 
-`func (o *InlineResponse20045) SetError(v string)`
+`func (o *InlineResponse20045) SetErrors(v []string)`
 
-SetError sets Error field to given value.
+SetErrors sets Errors field to given value.
 
-### HasError
+### HasErrors
 
-`func (o *InlineResponse20045) HasError() bool`
+`func (o *InlineResponse20045) HasErrors() bool`
 
-HasError returns a boolean if a field has been set.
+HasErrors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

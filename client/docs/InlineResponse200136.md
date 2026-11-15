@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UpgradeWindow** | Pointer to [**InlineResponse200136UpgradeWindow**](InlineResponse200136UpgradeWindow.md) |  | [optional] 
-**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
-**Products** | Pointer to [**InlineResponse200136Products**](InlineResponse200136Products.md) |  | [optional] 
+**Network** | [**InlineResponse200136Network**](InlineResponse200136Network.md) |  | 
+**Servers** | [**[]InlineResponse200136Servers**](InlineResponse200136Servers.md) | The list of syslog server configurations that are assigned to this network; suggested maximum array size is 10 | 
 
 ## Methods
 
 ### NewInlineResponse200136
 
-`func NewInlineResponse200136() *InlineResponse200136`
+`func NewInlineResponse200136(network InlineResponse200136Network, servers []InlineResponse200136Servers, ) *InlineResponse200136`
 
 NewInlineResponse200136 instantiates a new InlineResponse200136 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +26,45 @@ NewInlineResponse200136WithDefaults instantiates a new InlineResponse200136 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUpgradeWindow
+### GetNetwork
 
-`func (o *InlineResponse200136) GetUpgradeWindow() InlineResponse200136UpgradeWindow`
+`func (o *InlineResponse200136) GetNetwork() InlineResponse200136Network`
 
-GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetUpgradeWindowOk
+### GetNetworkOk
 
-`func (o *InlineResponse200136) GetUpgradeWindowOk() (*InlineResponse200136UpgradeWindow, bool)`
+`func (o *InlineResponse200136) GetNetworkOk() (*InlineResponse200136Network, bool)`
 
-GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgradeWindow
+### SetNetwork
 
-`func (o *InlineResponse200136) SetUpgradeWindow(v InlineResponse200136UpgradeWindow)`
+`func (o *InlineResponse200136) SetNetwork(v InlineResponse200136Network)`
 
-SetUpgradeWindow sets UpgradeWindow field to given value.
+SetNetwork sets Network field to given value.
 
-### HasUpgradeWindow
 
-`func (o *InlineResponse200136) HasUpgradeWindow() bool`
+### GetServers
 
-HasUpgradeWindow returns a boolean if a field has been set.
+`func (o *InlineResponse200136) GetServers() []InlineResponse200136Servers`
 
-### GetTimezone
+GetServers returns the Servers field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200136) GetTimezone() string`
+### GetServersOk
 
-GetTimezone returns the Timezone field if non-nil, zero value otherwise.
+`func (o *InlineResponse200136) GetServersOk() (*[]InlineResponse200136Servers, bool)`
 
-### GetTimezoneOk
-
-`func (o *InlineResponse200136) GetTimezoneOk() (*string, bool)`
-
-GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
+GetServersOk returns a tuple with the Servers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimezone
+### SetServers
 
-`func (o *InlineResponse200136) SetTimezone(v string)`
+`func (o *InlineResponse200136) SetServers(v []InlineResponse200136Servers)`
 
-SetTimezone sets Timezone field to given value.
+SetServers sets Servers field to given value.
 
-### HasTimezone
-
-`func (o *InlineResponse200136) HasTimezone() bool`
-
-HasTimezone returns a boolean if a field has been set.
-
-### GetProducts
-
-`func (o *InlineResponse200136) GetProducts() InlineResponse200136Products`
-
-GetProducts returns the Products field if non-nil, zero value otherwise.
-
-### GetProductsOk
-
-`func (o *InlineResponse200136) GetProductsOk() (*InlineResponse200136Products, bool)`
-
-GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProducts
-
-`func (o *InlineResponse200136) SetProducts(v InlineResponse200136Products)`
-
-SetProducts sets Products field to given value.
-
-### HasProducts
-
-`func (o *InlineResponse200136) HasProducts() bool`
-
-HasProducts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

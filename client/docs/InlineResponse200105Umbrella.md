@@ -5,7 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Organization** | Pointer to [**InlineResponse200105UmbrellaOrganization**](InlineResponse200105UmbrellaOrganization.md) |  | [optional] 
-**Origin** | Pointer to [**InlineResponse200105UmbrellaOrigin**](InlineResponse200105UmbrellaOrigin.md) |  | [optional] 
 
 ## Methods
 
@@ -50,31 +49,6 @@ SetOrganization sets Organization field to given value.
 `func (o *InlineResponse200105Umbrella) HasOrganization() bool`
 
 HasOrganization returns a boolean if a field has been set.
-
-### GetOrigin
-
-`func (o *InlineResponse200105Umbrella) GetOrigin() InlineResponse200105UmbrellaOrigin`
-
-GetOrigin returns the Origin field if non-nil, zero value otherwise.
-
-### GetOriginOk
-
-`func (o *InlineResponse200105Umbrella) GetOriginOk() (*InlineResponse200105UmbrellaOrigin, bool)`
-
-GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOrigin
-
-`func (o *InlineResponse200105Umbrella) SetOrigin(v InlineResponse200105UmbrellaOrigin)`
-
-SetOrigin sets Origin field to given value.
-
-### HasOrigin
-
-`func (o *InlineResponse200105Umbrella) HasOrigin() bool`
-
-HasOrigin returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

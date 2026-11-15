@@ -4,14 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RstpEnabled** | Pointer to **bool** | The spanning tree protocol status in network | [optional] 
-**StpBridgePriority** | Pointer to [**[]NetworksNetworkIdSwitchStpStpBridgePriority**](NetworksNetworkIdSwitchStpStpBridgePriority.md) | STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings. | [optional] 
+**Name** | Pointer to **string** | Name or description for layer 3 static route | [optional] 
+**Subnet** | **string** | The subnet which is routed via this static route and should be specified in CIDR notation (ex. 1.2.3.0/24) | 
+**NextHopIp** | **string** | IP address of the next hop device to which the device sends its traffic for the subnet | 
+**AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static route via OSPF | [optional] 
+**PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static route over OSPF routes | [optional] 
+**Vrf** | Pointer to [**DevicesSerialSwitchRoutingStaticRoutesVrf1**](DevicesSerialSwitchRoutingStaticRoutesVrf1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject190
 
-`func NewInlineObject190() *InlineObject190`
+`func NewInlineObject190(subnet string, nextHopIp string, ) *InlineObject190`
 
 NewInlineObject190 instantiates a new InlineObject190 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +30,145 @@ NewInlineObject190WithDefaults instantiates a new InlineObject190 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRstpEnabled
+### GetName
 
-`func (o *InlineObject190) GetRstpEnabled() bool`
+`func (o *InlineObject190) GetName() string`
 
-GetRstpEnabled returns the RstpEnabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetRstpEnabledOk
+### GetNameOk
 
-`func (o *InlineObject190) GetRstpEnabledOk() (*bool, bool)`
+`func (o *InlineObject190) GetNameOk() (*string, bool)`
 
-GetRstpEnabledOk returns a tuple with the RstpEnabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRstpEnabled
+### SetName
 
-`func (o *InlineObject190) SetRstpEnabled(v bool)`
+`func (o *InlineObject190) SetName(v string)`
 
-SetRstpEnabled sets RstpEnabled field to given value.
+SetName sets Name field to given value.
 
-### HasRstpEnabled
+### HasName
 
-`func (o *InlineObject190) HasRstpEnabled() bool`
+`func (o *InlineObject190) HasName() bool`
 
-HasRstpEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetStpBridgePriority
+### GetSubnet
 
-`func (o *InlineObject190) GetStpBridgePriority() []NetworksNetworkIdSwitchStpStpBridgePriority`
+`func (o *InlineObject190) GetSubnet() string`
 
-GetStpBridgePriority returns the StpBridgePriority field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetStpBridgePriorityOk
+### GetSubnetOk
 
-`func (o *InlineObject190) GetStpBridgePriorityOk() (*[]NetworksNetworkIdSwitchStpStpBridgePriority, bool)`
+`func (o *InlineObject190) GetSubnetOk() (*string, bool)`
 
-GetStpBridgePriorityOk returns a tuple with the StpBridgePriority field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStpBridgePriority
+### SetSubnet
 
-`func (o *InlineObject190) SetStpBridgePriority(v []NetworksNetworkIdSwitchStpStpBridgePriority)`
+`func (o *InlineObject190) SetSubnet(v string)`
 
-SetStpBridgePriority sets StpBridgePriority field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasStpBridgePriority
 
-`func (o *InlineObject190) HasStpBridgePriority() bool`
+### GetNextHopIp
 
-HasStpBridgePriority returns a boolean if a field has been set.
+`func (o *InlineObject190) GetNextHopIp() string`
+
+GetNextHopIp returns the NextHopIp field if non-nil, zero value otherwise.
+
+### GetNextHopIpOk
+
+`func (o *InlineObject190) GetNextHopIpOk() (*string, bool)`
+
+GetNextHopIpOk returns a tuple with the NextHopIp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNextHopIp
+
+`func (o *InlineObject190) SetNextHopIp(v string)`
+
+SetNextHopIp sets NextHopIp field to given value.
+
+
+### GetAdvertiseViaOspfEnabled
+
+`func (o *InlineObject190) GetAdvertiseViaOspfEnabled() bool`
+
+GetAdvertiseViaOspfEnabled returns the AdvertiseViaOspfEnabled field if non-nil, zero value otherwise.
+
+### GetAdvertiseViaOspfEnabledOk
+
+`func (o *InlineObject190) GetAdvertiseViaOspfEnabledOk() (*bool, bool)`
+
+GetAdvertiseViaOspfEnabledOk returns a tuple with the AdvertiseViaOspfEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdvertiseViaOspfEnabled
+
+`func (o *InlineObject190) SetAdvertiseViaOspfEnabled(v bool)`
+
+SetAdvertiseViaOspfEnabled sets AdvertiseViaOspfEnabled field to given value.
+
+### HasAdvertiseViaOspfEnabled
+
+`func (o *InlineObject190) HasAdvertiseViaOspfEnabled() bool`
+
+HasAdvertiseViaOspfEnabled returns a boolean if a field has been set.
+
+### GetPreferOverOspfRoutesEnabled
+
+`func (o *InlineObject190) GetPreferOverOspfRoutesEnabled() bool`
+
+GetPreferOverOspfRoutesEnabled returns the PreferOverOspfRoutesEnabled field if non-nil, zero value otherwise.
+
+### GetPreferOverOspfRoutesEnabledOk
+
+`func (o *InlineObject190) GetPreferOverOspfRoutesEnabledOk() (*bool, bool)`
+
+GetPreferOverOspfRoutesEnabledOk returns a tuple with the PreferOverOspfRoutesEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPreferOverOspfRoutesEnabled
+
+`func (o *InlineObject190) SetPreferOverOspfRoutesEnabled(v bool)`
+
+SetPreferOverOspfRoutesEnabled sets PreferOverOspfRoutesEnabled field to given value.
+
+### HasPreferOverOspfRoutesEnabled
+
+`func (o *InlineObject190) HasPreferOverOspfRoutesEnabled() bool`
+
+HasPreferOverOspfRoutesEnabled returns a boolean if a field has been set.
+
+### GetVrf
+
+`func (o *InlineObject190) GetVrf() DevicesSerialSwitchRoutingStaticRoutesVrf1`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *InlineObject190) GetVrfOk() (*DevicesSerialSwitchRoutingStaticRoutesVrf1, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *InlineObject190) SetVrf(v DevicesSerialSwitchRoutingStaticRoutesVrf1)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *InlineObject190) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

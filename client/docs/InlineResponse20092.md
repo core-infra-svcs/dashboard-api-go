@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClientTrackingMethod** | Pointer to **string** | Client tracking method of a network | [optional] 
-**DeploymentMode** | Pointer to **string** | Deployment mode of a network | [optional] 
-**DynamicDns** | Pointer to [**InlineResponse20092DynamicDns**](InlineResponse20092DynamicDns.md) |  | [optional] 
+**Mode** | Pointer to **string** | Intrusion detection mode | [optional] 
+**IdsRulesets** | Pointer to **string** | Intrusion detection ruleset | [optional] 
+**Policy** | Pointer to [**NullableInlineResponse20092Policy**](InlineResponse20092Policy.md) |  | [optional] 
+**ProtectedNetworks** | Pointer to [**InlineResponse20092ProtectedNetworks**](InlineResponse20092ProtectedNetworks.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +28,115 @@ NewInlineResponse20092WithDefaults instantiates a new InlineResponse20092 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClientTrackingMethod
+### GetMode
 
-`func (o *InlineResponse20092) GetClientTrackingMethod() string`
+`func (o *InlineResponse20092) GetMode() string`
 
-GetClientTrackingMethod returns the ClientTrackingMethod field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetClientTrackingMethodOk
+### GetModeOk
 
-`func (o *InlineResponse20092) GetClientTrackingMethodOk() (*string, bool)`
+`func (o *InlineResponse20092) GetModeOk() (*string, bool)`
 
-GetClientTrackingMethodOk returns a tuple with the ClientTrackingMethod field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientTrackingMethod
+### SetMode
 
-`func (o *InlineResponse20092) SetClientTrackingMethod(v string)`
+`func (o *InlineResponse20092) SetMode(v string)`
 
-SetClientTrackingMethod sets ClientTrackingMethod field to given value.
+SetMode sets Mode field to given value.
 
-### HasClientTrackingMethod
+### HasMode
 
-`func (o *InlineResponse20092) HasClientTrackingMethod() bool`
+`func (o *InlineResponse20092) HasMode() bool`
 
-HasClientTrackingMethod returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetDeploymentMode
+### GetIdsRulesets
 
-`func (o *InlineResponse20092) GetDeploymentMode() string`
+`func (o *InlineResponse20092) GetIdsRulesets() string`
 
-GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
+GetIdsRulesets returns the IdsRulesets field if non-nil, zero value otherwise.
 
-### GetDeploymentModeOk
+### GetIdsRulesetsOk
 
-`func (o *InlineResponse20092) GetDeploymentModeOk() (*string, bool)`
+`func (o *InlineResponse20092) GetIdsRulesetsOk() (*string, bool)`
 
-GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
+GetIdsRulesetsOk returns a tuple with the IdsRulesets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeploymentMode
+### SetIdsRulesets
 
-`func (o *InlineResponse20092) SetDeploymentMode(v string)`
+`func (o *InlineResponse20092) SetIdsRulesets(v string)`
 
-SetDeploymentMode sets DeploymentMode field to given value.
+SetIdsRulesets sets IdsRulesets field to given value.
 
-### HasDeploymentMode
+### HasIdsRulesets
 
-`func (o *InlineResponse20092) HasDeploymentMode() bool`
+`func (o *InlineResponse20092) HasIdsRulesets() bool`
 
-HasDeploymentMode returns a boolean if a field has been set.
+HasIdsRulesets returns a boolean if a field has been set.
 
-### GetDynamicDns
+### GetPolicy
 
-`func (o *InlineResponse20092) GetDynamicDns() InlineResponse20092DynamicDns`
+`func (o *InlineResponse20092) GetPolicy() InlineResponse20092Policy`
 
-GetDynamicDns returns the DynamicDns field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetDynamicDnsOk
+### GetPolicyOk
 
-`func (o *InlineResponse20092) GetDynamicDnsOk() (*InlineResponse20092DynamicDns, bool)`
+`func (o *InlineResponse20092) GetPolicyOk() (*InlineResponse20092Policy, bool)`
 
-GetDynamicDnsOk returns a tuple with the DynamicDns field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDynamicDns
+### SetPolicy
 
-`func (o *InlineResponse20092) SetDynamicDns(v InlineResponse20092DynamicDns)`
+`func (o *InlineResponse20092) SetPolicy(v InlineResponse20092Policy)`
 
-SetDynamicDns sets DynamicDns field to given value.
+SetPolicy sets Policy field to given value.
 
-### HasDynamicDns
+### HasPolicy
 
-`func (o *InlineResponse20092) HasDynamicDns() bool`
+`func (o *InlineResponse20092) HasPolicy() bool`
 
-HasDynamicDns returns a boolean if a field has been set.
+HasPolicy returns a boolean if a field has been set.
+
+### SetPolicyNil
+
+`func (o *InlineResponse20092) SetPolicyNil(b bool)`
+
+ SetPolicyNil sets the value for Policy to be an explicit nil
+
+### UnsetPolicy
+`func (o *InlineResponse20092) UnsetPolicy()`
+
+UnsetPolicy ensures that no value is present for Policy, not even an explicit nil
+### GetProtectedNetworks
+
+`func (o *InlineResponse20092) GetProtectedNetworks() InlineResponse20092ProtectedNetworks`
+
+GetProtectedNetworks returns the ProtectedNetworks field if non-nil, zero value otherwise.
+
+### GetProtectedNetworksOk
+
+`func (o *InlineResponse20092) GetProtectedNetworksOk() (*InlineResponse20092ProtectedNetworks, bool)`
+
+GetProtectedNetworksOk returns a tuple with the ProtectedNetworks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProtectedNetworks
+
+`func (o *InlineResponse20092) SetProtectedNetworks(v InlineResponse20092ProtectedNetworks)`
+
+SetProtectedNetworks sets ProtectedNetworks field to given value.
+
+### HasProtectedNetworks
+
+`func (o *InlineResponse20092) HasProtectedNetworks() bool`
+
+HasProtectedNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

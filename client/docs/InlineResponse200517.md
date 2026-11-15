@@ -4,10 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Unique identifier of the SSID profile | [optional] 
-**Name** | Pointer to **string** | Name of the SSID profile | [optional] 
-**Precedence** | Pointer to [**InlineResponse200517Precedence**](InlineResponse200517Precedence.md) |  | [optional] 
-**Ssid** | Pointer to [**InlineResponse200517Ssid**](InlineResponse200517Ssid.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200517Items**](InlineResponse200517Items.md) | The top-level property containing all cpu load data. | [optional] 
 
 ## Methods
 
@@ -28,105 +25,30 @@ NewInlineResponse200517WithDefaults instantiates a new InlineResponse200517 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetItems
 
-`func (o *InlineResponse200517) GetId() string`
+`func (o *InlineResponse200517) GetItems() []InlineResponse200517Items`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetItemsOk
 
-`func (o *InlineResponse200517) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200517) GetItemsOk() (*[]InlineResponse200517Items, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetItems
 
-`func (o *InlineResponse200517) SetId(v string)`
+`func (o *InlineResponse200517) SetItems(v []InlineResponse200517Items)`
 
-SetId sets Id field to given value.
+SetItems sets Items field to given value.
 
-### HasId
+### HasItems
 
-`func (o *InlineResponse200517) HasId() bool`
+`func (o *InlineResponse200517) HasItems() bool`
 
-HasId returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse200517) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200517) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200517) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse200517) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetPrecedence
-
-`func (o *InlineResponse200517) GetPrecedence() InlineResponse200517Precedence`
-
-GetPrecedence returns the Precedence field if non-nil, zero value otherwise.
-
-### GetPrecedenceOk
-
-`func (o *InlineResponse200517) GetPrecedenceOk() (*InlineResponse200517Precedence, bool)`
-
-GetPrecedenceOk returns a tuple with the Precedence field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPrecedence
-
-`func (o *InlineResponse200517) SetPrecedence(v InlineResponse200517Precedence)`
-
-SetPrecedence sets Precedence field to given value.
-
-### HasPrecedence
-
-`func (o *InlineResponse200517) HasPrecedence() bool`
-
-HasPrecedence returns a boolean if a field has been set.
-
-### GetSsid
-
-`func (o *InlineResponse200517) GetSsid() InlineResponse200517Ssid`
-
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
-
-### GetSsidOk
-
-`func (o *InlineResponse200517) GetSsidOk() (*InlineResponse200517Ssid, bool)`
-
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSsid
-
-`func (o *InlineResponse200517) SetSsid(v InlineResponse200517Ssid)`
-
-SetSsid sets Ssid field to given value.
-
-### HasSsid
-
-`func (o *InlineResponse200517) HasSsid() bool`
-
-HasSsid returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

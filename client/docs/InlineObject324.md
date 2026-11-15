@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DeviceSerial** | Pointer to **NullableString** | The serial number of the device to assign this license to. Set this to  null to unassign the license. If a different license is already active on the device, this parameter will control queueing/dequeuing this license. | [optional] 
+**Swaps** | [**[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps**](OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps.md) | List of replacments to perform | 
 
 ## Methods
 
 ### NewInlineObject324
 
-`func NewInlineObject324() *InlineObject324`
+`func NewInlineObject324(swaps []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, ) *InlineObject324`
 
 NewInlineObject324 instantiates a new InlineObject324 object
 This constructor will assign default values to properties that have it defined,
@@ -25,41 +25,26 @@ NewInlineObject324WithDefaults instantiates a new InlineObject324 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDeviceSerial
+### GetSwaps
 
-`func (o *InlineObject324) GetDeviceSerial() string`
+`func (o *InlineObject324) GetSwaps() []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps`
 
-GetDeviceSerial returns the DeviceSerial field if non-nil, zero value otherwise.
+GetSwaps returns the Swaps field if non-nil, zero value otherwise.
 
-### GetDeviceSerialOk
+### GetSwapsOk
 
-`func (o *InlineObject324) GetDeviceSerialOk() (*string, bool)`
+`func (o *InlineObject324) GetSwapsOk() (*[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, bool)`
 
-GetDeviceSerialOk returns a tuple with the DeviceSerial field if it's non-nil, zero value otherwise
+GetSwapsOk returns a tuple with the Swaps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceSerial
+### SetSwaps
 
-`func (o *InlineObject324) SetDeviceSerial(v string)`
+`func (o *InlineObject324) SetSwaps(v []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps)`
 
-SetDeviceSerial sets DeviceSerial field to given value.
+SetSwaps sets Swaps field to given value.
 
-### HasDeviceSerial
 
-`func (o *InlineObject324) HasDeviceSerial() bool`
-
-HasDeviceSerial returns a boolean if a field has been set.
-
-### SetDeviceSerialNil
-
-`func (o *InlineObject324) SetDeviceSerialNil(b bool)`
-
- SetDeviceSerialNil sets the value for DeviceSerial to be an explicit nil
-
-### UnsetDeviceSerial
-`func (o *InlineObject324) UnsetDeviceSerial()`
-
-UnsetDeviceSerial ensures that no value is present for DeviceSerial, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllowedUrlPatterns** | Pointer to **[]string** | A list of URL patterns that are allowed | [optional] 
-**BlockedUrlPatterns** | Pointer to **[]string** | A list of URL patterns that are blocked | [optional] 
-**BlockedUrlCategories** | Pointer to **[]string** | A list of URL categories to block | [optional] 
-**UrlCategoryListSize** | Pointer to **string** | URL category list size which is either &#39;topSites&#39; or &#39;fullList&#39; | [optional] 
+**DefaultDestinations** | Pointer to [**InlineResponse20071DefaultDestinations**](InlineResponse20071DefaultDestinations.md) |  | [optional] 
+**Alerts** | Pointer to [**[]InlineResponse20071Alerts**](InlineResponse20071Alerts.md) | Alert-specific configuration for each type. Only alerts that pertain to the network can be updated. | [optional] 
+**Muting** | Pointer to [**InlineResponse20071Muting**](InlineResponse20071Muting.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineObject53WithDefaults instantiates a new InlineObject53 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAllowedUrlPatterns
+### GetDefaultDestinations
 
-`func (o *InlineObject53) GetAllowedUrlPatterns() []string`
+`func (o *InlineObject53) GetDefaultDestinations() InlineResponse20071DefaultDestinations`
 
-GetAllowedUrlPatterns returns the AllowedUrlPatterns field if non-nil, zero value otherwise.
+GetDefaultDestinations returns the DefaultDestinations field if non-nil, zero value otherwise.
 
-### GetAllowedUrlPatternsOk
+### GetDefaultDestinationsOk
 
-`func (o *InlineObject53) GetAllowedUrlPatternsOk() (*[]string, bool)`
+`func (o *InlineObject53) GetDefaultDestinationsOk() (*InlineResponse20071DefaultDestinations, bool)`
 
-GetAllowedUrlPatternsOk returns a tuple with the AllowedUrlPatterns field if it's non-nil, zero value otherwise
+GetDefaultDestinationsOk returns a tuple with the DefaultDestinations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedUrlPatterns
+### SetDefaultDestinations
 
-`func (o *InlineObject53) SetAllowedUrlPatterns(v []string)`
+`func (o *InlineObject53) SetDefaultDestinations(v InlineResponse20071DefaultDestinations)`
 
-SetAllowedUrlPatterns sets AllowedUrlPatterns field to given value.
+SetDefaultDestinations sets DefaultDestinations field to given value.
 
-### HasAllowedUrlPatterns
+### HasDefaultDestinations
 
-`func (o *InlineObject53) HasAllowedUrlPatterns() bool`
+`func (o *InlineObject53) HasDefaultDestinations() bool`
 
-HasAllowedUrlPatterns returns a boolean if a field has been set.
+HasDefaultDestinations returns a boolean if a field has been set.
 
-### GetBlockedUrlPatterns
+### GetAlerts
 
-`func (o *InlineObject53) GetBlockedUrlPatterns() []string`
+`func (o *InlineObject53) GetAlerts() []InlineResponse20071Alerts`
 
-GetBlockedUrlPatterns returns the BlockedUrlPatterns field if non-nil, zero value otherwise.
+GetAlerts returns the Alerts field if non-nil, zero value otherwise.
 
-### GetBlockedUrlPatternsOk
+### GetAlertsOk
 
-`func (o *InlineObject53) GetBlockedUrlPatternsOk() (*[]string, bool)`
+`func (o *InlineObject53) GetAlertsOk() (*[]InlineResponse20071Alerts, bool)`
 
-GetBlockedUrlPatternsOk returns a tuple with the BlockedUrlPatterns field if it's non-nil, zero value otherwise
+GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBlockedUrlPatterns
+### SetAlerts
 
-`func (o *InlineObject53) SetBlockedUrlPatterns(v []string)`
+`func (o *InlineObject53) SetAlerts(v []InlineResponse20071Alerts)`
 
-SetBlockedUrlPatterns sets BlockedUrlPatterns field to given value.
+SetAlerts sets Alerts field to given value.
 
-### HasBlockedUrlPatterns
+### HasAlerts
 
-`func (o *InlineObject53) HasBlockedUrlPatterns() bool`
+`func (o *InlineObject53) HasAlerts() bool`
 
-HasBlockedUrlPatterns returns a boolean if a field has been set.
+HasAlerts returns a boolean if a field has been set.
 
-### GetBlockedUrlCategories
+### GetMuting
 
-`func (o *InlineObject53) GetBlockedUrlCategories() []string`
+`func (o *InlineObject53) GetMuting() InlineResponse20071Muting`
 
-GetBlockedUrlCategories returns the BlockedUrlCategories field if non-nil, zero value otherwise.
+GetMuting returns the Muting field if non-nil, zero value otherwise.
 
-### GetBlockedUrlCategoriesOk
+### GetMutingOk
 
-`func (o *InlineObject53) GetBlockedUrlCategoriesOk() (*[]string, bool)`
+`func (o *InlineObject53) GetMutingOk() (*InlineResponse20071Muting, bool)`
 
-GetBlockedUrlCategoriesOk returns a tuple with the BlockedUrlCategories field if it's non-nil, zero value otherwise
+GetMutingOk returns a tuple with the Muting field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBlockedUrlCategories
+### SetMuting
 
-`func (o *InlineObject53) SetBlockedUrlCategories(v []string)`
+`func (o *InlineObject53) SetMuting(v InlineResponse20071Muting)`
 
-SetBlockedUrlCategories sets BlockedUrlCategories field to given value.
+SetMuting sets Muting field to given value.
 
-### HasBlockedUrlCategories
+### HasMuting
 
-`func (o *InlineObject53) HasBlockedUrlCategories() bool`
+`func (o *InlineObject53) HasMuting() bool`
 
-HasBlockedUrlCategories returns a boolean if a field has been set.
-
-### GetUrlCategoryListSize
-
-`func (o *InlineObject53) GetUrlCategoryListSize() string`
-
-GetUrlCategoryListSize returns the UrlCategoryListSize field if non-nil, zero value otherwise.
-
-### GetUrlCategoryListSizeOk
-
-`func (o *InlineObject53) GetUrlCategoryListSizeOk() (*string, bool)`
-
-GetUrlCategoryListSizeOk returns a tuple with the UrlCategoryListSize field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUrlCategoryListSize
-
-`func (o *InlineObject53) SetUrlCategoryListSize(v string)`
-
-SetUrlCategoryListSize sets UrlCategoryListSize field to given value.
-
-### HasUrlCategoryListSize
-
-`func (o *InlineObject53) HasUrlCategoryListSize() bool`
-
-HasUrlCategoryListSize returns a boolean if a field has been set.
+HasMuting returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

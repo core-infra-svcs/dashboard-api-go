@@ -5,7 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Umbrella** | Pointer to [**InlineResponse200105Umbrella**](InlineResponse200105Umbrella.md) |  | [optional] 
-**Enabled** | Pointer to **bool** | Whether Umbrella protection is enabled | [optional] 
 
 ## Methods
 
@@ -50,31 +49,6 @@ SetUmbrella sets Umbrella field to given value.
 `func (o *InlineResponse200105) HasUmbrella() bool`
 
 HasUmbrella returns a boolean if a field has been set.
-
-### GetEnabled
-
-`func (o *InlineResponse200105) GetEnabled() bool`
-
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
-
-### GetEnabledOk
-
-`func (o *InlineResponse200105) GetEnabledOk() (*bool, bool)`
-
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnabled
-
-`func (o *InlineResponse200105) SetEnabled(v bool)`
-
-SetEnabled sets Enabled field to given value.
-
-### HasEnabled
-
-`func (o *InlineResponse200105) HasEnabled() bool`
-
-HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mask** | Pointer to **int32** | Mask used for the subnet of all MGs in  this network. | [optional] 
-**Cidr** | Pointer to **string** | CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool. | [optional] 
+**Enabled** | Pointer to **bool** | If true, mDNS gateway is enabled for this SSID and cluster. | [optional] 
+**Rules** | Pointer to [**[]NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules**](NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules.md) | List of mDNS forwarding rules. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject110WithDefaults instantiates a new InlineObject110 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMask
+### GetEnabled
 
-`func (o *InlineObject110) GetMask() int32`
+`func (o *InlineObject110) GetEnabled() bool`
 
-GetMask returns the Mask field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetMaskOk
+### GetEnabledOk
 
-`func (o *InlineObject110) GetMaskOk() (*int32, bool)`
+`func (o *InlineObject110) GetEnabledOk() (*bool, bool)`
 
-GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMask
+### SetEnabled
 
-`func (o *InlineObject110) SetMask(v int32)`
+`func (o *InlineObject110) SetEnabled(v bool)`
 
-SetMask sets Mask field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasMask
+### HasEnabled
 
-`func (o *InlineObject110) HasMask() bool`
+`func (o *InlineObject110) HasEnabled() bool`
 
-HasMask returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetCidr
+### GetRules
 
-`func (o *InlineObject110) GetCidr() string`
+`func (o *InlineObject110) GetRules() []NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules`
 
-GetCidr returns the Cidr field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetCidrOk
+### GetRulesOk
 
-`func (o *InlineObject110) GetCidrOk() (*string, bool)`
+`func (o *InlineObject110) GetRulesOk() (*[]NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules, bool)`
 
-GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCidr
+### SetRules
 
-`func (o *InlineObject110) SetCidr(v string)`
+`func (o *InlineObject110) SetRules(v []NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules)`
 
-SetCidr sets Cidr field to given value.
+SetRules sets Rules field to given value.
 
-### HasCidr
+### HasRules
 
-`func (o *InlineObject110) HasCidr() bool`
+`func (o *InlineObject110) HasRules() bool`
 
-HasCidr returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

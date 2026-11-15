@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DisenrollmentId** | Pointer to **string** | Id to check the status of your disenrollment | [optional] 
-**Url** | Pointer to **string** | Url to check the status of your disenrollment | [optional] 
-**Request** | Pointer to [**InlineResponse20129Request**](InlineResponse20129Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the disenrollment | [optional] 
+**Integrated** | Pointer to [**InlineResponse20129Integrated**](InlineResponse20129Integrated.md) |  | [optional] 
+**LastUsedAt** | Pointer to **string** | ISO8601Z timestamp when integration was last used | [optional] 
+**External** | Pointer to [**InlineResponse20129External**](InlineResponse20129External.md) |  | [optional] 
+**Status** | Pointer to **string** | Integration status | [optional] 
 
 ## Methods
 
@@ -28,80 +28,80 @@ NewInlineResponse20129WithDefaults instantiates a new InlineResponse20129 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDisenrollmentId
+### GetIntegrated
 
-`func (o *InlineResponse20129) GetDisenrollmentId() string`
+`func (o *InlineResponse20129) GetIntegrated() InlineResponse20129Integrated`
 
-GetDisenrollmentId returns the DisenrollmentId field if non-nil, zero value otherwise.
+GetIntegrated returns the Integrated field if non-nil, zero value otherwise.
 
-### GetDisenrollmentIdOk
+### GetIntegratedOk
 
-`func (o *InlineResponse20129) GetDisenrollmentIdOk() (*string, bool)`
+`func (o *InlineResponse20129) GetIntegratedOk() (*InlineResponse20129Integrated, bool)`
 
-GetDisenrollmentIdOk returns a tuple with the DisenrollmentId field if it's non-nil, zero value otherwise
+GetIntegratedOk returns a tuple with the Integrated field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDisenrollmentId
+### SetIntegrated
 
-`func (o *InlineResponse20129) SetDisenrollmentId(v string)`
+`func (o *InlineResponse20129) SetIntegrated(v InlineResponse20129Integrated)`
 
-SetDisenrollmentId sets DisenrollmentId field to given value.
+SetIntegrated sets Integrated field to given value.
 
-### HasDisenrollmentId
+### HasIntegrated
 
-`func (o *InlineResponse20129) HasDisenrollmentId() bool`
+`func (o *InlineResponse20129) HasIntegrated() bool`
 
-HasDisenrollmentId returns a boolean if a field has been set.
+HasIntegrated returns a boolean if a field has been set.
 
-### GetUrl
+### GetLastUsedAt
 
-`func (o *InlineResponse20129) GetUrl() string`
+`func (o *InlineResponse20129) GetLastUsedAt() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetLastUsedAt returns the LastUsedAt field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetLastUsedAtOk
 
-`func (o *InlineResponse20129) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse20129) GetLastUsedAtOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetLastUsedAtOk returns a tuple with the LastUsedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetLastUsedAt
 
-`func (o *InlineResponse20129) SetUrl(v string)`
+`func (o *InlineResponse20129) SetLastUsedAt(v string)`
 
-SetUrl sets Url field to given value.
+SetLastUsedAt sets LastUsedAt field to given value.
 
-### HasUrl
+### HasLastUsedAt
 
-`func (o *InlineResponse20129) HasUrl() bool`
+`func (o *InlineResponse20129) HasLastUsedAt() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasLastUsedAt returns a boolean if a field has been set.
 
-### GetRequest
+### GetExternal
 
-`func (o *InlineResponse20129) GetRequest() InlineResponse20129Request`
+`func (o *InlineResponse20129) GetExternal() InlineResponse20129External`
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+GetExternal returns the External field if non-nil, zero value otherwise.
 
-### GetRequestOk
+### GetExternalOk
 
-`func (o *InlineResponse20129) GetRequestOk() (*InlineResponse20129Request, bool)`
+`func (o *InlineResponse20129) GetExternalOk() (*InlineResponse20129External, bool)`
 
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetExternalOk returns a tuple with the External field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetExternal
 
-`func (o *InlineResponse20129) SetRequest(v InlineResponse20129Request)`
+`func (o *InlineResponse20129) SetExternal(v InlineResponse20129External)`
 
-SetRequest sets Request field to given value.
+SetExternal sets External field to given value.
 
-### HasRequest
+### HasExternal
 
-`func (o *InlineResponse20129) HasRequest() bool`
+`func (o *InlineResponse20129) HasExternal() bool`
 
-HasRequest returns a boolean if a field has been set.
+HasExternal returns a boolean if a field has been set.
 
 ### GetStatus
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SpoofingProtection** | Pointer to [**InlineResponse20084SpoofingProtection**](InlineResponse20084SpoofingProtection.md) |  | [optional] 
+**Rules** | Pointer to [**[]InlineResponse20084Rules**](InlineResponse20084Rules.md) | An array of 1:1 nat rules | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20084WithDefaults instantiates a new InlineResponse20084 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSpoofingProtection
+### GetRules
 
-`func (o *InlineResponse20084) GetSpoofingProtection() InlineResponse20084SpoofingProtection`
+`func (o *InlineResponse20084) GetRules() []InlineResponse20084Rules`
 
-GetSpoofingProtection returns the SpoofingProtection field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetSpoofingProtectionOk
+### GetRulesOk
 
-`func (o *InlineResponse20084) GetSpoofingProtectionOk() (*InlineResponse20084SpoofingProtection, bool)`
+`func (o *InlineResponse20084) GetRulesOk() (*[]InlineResponse20084Rules, bool)`
 
-GetSpoofingProtectionOk returns a tuple with the SpoofingProtection field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSpoofingProtection
+### SetRules
 
-`func (o *InlineResponse20084) SetSpoofingProtection(v InlineResponse20084SpoofingProtection)`
+`func (o *InlineResponse20084) SetRules(v []InlineResponse20084Rules)`
 
-SetSpoofingProtection sets SpoofingProtection field to given value.
+SetRules sets Rules field to given value.
 
-### HasSpoofingProtection
+### HasRules
 
-`func (o *InlineResponse20084) HasSpoofingProtection() bool`
+`func (o *InlineResponse20084) HasRules() bool`
 
-HasSpoofingProtection returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

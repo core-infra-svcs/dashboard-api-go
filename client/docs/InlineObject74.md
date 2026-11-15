@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** | Set mode to &#39;disabled&#39;/&#39;detection&#39;/&#39;prevention&#39; (optional - omitting will leave current config unchanged) | [optional] 
-**IdsRulesets** | Pointer to **string** | Set the detection ruleset &#39;connectivity&#39;/&#39;balanced&#39;/&#39;security&#39; (optional - omitting will leave current config unchanged). Default value is &#39;balanced&#39; if none currently saved | [optional] 
-**Policy** | Pointer to [**NetworksNetworkIdApplianceSecurityIntrusionPolicy**](NetworksNetworkIdApplianceSecurityIntrusionPolicy.md) |  | [optional] 
-**ProtectedNetworks** | Pointer to [**NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks**](NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks.md) |  | [optional] 
+**Name** | Pointer to **string** | The name of the new profile. Must be unique. | [optional] 
+**TwoFourGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings**](NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings.md) |  | [optional] 
+**FiveGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings**](NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings.md) |  | [optional] 
+**PerSsidSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesPerSsidSettings**](NetworksNetworkIdApplianceRfProfilesPerSsidSettings.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineObject74WithDefaults instantiates a new InlineObject74 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetName
 
-`func (o *InlineObject74) GetMode() string`
+`func (o *InlineObject74) GetName() string`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetNameOk
 
-`func (o *InlineObject74) GetModeOk() (*string, bool)`
+`func (o *InlineObject74) GetNameOk() (*string, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetName
 
-`func (o *InlineObject74) SetMode(v string)`
+`func (o *InlineObject74) SetName(v string)`
 
-SetMode sets Mode field to given value.
+SetName sets Name field to given value.
 
-### HasMode
+### HasName
 
-`func (o *InlineObject74) HasMode() bool`
+`func (o *InlineObject74) HasName() bool`
 
-HasMode returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetIdsRulesets
+### GetTwoFourGhzSettings
 
-`func (o *InlineObject74) GetIdsRulesets() string`
+`func (o *InlineObject74) GetTwoFourGhzSettings() NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings`
 
-GetIdsRulesets returns the IdsRulesets field if non-nil, zero value otherwise.
+GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
 
-### GetIdsRulesetsOk
+### GetTwoFourGhzSettingsOk
 
-`func (o *InlineObject74) GetIdsRulesetsOk() (*string, bool)`
+`func (o *InlineObject74) GetTwoFourGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings, bool)`
 
-GetIdsRulesetsOk returns a tuple with the IdsRulesets field if it's non-nil, zero value otherwise
+GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdsRulesets
+### SetTwoFourGhzSettings
 
-`func (o *InlineObject74) SetIdsRulesets(v string)`
+`func (o *InlineObject74) SetTwoFourGhzSettings(v NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings)`
 
-SetIdsRulesets sets IdsRulesets field to given value.
+SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
 
-### HasIdsRulesets
+### HasTwoFourGhzSettings
 
-`func (o *InlineObject74) HasIdsRulesets() bool`
+`func (o *InlineObject74) HasTwoFourGhzSettings() bool`
 
-HasIdsRulesets returns a boolean if a field has been set.
+HasTwoFourGhzSettings returns a boolean if a field has been set.
 
-### GetPolicy
+### GetFiveGhzSettings
 
-`func (o *InlineObject74) GetPolicy() NetworksNetworkIdApplianceSecurityIntrusionPolicy`
+`func (o *InlineObject74) GetFiveGhzSettings() NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
 
-### GetPolicyOk
+### GetFiveGhzSettingsOk
 
-`func (o *InlineObject74) GetPolicyOk() (*NetworksNetworkIdApplianceSecurityIntrusionPolicy, bool)`
+`func (o *InlineObject74) GetFiveGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings, bool)`
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetFiveGhzSettings
 
-`func (o *InlineObject74) SetPolicy(v NetworksNetworkIdApplianceSecurityIntrusionPolicy)`
+`func (o *InlineObject74) SetFiveGhzSettings(v NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings)`
 
-SetPolicy sets Policy field to given value.
+SetFiveGhzSettings sets FiveGhzSettings field to given value.
 
-### HasPolicy
+### HasFiveGhzSettings
 
-`func (o *InlineObject74) HasPolicy() bool`
+`func (o *InlineObject74) HasFiveGhzSettings() bool`
 
-HasPolicy returns a boolean if a field has been set.
+HasFiveGhzSettings returns a boolean if a field has been set.
 
-### GetProtectedNetworks
+### GetPerSsidSettings
 
-`func (o *InlineObject74) GetProtectedNetworks() NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks`
+`func (o *InlineObject74) GetPerSsidSettings() NetworksNetworkIdApplianceRfProfilesPerSsidSettings`
 
-GetProtectedNetworks returns the ProtectedNetworks field if non-nil, zero value otherwise.
+GetPerSsidSettings returns the PerSsidSettings field if non-nil, zero value otherwise.
 
-### GetProtectedNetworksOk
+### GetPerSsidSettingsOk
 
-`func (o *InlineObject74) GetProtectedNetworksOk() (*NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks, bool)`
+`func (o *InlineObject74) GetPerSsidSettingsOk() (*NetworksNetworkIdApplianceRfProfilesPerSsidSettings, bool)`
 
-GetProtectedNetworksOk returns a tuple with the ProtectedNetworks field if it's non-nil, zero value otherwise
+GetPerSsidSettingsOk returns a tuple with the PerSsidSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProtectedNetworks
+### SetPerSsidSettings
 
-`func (o *InlineObject74) SetProtectedNetworks(v NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks)`
+`func (o *InlineObject74) SetPerSsidSettings(v NetworksNetworkIdApplianceRfProfilesPerSsidSettings)`
 
-SetProtectedNetworks sets ProtectedNetworks field to given value.
+SetPerSsidSettings sets PerSsidSettings field to given value.
 
-### HasProtectedNetworks
+### HasPerSsidSettings
 
-`func (o *InlineObject74) HasProtectedNetworks() bool`
+`func (o *InlineObject74) HasPerSsidSettings() bool`
 
-HasProtectedNetworks returns a boolean if a field has been set.
+HasPerSsidSettings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

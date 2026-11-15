@@ -4,10 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
-**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
-**Identity** | Pointer to [**InlineResponse200251Identity**](InlineResponse200251Identity.md) |  | [optional] 
-**EapolKey** | Pointer to [**InlineResponse200251EapolKey**](InlineResponse200251EapolKey.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200251Items**](InlineResponse200251Items.md) | The network with its OWE transition pairs | [optional] 
 
 ## Methods
 
@@ -28,105 +25,30 @@ NewInlineResponse200251WithDefaults instantiates a new InlineResponse200251 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTimeout
+### GetItems
 
-`func (o *InlineResponse200251) GetTimeout() int32`
+`func (o *InlineResponse200251) GetItems() []InlineResponse200251Items`
 
-GetTimeout returns the Timeout field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetTimeoutOk
+### GetItemsOk
 
-`func (o *InlineResponse200251) GetTimeoutOk() (*int32, bool)`
+`func (o *InlineResponse200251) GetItemsOk() (*[]InlineResponse200251Items, bool)`
 
-GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeout
+### SetItems
 
-`func (o *InlineResponse200251) SetTimeout(v int32)`
+`func (o *InlineResponse200251) SetItems(v []InlineResponse200251Items)`
 
-SetTimeout sets Timeout field to given value.
+SetItems sets Items field to given value.
 
-### HasTimeout
+### HasItems
 
-`func (o *InlineResponse200251) HasTimeout() bool`
+`func (o *InlineResponse200251) HasItems() bool`
 
-HasTimeout returns a boolean if a field has been set.
-
-### GetMaxRetries
-
-`func (o *InlineResponse200251) GetMaxRetries() int32`
-
-GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
-
-### GetMaxRetriesOk
-
-`func (o *InlineResponse200251) GetMaxRetriesOk() (*int32, bool)`
-
-GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMaxRetries
-
-`func (o *InlineResponse200251) SetMaxRetries(v int32)`
-
-SetMaxRetries sets MaxRetries field to given value.
-
-### HasMaxRetries
-
-`func (o *InlineResponse200251) HasMaxRetries() bool`
-
-HasMaxRetries returns a boolean if a field has been set.
-
-### GetIdentity
-
-`func (o *InlineResponse200251) GetIdentity() InlineResponse200251Identity`
-
-GetIdentity returns the Identity field if non-nil, zero value otherwise.
-
-### GetIdentityOk
-
-`func (o *InlineResponse200251) GetIdentityOk() (*InlineResponse200251Identity, bool)`
-
-GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIdentity
-
-`func (o *InlineResponse200251) SetIdentity(v InlineResponse200251Identity)`
-
-SetIdentity sets Identity field to given value.
-
-### HasIdentity
-
-`func (o *InlineResponse200251) HasIdentity() bool`
-
-HasIdentity returns a boolean if a field has been set.
-
-### GetEapolKey
-
-`func (o *InlineResponse200251) GetEapolKey() InlineResponse200251EapolKey`
-
-GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
-
-### GetEapolKeyOk
-
-`func (o *InlineResponse200251) GetEapolKeyOk() (*InlineResponse200251EapolKey, bool)`
-
-GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEapolKey
-
-`func (o *InlineResponse200251) SetEapolKey(v InlineResponse200251EapolKey)`
-
-SetEapolKey sets EapolKey field to given value.
-
-### HasEapolKey
-
-`func (o *InlineResponse200251) HasEapolKey() bool`
-
-HasEapolKey returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

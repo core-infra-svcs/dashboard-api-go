@@ -4,11 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of client | [optional] 
-**ClientId** | Pointer to **string** | ID of client | [optional] 
-**Mac** | Pointer to **string** | MAC address of client | [optional] 
-**NetworkId** | Pointer to **string** | NetworkID | [optional] 
-**Assigned** | Pointer to [**[]OrganizationsOrganizationIdPoliciesAssignmentsByClientAssigned**](OrganizationsOrganizationIdPoliciesAssignmentsByClientAssigned.md) | Assigned policies | [optional] 
+**ResultingLicenses** | Pointer to [**[]InlineResponse200418**](InlineResponse200418.md) | Resulting licenses from the move | [optional] 
 
 ## Methods
 
@@ -29,130 +25,30 @@ NewInlineResponse200419WithDefaults instantiates a new InlineResponse200419 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetResultingLicenses
 
-`func (o *InlineResponse200419) GetName() string`
+`func (o *InlineResponse200419) GetResultingLicenses() []InlineResponse200418`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetResultingLicenses returns the ResultingLicenses field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetResultingLicensesOk
 
-`func (o *InlineResponse200419) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200419) GetResultingLicensesOk() (*[]InlineResponse200418, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetResultingLicensesOk returns a tuple with the ResultingLicenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetResultingLicenses
 
-`func (o *InlineResponse200419) SetName(v string)`
+`func (o *InlineResponse200419) SetResultingLicenses(v []InlineResponse200418)`
 
-SetName sets Name field to given value.
+SetResultingLicenses sets ResultingLicenses field to given value.
 
-### HasName
+### HasResultingLicenses
 
-`func (o *InlineResponse200419) HasName() bool`
+`func (o *InlineResponse200419) HasResultingLicenses() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetClientId
-
-`func (o *InlineResponse200419) GetClientId() string`
-
-GetClientId returns the ClientId field if non-nil, zero value otherwise.
-
-### GetClientIdOk
-
-`func (o *InlineResponse200419) GetClientIdOk() (*string, bool)`
-
-GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClientId
-
-`func (o *InlineResponse200419) SetClientId(v string)`
-
-SetClientId sets ClientId field to given value.
-
-### HasClientId
-
-`func (o *InlineResponse200419) HasClientId() bool`
-
-HasClientId returns a boolean if a field has been set.
-
-### GetMac
-
-`func (o *InlineResponse200419) GetMac() string`
-
-GetMac returns the Mac field if non-nil, zero value otherwise.
-
-### GetMacOk
-
-`func (o *InlineResponse200419) GetMacOk() (*string, bool)`
-
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMac
-
-`func (o *InlineResponse200419) SetMac(v string)`
-
-SetMac sets Mac field to given value.
-
-### HasMac
-
-`func (o *InlineResponse200419) HasMac() bool`
-
-HasMac returns a boolean if a field has been set.
-
-### GetNetworkId
-
-`func (o *InlineResponse200419) GetNetworkId() string`
-
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
-
-### GetNetworkIdOk
-
-`func (o *InlineResponse200419) GetNetworkIdOk() (*string, bool)`
-
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkId
-
-`func (o *InlineResponse200419) SetNetworkId(v string)`
-
-SetNetworkId sets NetworkId field to given value.
-
-### HasNetworkId
-
-`func (o *InlineResponse200419) HasNetworkId() bool`
-
-HasNetworkId returns a boolean if a field has been set.
-
-### GetAssigned
-
-`func (o *InlineResponse200419) GetAssigned() []OrganizationsOrganizationIdPoliciesAssignmentsByClientAssigned`
-
-GetAssigned returns the Assigned field if non-nil, zero value otherwise.
-
-### GetAssignedOk
-
-`func (o *InlineResponse200419) GetAssignedOk() (*[]OrganizationsOrganizationIdPoliciesAssignmentsByClientAssigned, bool)`
-
-GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAssigned
-
-`func (o *InlineResponse200419) SetAssigned(v []OrganizationsOrganizationIdPoliciesAssignmentsByClientAssigned)`
-
-SetAssigned sets Assigned field to given value.
-
-### HasAssigned
-
-`func (o *InlineResponse200419) HasAssigned() bool`
-
-HasAssigned returns a boolean if a field has been set.
+HasResultingLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

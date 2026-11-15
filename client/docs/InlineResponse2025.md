@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PipelineId** | Pointer to **string** | Pipeline ID | [optional] 
-**Operation** | Pointer to [**InlineResponse200274Operation**](InlineResponse200274Operation.md) |  | [optional] 
-**Status** | Pointer to **string** | Pipeline status | [optional] 
-**Counts** | Pointer to [**InlineResponse2025Counts**](InlineResponse2025Counts.md) |  | [optional] 
+**Id** | Pointer to **string** | Unique identifier for the background job | [optional] 
+**Action** | Pointer to **string** | The operation being performed | [optional] 
+**Status** | Pointer to **string** | Current status of the job | [optional] 
+**Message** | Pointer to **string** | Job message or error details | [optional] 
+**Result** | Pointer to [**InlineResponse2025Result**](InlineResponse2025Result.md) |  | [optional] 
 
 ## Methods
 
@@ -28,55 +29,55 @@ NewInlineResponse2025WithDefaults instantiates a new InlineResponse2025 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPipelineId
+### GetId
 
-`func (o *InlineResponse2025) GetPipelineId() string`
+`func (o *InlineResponse2025) GetId() string`
 
-GetPipelineId returns the PipelineId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetPipelineIdOk
+### GetIdOk
 
-`func (o *InlineResponse2025) GetPipelineIdOk() (*string, bool)`
+`func (o *InlineResponse2025) GetIdOk() (*string, bool)`
 
-GetPipelineIdOk returns a tuple with the PipelineId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPipelineId
+### SetId
 
-`func (o *InlineResponse2025) SetPipelineId(v string)`
+`func (o *InlineResponse2025) SetId(v string)`
 
-SetPipelineId sets PipelineId field to given value.
+SetId sets Id field to given value.
 
-### HasPipelineId
+### HasId
 
-`func (o *InlineResponse2025) HasPipelineId() bool`
+`func (o *InlineResponse2025) HasId() bool`
 
-HasPipelineId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetOperation
+### GetAction
 
-`func (o *InlineResponse2025) GetOperation() InlineResponse200274Operation`
+`func (o *InlineResponse2025) GetAction() string`
 
-GetOperation returns the Operation field if non-nil, zero value otherwise.
+GetAction returns the Action field if non-nil, zero value otherwise.
 
-### GetOperationOk
+### GetActionOk
 
-`func (o *InlineResponse2025) GetOperationOk() (*InlineResponse200274Operation, bool)`
+`func (o *InlineResponse2025) GetActionOk() (*string, bool)`
 
-GetOperationOk returns a tuple with the Operation field if it's non-nil, zero value otherwise
+GetActionOk returns a tuple with the Action field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOperation
+### SetAction
 
-`func (o *InlineResponse2025) SetOperation(v InlineResponse200274Operation)`
+`func (o *InlineResponse2025) SetAction(v string)`
 
-SetOperation sets Operation field to given value.
+SetAction sets Action field to given value.
 
-### HasOperation
+### HasAction
 
-`func (o *InlineResponse2025) HasOperation() bool`
+`func (o *InlineResponse2025) HasAction() bool`
 
-HasOperation returns a boolean if a field has been set.
+HasAction returns a boolean if a field has been set.
 
 ### GetStatus
 
@@ -103,30 +104,55 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetCounts
+### GetMessage
 
-`func (o *InlineResponse2025) GetCounts() InlineResponse2025Counts`
+`func (o *InlineResponse2025) GetMessage() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetMessage returns the Message field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetMessageOk
 
-`func (o *InlineResponse2025) GetCountsOk() (*InlineResponse2025Counts, bool)`
+`func (o *InlineResponse2025) GetMessageOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetMessage
 
-`func (o *InlineResponse2025) SetCounts(v InlineResponse2025Counts)`
+`func (o *InlineResponse2025) SetMessage(v string)`
 
-SetCounts sets Counts field to given value.
+SetMessage sets Message field to given value.
 
-### HasCounts
+### HasMessage
 
-`func (o *InlineResponse2025) HasCounts() bool`
+`func (o *InlineResponse2025) HasMessage() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasMessage returns a boolean if a field has been set.
+
+### GetResult
+
+`func (o *InlineResponse2025) GetResult() InlineResponse2025Result`
+
+GetResult returns the Result field if non-nil, zero value otherwise.
+
+### GetResultOk
+
+`func (o *InlineResponse2025) GetResultOk() (*InlineResponse2025Result, bool)`
+
+GetResultOk returns a tuple with the Result field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetResult
+
+`func (o *InlineResponse2025) SetResult(v InlineResponse2025Result)`
+
+SetResult sets Result field to given value.
+
+### HasResult
+
+`func (o *InlineResponse2025) HasResult() bool`
+
+HasResult returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

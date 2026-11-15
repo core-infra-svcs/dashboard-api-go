@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Hostname** | Pointer to **string** | Desired ESL hostname of the network | [optional] 
-**Enabled** | Pointer to **bool** | Turn ESL features on and off for this network | [optional] 
-**Mode** | Pointer to **string** | Electronic shelf label mode of the network. Valid options are &#39;Bluetooth&#39;, &#39;high frequency&#39; | [optional] 
+**Enabled** | Pointer to **bool** | Boolean value to enable or disable alternate management interface | [optional] 
+**VlanId** | Pointer to **int32** | Alternate management interface VLAN, must be between 1 and 4094 | [optional] 
+**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39;, &#39;syslog&#39; or &#39;ldap&#39; | [optional] 
+**AccessPoints** | Pointer to [**[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints**](NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints.md) | Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put &#39;accessPoints&#39; in the body when updating template networks. Also, an empty &#39;accessPoints&#39; array will remove all previous static IP assignments | [optional] 
 
 ## Methods
 
@@ -26,31 +27,6 @@ will change when the set of required properties is changed
 NewInlineObject208WithDefaults instantiates a new InlineObject208 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetHostname
-
-`func (o *InlineObject208) GetHostname() string`
-
-GetHostname returns the Hostname field if non-nil, zero value otherwise.
-
-### GetHostnameOk
-
-`func (o *InlineObject208) GetHostnameOk() (*string, bool)`
-
-GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHostname
-
-`func (o *InlineObject208) SetHostname(v string)`
-
-SetHostname sets Hostname field to given value.
-
-### HasHostname
-
-`func (o *InlineObject208) HasHostname() bool`
-
-HasHostname returns a boolean if a field has been set.
 
 ### GetEnabled
 
@@ -77,30 +53,80 @@ SetEnabled sets Enabled field to given value.
 
 HasEnabled returns a boolean if a field has been set.
 
-### GetMode
+### GetVlanId
 
-`func (o *InlineObject208) GetMode() string`
+`func (o *InlineObject208) GetVlanId() int32`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetVlanIdOk
 
-`func (o *InlineObject208) GetModeOk() (*string, bool)`
+`func (o *InlineObject208) GetVlanIdOk() (*int32, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetVlanId
 
-`func (o *InlineObject208) SetMode(v string)`
+`func (o *InlineObject208) SetVlanId(v int32)`
 
-SetMode sets Mode field to given value.
+SetVlanId sets VlanId field to given value.
 
-### HasMode
+### HasVlanId
 
-`func (o *InlineObject208) HasMode() bool`
+`func (o *InlineObject208) HasVlanId() bool`
 
-HasMode returns a boolean if a field has been set.
+HasVlanId returns a boolean if a field has been set.
+
+### GetProtocols
+
+`func (o *InlineObject208) GetProtocols() []string`
+
+GetProtocols returns the Protocols field if non-nil, zero value otherwise.
+
+### GetProtocolsOk
+
+`func (o *InlineObject208) GetProtocolsOk() (*[]string, bool)`
+
+GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProtocols
+
+`func (o *InlineObject208) SetProtocols(v []string)`
+
+SetProtocols sets Protocols field to given value.
+
+### HasProtocols
+
+`func (o *InlineObject208) HasProtocols() bool`
+
+HasProtocols returns a boolean if a field has been set.
+
+### GetAccessPoints
+
+`func (o *InlineObject208) GetAccessPoints() []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints`
+
+GetAccessPoints returns the AccessPoints field if non-nil, zero value otherwise.
+
+### GetAccessPointsOk
+
+`func (o *InlineObject208) GetAccessPointsOk() (*[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints, bool)`
+
+GetAccessPointsOk returns a tuple with the AccessPoints field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessPoints
+
+`func (o *InlineObject208) SetAccessPoints(v []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints)`
+
+SetAccessPoints sets AccessPoints field to given value.
+
+### HasAccessPoints
+
+`func (o *InlineObject208) HasAccessPoints() bool`
+
+HasAccessPoints returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

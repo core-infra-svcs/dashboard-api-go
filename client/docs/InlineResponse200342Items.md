@@ -4,16 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | **string** | The serial number of the Campus Gateway | 
-**Network** | [**InlineResponse200342Network**](InlineResponse200342Network.md) |  | 
-**ObservedAt** | **NullableTime** | When the node_stats value was last reported | 
-**Load** | [**NullableInlineResponse200342Load**](InlineResponse200342Load.md) |  | 
+**NetworkId** | **string** | Network identifier | 
+**Name** | **string** | Network name | 
+**Tunneling** | [**InlineResponse200342Tunneling**](InlineResponse200342Tunneling.md) |  | 
+**Site** | Pointer to [**InlineResponse200342Site**](InlineResponse200342Site.md) |  | [optional] 
+**Url** | **string** | Network management URL | 
+**Counts** | [**InlineResponse200342Counts**](InlineResponse200342Counts.md) |  | 
+**Cluster** | [**InlineResponse200342Cluster**](InlineResponse200342Cluster.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200342Items
 
-`func NewInlineResponse200342Items(serial string, network InlineResponse200342Network, observedAt NullableTime, load NullableInlineResponse200342Load, ) *InlineResponse200342Items`
+`func NewInlineResponse200342Items(networkId string, name string, tunneling InlineResponse200342Tunneling, url string, counts InlineResponse200342Counts, cluster InlineResponse200342Cluster, ) *InlineResponse200342Items`
 
 NewInlineResponse200342Items instantiates a new InlineResponse200342Items object
 This constructor will assign default values to properties that have it defined,
@@ -28,106 +31,151 @@ NewInlineResponse200342ItemsWithDefaults instantiates a new InlineResponse200342
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetNetworkId
 
-`func (o *InlineResponse200342Items) GetSerial() string`
+`func (o *InlineResponse200342Items) GetNetworkId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200342Items) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200342Items) GetNetworkIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetNetworkId
 
-`func (o *InlineResponse200342Items) SetSerial(v string)`
+`func (o *InlineResponse200342Items) SetNetworkId(v string)`
 
-SetSerial sets Serial field to given value.
+SetNetworkId sets NetworkId field to given value.
 
 
-### GetNetwork
+### GetName
 
-`func (o *InlineResponse200342Items) GetNetwork() InlineResponse200342Network`
+`func (o *InlineResponse200342Items) GetName() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetNameOk
 
-`func (o *InlineResponse200342Items) GetNetworkOk() (*InlineResponse200342Network, bool)`
+`func (o *InlineResponse200342Items) GetNameOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetName
 
-`func (o *InlineResponse200342Items) SetNetwork(v InlineResponse200342Network)`
+`func (o *InlineResponse200342Items) SetName(v string)`
 
-SetNetwork sets Network field to given value.
+SetName sets Name field to given value.
 
 
-### GetObservedAt
+### GetTunneling
 
-`func (o *InlineResponse200342Items) GetObservedAt() time.Time`
+`func (o *InlineResponse200342Items) GetTunneling() InlineResponse200342Tunneling`
 
-GetObservedAt returns the ObservedAt field if non-nil, zero value otherwise.
+GetTunneling returns the Tunneling field if non-nil, zero value otherwise.
 
-### GetObservedAtOk
+### GetTunnelingOk
 
-`func (o *InlineResponse200342Items) GetObservedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200342Items) GetTunnelingOk() (*InlineResponse200342Tunneling, bool)`
 
-GetObservedAtOk returns a tuple with the ObservedAt field if it's non-nil, zero value otherwise
+GetTunnelingOk returns a tuple with the Tunneling field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetObservedAt
+### SetTunneling
 
-`func (o *InlineResponse200342Items) SetObservedAt(v time.Time)`
+`func (o *InlineResponse200342Items) SetTunneling(v InlineResponse200342Tunneling)`
 
-SetObservedAt sets ObservedAt field to given value.
+SetTunneling sets Tunneling field to given value.
 
 
-### SetObservedAtNil
+### GetSite
 
-`func (o *InlineResponse200342Items) SetObservedAtNil(b bool)`
+`func (o *InlineResponse200342Items) GetSite() InlineResponse200342Site`
 
- SetObservedAtNil sets the value for ObservedAt to be an explicit nil
+GetSite returns the Site field if non-nil, zero value otherwise.
 
-### UnsetObservedAt
-`func (o *InlineResponse200342Items) UnsetObservedAt()`
+### GetSiteOk
 
-UnsetObservedAt ensures that no value is present for ObservedAt, not even an explicit nil
-### GetLoad
+`func (o *InlineResponse200342Items) GetSiteOk() (*InlineResponse200342Site, bool)`
 
-`func (o *InlineResponse200342Items) GetLoad() InlineResponse200342Load`
-
-GetLoad returns the Load field if non-nil, zero value otherwise.
-
-### GetLoadOk
-
-`func (o *InlineResponse200342Items) GetLoadOk() (*InlineResponse200342Load, bool)`
-
-GetLoadOk returns a tuple with the Load field if it's non-nil, zero value otherwise
+GetSiteOk returns a tuple with the Site field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLoad
+### SetSite
 
-`func (o *InlineResponse200342Items) SetLoad(v InlineResponse200342Load)`
+`func (o *InlineResponse200342Items) SetSite(v InlineResponse200342Site)`
 
-SetLoad sets Load field to given value.
+SetSite sets Site field to given value.
+
+### HasSite
+
+`func (o *InlineResponse200342Items) HasSite() bool`
+
+HasSite returns a boolean if a field has been set.
+
+### GetUrl
+
+`func (o *InlineResponse200342Items) GetUrl() string`
+
+GetUrl returns the Url field if non-nil, zero value otherwise.
+
+### GetUrlOk
+
+`func (o *InlineResponse200342Items) GetUrlOk() (*string, bool)`
+
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrl
+
+`func (o *InlineResponse200342Items) SetUrl(v string)`
+
+SetUrl sets Url field to given value.
 
 
-### SetLoadNil
+### GetCounts
 
-`func (o *InlineResponse200342Items) SetLoadNil(b bool)`
+`func (o *InlineResponse200342Items) GetCounts() InlineResponse200342Counts`
 
- SetLoadNil sets the value for Load to be an explicit nil
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### UnsetLoad
-`func (o *InlineResponse200342Items) UnsetLoad()`
+### GetCountsOk
 
-UnsetLoad ensures that no value is present for Load, not even an explicit nil
+`func (o *InlineResponse200342Items) GetCountsOk() (*InlineResponse200342Counts, bool)`
+
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCounts
+
+`func (o *InlineResponse200342Items) SetCounts(v InlineResponse200342Counts)`
+
+SetCounts sets Counts field to given value.
+
+
+### GetCluster
+
+`func (o *InlineResponse200342Items) GetCluster() InlineResponse200342Cluster`
+
+GetCluster returns the Cluster field if non-nil, zero value otherwise.
+
+### GetClusterOk
+
+`func (o *InlineResponse200342Items) GetClusterOk() (*InlineResponse200342Cluster, bool)`
+
+GetClusterOk returns a tuple with the Cluster field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCluster
+
+`func (o *InlineResponse200342Items) SetCluster(v InlineResponse200342Cluster)`
+
+SetCluster sets Cluster field to given value.
+
+
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CableTestId** | Pointer to **string** | Id of the cable test request. Used to check the status of the request. | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your cable test request. | [optional] 
-**Request** | Pointer to [**InlineResponse2012Request**](InlineResponse2012Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the cable test request. | [optional] 
-**Results** | Pointer to [**[]InlineResponse20033Results**](InlineResponse20033Results.md) | Results of the cable test request, one for each requested port. | [optional] 
-**Error** | Pointer to **string** | An error message for a failed execution | [optional] 
+**ArpTableId** | Pointer to **string** | Id of the ARP table request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your ARP table request. | [optional] 
+**Request** | Pointer to [**InlineResponse2011Request**](InlineResponse2011Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the ARP table request. | [optional] 
+**Entries** | Pointer to [**[]InlineResponse20033Entries**](InlineResponse20033Entries.md) | The ARP table entries | [optional] 
+**Error** | Pointer to **NullableString** | An error message for a failed execution | [optional] 
 
 ## Methods
 
@@ -30,30 +30,30 @@ NewInlineResponse20033WithDefaults instantiates a new InlineResponse20033 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCableTestId
+### GetArpTableId
 
-`func (o *InlineResponse20033) GetCableTestId() string`
+`func (o *InlineResponse20033) GetArpTableId() string`
 
-GetCableTestId returns the CableTestId field if non-nil, zero value otherwise.
+GetArpTableId returns the ArpTableId field if non-nil, zero value otherwise.
 
-### GetCableTestIdOk
+### GetArpTableIdOk
 
-`func (o *InlineResponse20033) GetCableTestIdOk() (*string, bool)`
+`func (o *InlineResponse20033) GetArpTableIdOk() (*string, bool)`
 
-GetCableTestIdOk returns a tuple with the CableTestId field if it's non-nil, zero value otherwise
+GetArpTableIdOk returns a tuple with the ArpTableId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCableTestId
+### SetArpTableId
 
-`func (o *InlineResponse20033) SetCableTestId(v string)`
+`func (o *InlineResponse20033) SetArpTableId(v string)`
 
-SetCableTestId sets CableTestId field to given value.
+SetArpTableId sets ArpTableId field to given value.
 
-### HasCableTestId
+### HasArpTableId
 
-`func (o *InlineResponse20033) HasCableTestId() bool`
+`func (o *InlineResponse20033) HasArpTableId() bool`
 
-HasCableTestId returns a boolean if a field has been set.
+HasArpTableId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -82,20 +82,20 @@ HasUrl returns a boolean if a field has been set.
 
 ### GetRequest
 
-`func (o *InlineResponse20033) GetRequest() InlineResponse2012Request`
+`func (o *InlineResponse20033) GetRequest() InlineResponse2011Request`
 
 GetRequest returns the Request field if non-nil, zero value otherwise.
 
 ### GetRequestOk
 
-`func (o *InlineResponse20033) GetRequestOk() (*InlineResponse2012Request, bool)`
+`func (o *InlineResponse20033) GetRequestOk() (*InlineResponse2011Request, bool)`
 
 GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRequest
 
-`func (o *InlineResponse20033) SetRequest(v InlineResponse2012Request)`
+`func (o *InlineResponse20033) SetRequest(v InlineResponse2011Request)`
 
 SetRequest sets Request field to given value.
 
@@ -130,30 +130,30 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetResults
+### GetEntries
 
-`func (o *InlineResponse20033) GetResults() []InlineResponse20033Results`
+`func (o *InlineResponse20033) GetEntries() []InlineResponse20033Entries`
 
-GetResults returns the Results field if non-nil, zero value otherwise.
+GetEntries returns the Entries field if non-nil, zero value otherwise.
 
-### GetResultsOk
+### GetEntriesOk
 
-`func (o *InlineResponse20033) GetResultsOk() (*[]InlineResponse20033Results, bool)`
+`func (o *InlineResponse20033) GetEntriesOk() (*[]InlineResponse20033Entries, bool)`
 
-GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
+GetEntriesOk returns a tuple with the Entries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResults
+### SetEntries
 
-`func (o *InlineResponse20033) SetResults(v []InlineResponse20033Results)`
+`func (o *InlineResponse20033) SetEntries(v []InlineResponse20033Entries)`
 
-SetResults sets Results field to given value.
+SetEntries sets Entries field to given value.
 
-### HasResults
+### HasEntries
 
-`func (o *InlineResponse20033) HasResults() bool`
+`func (o *InlineResponse20033) HasEntries() bool`
 
-HasResults returns a boolean if a field has been set.
+HasEntries returns a boolean if a field has been set.
 
 ### GetError
 
@@ -180,6 +180,16 @@ SetError sets Error field to given value.
 
 HasError returns a boolean if a field has been set.
 
+### SetErrorNil
+
+`func (o *InlineResponse20033) SetErrorNil(b bool)`
+
+ SetErrorNil sets the value for Error to be an explicit nil
+
+### UnsetError
+`func (o *InlineResponse20033) UnsetError()`
+
+UnsetError ensures that no value is present for Error, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

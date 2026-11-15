@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AssignmentId** | Pointer to **string** | ID of the assignment | [optional] 
-**Network** | Pointer to [**InlineResponse200283Network**](InlineResponse200283Network.md) |  | [optional] 
+**Device** | Pointer to [**InlineResponse200283Device**](InlineResponse200283Device.md) |  | [optional] 
+**Port** | Pointer to [**InlineResponse200283Port**](InlineResponse200283Port.md) |  | [optional] 
 **Profile** | Pointer to [**InlineResponse200283Profile**](InlineResponse200283Profile.md) |  | [optional] 
 
 ## Methods
@@ -27,55 +27,55 @@ NewInlineResponse200283ItemsWithDefaults instantiates a new InlineResponse200283
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAssignmentId
+### GetDevice
 
-`func (o *InlineResponse200283Items) GetAssignmentId() string`
+`func (o *InlineResponse200283Items) GetDevice() InlineResponse200283Device`
 
-GetAssignmentId returns the AssignmentId field if non-nil, zero value otherwise.
+GetDevice returns the Device field if non-nil, zero value otherwise.
 
-### GetAssignmentIdOk
+### GetDeviceOk
 
-`func (o *InlineResponse200283Items) GetAssignmentIdOk() (*string, bool)`
+`func (o *InlineResponse200283Items) GetDeviceOk() (*InlineResponse200283Device, bool)`
 
-GetAssignmentIdOk returns a tuple with the AssignmentId field if it's non-nil, zero value otherwise
+GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssignmentId
+### SetDevice
 
-`func (o *InlineResponse200283Items) SetAssignmentId(v string)`
+`func (o *InlineResponse200283Items) SetDevice(v InlineResponse200283Device)`
 
-SetAssignmentId sets AssignmentId field to given value.
+SetDevice sets Device field to given value.
 
-### HasAssignmentId
+### HasDevice
 
-`func (o *InlineResponse200283Items) HasAssignmentId() bool`
+`func (o *InlineResponse200283Items) HasDevice() bool`
 
-HasAssignmentId returns a boolean if a field has been set.
+HasDevice returns a boolean if a field has been set.
 
-### GetNetwork
+### GetPort
 
-`func (o *InlineResponse200283Items) GetNetwork() InlineResponse200283Network`
+`func (o *InlineResponse200283Items) GetPort() InlineResponse200283Port`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetPort returns the Port field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetPortOk
 
-`func (o *InlineResponse200283Items) GetNetworkOk() (*InlineResponse200283Network, bool)`
+`func (o *InlineResponse200283Items) GetPortOk() (*InlineResponse200283Port, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetPort
 
-`func (o *InlineResponse200283Items) SetNetwork(v InlineResponse200283Network)`
+`func (o *InlineResponse200283Items) SetPort(v InlineResponse200283Port)`
 
-SetNetwork sets Network field to given value.
+SetPort sets Port field to given value.
 
-### HasNetwork
+### HasPort
 
-`func (o *InlineResponse200283Items) HasNetwork() bool`
+`func (o *InlineResponse200283Items) HasPort() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasPort returns a boolean if a field has been set.
 
 ### GetProfile
 

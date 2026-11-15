@@ -4,14 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]InlineResponse200316Items**](InlineResponse200316Items.md) | Historical Severity Counts | 
-**Meta** | [**InlineResponse200316Meta**](InlineResponse200316Meta.md) |  | 
+**NetworkId** | Pointer to **string** | Network Id | [optional] 
+**NetworkName** | Pointer to **string** | Network name | [optional] 
+**DeviceSerial** | Pointer to **string** | Serial number of the device | [optional] 
+**DeviceStatus** | Pointer to **string** | Device Status | [optional] 
+**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnStatusesUplinks**](OrganizationsOrganizationIdApplianceVpnStatusesUplinks.md) | List of Uplink Information | [optional] 
+**VpnMode** | Pointer to **string** | VPN Mode | [optional] 
+**ExportedSubnets** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnStatusesExportedSubnets**](OrganizationsOrganizationIdApplianceVpnStatusesExportedSubnets.md) | List of Exported Subnets | [optional] 
+**MerakiVpnPeers** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnStatusesMerakiVpnPeers**](OrganizationsOrganizationIdApplianceVpnStatusesMerakiVpnPeers.md) | Meraki VPN Peers | [optional] 
+**ThirdPartyVpnPeers** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnStatusesThirdPartyVpnPeers**](OrganizationsOrganizationIdApplianceVpnStatusesThirdPartyVpnPeers.md) | Third Party VPN Peers | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200316
 
-`func NewInlineResponse200316(items []InlineResponse200316Items, meta InlineResponse200316Meta, ) *InlineResponse200316`
+`func NewInlineResponse200316() *InlineResponse200316`
 
 NewInlineResponse200316 instantiates a new InlineResponse200316 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +33,230 @@ NewInlineResponse200316WithDefaults instantiates a new InlineResponse200316 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetNetworkId
 
-`func (o *InlineResponse200316) GetItems() []InlineResponse200316Items`
+`func (o *InlineResponse200316) GetNetworkId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200316) GetItemsOk() (*[]InlineResponse200316Items, bool)`
+`func (o *InlineResponse200316) GetNetworkIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetNetworkId
 
-`func (o *InlineResponse200316) SetItems(v []InlineResponse200316Items)`
+`func (o *InlineResponse200316) SetNetworkId(v string)`
 
-SetItems sets Items field to given value.
+SetNetworkId sets NetworkId field to given value.
 
+### HasNetworkId
 
-### GetMeta
+`func (o *InlineResponse200316) HasNetworkId() bool`
 
-`func (o *InlineResponse200316) GetMeta() InlineResponse200316Meta`
+HasNetworkId returns a boolean if a field has been set.
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+### GetNetworkName
 
-### GetMetaOk
+`func (o *InlineResponse200316) GetNetworkName() string`
 
-`func (o *InlineResponse200316) GetMetaOk() (*InlineResponse200316Meta, bool)`
+GetNetworkName returns the NetworkName field if non-nil, zero value otherwise.
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+### GetNetworkNameOk
+
+`func (o *InlineResponse200316) GetNetworkNameOk() (*string, bool)`
+
+GetNetworkNameOk returns a tuple with the NetworkName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetNetworkName
 
-`func (o *InlineResponse200316) SetMeta(v InlineResponse200316Meta)`
+`func (o *InlineResponse200316) SetNetworkName(v string)`
 
-SetMeta sets Meta field to given value.
+SetNetworkName sets NetworkName field to given value.
 
+### HasNetworkName
+
+`func (o *InlineResponse200316) HasNetworkName() bool`
+
+HasNetworkName returns a boolean if a field has been set.
+
+### GetDeviceSerial
+
+`func (o *InlineResponse200316) GetDeviceSerial() string`
+
+GetDeviceSerial returns the DeviceSerial field if non-nil, zero value otherwise.
+
+### GetDeviceSerialOk
+
+`func (o *InlineResponse200316) GetDeviceSerialOk() (*string, bool)`
+
+GetDeviceSerialOk returns a tuple with the DeviceSerial field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDeviceSerial
+
+`func (o *InlineResponse200316) SetDeviceSerial(v string)`
+
+SetDeviceSerial sets DeviceSerial field to given value.
+
+### HasDeviceSerial
+
+`func (o *InlineResponse200316) HasDeviceSerial() bool`
+
+HasDeviceSerial returns a boolean if a field has been set.
+
+### GetDeviceStatus
+
+`func (o *InlineResponse200316) GetDeviceStatus() string`
+
+GetDeviceStatus returns the DeviceStatus field if non-nil, zero value otherwise.
+
+### GetDeviceStatusOk
+
+`func (o *InlineResponse200316) GetDeviceStatusOk() (*string, bool)`
+
+GetDeviceStatusOk returns a tuple with the DeviceStatus field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDeviceStatus
+
+`func (o *InlineResponse200316) SetDeviceStatus(v string)`
+
+SetDeviceStatus sets DeviceStatus field to given value.
+
+### HasDeviceStatus
+
+`func (o *InlineResponse200316) HasDeviceStatus() bool`
+
+HasDeviceStatus returns a boolean if a field has been set.
+
+### GetUplinks
+
+`func (o *InlineResponse200316) GetUplinks() []OrganizationsOrganizationIdApplianceVpnStatusesUplinks`
+
+GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+
+### GetUplinksOk
+
+`func (o *InlineResponse200316) GetUplinksOk() (*[]OrganizationsOrganizationIdApplianceVpnStatusesUplinks, bool)`
+
+GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUplinks
+
+`func (o *InlineResponse200316) SetUplinks(v []OrganizationsOrganizationIdApplianceVpnStatusesUplinks)`
+
+SetUplinks sets Uplinks field to given value.
+
+### HasUplinks
+
+`func (o *InlineResponse200316) HasUplinks() bool`
+
+HasUplinks returns a boolean if a field has been set.
+
+### GetVpnMode
+
+`func (o *InlineResponse200316) GetVpnMode() string`
+
+GetVpnMode returns the VpnMode field if non-nil, zero value otherwise.
+
+### GetVpnModeOk
+
+`func (o *InlineResponse200316) GetVpnModeOk() (*string, bool)`
+
+GetVpnModeOk returns a tuple with the VpnMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVpnMode
+
+`func (o *InlineResponse200316) SetVpnMode(v string)`
+
+SetVpnMode sets VpnMode field to given value.
+
+### HasVpnMode
+
+`func (o *InlineResponse200316) HasVpnMode() bool`
+
+HasVpnMode returns a boolean if a field has been set.
+
+### GetExportedSubnets
+
+`func (o *InlineResponse200316) GetExportedSubnets() []OrganizationsOrganizationIdApplianceVpnStatusesExportedSubnets`
+
+GetExportedSubnets returns the ExportedSubnets field if non-nil, zero value otherwise.
+
+### GetExportedSubnetsOk
+
+`func (o *InlineResponse200316) GetExportedSubnetsOk() (*[]OrganizationsOrganizationIdApplianceVpnStatusesExportedSubnets, bool)`
+
+GetExportedSubnetsOk returns a tuple with the ExportedSubnets field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExportedSubnets
+
+`func (o *InlineResponse200316) SetExportedSubnets(v []OrganizationsOrganizationIdApplianceVpnStatusesExportedSubnets)`
+
+SetExportedSubnets sets ExportedSubnets field to given value.
+
+### HasExportedSubnets
+
+`func (o *InlineResponse200316) HasExportedSubnets() bool`
+
+HasExportedSubnets returns a boolean if a field has been set.
+
+### GetMerakiVpnPeers
+
+`func (o *InlineResponse200316) GetMerakiVpnPeers() []OrganizationsOrganizationIdApplianceVpnStatusesMerakiVpnPeers`
+
+GetMerakiVpnPeers returns the MerakiVpnPeers field if non-nil, zero value otherwise.
+
+### GetMerakiVpnPeersOk
+
+`func (o *InlineResponse200316) GetMerakiVpnPeersOk() (*[]OrganizationsOrganizationIdApplianceVpnStatusesMerakiVpnPeers, bool)`
+
+GetMerakiVpnPeersOk returns a tuple with the MerakiVpnPeers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMerakiVpnPeers
+
+`func (o *InlineResponse200316) SetMerakiVpnPeers(v []OrganizationsOrganizationIdApplianceVpnStatusesMerakiVpnPeers)`
+
+SetMerakiVpnPeers sets MerakiVpnPeers field to given value.
+
+### HasMerakiVpnPeers
+
+`func (o *InlineResponse200316) HasMerakiVpnPeers() bool`
+
+HasMerakiVpnPeers returns a boolean if a field has been set.
+
+### GetThirdPartyVpnPeers
+
+`func (o *InlineResponse200316) GetThirdPartyVpnPeers() []OrganizationsOrganizationIdApplianceVpnStatusesThirdPartyVpnPeers`
+
+GetThirdPartyVpnPeers returns the ThirdPartyVpnPeers field if non-nil, zero value otherwise.
+
+### GetThirdPartyVpnPeersOk
+
+`func (o *InlineResponse200316) GetThirdPartyVpnPeersOk() (*[]OrganizationsOrganizationIdApplianceVpnStatusesThirdPartyVpnPeers, bool)`
+
+GetThirdPartyVpnPeersOk returns a tuple with the ThirdPartyVpnPeers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetThirdPartyVpnPeers
+
+`func (o *InlineResponse200316) SetThirdPartyVpnPeers(v []OrganizationsOrganizationIdApplianceVpnStatusesThirdPartyVpnPeers)`
+
+SetThirdPartyVpnPeers sets ThirdPartyVpnPeers field to given value.
+
+### HasThirdPartyVpnPeers
+
+`func (o *InlineResponse200316) HasThirdPartyVpnPeers() bool`
+
+HasThirdPartyVpnPeers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

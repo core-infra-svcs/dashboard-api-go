@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkIds** | Pointer to **[]string** | The network IDs that were added to the network group | [optional] 
+**Serials** | Pointer to **[]string** | Serials of the devices that were released | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200417WithDefaults instantiates a new InlineResponse200417 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkIds
+### GetSerials
 
-`func (o *InlineResponse200417) GetNetworkIds() []string`
+`func (o *InlineResponse200417) GetSerials() []string`
 
-GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetNetworkIdsOk
+### GetSerialsOk
 
-`func (o *InlineResponse200417) GetNetworkIdsOk() (*[]string, bool)`
+`func (o *InlineResponse200417) GetSerialsOk() (*[]string, bool)`
 
-GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkIds
+### SetSerials
 
-`func (o *InlineResponse200417) SetNetworkIds(v []string)`
+`func (o *InlineResponse200417) SetSerials(v []string)`
 
-SetNetworkIds sets NetworkIds field to given value.
+SetSerials sets Serials field to given value.
 
-### HasNetworkIds
+### HasSerials
 
-`func (o *InlineResponse200417) HasNetworkIds() bool`
+`func (o *InlineResponse200417) HasSerials() bool`
 
-HasNetworkIds returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

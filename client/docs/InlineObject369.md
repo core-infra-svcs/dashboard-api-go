@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceSerial** | **string** | Serial number of the source switch (must be on a network not bound to a template) | 
-**TargetSerials** | **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | 
+**Items** | Pointer to [**[]OrganizationsOrganizationIdSaseSitesDetachItems**](OrganizationsOrganizationIdSaseSitesDetachItems.md) | List of Secure Access sites to be detached. | [optional] 
 
 ## Methods
 
 ### NewInlineObject369
 
-`func NewInlineObject369(sourceSerial string, targetSerials []string, ) *InlineObject369`
+`func NewInlineObject369() *InlineObject369`
 
 NewInlineObject369 instantiates a new InlineObject369 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +25,30 @@ NewInlineObject369WithDefaults instantiates a new InlineObject369 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceSerial
+### GetItems
 
-`func (o *InlineObject369) GetSourceSerial() string`
+`func (o *InlineObject369) GetItems() []OrganizationsOrganizationIdSaseSitesDetachItems`
 
-GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetSourceSerialOk
+### GetItemsOk
 
-`func (o *InlineObject369) GetSourceSerialOk() (*string, bool)`
+`func (o *InlineObject369) GetItemsOk() (*[]OrganizationsOrganizationIdSaseSitesDetachItems, bool)`
 
-GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceSerial
+### SetItems
 
-`func (o *InlineObject369) SetSourceSerial(v string)`
+`func (o *InlineObject369) SetItems(v []OrganizationsOrganizationIdSaseSitesDetachItems)`
 
-SetSourceSerial sets SourceSerial field to given value.
+SetItems sets Items field to given value.
 
+### HasItems
 
-### GetTargetSerials
+`func (o *InlineObject369) HasItems() bool`
 
-`func (o *InlineObject369) GetTargetSerials() []string`
-
-GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
-
-### GetTargetSerialsOk
-
-`func (o *InlineObject369) GetTargetSerialsOk() (*[]string, bool)`
-
-GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTargetSerials
-
-`func (o *InlineObject369) SetTargetSerials(v []string)`
-
-SetTargetSerials sets TargetSerials field to given value.
-
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

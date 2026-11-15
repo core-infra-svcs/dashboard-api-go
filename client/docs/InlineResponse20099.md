@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BandwidthLimits** | Pointer to [**InlineResponse20099BandwidthLimits**](InlineResponse20099BandwidthLimits.md) |  | [optional] 
+**GlobalBandwidthLimits** | [**InlineResponse20099GlobalBandwidthLimits**](InlineResponse20099GlobalBandwidthLimits.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse20099
 
-`func NewInlineResponse20099() *InlineResponse20099`
+`func NewInlineResponse20099(globalBandwidthLimits InlineResponse20099GlobalBandwidthLimits, ) *InlineResponse20099`
 
 NewInlineResponse20099 instantiates a new InlineResponse20099 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +25,25 @@ NewInlineResponse20099WithDefaults instantiates a new InlineResponse20099 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBandwidthLimits
+### GetGlobalBandwidthLimits
 
-`func (o *InlineResponse20099) GetBandwidthLimits() InlineResponse20099BandwidthLimits`
+`func (o *InlineResponse20099) GetGlobalBandwidthLimits() InlineResponse20099GlobalBandwidthLimits`
 
-GetBandwidthLimits returns the BandwidthLimits field if non-nil, zero value otherwise.
+GetGlobalBandwidthLimits returns the GlobalBandwidthLimits field if non-nil, zero value otherwise.
 
-### GetBandwidthLimitsOk
+### GetGlobalBandwidthLimitsOk
 
-`func (o *InlineResponse20099) GetBandwidthLimitsOk() (*InlineResponse20099BandwidthLimits, bool)`
+`func (o *InlineResponse20099) GetGlobalBandwidthLimitsOk() (*InlineResponse20099GlobalBandwidthLimits, bool)`
 
-GetBandwidthLimitsOk returns a tuple with the BandwidthLimits field if it's non-nil, zero value otherwise
+GetGlobalBandwidthLimitsOk returns a tuple with the GlobalBandwidthLimits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBandwidthLimits
+### SetGlobalBandwidthLimits
 
-`func (o *InlineResponse20099) SetBandwidthLimits(v InlineResponse20099BandwidthLimits)`
+`func (o *InlineResponse20099) SetGlobalBandwidthLimits(v InlineResponse20099GlobalBandwidthLimits)`
 
-SetBandwidthLimits sets BandwidthLimits field to given value.
+SetGlobalBandwidthLimits sets GlobalBandwidthLimits field to given value.
 
-### HasBandwidthLimits
-
-`func (o *InlineResponse20099) HasBandwidthLimits() bool`
-
-HasBandwidthLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

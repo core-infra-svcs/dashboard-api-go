@@ -4,20 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the firewall rule | 
-**RulesetId** | **string** | Firewall ruleset ID to associate the rule with | 
-**Policy** | **string** | Rule policy - allow or deny traffic | 
-**Enabled** | Pointer to **bool** | Whether the rule is enabled | [optional] 
-**Priority** | Pointer to **int32** | Rule priority (lower numbers &#x3D; higher priority) | [optional] 
-**Description** | Pointer to **string** | Description of the firewall rule | [optional] 
-**Sources** | [**OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources**](OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources.md) |  | 
-**Destinations** | [**OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations**](OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations.md) |  | 
+**Name** | **string** | The name of the new network | 
+**ProductTypes** | **[]string** | The product type(s) of the new network. If more than one type is included, the network will be a combined network. | 
+**Tags** | Pointer to **[]string** | A list of tags to be applied to the network | [optional] 
+**TimeZone** | Pointer to **string** | The timezone of the network. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article.&lt;/a&gt; | [optional] 
+**CopyFromNetworkId** | Pointer to **string** | The ID of the network to copy configuration from. Other provided parameters will override the copied configuration, except type which must match this network&#39;s type exactly. | [optional] 
+**Notes** | Pointer to **NullableString** | Add any notes or additional information about this network here. | [optional] 
 
 ## Methods
 
 ### NewInlineObject335
 
-`func NewInlineObject335(name string, rulesetId string, policy string, sources OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources, destinations OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations, ) *InlineObject335`
+`func NewInlineObject335(name string, productTypes []string, ) *InlineObject335`
 
 NewInlineObject335 instantiates a new InlineObject335 object
 This constructor will assign default values to properties that have it defined,
@@ -52,161 +50,136 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetRulesetId
+### GetProductTypes
 
-`func (o *InlineObject335) GetRulesetId() string`
+`func (o *InlineObject335) GetProductTypes() []string`
 
-GetRulesetId returns the RulesetId field if non-nil, zero value otherwise.
+GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
 
-### GetRulesetIdOk
+### GetProductTypesOk
 
-`func (o *InlineObject335) GetRulesetIdOk() (*string, bool)`
+`func (o *InlineObject335) GetProductTypesOk() (*[]string, bool)`
 
-GetRulesetIdOk returns a tuple with the RulesetId field if it's non-nil, zero value otherwise
+GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRulesetId
+### SetProductTypes
 
-`func (o *InlineObject335) SetRulesetId(v string)`
+`func (o *InlineObject335) SetProductTypes(v []string)`
 
-SetRulesetId sets RulesetId field to given value.
+SetProductTypes sets ProductTypes field to given value.
 
 
-### GetPolicy
+### GetTags
 
-`func (o *InlineObject335) GetPolicy() string`
+`func (o *InlineObject335) GetTags() []string`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetPolicyOk
+### GetTagsOk
 
-`func (o *InlineObject335) GetPolicyOk() (*string, bool)`
+`func (o *InlineObject335) GetTagsOk() (*[]string, bool)`
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetTags
 
-`func (o *InlineObject335) SetPolicy(v string)`
+`func (o *InlineObject335) SetTags(v []string)`
 
-SetPolicy sets Policy field to given value.
+SetTags sets Tags field to given value.
 
+### HasTags
 
-### GetEnabled
+`func (o *InlineObject335) HasTags() bool`
 
-`func (o *InlineObject335) GetEnabled() bool`
+HasTags returns a boolean if a field has been set.
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+### GetTimeZone
 
-### GetEnabledOk
+`func (o *InlineObject335) GetTimeZone() string`
 
-`func (o *InlineObject335) GetEnabledOk() (*bool, bool)`
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+### GetTimeZoneOk
+
+`func (o *InlineObject335) GetTimeZoneOk() (*string, bool)`
+
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetTimeZone
 
-`func (o *InlineObject335) SetEnabled(v bool)`
+`func (o *InlineObject335) SetTimeZone(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetTimeZone sets TimeZone field to given value.
 
-### HasEnabled
+### HasTimeZone
 
-`func (o *InlineObject335) HasEnabled() bool`
+`func (o *InlineObject335) HasTimeZone() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasTimeZone returns a boolean if a field has been set.
 
-### GetPriority
+### GetCopyFromNetworkId
 
-`func (o *InlineObject335) GetPriority() int32`
+`func (o *InlineObject335) GetCopyFromNetworkId() string`
 
-GetPriority returns the Priority field if non-nil, zero value otherwise.
+GetCopyFromNetworkId returns the CopyFromNetworkId field if non-nil, zero value otherwise.
 
-### GetPriorityOk
+### GetCopyFromNetworkIdOk
 
-`func (o *InlineObject335) GetPriorityOk() (*int32, bool)`
+`func (o *InlineObject335) GetCopyFromNetworkIdOk() (*string, bool)`
 
-GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
+GetCopyFromNetworkIdOk returns a tuple with the CopyFromNetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPriority
+### SetCopyFromNetworkId
 
-`func (o *InlineObject335) SetPriority(v int32)`
+`func (o *InlineObject335) SetCopyFromNetworkId(v string)`
 
-SetPriority sets Priority field to given value.
+SetCopyFromNetworkId sets CopyFromNetworkId field to given value.
 
-### HasPriority
+### HasCopyFromNetworkId
 
-`func (o *InlineObject335) HasPriority() bool`
+`func (o *InlineObject335) HasCopyFromNetworkId() bool`
 
-HasPriority returns a boolean if a field has been set.
+HasCopyFromNetworkId returns a boolean if a field has been set.
 
-### GetDescription
+### GetNotes
 
-`func (o *InlineObject335) GetDescription() string`
+`func (o *InlineObject335) GetNotes() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetNotes returns the Notes field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetNotesOk
 
-`func (o *InlineObject335) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject335) GetNotesOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetNotes
 
-`func (o *InlineObject335) SetDescription(v string)`
+`func (o *InlineObject335) SetNotes(v string)`
 
-SetDescription sets Description field to given value.
+SetNotes sets Notes field to given value.
 
-### HasDescription
+### HasNotes
 
-`func (o *InlineObject335) HasDescription() bool`
+`func (o *InlineObject335) HasNotes() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasNotes returns a boolean if a field has been set.
 
-### GetSources
+### SetNotesNil
 
-`func (o *InlineObject335) GetSources() OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources`
+`func (o *InlineObject335) SetNotesNil(b bool)`
 
-GetSources returns the Sources field if non-nil, zero value otherwise.
+ SetNotesNil sets the value for Notes to be an explicit nil
 
-### GetSourcesOk
+### UnsetNotes
+`func (o *InlineObject335) UnsetNotes()`
 
-`func (o *InlineObject335) GetSourcesOk() (*OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources, bool)`
-
-GetSourcesOk returns a tuple with the Sources field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSources
-
-`func (o *InlineObject335) SetSources(v OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources)`
-
-SetSources sets Sources field to given value.
-
-
-### GetDestinations
-
-`func (o *InlineObject335) GetDestinations() OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations`
-
-GetDestinations returns the Destinations field if non-nil, zero value otherwise.
-
-### GetDestinationsOk
-
-`func (o *InlineObject335) GetDestinationsOk() (*OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations, bool)`
-
-GetDestinationsOk returns a tuple with the Destinations field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDestinations
-
-`func (o *InlineObject335) SetDestinations(v OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations)`
-
-SetDestinations sets Destinations field to given value.
-
-
+UnsetNotes ensures that no value is present for Notes, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -4,16 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the custom performance class | 
-**MaxLatency** | Pointer to **NullableInt32** | Maximum latency in milliseconds | [optional] 
-**MaxJitter** | Pointer to **NullableInt32** | Maximum jitter in milliseconds | [optional] 
-**MaxLossPercentage** | Pointer to **NullableInt32** | Maximum percentage of packet loss | [optional] 
+**Name** | **string** | Name of the route | 
+**Subnet** | **string** | Subnet of the route | 
+**GatewayIp** | **string** | Gateway IP address (next hop) | 
+**GatewayVlanId** | Pointer to **int32** | Gateway VLAN ID | [optional] 
+**Enabled** | Pointer to **bool** | Enable/disable the static route | [optional] 
+**Vrf** | Pointer to [**NetworksNetworkIdApplianceStaticRoutesVrf1**](NetworksNetworkIdApplianceStaticRoutesVrf1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject82
 
-`func NewInlineObject82(name string, ) *InlineObject82`
+`func NewInlineObject82(name string, subnet string, gatewayIp string, ) *InlineObject82`
 
 NewInlineObject82 instantiates a new InlineObject82 object
 This constructor will assign default values to properties that have it defined,
@@ -48,111 +50,121 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetMaxLatency
+### GetSubnet
 
-`func (o *InlineObject82) GetMaxLatency() int32`
+`func (o *InlineObject82) GetSubnet() string`
 
-GetMaxLatency returns the MaxLatency field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetMaxLatencyOk
+### GetSubnetOk
 
-`func (o *InlineObject82) GetMaxLatencyOk() (*int32, bool)`
+`func (o *InlineObject82) GetSubnetOk() (*string, bool)`
 
-GetMaxLatencyOk returns a tuple with the MaxLatency field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxLatency
+### SetSubnet
 
-`func (o *InlineObject82) SetMaxLatency(v int32)`
+`func (o *InlineObject82) SetSubnet(v string)`
 
-SetMaxLatency sets MaxLatency field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasMaxLatency
 
-`func (o *InlineObject82) HasMaxLatency() bool`
+### GetGatewayIp
 
-HasMaxLatency returns a boolean if a field has been set.
+`func (o *InlineObject82) GetGatewayIp() string`
 
-### SetMaxLatencyNil
+GetGatewayIp returns the GatewayIp field if non-nil, zero value otherwise.
 
-`func (o *InlineObject82) SetMaxLatencyNil(b bool)`
+### GetGatewayIpOk
 
- SetMaxLatencyNil sets the value for MaxLatency to be an explicit nil
+`func (o *InlineObject82) GetGatewayIpOk() (*string, bool)`
 
-### UnsetMaxLatency
-`func (o *InlineObject82) UnsetMaxLatency()`
-
-UnsetMaxLatency ensures that no value is present for MaxLatency, not even an explicit nil
-### GetMaxJitter
-
-`func (o *InlineObject82) GetMaxJitter() int32`
-
-GetMaxJitter returns the MaxJitter field if non-nil, zero value otherwise.
-
-### GetMaxJitterOk
-
-`func (o *InlineObject82) GetMaxJitterOk() (*int32, bool)`
-
-GetMaxJitterOk returns a tuple with the MaxJitter field if it's non-nil, zero value otherwise
+GetGatewayIpOk returns a tuple with the GatewayIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxJitter
+### SetGatewayIp
 
-`func (o *InlineObject82) SetMaxJitter(v int32)`
+`func (o *InlineObject82) SetGatewayIp(v string)`
 
-SetMaxJitter sets MaxJitter field to given value.
+SetGatewayIp sets GatewayIp field to given value.
 
-### HasMaxJitter
 
-`func (o *InlineObject82) HasMaxJitter() bool`
+### GetGatewayVlanId
 
-HasMaxJitter returns a boolean if a field has been set.
+`func (o *InlineObject82) GetGatewayVlanId() int32`
 
-### SetMaxJitterNil
+GetGatewayVlanId returns the GatewayVlanId field if non-nil, zero value otherwise.
 
-`func (o *InlineObject82) SetMaxJitterNil(b bool)`
+### GetGatewayVlanIdOk
 
- SetMaxJitterNil sets the value for MaxJitter to be an explicit nil
+`func (o *InlineObject82) GetGatewayVlanIdOk() (*int32, bool)`
 
-### UnsetMaxJitter
-`func (o *InlineObject82) UnsetMaxJitter()`
-
-UnsetMaxJitter ensures that no value is present for MaxJitter, not even an explicit nil
-### GetMaxLossPercentage
-
-`func (o *InlineObject82) GetMaxLossPercentage() int32`
-
-GetMaxLossPercentage returns the MaxLossPercentage field if non-nil, zero value otherwise.
-
-### GetMaxLossPercentageOk
-
-`func (o *InlineObject82) GetMaxLossPercentageOk() (*int32, bool)`
-
-GetMaxLossPercentageOk returns a tuple with the MaxLossPercentage field if it's non-nil, zero value otherwise
+GetGatewayVlanIdOk returns a tuple with the GatewayVlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxLossPercentage
+### SetGatewayVlanId
 
-`func (o *InlineObject82) SetMaxLossPercentage(v int32)`
+`func (o *InlineObject82) SetGatewayVlanId(v int32)`
 
-SetMaxLossPercentage sets MaxLossPercentage field to given value.
+SetGatewayVlanId sets GatewayVlanId field to given value.
 
-### HasMaxLossPercentage
+### HasGatewayVlanId
 
-`func (o *InlineObject82) HasMaxLossPercentage() bool`
+`func (o *InlineObject82) HasGatewayVlanId() bool`
 
-HasMaxLossPercentage returns a boolean if a field has been set.
+HasGatewayVlanId returns a boolean if a field has been set.
 
-### SetMaxLossPercentageNil
+### GetEnabled
 
-`func (o *InlineObject82) SetMaxLossPercentageNil(b bool)`
+`func (o *InlineObject82) GetEnabled() bool`
 
- SetMaxLossPercentageNil sets the value for MaxLossPercentage to be an explicit nil
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### UnsetMaxLossPercentage
-`func (o *InlineObject82) UnsetMaxLossPercentage()`
+### GetEnabledOk
 
-UnsetMaxLossPercentage ensures that no value is present for MaxLossPercentage, not even an explicit nil
+`func (o *InlineObject82) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineObject82) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineObject82) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
+
+### GetVrf
+
+`func (o *InlineObject82) GetVrf() NetworksNetworkIdApplianceStaticRoutesVrf1`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *InlineObject82) GetVrfOk() (*NetworksNetworkIdApplianceStaticRoutesVrf1, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *InlineObject82) SetVrf(v NetworksNetworkIdApplianceStaticRoutesVrf1)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *InlineObject82) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
+
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

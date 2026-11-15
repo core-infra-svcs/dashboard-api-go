@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**VlanProfile** | Pointer to [**InlineResponse200219VlanProfile**](InlineResponse200219VlanProfile.md) |  | [optional] 
-**Serials** | Pointer to **[]string** | Array of Device Serials | [optional] 
-**StackIds** | Pointer to **[]string** | Array of Switch Stack IDs | [optional] 
+**DscpTagValue** | Pointer to **int32** | The DSCP tag value. | [optional] 
+**Description** | Pointer to **string** | The description of the DSCP tag. | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200219WithDefaults instantiates a new InlineResponse200219 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlanProfile
+### GetDscpTagValue
 
-`func (o *InlineResponse200219) GetVlanProfile() InlineResponse200219VlanProfile`
+`func (o *InlineResponse200219) GetDscpTagValue() int32`
 
-GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
+GetDscpTagValue returns the DscpTagValue field if non-nil, zero value otherwise.
 
-### GetVlanProfileOk
+### GetDscpTagValueOk
 
-`func (o *InlineResponse200219) GetVlanProfileOk() (*InlineResponse200219VlanProfile, bool)`
+`func (o *InlineResponse200219) GetDscpTagValueOk() (*int32, bool)`
 
-GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
+GetDscpTagValueOk returns a tuple with the DscpTagValue field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanProfile
+### SetDscpTagValue
 
-`func (o *InlineResponse200219) SetVlanProfile(v InlineResponse200219VlanProfile)`
+`func (o *InlineResponse200219) SetDscpTagValue(v int32)`
 
-SetVlanProfile sets VlanProfile field to given value.
+SetDscpTagValue sets DscpTagValue field to given value.
 
-### HasVlanProfile
+### HasDscpTagValue
 
-`func (o *InlineResponse200219) HasVlanProfile() bool`
+`func (o *InlineResponse200219) HasDscpTagValue() bool`
 
-HasVlanProfile returns a boolean if a field has been set.
+HasDscpTagValue returns a boolean if a field has been set.
 
-### GetSerials
+### GetDescription
 
-`func (o *InlineResponse200219) GetSerials() []string`
+`func (o *InlineResponse200219) GetDescription() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetDescriptionOk
 
-`func (o *InlineResponse200219) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200219) GetDescriptionOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetDescription
 
-`func (o *InlineResponse200219) SetSerials(v []string)`
+`func (o *InlineResponse200219) SetDescription(v string)`
 
-SetSerials sets Serials field to given value.
+SetDescription sets Description field to given value.
 
-### HasSerials
+### HasDescription
 
-`func (o *InlineResponse200219) HasSerials() bool`
+`func (o *InlineResponse200219) HasDescription() bool`
 
-HasSerials returns a boolean if a field has been set.
-
-### GetStackIds
-
-`func (o *InlineResponse200219) GetStackIds() []string`
-
-GetStackIds returns the StackIds field if non-nil, zero value otherwise.
-
-### GetStackIdsOk
-
-`func (o *InlineResponse200219) GetStackIdsOk() (*[]string, bool)`
-
-GetStackIdsOk returns a tuple with the StackIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStackIds
-
-`func (o *InlineResponse200219) SetStackIds(v []string)`
-
-SetStackIds sets StackIds field to given value.
-
-### HasStackIds
-
-`func (o *InlineResponse200219) HasStackIds() bool`
-
-HasStackIds returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

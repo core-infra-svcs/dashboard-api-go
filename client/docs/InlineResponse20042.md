@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LookupId** | Pointer to **string** | Id of the route table lookup request. Used to check the status of the request. | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your routing table lookup request. | [optional] 
-**Request** | Pointer to [**InlineResponse20111Request**](InlineResponse20111Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the routing table lookup request. | [optional] 
-**Entries** | Pointer to [**[]InlineResponse20042Entries**](InlineResponse20042Entries.md) | Routing table entries that match the search criteria | [optional] 
-**Errors** | Pointer to **[]string** | An error message for a failed execution | [optional] 
+**JobId** | Pointer to **string** | Id of the power usage request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your power usage request. | [optional] 
+**Request** | Pointer to [**InlineResponse20110Request**](InlineResponse20110Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the power usage request. | [optional] 
+**Results** | Pointer to [**InlineResponse20042Results**](InlineResponse20042Results.md) |  | [optional] 
+**Errors** | Pointer to **[]string** | Any errors encountered while retrieving power usage details | [optional] 
 
 ## Methods
 
@@ -30,30 +30,30 @@ NewInlineResponse20042WithDefaults instantiates a new InlineResponse20042 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLookupId
+### GetJobId
 
-`func (o *InlineResponse20042) GetLookupId() string`
+`func (o *InlineResponse20042) GetJobId() string`
 
-GetLookupId returns the LookupId field if non-nil, zero value otherwise.
+GetJobId returns the JobId field if non-nil, zero value otherwise.
 
-### GetLookupIdOk
+### GetJobIdOk
 
-`func (o *InlineResponse20042) GetLookupIdOk() (*string, bool)`
+`func (o *InlineResponse20042) GetJobIdOk() (*string, bool)`
 
-GetLookupIdOk returns a tuple with the LookupId field if it's non-nil, zero value otherwise
+GetJobIdOk returns a tuple with the JobId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLookupId
+### SetJobId
 
-`func (o *InlineResponse20042) SetLookupId(v string)`
+`func (o *InlineResponse20042) SetJobId(v string)`
 
-SetLookupId sets LookupId field to given value.
+SetJobId sets JobId field to given value.
 
-### HasLookupId
+### HasJobId
 
-`func (o *InlineResponse20042) HasLookupId() bool`
+`func (o *InlineResponse20042) HasJobId() bool`
 
-HasLookupId returns a boolean if a field has been set.
+HasJobId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -82,20 +82,20 @@ HasUrl returns a boolean if a field has been set.
 
 ### GetRequest
 
-`func (o *InlineResponse20042) GetRequest() InlineResponse20111Request`
+`func (o *InlineResponse20042) GetRequest() InlineResponse20110Request`
 
 GetRequest returns the Request field if non-nil, zero value otherwise.
 
 ### GetRequestOk
 
-`func (o *InlineResponse20042) GetRequestOk() (*InlineResponse20111Request, bool)`
+`func (o *InlineResponse20042) GetRequestOk() (*InlineResponse20110Request, bool)`
 
 GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRequest
 
-`func (o *InlineResponse20042) SetRequest(v InlineResponse20111Request)`
+`func (o *InlineResponse20042) SetRequest(v InlineResponse20110Request)`
 
 SetRequest sets Request field to given value.
 
@@ -130,30 +130,30 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetEntries
+### GetResults
 
-`func (o *InlineResponse20042) GetEntries() []InlineResponse20042Entries`
+`func (o *InlineResponse20042) GetResults() InlineResponse20042Results`
 
-GetEntries returns the Entries field if non-nil, zero value otherwise.
+GetResults returns the Results field if non-nil, zero value otherwise.
 
-### GetEntriesOk
+### GetResultsOk
 
-`func (o *InlineResponse20042) GetEntriesOk() (*[]InlineResponse20042Entries, bool)`
+`func (o *InlineResponse20042) GetResultsOk() (*InlineResponse20042Results, bool)`
 
-GetEntriesOk returns a tuple with the Entries field if it's non-nil, zero value otherwise
+GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEntries
+### SetResults
 
-`func (o *InlineResponse20042) SetEntries(v []InlineResponse20042Entries)`
+`func (o *InlineResponse20042) SetResults(v InlineResponse20042Results)`
 
-SetEntries sets Entries field to given value.
+SetResults sets Results field to given value.
 
-### HasEntries
+### HasResults
 
-`func (o *InlineResponse20042) HasEntries() bool`
+`func (o *InlineResponse20042) HasResults() bool`
 
-HasEntries returns a boolean if a field has been set.
+HasResults returns a boolean if a field has been set.
 
 ### GetErrors
 

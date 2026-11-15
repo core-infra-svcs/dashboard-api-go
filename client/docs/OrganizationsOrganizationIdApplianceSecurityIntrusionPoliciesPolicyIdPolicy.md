@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | Display name for the policy | [optional] 
 **Description** | Pointer to **NullableString** | Description of the policy | [optional] 
-**BasePolicy** | Pointer to [**NullableInlineResponse200293BasePolicy**](InlineResponse200293BasePolicy.md) |  | [optional] 
+**BasePolicy** | Pointer to [**NullableInlineResponse200299BasePolicy**](InlineResponse200299BasePolicy.md) |  | [optional] 
 
 ## Methods
 
@@ -89,20 +89,20 @@ HasDescription returns a boolean if a field has been set.
 UnsetDescription ensures that no value is present for Description, not even an explicit nil
 ### GetBasePolicy
 
-`func (o *OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdPolicy) GetBasePolicy() InlineResponse200293BasePolicy`
+`func (o *OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdPolicy) GetBasePolicy() InlineResponse200299BasePolicy`
 
 GetBasePolicy returns the BasePolicy field if non-nil, zero value otherwise.
 
 ### GetBasePolicyOk
 
-`func (o *OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdPolicy) GetBasePolicyOk() (*InlineResponse200293BasePolicy, bool)`
+`func (o *OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdPolicy) GetBasePolicyOk() (*InlineResponse200299BasePolicy, bool)`
 
 GetBasePolicyOk returns a tuple with the BasePolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBasePolicy
 
-`func (o *OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdPolicy) SetBasePolicy(v InlineResponse200293BasePolicy)`
+`func (o *OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdPolicy) SetBasePolicy(v InlineResponse200299BasePolicy)`
 
 SetBasePolicy sets BasePolicy field to given value.
 

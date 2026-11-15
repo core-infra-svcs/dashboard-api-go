@@ -4,15 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Number** | Pointer to **int32** | The number of the SSID. | [optional] 
-**Name** | Pointer to **string** | The name of the SSID. | [optional] 
-**Enabled** | Pointer to **bool** | Whether or not the SSID is enabled. | [optional] 
-**DefaultVlanId** | Pointer to **int32** | The VLAN ID of the VLAN associated to this SSID. | [optional] 
-**AuthMode** | Pointer to **string** | The association control method for the SSID. | [optional] 
-**RadiusServers** | Pointer to [**[]NetworksNetworkIdApplianceSsidsRadiusServers**](NetworksNetworkIdApplianceSsidsRadiusServers.md) | The RADIUS 802.1x servers to be used for authentication. | [optional] 
-**EncryptionMode** | Pointer to **string** | The psk encryption mode for the SSID. | [optional] 
-**WpaEncryptionMode** | Pointer to **string** | WPA encryption mode for the SSID. | [optional] 
-**Visible** | Pointer to **bool** | Boolean indicating whether the MX should advertise or hide this SSID. | [optional] 
+**Mode** | Pointer to **string** | Current status of malware prevention | [optional] 
+**AllowedUrls** | Pointer to [**[]InlineResponse20094AllowedUrls**](InlineResponse20094AllowedUrls.md) | URLs permitted by the malware detection engine | [optional] 
+**AllowedFiles** | Pointer to [**[]InlineResponse20094AllowedFiles**](InlineResponse20094AllowedFiles.md) | Sha256 digests of files permitted by the malware detection engine | [optional] 
 
 ## Methods
 
@@ -33,230 +27,80 @@ NewInlineResponse20094WithDefaults instantiates a new InlineResponse20094 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNumber
+### GetMode
 
-`func (o *InlineResponse20094) GetNumber() int32`
+`func (o *InlineResponse20094) GetMode() string`
 
-GetNumber returns the Number field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetNumberOk
+### GetModeOk
 
-`func (o *InlineResponse20094) GetNumberOk() (*int32, bool)`
+`func (o *InlineResponse20094) GetModeOk() (*string, bool)`
 
-GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNumber
+### SetMode
 
-`func (o *InlineResponse20094) SetNumber(v int32)`
+`func (o *InlineResponse20094) SetMode(v string)`
 
-SetNumber sets Number field to given value.
+SetMode sets Mode field to given value.
 
-### HasNumber
+### HasMode
 
-`func (o *InlineResponse20094) HasNumber() bool`
+`func (o *InlineResponse20094) HasMode() bool`
 
-HasNumber returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetName
+### GetAllowedUrls
 
-`func (o *InlineResponse20094) GetName() string`
+`func (o *InlineResponse20094) GetAllowedUrls() []InlineResponse20094AllowedUrls`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetAllowedUrls returns the AllowedUrls field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetAllowedUrlsOk
 
-`func (o *InlineResponse20094) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20094) GetAllowedUrlsOk() (*[]InlineResponse20094AllowedUrls, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetAllowedUrlsOk returns a tuple with the AllowedUrls field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetAllowedUrls
 
-`func (o *InlineResponse20094) SetName(v string)`
+`func (o *InlineResponse20094) SetAllowedUrls(v []InlineResponse20094AllowedUrls)`
 
-SetName sets Name field to given value.
+SetAllowedUrls sets AllowedUrls field to given value.
 
-### HasName
+### HasAllowedUrls
 
-`func (o *InlineResponse20094) HasName() bool`
+`func (o *InlineResponse20094) HasAllowedUrls() bool`
 
-HasName returns a boolean if a field has been set.
+HasAllowedUrls returns a boolean if a field has been set.
 
-### GetEnabled
+### GetAllowedFiles
 
-`func (o *InlineResponse20094) GetEnabled() bool`
+`func (o *InlineResponse20094) GetAllowedFiles() []InlineResponse20094AllowedFiles`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetAllowedFiles returns the AllowedFiles field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetAllowedFilesOk
 
-`func (o *InlineResponse20094) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20094) GetAllowedFilesOk() (*[]InlineResponse20094AllowedFiles, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetAllowedFilesOk returns a tuple with the AllowedFiles field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetAllowedFiles
 
-`func (o *InlineResponse20094) SetEnabled(v bool)`
+`func (o *InlineResponse20094) SetAllowedFiles(v []InlineResponse20094AllowedFiles)`
 
-SetEnabled sets Enabled field to given value.
+SetAllowedFiles sets AllowedFiles field to given value.
 
-### HasEnabled
+### HasAllowedFiles
 
-`func (o *InlineResponse20094) HasEnabled() bool`
+`func (o *InlineResponse20094) HasAllowedFiles() bool`
 
-HasEnabled returns a boolean if a field has been set.
-
-### GetDefaultVlanId
-
-`func (o *InlineResponse20094) GetDefaultVlanId() int32`
-
-GetDefaultVlanId returns the DefaultVlanId field if non-nil, zero value otherwise.
-
-### GetDefaultVlanIdOk
-
-`func (o *InlineResponse20094) GetDefaultVlanIdOk() (*int32, bool)`
-
-GetDefaultVlanIdOk returns a tuple with the DefaultVlanId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDefaultVlanId
-
-`func (o *InlineResponse20094) SetDefaultVlanId(v int32)`
-
-SetDefaultVlanId sets DefaultVlanId field to given value.
-
-### HasDefaultVlanId
-
-`func (o *InlineResponse20094) HasDefaultVlanId() bool`
-
-HasDefaultVlanId returns a boolean if a field has been set.
-
-### GetAuthMode
-
-`func (o *InlineResponse20094) GetAuthMode() string`
-
-GetAuthMode returns the AuthMode field if non-nil, zero value otherwise.
-
-### GetAuthModeOk
-
-`func (o *InlineResponse20094) GetAuthModeOk() (*string, bool)`
-
-GetAuthModeOk returns a tuple with the AuthMode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAuthMode
-
-`func (o *InlineResponse20094) SetAuthMode(v string)`
-
-SetAuthMode sets AuthMode field to given value.
-
-### HasAuthMode
-
-`func (o *InlineResponse20094) HasAuthMode() bool`
-
-HasAuthMode returns a boolean if a field has been set.
-
-### GetRadiusServers
-
-`func (o *InlineResponse20094) GetRadiusServers() []NetworksNetworkIdApplianceSsidsRadiusServers`
-
-GetRadiusServers returns the RadiusServers field if non-nil, zero value otherwise.
-
-### GetRadiusServersOk
-
-`func (o *InlineResponse20094) GetRadiusServersOk() (*[]NetworksNetworkIdApplianceSsidsRadiusServers, bool)`
-
-GetRadiusServersOk returns a tuple with the RadiusServers field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRadiusServers
-
-`func (o *InlineResponse20094) SetRadiusServers(v []NetworksNetworkIdApplianceSsidsRadiusServers)`
-
-SetRadiusServers sets RadiusServers field to given value.
-
-### HasRadiusServers
-
-`func (o *InlineResponse20094) HasRadiusServers() bool`
-
-HasRadiusServers returns a boolean if a field has been set.
-
-### GetEncryptionMode
-
-`func (o *InlineResponse20094) GetEncryptionMode() string`
-
-GetEncryptionMode returns the EncryptionMode field if non-nil, zero value otherwise.
-
-### GetEncryptionModeOk
-
-`func (o *InlineResponse20094) GetEncryptionModeOk() (*string, bool)`
-
-GetEncryptionModeOk returns a tuple with the EncryptionMode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEncryptionMode
-
-`func (o *InlineResponse20094) SetEncryptionMode(v string)`
-
-SetEncryptionMode sets EncryptionMode field to given value.
-
-### HasEncryptionMode
-
-`func (o *InlineResponse20094) HasEncryptionMode() bool`
-
-HasEncryptionMode returns a boolean if a field has been set.
-
-### GetWpaEncryptionMode
-
-`func (o *InlineResponse20094) GetWpaEncryptionMode() string`
-
-GetWpaEncryptionMode returns the WpaEncryptionMode field if non-nil, zero value otherwise.
-
-### GetWpaEncryptionModeOk
-
-`func (o *InlineResponse20094) GetWpaEncryptionModeOk() (*string, bool)`
-
-GetWpaEncryptionModeOk returns a tuple with the WpaEncryptionMode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWpaEncryptionMode
-
-`func (o *InlineResponse20094) SetWpaEncryptionMode(v string)`
-
-SetWpaEncryptionMode sets WpaEncryptionMode field to given value.
-
-### HasWpaEncryptionMode
-
-`func (o *InlineResponse20094) HasWpaEncryptionMode() bool`
-
-HasWpaEncryptionMode returns a boolean if a field has been set.
-
-### GetVisible
-
-`func (o *InlineResponse20094) GetVisible() bool`
-
-GetVisible returns the Visible field if non-nil, zero value otherwise.
-
-### GetVisibleOk
-
-`func (o *InlineResponse20094) GetVisibleOk() (*bool, bool)`
-
-GetVisibleOk returns a tuple with the Visible field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVisible
-
-`func (o *InlineResponse20094) SetVisible(v bool)`
-
-SetVisible sets Visible field to given value.
-
-### HasVisible
-
-`func (o *InlineResponse20094) HasVisible() bool`
-
-HasVisible returns a boolean if a field has been set.
+HasAllowedFiles returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

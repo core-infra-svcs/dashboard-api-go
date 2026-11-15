@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkIds** | **[]string** | A list of network IDs to remove from the network group | 
+**DeviceSerial** | Pointer to **NullableString** | The serial number of the device to assign this license to. Set this to  null to unassign the license. If a different license is already active on the device, this parameter will control queueing/dequeuing this license. | [optional] 
 
 ## Methods
 
 ### NewInlineObject332
 
-`func NewInlineObject332(networkIds []string, ) *InlineObject332`
+`func NewInlineObject332() *InlineObject332`
 
 NewInlineObject332 instantiates a new InlineObject332 object
 This constructor will assign default values to properties that have it defined,
@@ -25,26 +25,41 @@ NewInlineObject332WithDefaults instantiates a new InlineObject332 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkIds
+### GetDeviceSerial
 
-`func (o *InlineObject332) GetNetworkIds() []string`
+`func (o *InlineObject332) GetDeviceSerial() string`
 
-GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+GetDeviceSerial returns the DeviceSerial field if non-nil, zero value otherwise.
 
-### GetNetworkIdsOk
+### GetDeviceSerialOk
 
-`func (o *InlineObject332) GetNetworkIdsOk() (*[]string, bool)`
+`func (o *InlineObject332) GetDeviceSerialOk() (*string, bool)`
 
-GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+GetDeviceSerialOk returns a tuple with the DeviceSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkIds
+### SetDeviceSerial
 
-`func (o *InlineObject332) SetNetworkIds(v []string)`
+`func (o *InlineObject332) SetDeviceSerial(v string)`
 
-SetNetworkIds sets NetworkIds field to given value.
+SetDeviceSerial sets DeviceSerial field to given value.
 
+### HasDeviceSerial
 
+`func (o *InlineObject332) HasDeviceSerial() bool`
+
+HasDeviceSerial returns a boolean if a field has been set.
+
+### SetDeviceSerialNil
+
+`func (o *InlineObject332) SetDeviceSerialNil(b bool)`
+
+ SetDeviceSerialNil sets the value for DeviceSerial to be an explicit nil
+
+### UnsetDeviceSerial
+`func (o *InlineObject332) UnsetDeviceSerial()`
+
+UnsetDeviceSerial ensures that no value is present for DeviceSerial, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

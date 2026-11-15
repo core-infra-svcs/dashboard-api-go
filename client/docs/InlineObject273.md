@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertIds** | **[]string** | Array of alert IDs in this organization to dismiss. Missing or inaccessible alert IDs return 404. | 
+**Override** | [**OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRulesRuleIdOverrideOverride1**](OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRulesRuleIdOverrideOverride1.md) |  | 
 
 ## Methods
 
 ### NewInlineObject273
 
-`func NewInlineObject273(alertIds []string, ) *InlineObject273`
+`func NewInlineObject273(override OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRulesRuleIdOverrideOverride1, ) *InlineObject273`
 
 NewInlineObject273 instantiates a new InlineObject273 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject273WithDefaults instantiates a new InlineObject273 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlertIds
+### GetOverride
 
-`func (o *InlineObject273) GetAlertIds() []string`
+`func (o *InlineObject273) GetOverride() OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRulesRuleIdOverrideOverride1`
 
-GetAlertIds returns the AlertIds field if non-nil, zero value otherwise.
+GetOverride returns the Override field if non-nil, zero value otherwise.
 
-### GetAlertIdsOk
+### GetOverrideOk
 
-`func (o *InlineObject273) GetAlertIdsOk() (*[]string, bool)`
+`func (o *InlineObject273) GetOverrideOk() (*OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRulesRuleIdOverrideOverride1, bool)`
 
-GetAlertIdsOk returns a tuple with the AlertIds field if it's non-nil, zero value otherwise
+GetOverrideOk returns a tuple with the Override field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertIds
+### SetOverride
 
-`func (o *InlineObject273) SetAlertIds(v []string)`
+`func (o *InlineObject273) SetOverride(v OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRulesRuleIdOverrideOverride1)`
 
-SetAlertIds sets AlertIds field to given value.
+SetOverride sets Override field to given value.
 
 
 

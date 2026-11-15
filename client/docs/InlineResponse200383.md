@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200133**](InlineResponse200133.md) | Outer container to hold the different syslog server configurations per network | [optional] 
+**Items** | Pointer to [**[]InlineResponse200383Items**](InlineResponse200383Items.md) | Device certificates | [optional] 
 **Meta** | Pointer to [**InlineResponse200383Meta**](InlineResponse200383Meta.md) |  | [optional] 
 
 ## Methods
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *InlineResponse200383) GetItems() []InlineResponse200133`
+`func (o *InlineResponse200383) GetItems() []InlineResponse200383Items`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *InlineResponse200383) GetItemsOk() (*[]InlineResponse200133, bool)`
+`func (o *InlineResponse200383) GetItemsOk() (*[]InlineResponse200383Items, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *InlineResponse200383) SetItems(v []InlineResponse200133)`
+`func (o *InlineResponse200383) SetItems(v []InlineResponse200383Items)`
 
 SetItems sets Items field to given value.
 

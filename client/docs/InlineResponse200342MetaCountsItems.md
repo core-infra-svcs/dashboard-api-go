@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Total** | **int32** | The total number of matching devices | 
-**Remaining** | **int32** | The number of devices available on subsequent pages | 
+**Total** | **int32** | Total | 
+**Remaining** | **int32** | Remaining | 
 
 ## Methods
 

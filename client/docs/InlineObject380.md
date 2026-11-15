@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Profile** | [**OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile**](OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile.md) |  | 
-**Ssid** | [**OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid**](OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid.md) |  | 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork**](OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork.md) |  | [optional] 
+**Status** | Pointer to **string** | The \&quot;status\&quot; to update the Certificate Authority to. Only valid option is \&quot;trusted\&quot;. | [optional] 
+**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority to update. | [optional] 
 
 ## Methods
 
 ### NewInlineObject380
 
-`func NewInlineObject380(profile OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile, ssid OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid, ) *InlineObject380`
+`func NewInlineObject380() *InlineObject380`
 
 NewInlineObject380 instantiates a new InlineObject380 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +26,55 @@ NewInlineObject380WithDefaults instantiates a new InlineObject380 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfile
+### GetStatus
 
-`func (o *InlineObject380) GetProfile() OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile`
+`func (o *InlineObject380) GetStatus() string`
 
-GetProfile returns the Profile field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetProfileOk
+### GetStatusOk
 
-`func (o *InlineObject380) GetProfileOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile, bool)`
+`func (o *InlineObject380) GetStatusOk() (*string, bool)`
 
-GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfile
+### SetStatus
 
-`func (o *InlineObject380) SetProfile(v OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile)`
+`func (o *InlineObject380) SetStatus(v string)`
 
-SetProfile sets Profile field to given value.
+SetStatus sets Status field to given value.
 
+### HasStatus
 
-### GetSsid
+`func (o *InlineObject380) HasStatus() bool`
 
-`func (o *InlineObject380) GetSsid() OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid`
+HasStatus returns a boolean if a field has been set.
 
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
+### GetCertificateAuthorityId
 
-### GetSsidOk
+`func (o *InlineObject380) GetCertificateAuthorityId() string`
 
-`func (o *InlineObject380) GetSsidOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid, bool)`
+GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
 
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+### GetCertificateAuthorityIdOk
+
+`func (o *InlineObject380) GetCertificateAuthorityIdOk() (*string, bool)`
+
+GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsid
+### SetCertificateAuthorityId
 
-`func (o *InlineObject380) SetSsid(v OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid)`
+`func (o *InlineObject380) SetCertificateAuthorityId(v string)`
 
-SetSsid sets Ssid field to given value.
+SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
 
+### HasCertificateAuthorityId
 
-### GetNetwork
+`func (o *InlineObject380) HasCertificateAuthorityId() bool`
 
-`func (o *InlineObject380) GetNetwork() OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineObject380) GetNetworkOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineObject380) SetNetwork(v OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineObject380) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
+HasCertificateAuthorityId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Api** | [**OrganizationsOrganizationIdSaseIntegrationsApi**](OrganizationsOrganizationIdSaseIntegrationsApi.md) |  | 
+**Name** | Pointer to **string** | A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only) | [optional] 
+**ObjectIds** | Pointer to **[]string** | A list of Policy Object ID&#39;s that this NetworkObjectGroup should be associated to (note: these ID&#39;s will replace the existing associated Policy Objects) | [optional] 
 
 ## Methods
 
 ### NewInlineObject359
 
-`func NewInlineObject359(api OrganizationsOrganizationIdSaseIntegrationsApi, ) *InlineObject359`
+`func NewInlineObject359() *InlineObject359`
 
 NewInlineObject359 instantiates a new InlineObject359 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,55 @@ NewInlineObject359WithDefaults instantiates a new InlineObject359 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetApi
+### GetName
 
-`func (o *InlineObject359) GetApi() OrganizationsOrganizationIdSaseIntegrationsApi`
+`func (o *InlineObject359) GetName() string`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetApiOk
+### GetNameOk
 
-`func (o *InlineObject359) GetApiOk() (*OrganizationsOrganizationIdSaseIntegrationsApi, bool)`
+`func (o *InlineObject359) GetNameOk() (*string, bool)`
 
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetName
 
-`func (o *InlineObject359) SetApi(v OrganizationsOrganizationIdSaseIntegrationsApi)`
+`func (o *InlineObject359) SetName(v string)`
 
-SetApi sets Api field to given value.
+SetName sets Name field to given value.
 
+### HasName
+
+`func (o *InlineObject359) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetObjectIds
+
+`func (o *InlineObject359) GetObjectIds() []string`
+
+GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
+
+### GetObjectIdsOk
+
+`func (o *InlineObject359) GetObjectIdsOk() (*[]string, bool)`
+
+GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetObjectIds
+
+`func (o *InlineObject359) SetObjectIds(v []string)`
+
+SetObjectIds sets ObjectIds field to given value.
+
+### HasObjectIds
+
+`func (o *InlineObject359) HasObjectIds() bool`
+
+HasObjectIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

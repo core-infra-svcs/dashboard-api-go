@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Channel** | Pointer to **string** | Desired ESL channel for the device. Only configurable for devices assigned the High frequency ESL or sepioo IIoT role. Use &#39;Auto&#39; (case insensitive) to use the recommended channel | [optional] 
-**Enabled** | Pointer to **bool** | Turn ESL features on and off for this device | [optional] 
+**Addresses** | Pointer to [**[]DevicesSerialWirelessAlternateManagementInterfaceIpv6Addresses**](DevicesSerialWirelessAlternateManagementInterfaceIpv6Addresses.md) | configured alternate management interface addresses | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineObject47WithDefaults instantiates a new InlineObject47 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetChannel
+### GetAddresses
 
-`func (o *InlineObject47) GetChannel() string`
+`func (o *InlineObject47) GetAddresses() []DevicesSerialWirelessAlternateManagementInterfaceIpv6Addresses`
 
-GetChannel returns the Channel field if non-nil, zero value otherwise.
+GetAddresses returns the Addresses field if non-nil, zero value otherwise.
 
-### GetChannelOk
+### GetAddressesOk
 
-`func (o *InlineObject47) GetChannelOk() (*string, bool)`
+`func (o *InlineObject47) GetAddressesOk() (*[]DevicesSerialWirelessAlternateManagementInterfaceIpv6Addresses, bool)`
 
-GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
+GetAddressesOk returns a tuple with the Addresses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetChannel
+### SetAddresses
 
-`func (o *InlineObject47) SetChannel(v string)`
+`func (o *InlineObject47) SetAddresses(v []DevicesSerialWirelessAlternateManagementInterfaceIpv6Addresses)`
 
-SetChannel sets Channel field to given value.
+SetAddresses sets Addresses field to given value.
 
-### HasChannel
+### HasAddresses
 
-`func (o *InlineObject47) HasChannel() bool`
+`func (o *InlineObject47) HasAddresses() bool`
 
-HasChannel returns a boolean if a field has been set.
-
-### GetEnabled
-
-`func (o *InlineObject47) GetEnabled() bool`
-
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
-
-### GetEnabledOk
-
-`func (o *InlineObject47) GetEnabledOk() (*bool, bool)`
-
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnabled
-
-`func (o *InlineObject47) SetEnabled(v bool)`
-
-SetEnabled sets Enabled field to given value.
-
-### HasEnabled
-
-`func (o *InlineObject47) HasEnabled() bool`
-
-HasEnabled returns a boolean if a field has been set.
+HasAddresses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

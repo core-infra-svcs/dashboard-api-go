@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, the SSID device type group policies are enabled. | [optional] 
-**DeviceTypePolicies** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies**](NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies.md) | List of device type policies. | [optional] 
+**Transitions** | [**[]NetworksNetworkIdWirelessSsidsOweTransitions**](NetworksNetworkIdWirelessSsidsOweTransitions.md) | Array of OWE transition pairs | 
 
 ## Methods
 
 ### NewInlineObject221
 
-`func NewInlineObject221() *InlineObject221`
+`func NewInlineObject221(transitions []NetworksNetworkIdWirelessSsidsOweTransitions, ) *InlineObject221`
 
 NewInlineObject221 instantiates a new InlineObject221 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +25,25 @@ NewInlineObject221WithDefaults instantiates a new InlineObject221 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetTransitions
 
-`func (o *InlineObject221) GetEnabled() bool`
+`func (o *InlineObject221) GetTransitions() []NetworksNetworkIdWirelessSsidsOweTransitions`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetTransitions returns the Transitions field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetTransitionsOk
 
-`func (o *InlineObject221) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject221) GetTransitionsOk() (*[]NetworksNetworkIdWirelessSsidsOweTransitions, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetTransitionsOk returns a tuple with the Transitions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetTransitions
 
-`func (o *InlineObject221) SetEnabled(v bool)`
+`func (o *InlineObject221) SetTransitions(v []NetworksNetworkIdWirelessSsidsOweTransitions)`
 
-SetEnabled sets Enabled field to given value.
+SetTransitions sets Transitions field to given value.
 
-### HasEnabled
-
-`func (o *InlineObject221) HasEnabled() bool`
-
-HasEnabled returns a boolean if a field has been set.
-
-### GetDeviceTypePolicies
-
-`func (o *InlineObject221) GetDeviceTypePolicies() []NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies`
-
-GetDeviceTypePolicies returns the DeviceTypePolicies field if non-nil, zero value otherwise.
-
-### GetDeviceTypePoliciesOk
-
-`func (o *InlineObject221) GetDeviceTypePoliciesOk() (*[]NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies, bool)`
-
-GetDeviceTypePoliciesOk returns a tuple with the DeviceTypePolicies field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDeviceTypePolicies
-
-`func (o *InlineObject221) SetDeviceTypePolicies(v []NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies)`
-
-SetDeviceTypePolicies sets DeviceTypePolicies field to given value.
-
-### HasDeviceTypePolicies
-
-`func (o *InlineObject221) HasDeviceTypePolicies() bool`
-
-HasDeviceTypePolicies returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

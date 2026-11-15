@@ -4,13 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ArtifactId** | Pointer to **string** | Custom analytics artifact ID | [optional] 
-**OrganizationId** | Pointer to **string** | Organization ID | [optional] 
-**Name** | Pointer to **string** | Custom analytics artifact name | [optional] 
-**Status** | Pointer to [**OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus**](OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus.md) |  | [optional] 
-**UploadId** | Pointer to **string** | Upload ID | [optional] 
-**UploadUrl** | Pointer to **string** | Upload URL | [optional] 
-**UploadUrlExpiry** | Pointer to **time.Time** | Upload URL expiry time | [optional] 
+**Name** | Pointer to **string** | Name of the Dashboard branding policy. | [optional] 
+**Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
+**Appearance** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAppearance**](OrganizationsOrganizationIdBrandingPoliciesAppearance.md) |  | [optional] 
+**AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
+**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings1**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings1.md) |  | [optional] 
+**CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo.md) |  | [optional] 
 
 ## Methods
 
@@ -30,56 +29,6 @@ will change when the set of required properties is changed
 NewInlineResponse20126WithDefaults instantiates a new InlineResponse20126 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetArtifactId
-
-`func (o *InlineResponse20126) GetArtifactId() string`
-
-GetArtifactId returns the ArtifactId field if non-nil, zero value otherwise.
-
-### GetArtifactIdOk
-
-`func (o *InlineResponse20126) GetArtifactIdOk() (*string, bool)`
-
-GetArtifactIdOk returns a tuple with the ArtifactId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetArtifactId
-
-`func (o *InlineResponse20126) SetArtifactId(v string)`
-
-SetArtifactId sets ArtifactId field to given value.
-
-### HasArtifactId
-
-`func (o *InlineResponse20126) HasArtifactId() bool`
-
-HasArtifactId returns a boolean if a field has been set.
-
-### GetOrganizationId
-
-`func (o *InlineResponse20126) GetOrganizationId() string`
-
-GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
-
-### GetOrganizationIdOk
-
-`func (o *InlineResponse20126) GetOrganizationIdOk() (*string, bool)`
-
-GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOrganizationId
-
-`func (o *InlineResponse20126) SetOrganizationId(v string)`
-
-SetOrganizationId sets OrganizationId field to given value.
-
-### HasOrganizationId
-
-`func (o *InlineResponse20126) HasOrganizationId() bool`
-
-HasOrganizationId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -106,105 +55,130 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetStatus
+### GetEnabled
 
-`func (o *InlineResponse20126) GetStatus() OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus`
+`func (o *InlineResponse20126) GetEnabled() bool`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetEnabledOk
 
-`func (o *InlineResponse20126) GetStatusOk() (*OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus, bool)`
+`func (o *InlineResponse20126) GetEnabledOk() (*bool, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetEnabled
 
-`func (o *InlineResponse20126) SetStatus(v OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus)`
+`func (o *InlineResponse20126) SetEnabled(v bool)`
 
-SetStatus sets Status field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasStatus
+### HasEnabled
 
-`func (o *InlineResponse20126) HasStatus() bool`
+`func (o *InlineResponse20126) HasEnabled() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetUploadId
+### GetAppearance
 
-`func (o *InlineResponse20126) GetUploadId() string`
+`func (o *InlineResponse20126) GetAppearance() OrganizationsOrganizationIdBrandingPoliciesAppearance`
 
-GetUploadId returns the UploadId field if non-nil, zero value otherwise.
+GetAppearance returns the Appearance field if non-nil, zero value otherwise.
 
-### GetUploadIdOk
+### GetAppearanceOk
 
-`func (o *InlineResponse20126) GetUploadIdOk() (*string, bool)`
+`func (o *InlineResponse20126) GetAppearanceOk() (*OrganizationsOrganizationIdBrandingPoliciesAppearance, bool)`
 
-GetUploadIdOk returns a tuple with the UploadId field if it's non-nil, zero value otherwise
+GetAppearanceOk returns a tuple with the Appearance field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUploadId
+### SetAppearance
 
-`func (o *InlineResponse20126) SetUploadId(v string)`
+`func (o *InlineResponse20126) SetAppearance(v OrganizationsOrganizationIdBrandingPoliciesAppearance)`
 
-SetUploadId sets UploadId field to given value.
+SetAppearance sets Appearance field to given value.
 
-### HasUploadId
+### HasAppearance
 
-`func (o *InlineResponse20126) HasUploadId() bool`
+`func (o *InlineResponse20126) HasAppearance() bool`
 
-HasUploadId returns a boolean if a field has been set.
+HasAppearance returns a boolean if a field has been set.
 
-### GetUploadUrl
+### GetAdminSettings
 
-`func (o *InlineResponse20126) GetUploadUrl() string`
+`func (o *InlineResponse20126) GetAdminSettings() OrganizationsOrganizationIdBrandingPoliciesAdminSettings`
 
-GetUploadUrl returns the UploadUrl field if non-nil, zero value otherwise.
+GetAdminSettings returns the AdminSettings field if non-nil, zero value otherwise.
 
-### GetUploadUrlOk
+### GetAdminSettingsOk
 
-`func (o *InlineResponse20126) GetUploadUrlOk() (*string, bool)`
+`func (o *InlineResponse20126) GetAdminSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesAdminSettings, bool)`
 
-GetUploadUrlOk returns a tuple with the UploadUrl field if it's non-nil, zero value otherwise
+GetAdminSettingsOk returns a tuple with the AdminSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUploadUrl
+### SetAdminSettings
 
-`func (o *InlineResponse20126) SetUploadUrl(v string)`
+`func (o *InlineResponse20126) SetAdminSettings(v OrganizationsOrganizationIdBrandingPoliciesAdminSettings)`
 
-SetUploadUrl sets UploadUrl field to given value.
+SetAdminSettings sets AdminSettings field to given value.
 
-### HasUploadUrl
+### HasAdminSettings
 
-`func (o *InlineResponse20126) HasUploadUrl() bool`
+`func (o *InlineResponse20126) HasAdminSettings() bool`
 
-HasUploadUrl returns a boolean if a field has been set.
+HasAdminSettings returns a boolean if a field has been set.
 
-### GetUploadUrlExpiry
+### GetHelpSettings
 
-`func (o *InlineResponse20126) GetUploadUrlExpiry() time.Time`
+`func (o *InlineResponse20126) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings1`
 
-GetUploadUrlExpiry returns the UploadUrlExpiry field if non-nil, zero value otherwise.
+GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
 
-### GetUploadUrlExpiryOk
+### GetHelpSettingsOk
 
-`func (o *InlineResponse20126) GetUploadUrlExpiryOk() (*time.Time, bool)`
+`func (o *InlineResponse20126) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings1, bool)`
 
-GetUploadUrlExpiryOk returns a tuple with the UploadUrlExpiry field if it's non-nil, zero value otherwise
+GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUploadUrlExpiry
+### SetHelpSettings
 
-`func (o *InlineResponse20126) SetUploadUrlExpiry(v time.Time)`
+`func (o *InlineResponse20126) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings1)`
 
-SetUploadUrlExpiry sets UploadUrlExpiry field to given value.
+SetHelpSettings sets HelpSettings field to given value.
 
-### HasUploadUrlExpiry
+### HasHelpSettings
 
-`func (o *InlineResponse20126) HasUploadUrlExpiry() bool`
+`func (o *InlineResponse20126) HasHelpSettings() bool`
 
-HasUploadUrlExpiry returns a boolean if a field has been set.
+HasHelpSettings returns a boolean if a field has been set.
+
+### GetCustomLogo
+
+`func (o *InlineResponse20126) GetCustomLogo() OrganizationsOrganizationIdBrandingPoliciesCustomLogo`
+
+GetCustomLogo returns the CustomLogo field if non-nil, zero value otherwise.
+
+### GetCustomLogoOk
+
+`func (o *InlineResponse20126) GetCustomLogoOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogo, bool)`
+
+GetCustomLogoOk returns a tuple with the CustomLogo field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCustomLogo
+
+`func (o *InlineResponse20126) SetCustomLogo(v OrganizationsOrganizationIdBrandingPoliciesCustomLogo)`
+
+SetCustomLogo sets CustomLogo field to given value.
+
+### HasCustomLogo
+
+`func (o *InlineResponse20126) HasCustomLogo() bool`
+
+HasCustomLogo returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

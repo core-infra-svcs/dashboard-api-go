@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems**](OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems.md) | MCG cluster-network tunnel settings | 
+**Serial** | Pointer to **string** | Serial of camera | [optional] 
+**WirelessCredentialsSent** | Pointer to **bool** | Note whether credentials were sent successfully | [optional] 
 
 ## Methods
 
 ### NewInlineObject285
 
-`func NewInlineObject285(items []OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems, ) *InlineObject285`
+`func NewInlineObject285() *InlineObject285`
 
 NewInlineObject285 instantiates a new InlineObject285 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,55 @@ NewInlineObject285WithDefaults instantiates a new InlineObject285 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetSerial
 
-`func (o *InlineObject285) GetItems() []OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems`
+`func (o *InlineObject285) GetSerial() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetSerialOk
 
-`func (o *InlineObject285) GetItemsOk() (*[]OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems, bool)`
+`func (o *InlineObject285) GetSerialOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetSerial
 
-`func (o *InlineObject285) SetItems(v []OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems)`
+`func (o *InlineObject285) SetSerial(v string)`
 
-SetItems sets Items field to given value.
+SetSerial sets Serial field to given value.
 
+### HasSerial
+
+`func (o *InlineObject285) HasSerial() bool`
+
+HasSerial returns a boolean if a field has been set.
+
+### GetWirelessCredentialsSent
+
+`func (o *InlineObject285) GetWirelessCredentialsSent() bool`
+
+GetWirelessCredentialsSent returns the WirelessCredentialsSent field if non-nil, zero value otherwise.
+
+### GetWirelessCredentialsSentOk
+
+`func (o *InlineObject285) GetWirelessCredentialsSentOk() (*bool, bool)`
+
+GetWirelessCredentialsSentOk returns a tuple with the WirelessCredentialsSent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWirelessCredentialsSent
+
+`func (o *InlineObject285) SetWirelessCredentialsSent(v bool)`
+
+SetWirelessCredentialsSent sets WirelessCredentialsSent field to given value.
+
+### HasWirelessCredentialsSent
+
+`func (o *InlineObject285) HasWirelessCredentialsSent() bool`
+
+HasWirelessCredentialsSent returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

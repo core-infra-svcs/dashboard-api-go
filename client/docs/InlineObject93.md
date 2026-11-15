@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Uplinks** | [**[]NetworksNetworkIdApplianceUplinksNatUplinks**](NetworksNetworkIdApplianceUplinksNatUplinks.md) | Per-uplink NAT exception configuration on the network. | 
+**Policy** | [**NetworksNetworkIdApplianceUmbrellaPoliciesAddPolicy**](NetworksNetworkIdApplianceUmbrellaPoliciesAddPolicy.md) |  | 
 
 ## Methods
 
 ### NewInlineObject93
 
-`func NewInlineObject93(uplinks []NetworksNetworkIdApplianceUplinksNatUplinks, ) *InlineObject93`
+`func NewInlineObject93(policy NetworksNetworkIdApplianceUmbrellaPoliciesAddPolicy, ) *InlineObject93`
 
 NewInlineObject93 instantiates a new InlineObject93 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject93WithDefaults instantiates a new InlineObject93 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUplinks
+### GetPolicy
 
-`func (o *InlineObject93) GetUplinks() []NetworksNetworkIdApplianceUplinksNatUplinks`
+`func (o *InlineObject93) GetPolicy() NetworksNetworkIdApplianceUmbrellaPoliciesAddPolicy`
 
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetUplinksOk
+### GetPolicyOk
 
-`func (o *InlineObject93) GetUplinksOk() (*[]NetworksNetworkIdApplianceUplinksNatUplinks, bool)`
+`func (o *InlineObject93) GetPolicyOk() (*NetworksNetworkIdApplianceUmbrellaPoliciesAddPolicy, bool)`
 
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinks
+### SetPolicy
 
-`func (o *InlineObject93) SetUplinks(v []NetworksNetworkIdApplianceUplinksNatUplinks)`
+`func (o *InlineObject93) SetPolicy(v NetworksNetworkIdApplianceUmbrellaPoliciesAddPolicy)`
 
-SetUplinks sets Uplinks field to given value.
+SetPolicy sets Policy field to given value.
 
 
 

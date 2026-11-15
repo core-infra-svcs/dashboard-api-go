@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
-**DevicePolicy** | Pointer to **string** | The name of the client&#39;s policy | [optional] 
-**GroupPolicyId** | Pointer to **string** | The group policy identifier of the client | [optional] 
-**PoliciesBySsid** | Pointer to [**[]InlineResponse200128PoliciesBySsid**](InlineResponse200128PoliciesBySsid.md) | The policies applied to the client by SSID | [optional] 
+**Counts** | Pointer to [**InlineResponse200128Counts**](InlineResponse200128Counts.md) |  | [optional] 
+**Usages** | Pointer to [**InlineResponse200128Usages**](InlineResponse200128Usages.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +26,55 @@ NewInlineResponse200128WithDefaults instantiates a new InlineResponse200128 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMac
+### GetCounts
 
-`func (o *InlineResponse200128) GetMac() string`
+`func (o *InlineResponse200128) GetCounts() InlineResponse200128Counts`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetCountsOk
 
-`func (o *InlineResponse200128) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200128) GetCountsOk() (*InlineResponse200128Counts, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetCounts
 
-`func (o *InlineResponse200128) SetMac(v string)`
+`func (o *InlineResponse200128) SetCounts(v InlineResponse200128Counts)`
 
-SetMac sets Mac field to given value.
+SetCounts sets Counts field to given value.
 
-### HasMac
+### HasCounts
 
-`func (o *InlineResponse200128) HasMac() bool`
+`func (o *InlineResponse200128) HasCounts() bool`
 
-HasMac returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
-### GetDevicePolicy
+### GetUsages
 
-`func (o *InlineResponse200128) GetDevicePolicy() string`
+`func (o *InlineResponse200128) GetUsages() InlineResponse200128Usages`
 
-GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
+GetUsages returns the Usages field if non-nil, zero value otherwise.
 
-### GetDevicePolicyOk
+### GetUsagesOk
 
-`func (o *InlineResponse200128) GetDevicePolicyOk() (*string, bool)`
+`func (o *InlineResponse200128) GetUsagesOk() (*InlineResponse200128Usages, bool)`
 
-GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
+GetUsagesOk returns a tuple with the Usages field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevicePolicy
+### SetUsages
 
-`func (o *InlineResponse200128) SetDevicePolicy(v string)`
+`func (o *InlineResponse200128) SetUsages(v InlineResponse200128Usages)`
 
-SetDevicePolicy sets DevicePolicy field to given value.
+SetUsages sets Usages field to given value.
 
-### HasDevicePolicy
+### HasUsages
 
-`func (o *InlineResponse200128) HasDevicePolicy() bool`
+`func (o *InlineResponse200128) HasUsages() bool`
 
-HasDevicePolicy returns a boolean if a field has been set.
-
-### GetGroupPolicyId
-
-`func (o *InlineResponse200128) GetGroupPolicyId() string`
-
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
-
-### GetGroupPolicyIdOk
-
-`func (o *InlineResponse200128) GetGroupPolicyIdOk() (*string, bool)`
-
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGroupPolicyId
-
-`func (o *InlineResponse200128) SetGroupPolicyId(v string)`
-
-SetGroupPolicyId sets GroupPolicyId field to given value.
-
-### HasGroupPolicyId
-
-`func (o *InlineResponse200128) HasGroupPolicyId() bool`
-
-HasGroupPolicyId returns a boolean if a field has been set.
-
-### GetPoliciesBySsid
-
-`func (o *InlineResponse200128) GetPoliciesBySsid() []InlineResponse200128PoliciesBySsid`
-
-GetPoliciesBySsid returns the PoliciesBySsid field if non-nil, zero value otherwise.
-
-### GetPoliciesBySsidOk
-
-`func (o *InlineResponse200128) GetPoliciesBySsidOk() (*[]InlineResponse200128PoliciesBySsid, bool)`
-
-GetPoliciesBySsidOk returns a tuple with the PoliciesBySsid field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPoliciesBySsid
-
-`func (o *InlineResponse200128) SetPoliciesBySsid(v []InlineResponse200128PoliciesBySsid)`
-
-SetPoliciesBySsid sets PoliciesBySsid field to given value.
-
-### HasPoliciesBySsid
-
-`func (o *InlineResponse200128) HasPoliciesBySsid() bool`
-
-HasPoliciesBySsid returns a boolean if a field has been set.
+HasUsages returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

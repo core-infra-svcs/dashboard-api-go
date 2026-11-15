@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | Pointer to **[]string** | The serials of the devices | [optional] 
-**Errors** | Pointer to [**[]InlineResponse200131Errors**](InlineResponse200131Errors.md) | Errors for devices that were not added | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
+**DevicePolicy** | Pointer to **string** | The name of the client&#39;s policy | [optional] 
+**GroupPolicyId** | Pointer to **string** | The group policy identifier of the client | [optional] 
+**PoliciesBySsid** | Pointer to [**[]InlineResponse200131PoliciesBySsid**](InlineResponse200131PoliciesBySsid.md) | The policies applied to the client by SSID | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200131WithDefaults instantiates a new InlineResponse200131 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetMac
 
-`func (o *InlineResponse200131) GetSerials() []string`
+`func (o *InlineResponse200131) GetMac() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetMacOk
 
-`func (o *InlineResponse200131) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200131) GetMacOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetMac
 
-`func (o *InlineResponse200131) SetSerials(v []string)`
+`func (o *InlineResponse200131) SetMac(v string)`
 
-SetSerials sets Serials field to given value.
+SetMac sets Mac field to given value.
 
-### HasSerials
+### HasMac
 
-`func (o *InlineResponse200131) HasSerials() bool`
+`func (o *InlineResponse200131) HasMac() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetErrors
+### GetDevicePolicy
 
-`func (o *InlineResponse200131) GetErrors() []InlineResponse200131Errors`
+`func (o *InlineResponse200131) GetDevicePolicy() string`
 
-GetErrors returns the Errors field if non-nil, zero value otherwise.
+GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
 
-### GetErrorsOk
+### GetDevicePolicyOk
 
-`func (o *InlineResponse200131) GetErrorsOk() (*[]InlineResponse200131Errors, bool)`
+`func (o *InlineResponse200131) GetDevicePolicyOk() (*string, bool)`
 
-GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
+GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetErrors
+### SetDevicePolicy
 
-`func (o *InlineResponse200131) SetErrors(v []InlineResponse200131Errors)`
+`func (o *InlineResponse200131) SetDevicePolicy(v string)`
 
-SetErrors sets Errors field to given value.
+SetDevicePolicy sets DevicePolicy field to given value.
 
-### HasErrors
+### HasDevicePolicy
 
-`func (o *InlineResponse200131) HasErrors() bool`
+`func (o *InlineResponse200131) HasDevicePolicy() bool`
 
-HasErrors returns a boolean if a field has been set.
+HasDevicePolicy returns a boolean if a field has been set.
+
+### GetGroupPolicyId
+
+`func (o *InlineResponse200131) GetGroupPolicyId() string`
+
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+
+### GetGroupPolicyIdOk
+
+`func (o *InlineResponse200131) GetGroupPolicyIdOk() (*string, bool)`
+
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupPolicyId
+
+`func (o *InlineResponse200131) SetGroupPolicyId(v string)`
+
+SetGroupPolicyId sets GroupPolicyId field to given value.
+
+### HasGroupPolicyId
+
+`func (o *InlineResponse200131) HasGroupPolicyId() bool`
+
+HasGroupPolicyId returns a boolean if a field has been set.
+
+### GetPoliciesBySsid
+
+`func (o *InlineResponse200131) GetPoliciesBySsid() []InlineResponse200131PoliciesBySsid`
+
+GetPoliciesBySsid returns the PoliciesBySsid field if non-nil, zero value otherwise.
+
+### GetPoliciesBySsidOk
+
+`func (o *InlineResponse200131) GetPoliciesBySsidOk() (*[]InlineResponse200131PoliciesBySsid, bool)`
+
+GetPoliciesBySsidOk returns a tuple with the PoliciesBySsid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPoliciesBySsid
+
+`func (o *InlineResponse200131) SetPoliciesBySsid(v []InlineResponse200131PoliciesBySsid)`
+
+SetPoliciesBySsid sets PoliciesBySsid field to given value.
+
+### HasPoliciesBySsid
+
+`func (o *InlineResponse200131) HasPoliciesBySsid() bool`
+
+HasPoliciesBySsid returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

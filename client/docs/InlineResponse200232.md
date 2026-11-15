@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**T0** | Pointer to **int32** | The latency history bucket start time in seconds | [optional] 
-**T1** | Pointer to **int32** | The latency history bucket end time in seconds | [optional] 
-**LatencyBinsByCategory** | Pointer to [**NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory**](NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory.md) |  | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
+**LatencyStats** | Pointer to [**NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats**](NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200232WithDefaults instantiates a new InlineResponse200232 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetT0
+### GetMac
 
-`func (o *InlineResponse200232) GetT0() int32`
+`func (o *InlineResponse200232) GetMac() string`
 
-GetT0 returns the T0 field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetT0Ok
+### GetMacOk
 
-`func (o *InlineResponse200232) GetT0Ok() (*int32, bool)`
+`func (o *InlineResponse200232) GetMacOk() (*string, bool)`
 
-GetT0Ok returns a tuple with the T0 field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetT0
+### SetMac
 
-`func (o *InlineResponse200232) SetT0(v int32)`
+`func (o *InlineResponse200232) SetMac(v string)`
 
-SetT0 sets T0 field to given value.
+SetMac sets Mac field to given value.
 
-### HasT0
+### HasMac
 
-`func (o *InlineResponse200232) HasT0() bool`
+`func (o *InlineResponse200232) HasMac() bool`
 
-HasT0 returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetT1
+### GetLatencyStats
 
-`func (o *InlineResponse200232) GetT1() int32`
+`func (o *InlineResponse200232) GetLatencyStats() NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats`
 
-GetT1 returns the T1 field if non-nil, zero value otherwise.
+GetLatencyStats returns the LatencyStats field if non-nil, zero value otherwise.
 
-### GetT1Ok
+### GetLatencyStatsOk
 
-`func (o *InlineResponse200232) GetT1Ok() (*int32, bool)`
+`func (o *InlineResponse200232) GetLatencyStatsOk() (*NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats, bool)`
 
-GetT1Ok returns a tuple with the T1 field if it's non-nil, zero value otherwise
+GetLatencyStatsOk returns a tuple with the LatencyStats field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetT1
+### SetLatencyStats
 
-`func (o *InlineResponse200232) SetT1(v int32)`
+`func (o *InlineResponse200232) SetLatencyStats(v NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats)`
 
-SetT1 sets T1 field to given value.
+SetLatencyStats sets LatencyStats field to given value.
 
-### HasT1
+### HasLatencyStats
 
-`func (o *InlineResponse200232) HasT1() bool`
+`func (o *InlineResponse200232) HasLatencyStats() bool`
 
-HasT1 returns a boolean if a field has been set.
-
-### GetLatencyBinsByCategory
-
-`func (o *InlineResponse200232) GetLatencyBinsByCategory() NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory`
-
-GetLatencyBinsByCategory returns the LatencyBinsByCategory field if non-nil, zero value otherwise.
-
-### GetLatencyBinsByCategoryOk
-
-`func (o *InlineResponse200232) GetLatencyBinsByCategoryOk() (*NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory, bool)`
-
-GetLatencyBinsByCategoryOk returns a tuple with the LatencyBinsByCategory field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLatencyBinsByCategory
-
-`func (o *InlineResponse200232) SetLatencyBinsByCategory(v NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory)`
-
-SetLatencyBinsByCategory sets LatencyBinsByCategory field to given value.
-
-### HasLatencyBinsByCategory
-
-`func (o *InlineResponse200232) HasLatencyBinsByCategory() bool`
-
-HasLatencyBinsByCategory returns a boolean if a field has been set.
+HasLatencyStats returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

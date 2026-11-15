@@ -4,16 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | **string** | ID of the network whose VPN exclusion rules are returned. | 
-**NetworkName** | **string** | Name of the network whose VPN exclusion rules are returned. | 
-**Custom** | [**[]InlineResponse200101Custom**](InlineResponse200101Custom.md) | Custom VPN exclusion rules. | 
-**MajorApplications** | [**[]InlineResponse200101MajorApplications**](InlineResponse200101MajorApplications.md) | Major Application based VPN exclusion rules. | 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200101Rules**](InlineResponse200101Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200101
 
-`func NewInlineResponse200101(networkId string, networkName string, custom []InlineResponse200101Custom, majorApplications []InlineResponse200101MajorApplications, ) *InlineResponse200101`
+`func NewInlineResponse200101() *InlineResponse200101`
 
 NewInlineResponse200101 instantiates a new InlineResponse200101 object
 This constructor will assign default values to properties that have it defined,
@@ -28,85 +26,55 @@ NewInlineResponse200101WithDefaults instantiates a new InlineResponse200101 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetDefaultRulesEnabled
 
-`func (o *InlineResponse200101) GetNetworkId() string`
+`func (o *InlineResponse200101) GetDefaultRulesEnabled() bool`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetDefaultRulesEnabledOk
 
-`func (o *InlineResponse200101) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200101) GetDefaultRulesEnabledOk() (*bool, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetDefaultRulesEnabled
 
-`func (o *InlineResponse200101) SetNetworkId(v string)`
+`func (o *InlineResponse200101) SetDefaultRulesEnabled(v bool)`
 
-SetNetworkId sets NetworkId field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
+### HasDefaultRulesEnabled
 
-### GetNetworkName
+`func (o *InlineResponse200101) HasDefaultRulesEnabled() bool`
 
-`func (o *InlineResponse200101) GetNetworkName() string`
+HasDefaultRulesEnabled returns a boolean if a field has been set.
 
-GetNetworkName returns the NetworkName field if non-nil, zero value otherwise.
+### GetRules
 
-### GetNetworkNameOk
+`func (o *InlineResponse200101) GetRules() []InlineResponse200101Rules`
 
-`func (o *InlineResponse200101) GetNetworkNameOk() (*string, bool)`
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-GetNetworkNameOk returns a tuple with the NetworkName field if it's non-nil, zero value otherwise
+### GetRulesOk
+
+`func (o *InlineResponse200101) GetRulesOk() (*[]InlineResponse200101Rules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkName
+### SetRules
 
-`func (o *InlineResponse200101) SetNetworkName(v string)`
+`func (o *InlineResponse200101) SetRules(v []InlineResponse200101Rules)`
 
-SetNetworkName sets NetworkName field to given value.
+SetRules sets Rules field to given value.
 
+### HasRules
 
-### GetCustom
+`func (o *InlineResponse200101) HasRules() bool`
 
-`func (o *InlineResponse200101) GetCustom() []InlineResponse200101Custom`
-
-GetCustom returns the Custom field if non-nil, zero value otherwise.
-
-### GetCustomOk
-
-`func (o *InlineResponse200101) GetCustomOk() (*[]InlineResponse200101Custom, bool)`
-
-GetCustomOk returns a tuple with the Custom field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCustom
-
-`func (o *InlineResponse200101) SetCustom(v []InlineResponse200101Custom)`
-
-SetCustom sets Custom field to given value.
-
-
-### GetMajorApplications
-
-`func (o *InlineResponse200101) GetMajorApplications() []InlineResponse200101MajorApplications`
-
-GetMajorApplications returns the MajorApplications field if non-nil, zero value otherwise.
-
-### GetMajorApplicationsOk
-
-`func (o *InlineResponse200101) GetMajorApplicationsOk() (*[]InlineResponse200101MajorApplications, bool)`
-
-GetMajorApplicationsOk returns a tuple with the MajorApplications field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMajorApplications
-
-`func (o *InlineResponse200101) SetMajorApplications(v []InlineResponse200101MajorApplications)`
-
-SetMajorApplications sets MajorApplications field to given value.
-
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

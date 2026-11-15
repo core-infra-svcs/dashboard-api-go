@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Service provider name. | [optional] 
-**Logo** | Pointer to [**InlineResponse200345Logo**](InlineResponse200345Logo.md) |  | [optional] 
-**IsBootstrap** | Pointer to **bool** | Indicates if service provider is the bootstrap provider. | [optional] 
-**Terms** | Pointer to [**InlineResponse200345Terms**](InlineResponse200345Terms.md) |  | [optional] 
+**Cluster** | [**OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateCluster**](OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateCluster.md) |  | 
+**Network** | [**InlineResponse20091Network**](InlineResponse20091Network.md) |  | 
+**Data** | [**InlineResponse200345Data**](InlineResponse200345Data.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200345Items
 
-`func NewInlineResponse200345Items() *InlineResponse200345Items`
+`func NewInlineResponse200345Items(cluster OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateCluster, network InlineResponse20091Network, data InlineResponse200345Data, ) *InlineResponse200345Items`
 
 NewInlineResponse200345Items instantiates a new InlineResponse200345Items object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +27,65 @@ NewInlineResponse200345ItemsWithDefaults instantiates a new InlineResponse200345
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetCluster
 
-`func (o *InlineResponse200345Items) GetName() string`
+`func (o *InlineResponse200345Items) GetCluster() OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateCluster`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetCluster returns the Cluster field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetClusterOk
 
-`func (o *InlineResponse200345Items) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200345Items) GetClusterOk() (*OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateCluster, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetClusterOk returns a tuple with the Cluster field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetCluster
 
-`func (o *InlineResponse200345Items) SetName(v string)`
+`func (o *InlineResponse200345Items) SetCluster(v OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateCluster)`
 
-SetName sets Name field to given value.
+SetCluster sets Cluster field to given value.
 
-### HasName
 
-`func (o *InlineResponse200345Items) HasName() bool`
+### GetNetwork
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineResponse200345Items) GetNetwork() InlineResponse20091Network`
 
-### GetLogo
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200345Items) GetLogo() InlineResponse200345Logo`
+### GetNetworkOk
 
-GetLogo returns the Logo field if non-nil, zero value otherwise.
+`func (o *InlineResponse200345Items) GetNetworkOk() (*InlineResponse20091Network, bool)`
 
-### GetLogoOk
-
-`func (o *InlineResponse200345Items) GetLogoOk() (*InlineResponse200345Logo, bool)`
-
-GetLogoOk returns a tuple with the Logo field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLogo
+### SetNetwork
 
-`func (o *InlineResponse200345Items) SetLogo(v InlineResponse200345Logo)`
+`func (o *InlineResponse200345Items) SetNetwork(v InlineResponse20091Network)`
 
-SetLogo sets Logo field to given value.
+SetNetwork sets Network field to given value.
 
-### HasLogo
 
-`func (o *InlineResponse200345Items) HasLogo() bool`
+### GetData
 
-HasLogo returns a boolean if a field has been set.
+`func (o *InlineResponse200345Items) GetData() InlineResponse200345Data`
 
-### GetIsBootstrap
+GetData returns the Data field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200345Items) GetIsBootstrap() bool`
+### GetDataOk
 
-GetIsBootstrap returns the IsBootstrap field if non-nil, zero value otherwise.
+`func (o *InlineResponse200345Items) GetDataOk() (*InlineResponse200345Data, bool)`
 
-### GetIsBootstrapOk
-
-`func (o *InlineResponse200345Items) GetIsBootstrapOk() (*bool, bool)`
-
-GetIsBootstrapOk returns a tuple with the IsBootstrap field if it's non-nil, zero value otherwise
+GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsBootstrap
+### SetData
 
-`func (o *InlineResponse200345Items) SetIsBootstrap(v bool)`
+`func (o *InlineResponse200345Items) SetData(v InlineResponse200345Data)`
 
-SetIsBootstrap sets IsBootstrap field to given value.
+SetData sets Data field to given value.
 
-### HasIsBootstrap
-
-`func (o *InlineResponse200345Items) HasIsBootstrap() bool`
-
-HasIsBootstrap returns a boolean if a field has been set.
-
-### GetTerms
-
-`func (o *InlineResponse200345Items) GetTerms() InlineResponse200345Terms`
-
-GetTerms returns the Terms field if non-nil, zero value otherwise.
-
-### GetTermsOk
-
-`func (o *InlineResponse200345Items) GetTermsOk() (*InlineResponse200345Terms, bool)`
-
-GetTermsOk returns a tuple with the Terms field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTerms
-
-`func (o *InlineResponse200345Items) SetTerms(v InlineResponse200345Terms)`
-
-SetTerms sets Terms field to given value.
-
-### HasTerms
-
-`func (o *InlineResponse200345Items) HasTerms() bool`
-
-HasTerms returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

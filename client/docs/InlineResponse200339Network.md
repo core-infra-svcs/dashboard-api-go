@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **string** | Network ID | 
-**Name** | **string** | Network Name | 
+**Id** | Pointer to **string** | Network ID | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200339Network
 
-`func NewInlineResponse200339Network(id string, name string, ) *InlineResponse200339Network`
+`func NewInlineResponse200339Network() *InlineResponse200339Network`
 
 NewInlineResponse200339Network instantiates a new InlineResponse200339Network object
 This constructor will assign default values to properties that have it defined,
@@ -45,26 +44,11 @@ and a boolean to check if the value has been set.
 
 SetId sets Id field to given value.
 
+### HasId
 
-### GetName
+`func (o *InlineResponse200339Network) HasId() bool`
 
-`func (o *InlineResponse200339Network) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200339Network) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200339Network) SetName(v string)`
-
-SetName sets Name field to given value.
-
+HasId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
